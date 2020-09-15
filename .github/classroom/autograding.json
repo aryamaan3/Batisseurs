@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "exécution de maven",
+      "setup": "",
+      "run": "mvn clean install",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
