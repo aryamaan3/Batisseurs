@@ -1,9 +1,8 @@
 # bat20-B
 bat20-bat20-b created by GitHub Classroom
 
-ITERATION 1
-But : 
-- Créer du deck (sans propriétés type coûts, ...)
+ITERATION 1 
+- Création du deck (sans propriétés type coûts, ...)
 - Génération du plateau :
   - Shuffle des cartes chantier/ouvriers
 - Création d'un joueur unique
