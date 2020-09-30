@@ -49,7 +49,7 @@ ITERATION 6
 ITERATION 7
 - Vraie condition de fin de partie + les conditions supplémentaires en cas d'égalité
 - Création du classement en fonction des conditions de fin de partie
-- Mise en place de 4 joueus
+- Mise en place de 4 joueurs
 
 ITERATION 8
 - Amélioration de l'IA
