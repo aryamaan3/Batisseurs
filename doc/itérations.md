@@ -8,7 +8,7 @@ But :
   - Shuffle des cartes chantier/ouvriers
 - Création d'un joueur unique
 - Définition de l'action "Piocher"
-- IA qui choisit 3 cartes (deux ouvriers, un chantier)
+- IA qui prends les 3 premieres cartes (deux ouvriers, un chantier)
 - Définir une condition de fin de partie : le joueur a choisit 3 cartes
 
 ITERATION 2
@@ -19,7 +19,39 @@ ITERATION 2
 - Fin du jeu quand on a placé un ouvrier sur un batiment
 
 ITERATION 3
+- Attribution automatique d'un apprentis en début de partie
 - L'action "placer un ouvrier" bloque l'ouvrier en question
 - Faire la somme des ressources des ouvriers placés sur un batiment
 - Fin de partie : finir un batiment (la somme des ressources des ouvriers depasse celles du batiment)
+
+ITERATION 4
+- Génération de l'étalage des (5) cartes batiments et ouvrier, remplacer les cartes piochées
+- Génération du portefeuille/bourse + attribution des 100 premiers écus (pour ne pas bloquer l'IA qui est encore basique)
+- Vérification du portefeuille/bourse pour savoir si l'action est autorisée
+- Gestion de la fin d'un batiment => Libération de l'ouvrier, on déplace la carte et donne les points et/ou des écus
+- Condition de fin de partie : Finir un batiment
+
+// Rapport
+ITERATION 5
+- Gestion des tours : fin d'un tour après avoir utilisé toutes les actions
+  - Création de l'action "Prendre de l'argent"/Skiper
+- Création du compteur "Point de Victoire"
+- Fin de partie : atteindre un certain nombre point
+
+ITERATION 6
+- Ajout d'un deuxième joueur
+- Modification de la fin d'un tour : tout le monde a utilisé ses actions ? Ordre : d'abord le joueur 1 utilise toutes ses actions, puis le joueur 2
+- Améliorer l'IA (stratégie simple)
+- Désignation du premier joueur avec le totem
+- Gestion des machines, batiments => ouvriers
+- Fin de partie : on fait 2-3 tour, celui qui a le plus de point gagne (égalité non gérée)
+
+ITERATION 7
+- Vraie condition de fin de partie + les conditions supplémentaires en cas d'égalité
+- Création du classement en fonction des conditions de fin de partie
+- Mise en place de 4 joueus
+
+ITERATION 8
+- Amélioration de l'IA
+- Génération des statistiques de fin de parties
 
