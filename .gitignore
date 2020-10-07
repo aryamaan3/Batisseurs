@@ -10,6 +10,7 @@
 **/testapidocs/
 
 # pour intellij
+*.iml
 **/*.iml
 **/.gradle
 **/local.properties
