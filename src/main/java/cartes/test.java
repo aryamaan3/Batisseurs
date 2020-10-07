@@ -1,2 +1,4 @@
-package cartes;public class test {
+package cartes;
+
+public class test {
 }
