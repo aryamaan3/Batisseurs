@@ -2,6 +2,7 @@ package moteurdejeu;
 
 
 import cartes.CarteOuvrier;
+import cartes.Cartes;
 import joueurs.Joueurs;
 
 
@@ -19,9 +20,9 @@ public class MoteurDeJeu{
         System.out.println("Voici vos choix" + c1 +"");
     }
 
-    CarteOuvrier DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+    Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
 
-    private void piocher(CarteOuvrier Carte){
+    private void piocher(Cartes Carte){
         DeckJoueur1[0] = Carte;
     }
 
