@@ -27,7 +27,7 @@ public class MoteurDeJeu {
 
         piocher(c1);
 
-        System.out.println(DeckJoueur1[1]);
+        System.out.println(DeckJoueur1[0]);
     }
 }
 
