@@ -13,20 +13,16 @@ public class MoteurDeJeu{
         System.out.println("Il y a %d joueur(s)"+nbjoueurs+"");
         System.out.println("Debut du jeu...");
 
-        Joueurs j1 = new Joueurs(1);
-        CarteOuvrier c1 = new CarteOuvrier("ouvrier");
+        //Joueurs j1 = new Joueurs(1);
+        //CarteOuvrier c1 = new CarteOuvrier("ouvrier");
 
         System.out.println("Voici vos choix" + c1 +"");
-
-        String DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
-
-        private void piocher (j1, c1){
-
-        }
-
-
-
     }
 
+    CarteOuvrier DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+
+    private void piocher(CarteOuvrier Carte){
+        DeckJoueur1[0] = Carte;
+    }
 
 }
