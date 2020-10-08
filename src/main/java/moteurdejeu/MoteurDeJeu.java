@@ -31,7 +31,7 @@ public class MoteurDeJeu {
         piocher(j1,c1);
 
         System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckJoueur[j1.getId()][0]);
-            if("ouvrier".equals("ouvrier")){
+            if(DeckJoueur[j1.getId()][0].getIdCarte().equals("ouvrier")){
                 System.out.println("Vous avez gagné");
                 break;
             }
