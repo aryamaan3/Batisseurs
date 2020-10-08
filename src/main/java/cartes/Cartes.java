@@ -16,6 +16,6 @@ public class Cartes {
         return "Cartes{ " +
                 "id=" + idCart +
                 " type='" + type +'\'' +
-                ' }';
+                " }";
     }
 }
