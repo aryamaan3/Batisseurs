@@ -2,16 +2,16 @@ package cartes;
 
 
 
-public class CarteOuvrier {
+public class Cartes {
     String type;
 
-    public CarteOuvrier(String type){
+    public Cartes(String type){
         this.type = type;
     }
 
     @Override
     public String toString() {      //méthode pour visualiser
-        return "CarteOuvrier{" +
+        return "Cartes{" +
                 "type='" + type + '\'' +
                 '}';
     }
