@@ -13,9 +13,9 @@ public class Cartes {
 
     @Override
     public String toString() {      //méthode pour visualiser
-        return "Cartes{" +
+        return "Cartes{ " +
                 "id=" + idCart +
-                "type='" + type +'\'' +
-                '}';
+                " type='" + type +'\'' +
+                ' }';
     }
 }
