@@ -15,7 +15,7 @@ public class MoteurDeJeu {
     public static void main(String[] args) {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
 
-        static Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+        Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
