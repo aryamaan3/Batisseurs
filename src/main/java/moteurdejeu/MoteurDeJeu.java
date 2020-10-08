@@ -9,8 +9,20 @@ import joueurs.Joueurs;
 public class MoteurDeJeu{
 
     public static void main(String[] args) {
-        Joueurs joueur1 = new Joueurs(1);
-        //CarteOuvrier carte = new CarteOuvrier("Compagnon",4,4,3,0,0);
+        int nbjoueurs = 1; //pour l'instant seulement 1 joueur
+        System.out.println("Il y a %d joueur(s)", nbjoueurs);
+        System.out.println("\n Debut du jeu...");
+
+        Joueurs j1 = new Joueurs(1);
+        CarteOuvrier c1 = new CarteOuvrier("ouvrier");
+
+        System.out.println("\nVoici vos choix" + c1 +"");
+
+        private void piocher (j1, c1){
+
+        }
+
+
 
     }
 
