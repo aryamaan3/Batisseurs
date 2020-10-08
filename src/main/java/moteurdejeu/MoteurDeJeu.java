@@ -20,20 +20,22 @@ public class MoteurDeJeu {
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        Joueurs j1 = new Joueurs(0);
+        Joueurs j1 = new Joueurs(1);
         Cartes c1 = new Cartes(1,"ouvrier");
-        while (true){
-        System.out.println("Voici vos choix" + c1 + "");
 
-        System.out.println("le joueur a selctionné" + c1 + "");
+        while (true){
+        System.out.println("Voici vos choix " + c1 + "");
+
+        System.out.println("le joueur a selctionné " + c1 + "");
 
         piocher(j1,c1);
 
-        System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckJoueur[0][0]);
-        if("ouvrier".equals("ouvrier")){
-            System.out.println("Vous avez gagné");
-            break;
+        System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckJoueur[j1.getId()][0]);
+            if("ouvrier".equals("ouvrier")){
+                System.out.println("Vous avez gagné");
+                break;
             }
-    }}
+        }
+    }
 }
 
