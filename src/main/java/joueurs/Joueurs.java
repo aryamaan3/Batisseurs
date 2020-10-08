@@ -6,6 +6,10 @@ public class Joueurs {
         this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {  // Méthode pour visualiser les variable de l'objet joueur
         return "Joueurs{" +
