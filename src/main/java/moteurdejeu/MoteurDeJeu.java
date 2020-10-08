@@ -8,7 +8,7 @@ import joueurs.Joueurs;
 
 public class MoteurDeJeu {
 
-    Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+    static Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
 
     private static void piocher(Cartes carte) {
         DeckJoueur1[0] = carte;
