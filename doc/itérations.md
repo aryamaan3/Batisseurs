@@ -22,6 +22,8 @@ ITERATION 3
 - Fin de partie : finir un batiment (la somme des ressources des ouvriers depasse celles du batiment)
 
 ITERATION 4
+- Ajout d'un deuxième joueur
+- Génération des statistiques de fin de parties
 - Génération de l'étalage des (5) cartes batiments et ouvrier, remplacer les cartes piochées
 - Génération du portefeuille/bourse + attribution des 100 premiers écus (pour ne pas bloquer l'IA qui est encore basique)
 - Vérification du portefeuille/bourse pour savoir si l'action est autorisée
@@ -39,7 +41,6 @@ ITERATION 6
 - Fin de partie : atteindre un certain nombre point
 
 ITERATION 7
-- Ajout d'un deuxième joueur
 - Modification de la fin d'un tour : tout le monde a utilisé ses actions ? Ordre : d'abord le joueur 1 utilise toutes ses actions, puis le joueur 2
 - Améliorer l'IA (stratégie simple)
 - Désignation du premier joueur avec le totem
@@ -53,5 +54,5 @@ ITERATION 8
 
 ITERATION 9
 - Amélioration de l'IA
-- Génération des statistiques de fin de parties
+
 
