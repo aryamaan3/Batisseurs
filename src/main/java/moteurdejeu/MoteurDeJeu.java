@@ -1,7 +1,7 @@
 package moteurdejeu;
 
 
-import cartes.CarteOuvrier;
+import cartes.Cartes;
 import cartes.Cartes;
 import joueurs.Joueurs;
 
