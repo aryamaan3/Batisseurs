@@ -18,6 +18,8 @@ public class MoteurDeJeu{
 
         System.out.println("Voici vos choix" + c1 +"");
 
+        String DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+
         private void piocher (j1, c1){
 
         }
