@@ -3,12 +3,10 @@ bat20-bat20-b created by GitHub Classroom
 
 ITERATION 1 
 - Création du deck (sans propriétés type coûts, ...)
-- Génération du plateau :
-  - Shuffle des cartes chantier/ouvriers
 - Création d'un joueur unique
 - Définition de l'action "Piocher"
-- IA qui prends les 3 premieres cartes (deux ouvriers, un chantier)
-- Définir une condition de fin de partie : le joueur a choisit 3 cartes
+- Joueur pioche une carte
+- Définir une condition de fin de partie : le joueur a choisit la carte
 
 ITERATION 2
 - Attribution des propriétés des cartes batiments et ouvrier (numéro unique : a débatre)
