@@ -22,7 +22,7 @@ public class MoteurDeJeu {
 
         Joueurs j1 = new Joueurs(0);
         Cartes c1 = new Cartes(1,"ouvrier");
-
+        while (true){
         System.out.println("Voici vos choix" + c1 + "");
 
         System.out.println("le joueur a selctionné" + c1 + "");
@@ -30,6 +30,10 @@ public class MoteurDeJeu {
         piocher(j1,c1);
 
         System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckJoueur[0][0]);
-    }
+        if("ouvrier".equals("ouvrier")){
+            System.out.println("Vous avez gagné");
+            break;
+            }
+    }}
 }
 
