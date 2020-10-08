@@ -25,6 +25,8 @@ public class MoteurDeJeu {
 
         System.out.println("Voici vos choix" + c1 + "");
 
+        System.out.println("le joueur a selctionné" + c1 + "");
+
         piocher(c1);
 
         System.out.println("Votre deck possède ces cartes : "+DeckJoueur1[0]);

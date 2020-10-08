@@ -1,7 +1,5 @@
 package cartes;
 
-
-
 public class Cartes {
     int idCart;
     String type;
