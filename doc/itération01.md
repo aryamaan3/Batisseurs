@@ -14,6 +14,7 @@ Fonctionnalités livrées et issues réalisées :
     - Création de la méthode piocher  
 
 Tests :
+- test des méthodes (pas les consctructeurs) de l'object joueur
 
 
 
