@@ -29,7 +29,7 @@ public class MoteurDeJeu {
 
         piocher(j1,c1);
 
-        System.out.println("Votre deck possède ces cartes : "+DeckJoueur[0][0]);
+        System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckJoueur[0][0]);
     }
 }
 
