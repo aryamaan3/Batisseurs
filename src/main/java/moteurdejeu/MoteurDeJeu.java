@@ -12,7 +12,6 @@ public class MoteurDeJeu {
 
     private static void piocher(Joueurs joueur, Cartes carte) {
         DeckJoueur[joueur.getId()][0] = carte; // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
-
     }
 
     public static void main(String[] args) {
@@ -21,7 +20,7 @@ public class MoteurDeJeu {
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        Joueurs j1 = new Joueurs(1);
+        Joueurs j1 = new Joueurs(0);
         Cartes c1 = new Cartes(1,"ouvrier");
 
         System.out.println("Voici vos choix" + c1 + "");
