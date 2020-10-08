@@ -18,4 +18,16 @@ public class CarteOuvrier {
         this.savoir = savoir;
         this.tuile = tuile;
     }
+
+    @Override
+    public String toString() {      //méthode pour visualiser
+        return "CarteOuvrier{" +
+                "type='" + type + '\'' +
+                ", cout=" + cout +
+                ", bois=" + bois +
+                ", pierre=" + pierre +
+                ", savoir=" + savoir +
+                ", tuile=" + tuile +
+                '}';
+    }
 }
