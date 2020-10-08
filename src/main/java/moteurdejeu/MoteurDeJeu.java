@@ -21,7 +21,7 @@ public class MoteurDeJeu{
 
         piocher(c1);
 
-        System.out.println(Deckjoueur[1]);
+        System.out.println(DeckJoueur1[1]);
     }
 
     Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
@@ -30,4 +30,3 @@ public class MoteurDeJeu{
         DeckJoueur1[0] = Carte;
     }
 
-}
