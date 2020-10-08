@@ -19,7 +19,7 @@ public class MoteurDeJeu{
 
         System.out.println("Voici vos choix" + c1 +"");
 
-        j1.piocher(c1);
+        piocher(c1);
 
         System.out.println(Deckjoueur[1]);
     }
