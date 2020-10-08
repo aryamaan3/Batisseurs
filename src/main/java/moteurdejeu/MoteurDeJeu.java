@@ -15,7 +15,7 @@ public class MoteurDeJeu{
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-        CarteOuvrier c1 = new CarteOuvrier("ouvrier");
+        Cartes c1 = new Cartes("ouvrier");
 
         System.out.println("Voici vos choix" + c1 +"");
 
