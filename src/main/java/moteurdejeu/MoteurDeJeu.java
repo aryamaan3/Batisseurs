@@ -8,14 +8,14 @@ import joueurs.Joueurs;
 
 public class MoteurDeJeu {
 
+    Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
+
     private static void piocher(Cartes carte) {
         DeckJoueur1[0] = carte;
     }
 
     public static void main(String[] args) {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
-
-        Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
