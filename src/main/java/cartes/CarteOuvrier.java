@@ -1,16 +1,21 @@
 package cartes;
 
-import java.util.HashMap;
+
 
 public class CarteOuvrier {
     String type;
     int cout;
-    HashMap<String, Integer> ressources;
+    int bois;
+    int pierre;
+    int savoir;
+    int tuile;
 
-    public CarteOuvrier(String type, int cout, HashMap<String, Integer> ressources){
+    public CarteOuvrier(String type, int cout, int bois, int pierre, int savoir, int tuile){
         this.type = type;
         this.cout = cout;
-        this.ressources = ressources;  //test
+        this.bois = bois;
+        this.pierre = pierre;
+        this.savoir = savoir;
+        this.tuile = tuile;
     }
-    //Commentaire test 3
 }
