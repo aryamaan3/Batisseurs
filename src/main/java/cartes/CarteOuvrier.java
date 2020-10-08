@@ -10,6 +10,6 @@ public class CarteOuvrier {
     public CarteOuvrier(String type, int cout, HashMap<String, Integer> ressources){
         this.type = type;
         this.cout = cout;
-        this.ressources = ressources;
+        this.ressources = ressources;  //test
     }
 }
