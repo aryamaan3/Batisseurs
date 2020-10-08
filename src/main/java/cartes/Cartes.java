@@ -9,6 +9,10 @@ public class Cartes {
         this.type = type;
     }
 
+    public String getIdCarte(){
+        return type;
+    }
+
     @Override
     public String toString() {      //méthode pour visualiser
         return "Cartes{ " +
