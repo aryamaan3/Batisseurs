@@ -12,4 +12,5 @@ class MyTests {
         assertEquals(17, 8+9);
         assertEquals(19, 10+9);
     }
+
 }
