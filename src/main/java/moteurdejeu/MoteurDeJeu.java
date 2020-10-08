@@ -26,7 +26,7 @@ public class MoteurDeJeu{
 
     Cartes DeckJoueur1[];  //Contiendra des objects "cartes" que possède le joueur 1
 
-    private void piocher(Cartes Carte){
+    private static void piocher(Cartes Carte){
         DeckJoueur1[0] = Carte;
     }
 
