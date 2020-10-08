@@ -2,13 +2,14 @@
 bat20-bat20-b created by GitHub Classroom
 
 ITERATION 1 
-- Création du deck (sans propriétés type coûts, ...)
+- Création d'une carte (sans propriétés type coûts, ...)
 - Création d'un joueur unique
 - Définition de l'action "Piocher"
 - Joueur pioche une carte
 - Définir une condition de fin de partie : le joueur a choisit la carte
 
 ITERATION 2
+- Création du deck
 - Ajout d'un deuxième joueur
 - Définition de l'action "Placer une carte"
 - Création du compteur d'action (3)
