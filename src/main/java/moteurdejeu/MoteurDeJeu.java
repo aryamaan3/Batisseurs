@@ -9,10 +9,8 @@ import joueurs.Joueurs;
 public class MoteurDeJeu{
 
     public static void main(String[] args) {
-        //Joueurs joueur1 = new Joueurs();
+        Joueurs joueur1 = new Joueurs(1);
         //CarteOuvrier carte = new CarteOuvrier("Compagnon",4,4,3,0,0);
-
-
 
     }
 
