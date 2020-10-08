@@ -10,7 +10,7 @@ public class MoteurDeJeu {
 
     public static void main(String[] args) {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
-        System.out.println("Il y a %d joueur(s)" + nbjoueurs + "");
+        System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
         //Joueurs j1 = new Joueurs(1);
