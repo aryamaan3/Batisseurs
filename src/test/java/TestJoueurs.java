@@ -1,7 +1,8 @@
-import cartes.Cartes;
 import joueurs.Joueurs;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TestJoueurs {
     /*
@@ -13,6 +14,12 @@ public class TestJoueurs {
         test.publicConstructor(int.class);
     }
     */
+    @Test
+    public void testgetId() {
+        int a = ThreadLocalRandom.current().nextInt(0, 99);
+        Joueurs test = new Joueurs(a);
+        Joueurs test2 = new Joueurs(a + 1);
 
-
+        assertEquals(test2.getId(), a + 1);
+    }
 }
