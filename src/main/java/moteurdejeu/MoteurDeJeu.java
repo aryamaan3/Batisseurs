@@ -8,9 +8,9 @@ import joueurs.Joueurs;
 
 public class MoteurDeJeu {
 
-    static Cartes DeckJoueur[][] = new Cartes[2][2];  //Contiendra des objects "cartes" que possède les joueur
+    public static Cartes[][] DeckJoueur = new Cartes[2][2];  //Contiendra des objects "cartes" que possède les joueur
 
-    private static void piocher(Joueurs joueur, Cartes carte) {
+    public static void piocher(Joueurs joueur, Cartes carte) {
         DeckJoueur[joueur.getId()][0] = carte; // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
     }
 
