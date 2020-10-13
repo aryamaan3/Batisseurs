@@ -1,7 +1,7 @@
 package joueurs;
 
 public class Joueurs {
-    int id;
+    private int id;
     public Joueurs (int id){
         this.id = id;
     }

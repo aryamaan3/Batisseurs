@@ -1,8 +1,8 @@
 package cartes;
 
 public class Cartes {
-    int idCart;
-    String type;
+    private int idCart;
+    private String type;
 
     public Cartes(int id, String type){
         this.idCart = id;
