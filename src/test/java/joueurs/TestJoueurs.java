@@ -1,3 +1,5 @@
+package joueurs;
+
 import joueurs.Joueurs;
 import org.junit.jupiter.api.Test;
 

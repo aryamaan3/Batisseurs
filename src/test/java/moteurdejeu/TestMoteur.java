@@ -1,3 +1,5 @@
+package moteurdejeu;
+
 import cartes.Cartes;
 import joueurs.Joueurs;
 import moteurdejeu.MoteurDeJeu;
