@@ -57,14 +57,14 @@ public class MoteurDeJeu {
             System.out.println(batiment1.toString());
 
             System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
-            compteTour++;
+
             // Condition de victoire
-            if(DeckOuvrier[j1.getId()][0].getIdCarte().equals("ouvrier")){
+            if(1==1){
                 System.out.println("Vous avez gagné");
                 break;
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
-            //On incrémente compteTour
+            compteTour++;//On incrémente compteTour
         }
     }
 }
