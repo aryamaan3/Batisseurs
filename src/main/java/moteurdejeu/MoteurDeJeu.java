@@ -12,14 +12,14 @@ public class MoteurDeJeu {
 
     // Desk de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
-    public static Cartes[][] DeckOuvrier = new Cartes[2][2];  //Contiendra des objects "cartes" que possède les joueur
-    public static Cartes[] DeckBatiment = new Cartes[2];
+    public static Cartes[] DeckOuvrier = new Cartes[2];  //Contiendra des objects "cartes" que possède les joueur
+    public static Cartes[] DeckBatiment = new Cartes[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
 
     // Methode permettant à un joueur de piocher une carte (les deux sont en paramètre de la méthode
     // Ajoute la carte piocher à l'indice 0 du deck du joueur
     public static void piocher(Joueurs joueur, Cartes carteOuvrier) {
-        DeckOuvrier[joueur.getId()][0] = carteOuvrier;
+        DeckOuvrier[joueur.getId()] = carteOuvrier;
 
         // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
     }
@@ -32,6 +32,7 @@ public class MoteurDeJeu {
 
     }
 
+    public static void placerOuvrier(Joueurs)
     // Future méthode placerOuvrier
 
     public static void main(String[] args) throws Exception {
@@ -44,13 +45,9 @@ public class MoteurDeJeu {
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-
         Cartes c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
-        //Deck deckBatiment = new Deck("batiment");
-        //Cartes[] deckBatiment = new Deck("batiment").getDeck();
-        //Cartes batiment1 = deckBatiment[0];
-
         CarteBatiments batiment1 = new CarteBatiments(1,"B1",0,0,0,0,0,0,0,-1);
+
         DeckBatiment[0] = batiment1;
 
         while (true){
