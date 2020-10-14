@@ -60,6 +60,7 @@ public class MoteurDeJeu {
 
             piocher(j1,c1);
 
+            //On affecte le joueur1 au batiment1
             choisirChantier(j1, batiment1);
 
             System.out.println(batiment1.toString());
