@@ -31,6 +31,10 @@ public class CarteBatiments extends Cartes {
         this.idjoueur = idJoueur;
     }
 
+    public int getIdjoueur(){
+        return this.idjoueur;
+    }
+
     public String toString(){
         return "Carte Batiment "+nom+", appartient au joueur "+idjoueur;
     }
