@@ -28,9 +28,12 @@ public class TestPlacer {
         }
 
         MoteurDeJeu.placerOuvrierSurChantier(chantier, ouvrier);
-        if (ouvrier.getChantier() == 0){
+        if (ouvrier.getChantier() == 1){
             cond++;
         }
-        assertEquals(3, cond);
+        if (chantier.getIdOuvrier() == 0){
+            cond++;
+        }
+        assertEquals(4, cond);
     }
 }
