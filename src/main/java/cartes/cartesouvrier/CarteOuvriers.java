@@ -5,6 +5,7 @@ import cartes.Cartes;
 public class CarteOuvriers extends Cartes {
     int cout;
     int idjoueur;
+    int assign; // Constiendra l'id du chantier qu'il est en train de construire
 
     // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
     // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
@@ -35,6 +36,11 @@ public class CarteOuvriers extends Cartes {
 
     public int getIdjoueur(){
         return this.idjoueur;
+    }
+
+    // On va remplacer le champs "assign" avec l'id de la carte chantier dont l'ouvrier s'occupe
+    public void AffectationOuvrierAChantier(int chantier){
+        this.assign = chantier;
     }
 
     public String toString(){
