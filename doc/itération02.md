@@ -7,14 +7,15 @@ Fonctionnalités livrées et issues réalisées :
     - 
     -  
 - Issue réalisée :
-    - 
+    - Céation Choisir Ouvrier
     - 
     - 
     -   
 
 - Tests :
-    - 
-    -
+    - Test Cartes
+    - Test Piocher
+    - Test ChoisirOuvrier
 
 - Organisation du code :
     - 
