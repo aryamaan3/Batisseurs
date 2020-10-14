@@ -15,7 +15,7 @@ public class MoteurDeJeu {
     // Variable qui contient les zones de construction (où les batiments sont placés)
     // Contient les cartes en construction de TOUS les joueurs
     // (ex : ZoneDeConstruction[1][2] joueur 1, carte numéro 3 (indice 2)
-    public static Cartes[][] ZoneDeConstruction = new Carte[2][2];
+    public static Cartes[][] ZoneDeConstruction = new Cartes[2][2];
 
     // Methode permettant à un joueur de piocher une carte (les deux sont en paramètre de la méthode
     // Ajoute la carte piocher à l'indice 0 du deck du joueur
@@ -32,6 +32,7 @@ public class MoteurDeJeu {
 
     public static void main(String[] args) {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
+        int compteTour = 1;//Pour compter le nombre de tour au fil de la partie
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
@@ -40,19 +41,21 @@ public class MoteurDeJeu {
         Cartes c1 = new Cartes(1,"ouvrier");
 
         while (true){
-        System.out.println("Voici vos choix " + c1 + "");
+            System.out.println("Voici vos choix " + c1 + "");
 
-        System.out.println("le joueur a selctionné " + c1 + "");
+            System.out.println("le joueur a selctionné " + c1 + "");
 
-        piocher(j1,c1);
+            piocher(j1,c1);
 
-        System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
+            System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
 
-        // Condition de victoire
+            // Condition de victoire
             if(DeckOuvrier[j1.getId()][0].getIdCarte().equals("ouvrier")){
                 System.out.println("Vous avez gagné");
                 break;
             }
+            System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
+            compteTour++;//On incrémente compteTour
         }
     }
 }
