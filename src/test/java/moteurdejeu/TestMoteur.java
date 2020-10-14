@@ -15,7 +15,7 @@ public class TestMoteur {
         Joueurs toto = new Joueurs(2);
         Cartes fofo = new Cartes(2, "eglise");
         MoteurDeJeu.piocher(toto, fofo);
-        if(MoteurDeJeu.DeckJoueur[toto.getId()][0].getIdCarte().equals("eglise")){
+        if(MoteurDeJeu.DeckOuvrier[toto.getId()][0].getIdCarte().equals("eglise")){
             cond++;
         }
         assertEquals(1, cond);
