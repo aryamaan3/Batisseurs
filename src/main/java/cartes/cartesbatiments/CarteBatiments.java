@@ -5,7 +5,7 @@ import cartes.Cartes;
 public class CarteBatiments extends Cartes {
 
 
-    int id,gainEcu,gainPoints,construit,idjoueur;
+    int id,gainEcu,gainPoints,construit,idjoueur, ouvrier;
     // l'avant dernier indice qui était avec false devient un int avec 0 = false, 1 = true
     public static int[][] carteBat = {{0,0,1,1,0,8,0,0,0,0,0,0,-1},
             {1,1,0,0,1,8,0,0,0,0,0,0,-1}, {2,0,2,1,0,6,1,0,0,0,0,0,-1},
@@ -16,7 +16,7 @@ public class CarteBatiments extends Cartes {
     public static String[] carteBatName = {"la cabane", "la tonnelle", "la cabane perchee", "la hutte de paille", "le lavoir", "le pont en pierre",
         "le pont couvert", "la maison urbaine", "la maisonnette"};
 
-    public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre, int construit, int idjoueur ) {
+    public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre, int construit, int idjoueur, int ouvrier ) {
         super(id, nom, bois, tuile, savoir, pierre);
 
         this.gainEcu = gainEcu;
@@ -24,6 +24,7 @@ public class CarteBatiments extends Cartes {
         this.construit = construit;
         this.idjoueur = idjoueur;
         this.id = id;
+        this.ouvrier= ouvrier;
     }
 
     // Méthode qui permet de changer le champ idJoueur d'un objet CarteBatiment (initialisé à -1)
@@ -38,6 +39,11 @@ public class CarteBatiments extends Cartes {
 
     public int getId(){
         return this.id;
+    }
+
+    // Affectation du champ ouvrier avec l'id; plus tard il nous faudra un tableau d'ouvrier à la place d'un int
+    public void AffectationOuvrierAChantier(int ouvrier){
+        this.ouvrier = ouvrier;
     }
 
     public String toString(){

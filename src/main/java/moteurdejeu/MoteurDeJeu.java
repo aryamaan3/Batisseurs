@@ -29,7 +29,10 @@ public class MoteurDeJeu {
     // Future méthode placerOuvrier
 
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
+        //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
+        batiment.
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -43,7 +46,7 @@ public class MoteurDeJeu {
 
         Joueurs j1 = new Joueurs(1);
         Cartes c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"B1",0,0,0,0,0,0,0,-1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"B1",0,0,0,0,0,0,0,-1, -1);
 
         DeckBatiment[0] = batiment1;
 
