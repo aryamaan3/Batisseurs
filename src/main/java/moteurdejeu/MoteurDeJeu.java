@@ -25,7 +25,7 @@ public class MoteurDeJeu {
 
     // Permet à un joueur de choisir une carteBatiment et de l'ajouter dans sa ZoneDeConstruction
     public void choisirChantier(Joueurs joueur, Cartes carteBatiment){
-        ZoneDeConstruction[Joueurs.getId(joueur)];
+        ZoneDeConstruction[joueur.getId()][];
     }
 
     // Future méthode placerOuvrier
