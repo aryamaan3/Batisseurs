@@ -12,10 +12,12 @@ public class MoteurDeJeu {
     // Contient donc les cartes ouvrier de TOUS les joueurs
     public static Cartes[][] DeckOuvrier = new Cartes[2][2];  //Contiendra des objects "cartes" que possède les joueur
 
+    /*  Supprimé
     // Variable qui contient les zones de construction (où les batiments sont placés)
     // Contient les cartes en construction de TOUS les joueurs
     // (ex : ZoneDeConstruction[1][2] joueur 1, carte numéro 3 (indice 2)
     public static Cartes[][] ZoneDeConstruction = new Cartes[2][2];
+    */
 
     // Methode permettant à un joueur de piocher une carte (les deux sont en paramètre de la méthode
     // Ajoute la carte piocher à l'indice 0 du deck du joueur
@@ -23,10 +25,11 @@ public class MoteurDeJeu {
         DeckOuvrier[joueur.getId()][0] = carteOuvrier; // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
     }
 
-    // Permet à un joueur de choisir une carteBatiment et de l'ajouter dans sa ZoneDeConstruction
+    // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
     public static void choisirChantier(Joueurs joueur, Cartes carteBatiment){
-        // [0] car c'est la première carte, doit etre modifié par la suite avec une incrémentatin auto ...
-        ZoneDeConstruction[joueur.getId()][0] = carteBatiment;
+        // [13] correspond au champ idJoueur
+        // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
+        carteBatiment[0][13] = joueur.getId();
     }
 
     // Future méthode placerOuvrier
