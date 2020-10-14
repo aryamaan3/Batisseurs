@@ -21,7 +21,7 @@ public class Deck {
          }
          else if(type == "batiment"){
              for(int i=1;i<43;i++){
-                 deck[i-1] = new CarteBatiments(i,"batiments",2,1,3,4,4,6);
+                 deck[i-1] = new CarteBatiments(i,"batiments",2,1,3,4,4,6, false,-1);
              }
              return deck;
 

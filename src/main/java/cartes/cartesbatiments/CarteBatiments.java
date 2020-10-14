@@ -12,7 +12,7 @@ public class CarteBatiments extends Cartes {
             {"7","la maison urbaine","2","0","2","1","10","2","0","0","0","0","FALSE","-1"}, {"8","la maisonnette","2","1","0","2","10","2","0","0","0","0","FALSE","-1"}};
 
 
-    public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre) {
+    public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre, boolean construit, int idjoueur ) {
         super(id, nom, bois, tuile, savoir, pierre);
 
         this.gainEcu = gainEcu;
