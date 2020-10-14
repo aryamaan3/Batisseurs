@@ -29,7 +29,6 @@ public class Cartes {
     @Override
     public String toString() {      //méthode pour visualiser
         return "Carte : "
-                 +nom+
-                "appartient au joueur ";
+                 +nom+"";
     }
 }
