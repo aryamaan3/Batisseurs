@@ -57,5 +57,8 @@ public class CarteOuvriers extends Cartes {
         return "Carte ouvrier "+nom+", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)";
     }
 
+    public String getName(){
+        return this.nom;
+    }
 
 }

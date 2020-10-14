@@ -45,21 +45,15 @@ public class MoteurDeJeu {
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-        Cartes c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
+        CarteOuvriers c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
         CarteBatiments batiment1 = new CarteBatiments(1,"B1",0,0,0,0,0,0,0,-1, -1);
 
         DeckBatiment[0] = batiment1;
 
         while (true){
-            System.out.println("Voici vos choix " + c1 + "");
-
-            System.out.println("le joueur a selectionné " + c1 + "");
-
-            //piocher(j1,c1);
-
-            //On affecte le joueur1 au batiment1
+            choisirOuvrier(j1,c1);
             choisirChantier(j1, batiment1);
-
+            System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
             System.out.println(batiment1.toString());
 
             //System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);

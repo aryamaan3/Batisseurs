@@ -54,8 +54,8 @@ public class CarteBatiments extends Cartes {
         return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
     }
 
-    public String nom(){
-        return "\nCarte Batiment "+nom+"";
+    public String getName(){
+        return this.nom;
     }
 
 
