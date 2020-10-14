@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Testplacer {
     @Test
-    public void testplacer(){
+    public void testchoisir(){
         Cartes ouvrier = new Cartes (1, "ouvrier");
         Cartes chantier = new Cartes (2, "chantier");
         Joueurs j1 = new Joueurs(1);
