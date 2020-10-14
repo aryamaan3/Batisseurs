@@ -31,9 +31,8 @@ public class MoteurDeJeu {
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
         //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
-        // On affecte le champ "ouvrier" de batiment avec l'id de l'ouvier qui le contruit
-        // Les deux méthodes s'appelle pareil mais leur signature est différente
-        batiment.AffectationOuvrierAChantier(ouvrier.getId());
+        //batiment.
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -63,7 +62,7 @@ public class MoteurDeJeu {
 
             System.out.println(batiment1.toString());
 
-            System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
+            //System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
 
             // Condition de victoire
             if(1==1){

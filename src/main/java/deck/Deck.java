@@ -8,7 +8,7 @@ public class Deck {
     Cartes[] deck;
 
 
-     public Deck (String type) throws Exception {
+     /*public Deck (String type) throws Exception {
          this.type = type;
 
          if(type.equals("ouvrier")){
@@ -51,7 +51,7 @@ public class Deck {
 
     public Cartes[] getDeck() {
         return deck;
-    }
+    }*/
 
 
 }

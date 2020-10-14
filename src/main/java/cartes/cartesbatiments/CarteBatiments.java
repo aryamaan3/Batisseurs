@@ -41,13 +41,21 @@ public class CarteBatiments extends Cartes {
         return this.id;
     }
 
+    public int getIdOuvrier(){
+        return this.ouvrier;
+    }
+
     // Affectation du champ ouvrier avec l'id; plus tard il nous faudra un tableau d'ouvrier à la place d'un int
     public void AffectationOuvrierAChantier(int ouvrier){
         this.ouvrier = ouvrier;
     }
 
     public String toString(){
-        return "Carte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
+        return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
+    }
+
+    public String nom(){
+        return "\nCarte Batiment "+nom+"";
     }
 
 
