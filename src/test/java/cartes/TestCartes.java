@@ -8,7 +8,7 @@ class TestCartes {
     @Test
     public void testcartes(){
         int cond = 0;
-        Cartes test = new Cartes(1,"test" );
+        Cartes test = new Cartes(1,"test",1,2,3,4 );
         if (test.getIdCarte().equals("test")){
             cond++;
         }

@@ -1,23 +1,34 @@
 package cartes;
 
 public class Cartes {
-    private int idCart;
-    private String type;
 
-    public Cartes(int id, String type){ //constructeur
+    protected int idCart,bois,tuile,savoir,pierre;
+    protected String nom;
+
+
+
+    public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
         this.idCart = id;
-        this.type = type;
+        this.bois = bois;
+        this.tuile = tuile;
+        this.savoir = savoir;
+        this.pierre = pierre;
+        this.nom = nom;
+
+
     }
 
-    public String getIdCarte(){ //return le type de carte
-        return type;
+
+
+
+    public String getIdCarte(){
+        return nom;
     }
+
 
     @Override
     public String toString() {      //méthode pour visualiser
         return "Cartes{ " +
-                "id=" + idCart +
-                " type='" + type +'\'' +
-                " }";
+                "id=" + idCart +"}";
     }
 }

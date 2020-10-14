@@ -2,6 +2,7 @@ package moteurdejeu;
 
 
 import cartes.Cartes;
+import cartes.cartesouvrier.CarteOuvrier;
 import joueurs.Joueurs;
 
 
@@ -42,7 +43,7 @@ public class MoteurDeJeu {
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-        Cartes c1 = new Cartes(1,"ouvrier");
+        Cartes c1 = new CarteOuvrier(0,"ouvrier",2,1,3,4);
 
         while (true){
             System.out.println("Voici vos choix " + c1 + "");
