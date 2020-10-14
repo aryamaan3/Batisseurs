@@ -27,7 +27,7 @@ public class MoteurDeJeu {
 
     // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
     public static void choisirChantier(Joueurs joueur, Cartes carteBatiment){
-        // [13] correspond au champ idJoueur
+        // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
         carteBatiment[0][13] = joueur.getId();
     }
