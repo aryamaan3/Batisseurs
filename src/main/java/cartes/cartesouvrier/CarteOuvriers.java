@@ -44,7 +44,7 @@ public class CarteOuvriers extends Cartes {
     }
 
     public int getChantier(){
-        return this.id;
+        return this.assign;
     }
 
     // On va remplacer le champs "assign" avec l'id de la carte chantier dont l'ouvrier s'occupe

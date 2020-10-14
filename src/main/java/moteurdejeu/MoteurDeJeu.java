@@ -31,7 +31,7 @@ public class MoteurDeJeu {
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
         //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
-        //batiment.
+        batiment.AffectationOuvrierAChantier(ouvrier.getId());
 
     }
 
@@ -39,14 +39,14 @@ public class MoteurDeJeu {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
         int compteTour = 1;//Pour compter le nombre de tour au fil de la partie
 
-
-
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-        CarteOuvriers c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"B1",0,0,0,0,0,0,0,-1, -1);
+        CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffle",0,0,0,0,0,0,0,-1, -1);
+
+        placerOuvrierSurChantier(batiment1, c1);
 
         DeckBatiment[0] = batiment1;
 
@@ -54,6 +54,10 @@ public class MoteurDeJeu {
             choisirOuvrier(j1,c1);
             choisirChantier(j1, batiment1);
             System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
+
+            System.out.println("Sur le chantier " +batiment1.getName()+ " on a l'ouvrier "+ batiment1.getIdOuvrier());
+            System.out.println("L'ouvrier " +c1.getName()+ " travail sur "+ c1.getChantier());
+
 
             // Condition de victoire
             if(1==1){
