@@ -26,8 +26,8 @@ public class CarteBatiments extends Cartes {
     }
 
     // Méthode qui permet de changer le champ idJoueur d'un objet CarteBatiment (initialisé à -1)
-    public void Affectation(int idJoueur){
-        // this represente la carte qu'on passe : batiment1.Affectation(id);
+    public void AffectationChantier(int idJoueur){
+        // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
         this.idjoueur = idJoueur;
     }
 

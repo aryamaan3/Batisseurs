@@ -4,7 +4,6 @@ package moteurdejeu;
 import cartes.Cartes;
 import cartes.cartesouvrier.CarteOuvriers;
 import cartes.cartesbatiments.CarteBatiments;
-import deck.Deck;
 import joueurs.Joueurs;
 
 
@@ -15,24 +14,19 @@ public class MoteurDeJeu {
     public static Cartes[] DeckOuvrier = new Cartes[2];  //Contiendra des objects "cartes" que possède les joueur
     public static Cartes[] DeckBatiment = new Cartes[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
-
-    // Methode permettant à un joueur de piocher une carte (les deux sont en paramètre de la méthode
-    // Ajoute la carte piocher à l'indice 0 du deck du joueur
-    public static void piocher(Joueurs joueur, Cartes carteOuvrier) {
-        DeckOuvrier[joueur.getId()] = carteOuvrier;
-
-        // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
+    // Choix de l'ouvrier par le joueur
+    public static void choisirOuvrier(Joueurs joueur, CarteOuvriers ouvrier){
+        ouvrier.AffectationOuvrier(joueur.getId());
     }
 
     // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
     public static void choisirChantier(Joueurs joueur, CarteBatiments carteBatiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
-        carteBatiment.Affectation(joueur.getId());
+        carteBatiment.AffectationChantier(joueur.getId());
 
     }
 
-    public static void placerOuvrier(Joueurs)
     // Future méthode placerOuvrier
 
     public static void main(String[] args) throws Exception {
