@@ -54,9 +54,6 @@ public class MoteurDeJeu {
             choisirOuvrier(j1,c1);
             choisirChantier(j1, batiment1);
             System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
-            System.out.println(batiment1.toString());
-
-            //System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
 
             // Condition de victoire
             if(1==1){
