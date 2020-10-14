@@ -4,6 +4,7 @@ import cartes.Cartes;
 
 public class CarteOuvriers extends Cartes {
     int cout;
+    int idjoueur;
 
     // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
     // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
@@ -23,9 +24,23 @@ public class CarteOuvriers extends Cartes {
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
         this.cout = cout;
+        this.idjoueur = idjoueur;
 
     }
 
+    // Méthode qui permet de changer le champ idJoueur d'un objet CarteOuvrier (initialisé à -1)
+    public void AffectationOuvrier(int idJoueur){
+        this.idjoueur = idJoueur;
+    }
+
+    public int getIdjoueur(){
+        return this.idjoueur;
+    }
+
+    public String toString(){
+
+        return "Carte ouvrier "+nom+", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)";
+    }
 
 
 }
