@@ -39,18 +39,21 @@
             </plugin>
             <!-- Définition de la main class à exécuter -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version> <!-- à ne pas changer : c'est la version du plugin (et pas de java) -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
-                        </manifest>
-                    </archive>
+                    <mainClass>moteurdejeu.MoteurDeJeu
+                    </mainClass>
                 </configuration>
             </plugin>
-
         </plugins>
 
     </build>
