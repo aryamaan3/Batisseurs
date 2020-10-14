@@ -12,11 +12,10 @@ public class TestPlacer {
    @Test
     public void testchoisir(){
         CarteBatiments chantier = new CarteBatiments (1,"B1",0,0,0,0,0,0,0,-1);
-        Joueurs j1 = new Joueurs(1);
         //MoteurDeJeu.placerouvrier (j1, chantier, ouvrier);
-        MoteurDeJeu.choisirChantier (j1, chantier);
+        MoteurDeJeu.choisirChantier (1, chantier);
         int cond = 0;
-        if (chantier.getIdjoueur()==j1.getId()){
+        if (chantier.getIdjoueur()==1){
             cond++;
         }
         assertEquals(1, cond);

@@ -36,6 +36,6 @@ public class CarteBatiments extends Cartes {
     }
 
     public String toString(){
-        return "Carte Batiment "+nom+", appartient au joueur "+idjoueur;
+        return "Carte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
     }
 }
