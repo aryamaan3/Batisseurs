@@ -12,10 +12,10 @@ public class TestMoteur {
     @Test
     void TestPiocher (){
         int cond = 0;
-        Joueurs toto = new Joueurs(2);
-        Cartes fofo = new Cartes(2, "eglise",2,6,9,5);
+        Joueurs toto = new Joueurs(1);
+        Cartes fofo = new Cartes(1, "eglise");
         MoteurDeJeu.piocher(toto, fofo);
-        if(MoteurDeJeu.DeckJoueur[toto.getId()][0].getIdCarte().equals("eglise")){
+        if(MoteurDeJeu.carteBatiment[Joueurs.getId()][0].getIdCarte().equals("eglise")){
             cond++;
         }
         assertEquals(1, cond);
