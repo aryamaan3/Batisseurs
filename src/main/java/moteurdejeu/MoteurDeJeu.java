@@ -2,7 +2,7 @@ package moteurdejeu;
 
 
 import cartes.Cartes;
-import cartes.cartesouvrier.CarteOuvrier;
+import cartes.cartesouvrier.CarteOuvriers;
 import joueurs.Joueurs;
 
 
@@ -23,32 +23,36 @@ public class MoteurDeJeu {
     // Methode permettant à un joueur de piocher une carte (les deux sont en paramètre de la méthode
     // Ajoute la carte piocher à l'indice 0 du deck du joueur
     public static void piocher(Joueurs joueur, Cartes carteOuvrier) {
-        DeckOuvrier[joueur.getId()][0] = carteOuvrier; // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
+        DeckOuvrier[joueur.getId()][0] = carteOuvrier;
+
+        // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
     }
 
     // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
     public static void choisirChantier(Joueurs joueur, Cartes carteBatiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
-        carteBatiment[0][13] = joueur.getId();
+
     }
 
     // Future méthode placerOuvrier
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
         int compteTour = 1;//Pour compter le nombre de tour au fil de la partie
+
+
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
         Joueurs j1 = new Joueurs(1);
-        Cartes c1 = new CarteOuvrier(0,"ouvrier",2,1,3,4);
+        Cartes c1 = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
 
         while (true){
             System.out.println("Voici vos choix " + c1 + "");
 
-            System.out.println("le joueur a selctionné " + c1 + "");
+            System.out.println("le joueur a selectionné " + c1 + "");
 
             piocher(j1,c1);
 
