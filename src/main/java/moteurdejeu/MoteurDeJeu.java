@@ -60,7 +60,7 @@ public class MoteurDeJeu {
 
 
             // Condition de victoire
-            if(1==1){
+            if(batiment1.getIdOuvrier() == c1.getId() && c1.getChantier() == batiment1.getId()){
                 System.out.println("Vous avez gagné");
                 break;
             }
