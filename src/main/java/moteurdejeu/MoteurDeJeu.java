@@ -63,7 +63,7 @@ public class MoteurDeJeu {
 
             System.out.println(batiment1.toString());
 
-            System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
+            //System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
 
             // Condition de victoire
             if(1==1){
