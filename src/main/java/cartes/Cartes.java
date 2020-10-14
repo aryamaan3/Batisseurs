@@ -4,13 +4,17 @@ public class Cartes {
 
     protected int idCart,bois,tuile,savoir,pierre;
     protected String nom;
-    public static Object[][] carteOuv = {{0,"Maitre",5,0,0,2,3,false,-1},{1,"Maître",5,2,0,0,3,false,-1},{2,"Maître",5,3,0,0,2,false,-1},
-            {3,"Maître",5,3,2,0,0,false,-1},{4,"Maître",5,0,3,2,0,false,-1},{5,"Maître",5,2,3,0,0,false,-1},{6,"Maître",5,0,2,3,0,false,-1},
-            {7,"Maître",5,0,0,3,2,false,-1},{8,"Compagnon",4,3,1,0,0,false,-1},{9,"Compagnon",4,0,0,1,3,false,-1},
-            {10,"Compagnon",4,1,0,3,0,false,-1},{11,"Compagnon",4,0,3,0,1,false,-1},{12,"Compagnon",4,2,0,0,2,false,-1},
-            {13,"Compagnon",4,2,2,0,0,false,-1},{14,"Compagnon",4,2,0,2,0,false,-1},{15,"Compagnon",4,0,2,0,2,false,-1},
-            {16,"Compagnon",4,0,2,2,0,false,-1},{17,"Compagnon",4,0,0,2,2,false,-1},{18,"Compagnon",4,0,1,1,2,false,-1},
-            {19,"Compagnon",4,2,0,0,2,false,-1}};
+    // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
+    // l'avant dernier indice qui était avec false devient un int avec 0 = false, 1 = true
+    public static int[][] carteOuv = {{0,1,5,0,0,2,3,0,-1},{1,1,5,2,0,0,3,0,-1},{2,1,5,3,0,0,2,0,-1},
+            {3,1,5,3,2,0,0,0,-1},{4,1,5,0,3,2,0,0,-1},{5,1,5,2,3,0,0,0,-1},{6,1,5,0,2,3,0,0,-1},
+            {7,1,5,0,0,3,2,0,-1},{8,2,4,3,1,0,0,0,-1},{9,2,4,0,0,1,3,0,-1},
+            {10,2,4,1,0,3,0,0,-1},{11,2,4,0,3,0,1,0,-1},{12,2,4,2,0,0,2,0,-1},
+            {13,2,4,2,2,0,0,0,-1},{14,2,4,2,0,2,0,0,-1},{15,2,4,0,2,0,2,0,-1},
+            {16,2,4,0,2,2,0,0,-1},{17,2,4,0,0,2,2,0,-1},{18,2,4,0,1,1,2,0,-1},
+            {19,2,4,2,0,0,2,0,-1}};
+
+    public static String[] carteOuvName = {"maitre", "compagnon"};
 
 
     public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
