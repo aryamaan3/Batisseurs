@@ -31,8 +31,9 @@ public class MoteurDeJeu {
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
         //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
-        batiment.
-
+        // On affecte le champ "ouvrier" de batiment avec l'id de l'ouvier qui le contruit
+        // Les deux méthodes s'appelle pareil mais leur signature est différente
+        batiment.AffectationOuvrierAChantier(ouvrier.getId());
     }
 
     public static void main(String[] args) throws Exception {

@@ -4,7 +4,7 @@ import cartes.Cartes;
 
 public class CarteOuvriers extends Cartes {
     int cout;
-    int idjoueur;
+    int idjoueur, id;
     int assign; // Constiendra l'id du chantier qu'il est en train de construire
 
     // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
@@ -25,6 +25,7 @@ public class CarteOuvriers extends Cartes {
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
         this.cout = cout;
+        this.id= id;
         this.idjoueur = idjoueur;
 
     }
@@ -36,6 +37,10 @@ public class CarteOuvriers extends Cartes {
 
     public int getIdjoueur(){
         return this.idjoueur;
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     // On va remplacer le champs "assign" avec l'id de la carte chantier dont l'ouvrier s'occupe
