@@ -49,14 +49,14 @@ public class MoteurDeJeu {
             piocher(j1,c1);
 
             System.out.println("Le joueur "+j1.getId()+ " possède ces cartes : "+DeckOuvrier[j1.getId()][0]);
-
+            compteTour++;
             // Condition de victoire
             if(DeckOuvrier[j1.getId()][0].getIdCarte().equals("ouvrier")){
                 System.out.println("Vous avez gagné");
                 break;
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
-            compteTour++;//On incrémente compteTour
+            //On incrémente compteTour
         }
     }
 }
