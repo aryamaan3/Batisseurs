@@ -23,12 +23,12 @@ public class MoteurDeJeu {
         DeckOuvrier[joueur.getId()][0] = carteOuvrier; // Regroupe les decks de tout le monde, le deck du la première carte du joueur 1 sera à la position Deck[0][0]
     }
 
-    // Permet à un joueur de placer une carteOuvrier sur une carteBatiment
-    // OU de placer une carte batiment sur le plateau
-    // Permet à la fois de placer une carte batiment dans sa Zone
-    public void choisirChantier(Joueurs joueur, Cartes carteBatiment, Cartes carteOuvrier){
-
+    // Permet à un joueur de choisir une carteBatiment et de l'ajouter dans sa ZoneDeConstruction
+    public void choisirChantier(Joueurs joueur, Cartes carteBatiment){
+        ZoneDeConstruction[Joueurs.getId(joueur)];
     }
+
+    // Future méthode placerOuvrier
 
     public static void main(String[] args) {
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
