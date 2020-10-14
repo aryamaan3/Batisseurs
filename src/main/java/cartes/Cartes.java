@@ -20,7 +20,7 @@ public class Cartes {
 
 
 
-
+    // La personne qui a créée cette fonction doit la modifier pour renvoyer un int : idCarte et pas un nom !
     public String getIdCarte(){
         return nom;
     }
@@ -28,9 +28,8 @@ public class Cartes {
 
     @Override
     public String toString() {      //méthode pour visualiser
-        return "Cartes{ " +
-                "id= " + idCart +
-                "\nnom= " +nom+
-                "}";
+        return "Carte : "
+                 +nom+
+                "appartient au joueur ";
     }
 }
