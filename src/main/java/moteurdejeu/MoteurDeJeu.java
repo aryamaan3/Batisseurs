@@ -4,6 +4,8 @@ package moteurdejeu;
 import cartes.Cartes;
 import cartes.cartesouvrier.CarteOuvriers;
 import cartes.cartesbatiments.CarteBatiments;
+import decks.DeckBatiments;
+import decks.DeckOuvriers;
 import joueurs.Joueurs;
 
 
@@ -41,6 +43,9 @@ public class MoteurDeJeu {
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
+
+
+
 
         Joueurs j1 = new Joueurs(1);
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
