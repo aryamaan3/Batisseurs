@@ -1,6 +1,7 @@
 package cartes.cartesbatiments;
 
 import cartes.Cartes;
+import cartes.findInDeck;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
@@ -64,7 +65,16 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         Retourne un int et pas un booléen car c'était plus simple à utiliser dans le constructeur.
         On utilise le champ "construit" => 0 si pas contruit, 1 si construit.
      */
-    /*public int isBuilt(){
-        if( this.getBois() <= )
-    }*/
+    public int isBuilt(){
+        // Compare le bois
+        if( this.getBois() <= findInDeck.findOuvrierInDeck(this.ouvrier).getBois()
+            &&  this.getTuile() <= findInDeck.findOuvrierInDeck(this.ouvrier).getTuile()
+            &&  this.getPierre() <= findInDeck.findOuvrierInDeck(this.ouvrier).getPierre()
+            &&  this.getSavoir() <= findInDeck.findOuvrierInDeck(this.ouvrier).getSavoir()
+        ){
+            System.out.println("Le joueur "+ this.idjoueur + " a terminé "+ this.getName());
+            return 1; // Return "true"
+        }
+        return 0;
+    }
 }

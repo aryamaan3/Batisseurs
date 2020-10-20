@@ -18,6 +18,8 @@ public class Cartes { //Classe pour creer l'objet cartes
 
     }
 
+
+
     public int getBois() {
         return bois;
     }

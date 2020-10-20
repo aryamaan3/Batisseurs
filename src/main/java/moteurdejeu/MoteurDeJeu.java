@@ -13,8 +13,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     // Desk de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
-    public static Cartes[] DeckOuvrier = new Cartes[2];  //Contiendra des objects "cartes" que possède les joueur
-    public static Cartes[] DeckBatiment = new Cartes[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
+    public static CarteOuvriers[] DeckOuvrier = new CarteOuvriers[2];  //Contiendra des objects "cartes" que possède les joueur
+    public static CarteBatiments[] DeckBatiment = new CarteBatiments[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
     // Choix de l'ouvrier par le joueur
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
@@ -49,8 +49,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j3 = new Joueurs(3);
         Joueurs j4 = new Joueurs(4);
 
-        CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,0,0,0,0,0,-1, -1);
+        CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,1,1,0,0,-1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,1,1,1,1,0,-1, -1);
         CarteOuvriers c2 = new CarteOuvriers(1,"toto",2,1,3,4,1,0,-1);
         CarteBatiments batiment2 = new CarteBatiments(2,"BigBen",0,0,0,0,0,0,0,-1, -1);
 
@@ -88,7 +88,11 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             }
 
             // Condition de victoire
-            if(batiment1.getIdOuvrier() == c1.getId() && c1.getChantier() == batiment1.getId()){
+            /*if(batiment1.getIdOuvrier() == c1.getId() && c1.getChantier() == batiment1.getId()){
+                System.out.println("Vous avez gagné");
+                break;
+            }*/
+            if(batiment1.isBuilt()  == 1){
                 System.out.println("Vous avez gagné");
                 break;
             }
