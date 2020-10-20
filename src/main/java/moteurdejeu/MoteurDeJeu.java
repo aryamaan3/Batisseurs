@@ -37,15 +37,12 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void déroulementJeux(){
         int nbjoueurs = 1; //pour l'instant seulement 1 joueur
-        int compteTour = 1;//Pour compter le nombre de tour au fil de la partie
+        int compteTour = 1; //Pour compter le nombre de tour au fil de la partie
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
-
-
-
 
         Joueurs j1 = new Joueurs(1);
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
@@ -72,6 +69,10 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
         }
+    }
+
+    public static void main(String[] args) {
+        déroulementJeux();
     }
 }
 
