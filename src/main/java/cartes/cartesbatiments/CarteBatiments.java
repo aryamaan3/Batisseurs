@@ -64,7 +64,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         Retourne un int et pas un booléen car c'était plus simple à utiliser dans le constructeur.
         On utilise le champ "construit" => 0 si pas contruit, 1 si construit.
      */
-    public int isBuilt(){
+    /*public int isBuilt(){
         if( this.getBois() <= )
-    }
+    }*/
 }

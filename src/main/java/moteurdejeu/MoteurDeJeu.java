@@ -17,15 +17,15 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     public static Cartes[] DeckBatiment = new Cartes[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
     // Choix de l'ouvrier par le joueur
-    public static void choisirOuvrier(Joueurs joueur, CarteOuvriers ouvrier){
-        ouvrier.AffectationOuvrier(joueur.getId());
+    public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
+        ouvrier.AffectationOuvrier(id);
     }
 
     // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
-    public static void choisirChantier(Joueurs joueur, CarteBatiments carteBatiment){
+    public static void choisirChantier(int id, CarteBatiments carteBatiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
-        carteBatiment.AffectationChantier(joueur.getId());
+        carteBatiment.AffectationChantier(id);
     }
 
     // Future méthode placerOuvrier
@@ -38,30 +38,60 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void déroulementJeux(){
-        int nbjoueurs = 1; //pour l'instant seulement 1 joueur
+        int nbjoueurs = 2; //pour l'instant seulement 2 joueur
         int compteTour = 1; //Pour compter le nombre de tour au fil de la partie
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        Joueurs j1 = new Joueurs(1);
+        for (int i = 0; i < nbjoueurs; i++){
+
+            if (i == 0){
+                Joueurs j1 = new Joueurs(1);
+            }
+
+            if (i == 1){
+                Joueurs j2 = new Joueurs(2);
+            }
+
+            if (i == 2){
+                Joueurs j3 = new Joueurs(3);
+            }
+
+            if (i == 3){
+                Joueurs j4 = new Joueurs(4);
+            }
+        }
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
         CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,0,0,0,0,0,-1, -1);
+        CarteOuvriers c2 = new CarteOuvriers(1,"toto",2,1,3,4,1,0,-1);
+        CarteBatiments batiment2 = new CarteBatiments(2,"BigBen",0,0,0,0,0,0,0,-1, -1);
 
         DeckBatiment[0] = batiment1;
         DeckOuvrier[0] = c1;
 
-        placerOuvrierSurChantier(batiment1, c1);
-
         while (true){ //loop pour chaque tour
-            choisirOuvrier(j1,c1); //joueur choisi un ouvrier
-            choisirChantier(j1, batiment1); //joueur choisi un chantier
-            System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
 
-            System.out.println("Sur le chantier " +batiment1.getName()+ " on a l'ouvrier "+ batiment1.getIdOuvrier());
+            for (int i = 0; i < nbjoueurs; i++) {
+                if (i == 0) {
+                    placerOuvrierSurChantier(batiment1, c1);
+                    choisirOuvrier(i, c1); //joueur choisi un ouvrier
+                    choisirChantier(i, batiment1); //joueur choisi un chantier
 
-            System.out.println("L'ouvrier " +c1.getName()+ " travail sur "+ c1.getChantier());
+                    System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
+                    System.out.println("Sur le chantier " + batiment1.getName() + " on a l'ouvrier " + batiment1.getIdOuvrier());
+                    System.out.println("L'ouvrier " + c1.getName() + " travail sur " + c1.getChantier());
+                }
+                if (i == 1) {
+                    placerOuvrierSurChantier(batiment2, c2);
+                    choisirOuvrier(i, c2); //joueur choisi un ouvrier
+                    choisirChantier(i, batiment2); //joueur choisi un chantier
 
+                    System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c2.getName() + " et un chantier " + batiment2.getName());
+                    System.out.println("Sur le chantier " + batiment2.getName() + " on a l'ouvrier " + batiment2.getIdOuvrier());
+                    System.out.println("L'ouvrier " + c2.getName() + " travail sur " + c2.getChantier());
+                }
+            }
 
             // Condition de victoire
             if(batiment1.getIdOuvrier() == c1.getId() && c1.getChantier() == batiment1.getId()){
