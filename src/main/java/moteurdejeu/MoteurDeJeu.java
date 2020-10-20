@@ -50,7 +50,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j4 = new Joueurs(4);
 
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,1,1,0,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,1,1,1,1,0,-1, -1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,1,0,1,1,0,-1, -1);
         CarteOuvriers c2 = new CarteOuvriers(1,"toto",2,1,3,4,1,0,-1);
         CarteBatiments batiment2 = new CarteBatiments(2,"BigBen",0,0,0,0,0,0,0,-1, -1);
 
