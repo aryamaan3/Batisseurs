@@ -60,9 +60,4 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     public String getName(){
         return this.nom;
     }
-
-    public void getObjetOuvrier(int id){
-        this.id = id;
-        return
-    }
 }
