@@ -2,7 +2,7 @@ package cartes.cartesouvrier;
 
 import cartes.Cartes;
 
-public class CarteOuvriers extends Cartes {
+public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     int cout;
     int idjoueur, id;
     int assign; // Constiendra l'id du chantier qu'il est en train de construire

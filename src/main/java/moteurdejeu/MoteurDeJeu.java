@@ -9,7 +9,7 @@ import decks.DeckOuvriers;
 import joueurs.Joueurs;
 
 
-public class MoteurDeJeu {
+public class MoteurDeJeu { //Controle le deroulement du jeu
 
     // Desk de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
@@ -55,9 +55,9 @@ public class MoteurDeJeu {
 
         DeckBatiment[0] = batiment1;
 
-        while (true){
-            choisirOuvrier(j1,c1);
-            choisirChantier(j1, batiment1);
+        while (true){ //loop pour chaque tour
+            choisirOuvrier(j1,c1); //joueur choisi un ouvrier
+            choisirChantier(j1, batiment1); //joueur choisi un chantier
             System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
 
             System.out.println("Sur le chantier " +batiment1.getName()+ " on a l'ouvrier "+ batiment1.getIdOuvrier());

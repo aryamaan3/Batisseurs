@@ -1,6 +1,6 @@
 package joueurs;
 
-public class Joueurs {
+public class Joueurs { // classe pour creer un joueur
     private static int id;
     public Joueurs (int id){
         this.id = id;

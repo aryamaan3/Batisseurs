@@ -2,7 +2,7 @@ package cartes.cartesbatiments;
 
 import cartes.Cartes;
 
-public class CarteBatiments extends Cartes {
+public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
     int id,gainEcu,gainPoints,construit,idjoueur, ouvrier;

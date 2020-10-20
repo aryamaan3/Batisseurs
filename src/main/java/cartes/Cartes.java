@@ -1,6 +1,6 @@
 package cartes;
 
-public class Cartes {
+public class Cartes { //Classe pour creer l'objet cartes
 
     protected int idCart,bois,tuile,savoir,pierre;
     protected String nom;
