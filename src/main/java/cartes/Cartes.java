@@ -18,10 +18,28 @@ public class Cartes { //Classe pour creer l'objet cartes
 
     }
 
+    public int getBois() {
+        return bois;
+    }
 
+    public int getPierre() {
+        return pierre;
+    }
+
+    public int getSavoir() {
+        return savoir;
+    }
+
+    public int getTuile() {
+        return tuile;
+    }
 
     // La personne qui a créée cette fonction doit la modifier pour renvoyer un int : idCarte et pas un nom !
-    public String getIdCarte(){
+    public int getIdCarte(){
+        return idCart;
+    }
+
+    public String getNom(){
         return nom;
     }
 
