@@ -44,7 +44,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        for (int i = 0; i < nbjoueurs; i++){
+        for (int i = 0; i < nbjoueurs; i++){ //boucle pour creer le nb de joueurs requis
 
             if (i == 0){
                 Joueurs j1 = new Joueurs(1);
@@ -72,8 +72,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
         while (true){ //loop pour chaque tour
 
-            for (int i = 0; i < nbjoueurs; i++) {
-                if (i == 0) {
+            for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
+                if (i == 0) { //actions du joueur 1
                     placerOuvrierSurChantier(batiment1, c1);
                     choisirOuvrier(i, c1); //joueur choisi un ouvrier
                     choisirChantier(i, batiment1); //joueur choisi un chantier
@@ -82,7 +82,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println("Sur le chantier " + batiment1.getName() + " on a l'ouvrier " + batiment1.getIdOuvrier());
                     System.out.println("L'ouvrier " + c1.getName() + " travail sur " + c1.getChantier());
                 }
-                if (i == 1) {
+                if (i == 1) { //actions du joueur 2
                     placerOuvrierSurChantier(batiment2, c2);
                     choisirOuvrier(i, c2); //joueur choisi un ouvrier
                     choisirChantier(i, batiment2); //joueur choisi un chantier
@@ -90,6 +90,14 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c2.getName() + " et un chantier " + batiment2.getName());
                     System.out.println("Sur le chantier " + batiment2.getName() + " on a l'ouvrier " + batiment2.getIdOuvrier());
                     System.out.println("L'ouvrier " + c2.getName() + " travail sur " + c2.getChantier());
+                }
+
+                if (i == 2){ //actions joueur 3
+                    System.out.println("error");
+                }
+
+                if (i == 3){ // actions joueur 4
+                    System.out.println("error");
                 }
             }
 
