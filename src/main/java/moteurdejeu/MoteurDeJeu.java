@@ -46,11 +46,12 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
         Joueurs j1 = new Joueurs(1);
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffle",0,0,0,0,0,0,0,-1, -1);
-
-        placerOuvrierSurChantier(batiment1, c1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,0,0,0,0,0,-1, -1);
 
         DeckBatiment[0] = batiment1;
+        DeckOuvrier[0] = c1;
+
+        placerOuvrierSurChantier(batiment1, c1);
 
         while (true){ //loop pour chaque tour
             choisirOuvrier(j1,c1); //joueur choisi un ouvrier
@@ -58,6 +59,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             System.out.println("Le joueur "+j1.getId()+ " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
 
             System.out.println("Sur le chantier " +batiment1.getName()+ " on a l'ouvrier "+ batiment1.getIdOuvrier());
+
             System.out.println("L'ouvrier " +c1.getName()+ " travail sur "+ c1.getChantier());
 
 

@@ -59,4 +59,12 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     }
 
 
+    /* Méthode qui va constamment comparer les ressources du bâtiment et les ressources
+        apportaient par les ouvriers qui travaillent sur ce bâtiment.
+        Retourne un int et pas un booléen car c'était plus simple à utiliser dans le constructeur.
+        On utilise le champ "construit" => 0 si pas contruit, 1 si construit.
+     */
+    public int isBuilt(){
+        if( this.getBois() <= )
+    }
 }
