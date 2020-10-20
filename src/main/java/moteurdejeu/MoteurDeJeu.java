@@ -44,24 +44,11 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        for (int i = 0; i < nbjoueurs; i++){ //boucle pour creer le nb de joueurs requis
+        Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
+        Joueurs j2 = new Joueurs(2);
+        Joueurs j3 = new Joueurs(3);
+        Joueurs j4 = new Joueurs(4);
 
-            if (i == 0){
-                Joueurs j1 = new Joueurs(1);
-            }
-
-            if (i == 1){
-                Joueurs j2 = new Joueurs(2);
-            }
-
-            if (i == 2){
-                Joueurs j3 = new Joueurs(3);
-            }
-
-            if (i == 3){
-                Joueurs j4 = new Joueurs(4);
-            }
-        }
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,3,4,1,0,-1);
         CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,0,0,0,0,0,-1, -1);
         CarteOuvriers c2 = new CarteOuvriers(1,"toto",2,1,3,4,1,0,-1);
@@ -71,7 +58,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         DeckOuvrier[0] = c1;
 
         while (true){ //loop pour chaque tour
-
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     placerOuvrierSurChantier(batiment1, c1);
