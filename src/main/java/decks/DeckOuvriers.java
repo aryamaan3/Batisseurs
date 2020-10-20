@@ -35,6 +35,11 @@ public class DeckOuvriers {
                     carteOuv[i][8]);
         }
     }
+
+    /**
+     *
+     * @return Le deck ouvrier
+     */
     public CarteOuvriers[] getDeck(){
         return DeckOuvriers;
     }

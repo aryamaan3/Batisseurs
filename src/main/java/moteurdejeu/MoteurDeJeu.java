@@ -16,20 +16,31 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     public static CarteOuvriers[] DeckOuvrier = new CarteOuvriers[2];  //Contiendra des objects "cartes" que possède les joueur
     public static CarteBatiments[] DeckBatiment = new CarteBatiments[2];    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
-    // Choix de l'ouvrier par le joueur
+    /**
+     * Choix de l'ouvrier par le joueur
+     * @param id
+     * @param ouvrier
+     */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
         ouvrier.AffectationOuvrier(id);
     }
 
-    // Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
+    /**
+     * Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
+     * @param id
+     * @param carteBatiment
+     */
     public static void choisirChantier(int id, CarteBatiments carteBatiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
         carteBatiment.AffectationChantier(id);
     }
 
-    // Future méthode placerOuvrier
-
+    /**
+     * Permet de placer un ouvrier sur un chantier
+     * @param batiment
+     * @param ouvrier
+     */
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
         //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
@@ -37,6 +48,9 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     }
 
+    /**
+     * Méthode permettant de le bon fonctionnment du jeux
+     */
     public static void déroulementJeux(){
         int nbjoueurs = 2; //pour l'instant seulement 2 joueur
         int compteTour = 1; //Pour compter le nombre de tour au fil de la partie

@@ -31,6 +31,10 @@ public class DeckBatiments {
         }
     }
 
+    /**
+     *
+     * @return Le deck batiment
+     */
     public CarteBatiments[] getDeck(){
         return DeckBatiments;
     }

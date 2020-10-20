@@ -28,33 +28,59 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.ouvrier= ouvrier;
     }
 
-    // Méthode qui permet de changer le champ idJoueur d'un objet CarteBatiment (initialisé à -1)
+    /**
+     * Méthode qui permet de changer le champ idJoueur d'un objet CarteBatiment (initialisé à -1)
+     * @param idJoueur
+     */
     public void AffectationChantier(int idJoueur){
         // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
         this.idjoueur = idJoueur;
     }
 
+    /**
+     *
+     * @return L'id du joueur
+     */
     public int getIdjoueur(){
         return this.idjoueur;
     }
 
+    /**
+     *
+     * @return L'id de la carte
+     */
     public int getId(){
         return this.id;
     }
 
+    /**
+     *
+     * @return L'id de l'ouvrier
+     */
     public int getIdOuvrier(){
         return this.ouvrier;
     }
 
-    // Affectation du champ ouvrier avec l'id; plus tard il nous faudra un tableau d'ouvrier à la place d'un int
+    /**
+     * Affectation du champ ouvrier avec l'id; plus tard il nous faudra un tableau d'ouvrier à la place d'un int
+     * @param ouvrier
+     */
     public void AffectationOuvrierAChantier(int ouvrier){
         this.ouvrier = ouvrier;
     }
 
+    /**
+     *
+     * @return Une phrase informant le joueur sur les batiments qu'il possède
+     */
     public String toString(){
         return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
     }
 
+    /**
+     *
+     * @return Le nom du batiment
+     */
     public String getName(){
         return this.nom;
     }
