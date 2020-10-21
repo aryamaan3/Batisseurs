@@ -9,6 +9,7 @@
 **/apidocs/
 **/testapidocs/
 
+
 # pour intellij
 *.iml
 **/*.iml
@@ -34,3 +35,4 @@
 
 # pour les mac...
 **/.DS_Store
+/doc/javadoc/
