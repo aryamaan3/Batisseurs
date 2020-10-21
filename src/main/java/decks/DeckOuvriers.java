@@ -48,10 +48,6 @@ public class DeckOuvriers {
         }
     }
 
-    public void getApprenti(int idJoueur) {
-        int a = DeckOuvriers[3].getIdjoueur();
-        a = idJoueur;
-    }
 
     /**
      * @return Le deck ouvrier

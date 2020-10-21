@@ -59,4 +59,21 @@ public class TestDeck {
         }
         assertEquals(1, cond);
     }
+
+    @Test
+    public void testGetApprenti(){
+        CarteOuvriers[] deck = new DeckOuvriers().getDeck();
+        //CarteOuvriers carteTest = deck[39];
+        CarteOuvriers.getApprenti(1, deck);
+        int cond = 0;
+
+        for(int i = 36; i < 42; i++){
+            System.out.println(deck[i]);
+            if(deck[i].getIdjoueur() == 1){
+
+                cond++;
+            }
+        }
+        assertEquals(1, cond);
+    }
 }

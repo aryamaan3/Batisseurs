@@ -78,6 +78,12 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         }
     }
 
+    public static void getApprenti(int idJoueur, CarteOuvriers[] c) {
+        Random gen = new Random();
+        int rand = gen.nextInt(6);
+        c[36+rand].AffectationOuvrier(1);
+    }
+
     /**
      *
      * @return Le nom de l'ouvrier
