@@ -170,4 +170,21 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
     }
 
+    public static CarteBatiments[] carteSurTable(CarteBatiments[] c){
+        CarteBatiments[] cst = new CarteBatiments[5];
+        int i =0;
+        int j =0;
+        while(i< cst.length){
+            if(c[j].idjoueur==-1){
+                cst[i]=c[j];
+                i++;
+                j++;
+            } else {
+                j++;
+
+            }
+        }
+        return cst;
+    }
+
 }

@@ -106,4 +106,20 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     public String getName(){
         return this.nom;
     }
+    public static CarteOuvriers[] carteSurTable(CarteOuvriers[] c){
+        CarteOuvriers[] cst = new CarteOuvriers[7];
+        int i =0;
+        int j =0;
+        while(i< 7){                        // Il y a 7 cartes pour le moment, car la 6ème carte du deck est nécessaire
+            if(c[j].getIdjoueur()==-1){     // pour valider la condition de victoire.
+                cst[i]=c[j];
+                i++;
+                j++;
+            } else {
+                j++;
+
+            }
+        }
+        return cst;
+    }
 }

@@ -56,15 +56,4 @@ public class DeckOuvriers {
         return DeckOuvriers;
     }
 
-
-    public void shuffle() {
-        Random gen = new Random();
-        for (int i = DeckOuvriers.length - 1; i > 0; i--) {
-            int indice = gen.nextInt(i + 1);
-            // je swap
-            CarteOuvriers a = DeckOuvriers[indice];
-            DeckOuvriers[indice] = DeckOuvriers[i];
-            DeckOuvriers[i] = a;
-        }
-    }
 }

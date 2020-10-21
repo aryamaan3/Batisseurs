@@ -76,4 +76,22 @@ public class TestDeck {
         }
         assertEquals(1, cond);
     }
+
+    @Test
+    public void testCarteSurTableOuvrier(){
+        CarteOuvriers[] deck = new DeckOuvriers().getDeck();
+        CarteOuvriers[] CartesOuvrierSurTable = CarteOuvriers.carteSurTable(deck);
+        for(int i=0;i<CartesOuvrierSurTable.length;i++){
+            System.out.print(CartesOuvrierSurTable[i].getId());
+        }
+    }
+
+    @Test
+    public void testCarteSurTableBatiment(){
+        CarteBatiments[] deck = new  DeckBatiments().getDeck();
+        CarteBatiments[] CartesOuvrierSurTable =  CarteBatiments.carteSurTable(deck);
+        for(int i=0;i<CartesOuvrierSurTable.length;i++){
+            System.out.print(CartesOuvrierSurTable[i].getId());
+        }
+    }
 }
