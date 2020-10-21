@@ -50,6 +50,13 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     }
 
     /**
+     * Est appelé dans isBuilt() quand un batiment est fini pour libérer l'ouvrier
+     */
+    public void resetAssign(){
+        this.assign = -1;
+    }
+
+    /**
      *
      * @return Le chantier auquel est assigné l'ouvrier
      */

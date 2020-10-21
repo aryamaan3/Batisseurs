@@ -90,10 +90,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public String toString(){
         return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1)+", ressources présentes : "
-                + "\n -bois : " + this.sumBois + "(besoin : "+ this.bois +")"
-                + "\n -pierre : " + this.sumPierre + "(besoin : "+ this.pierre +")"
-                + "\n -tuile : " + this.sumTuile + "(besoin : "+ this.tuile +")"
-                + "\n -savoir : " + this.sumSavoir + "(besoin : "+ this.savoir +")";
+                + "\n - bois : " + this.sumBois + "  (besoin : "+ this.bois +")"
+                + "\n - pierre : " + this.sumPierre + "  (besoin : "+ this.pierre +")"
+                + "\n - tuile : " + this.sumTuile + "    (besoin : "+ this.tuile +")"
+                + "\n - savoir : " + this.sumSavoir + "  (besoin : "+ this.savoir +")";
     }
 
     /**
@@ -149,6 +149,11 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getSavoir() <= this.sumSavoir
         ){
             System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
+
+            // On libère nos ouvriers quand le chantier est fini
+            for (int i = 0; i < nbOuvrier; i++) {
+                findInDeck.findOuvrierInDeck(this.ouvrier[i]).resetAssign();
+            }
             return 1;
         }
         return 0;
