@@ -25,7 +25,7 @@ public class DeckBatiments {
                     carteBat[i][4],
                     carteBat[i][5],
                     carteBat[i][6]);
-    }
+    }}
 
     /**
      *

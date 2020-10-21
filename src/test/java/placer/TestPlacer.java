@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class TestPlacer {
    @Test
     public void TestChoisir(){ //Tests sur les methodes d'attrinution de cartes
-        CarteBatiments chantier = new CarteBatiments (1,"B1",0,0,0,0,0,0,0,-1, -1);
+        CarteBatiments chantier = new CarteBatiments (1,"B1",0,0,0,0,0,0);
         //MoteurDeJeu.placerouvrier (j1, chantier, ouvrier);
         Joueurs j1 = new Joueurs(1);
         MoteurDeJeu.choisirChantier (j1.getId(), chantier); //on donne au j1 la carte chantier

@@ -7,8 +7,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
 
     int id,gainEcu,gainPoints,construit,idjoueur;
-    int ouvrier;
-    int nbOuvrier; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
+    int []ouvrier;    // Tableau car on veut avoir plusieurs ouvriers sur un chantier
+    int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
 
     public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre) {
         super(id, nom, bois, tuile, savoir, pierre);
@@ -18,7 +18,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.id = id;
         this.construit = 0;
         this.idjoueur = -1;
-        this.ouvrier = -1;
+        this.ouvrier[0] = -1;
     }
 
     /**
@@ -59,7 +59,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @param ouvrier
      */
     public void AffectationOuvrierAChantier(int ouvrier){
-        this.ouvrier = ouvrier;
+        this.ouvrier[nbOuvrier] = ouvrier;
+        this.nbOuvrier ++;  // On incrémente ce compteur pour que le prochain ouvrier soit affecté à la bonne position
     }
 
     /**
