@@ -7,7 +7,7 @@ import java.util.Random;
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     private int cout;
     private int idjoueur, id;
-    private int assign; // Constiendra l'id du chantier qu'il est en train de construire
+    private int assign = -1; // Constiendra l'id du chantier qu'il est en train de construire et -1 si il est libre
     
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
@@ -39,6 +39,21 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public int getId(){
         return this.id;
+    }
+
+    /**
+     *
+     * @return Retourne l'id du chantier sur lequel il travaille ou -1 si il est libre
+     */
+    public int getAssign(){
+        return this.assign;
+    }
+
+    /**
+     * Est appelé dans isBuilt() quand un batiment est fini pour libérer l'ouvrier
+     */
+    public void resetAssign(){
+        this.assign = -1;
     }
 
     /**
