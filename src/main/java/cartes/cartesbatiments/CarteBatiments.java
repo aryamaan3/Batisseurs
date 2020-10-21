@@ -98,7 +98,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getPierre() <= findInDeck.findOuvrierInDeck(this.ouvrier).getPierre()
             &&  this.getSavoir() <= findInDeck.findOuvrierInDeck(this.ouvrier).getSavoir()
         ){
-            System.out.println("Le joueur "+ this.idjoueur + " a terminé "+ this.getName());
+            System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
             return 1; // Return "true"
         }
         return 0;
