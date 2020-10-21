@@ -85,10 +85,11 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
 
         while (true){ //loop pour chaque tour
+            System.out.println("######################### Tour n°" + compteTour + "#########################");
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
-
-                    System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + DeckOuvrier[3].getName() + " et un chantier " + DeckBatiment[2].getName());
+                    System.out.println("------------------ Joueur n°" + i + "------------------");
+                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + DeckOuvrier[3].getName() + " et un chantier " + DeckBatiment[2].getName());
                     System.out.println("Sur le chantier " + DeckBatiment[2].getName() + " on a l'ouvrier " + DeckBatiment[2].getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + DeckOuvrier[3].getName() + " travail sur " + DeckOuvrier[3].getChantier());
 
@@ -101,7 +102,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println(DeckBatiment[2].toString());
                 }
                 if (i == 1) { //actions du joueur 2
-                    System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + DeckOuvrier[5].getName() + " et un chantier " + DeckBatiment[5].getName());
+                    System.out.println("------------------ Joueur n°" + i + "------------------");
+                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + DeckOuvrier[5].getName() + " et un chantier " + DeckBatiment[5].getName());
                     System.out.println("Sur le chantier " + DeckBatiment[5].getName() + " on a l'ouvrier " + DeckBatiment[5].getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + DeckOuvrier[5].getName() + " travail sur " + DeckOuvrier[5].getChantier());
                 }
