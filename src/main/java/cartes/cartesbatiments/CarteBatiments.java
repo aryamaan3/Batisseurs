@@ -9,6 +9,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     int id,gainEcu,gainPoints,construit,idjoueur;
     int []ouvrier;    // Tableau car on veut avoir plusieurs ouvriers sur un chantier
     int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
+    int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
 
     public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre) {
         super(id, nom, bois, tuile, savoir, pierre);
@@ -50,7 +51,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      *
      * @return L'id de l'ouvrier
      */
-    public int getIdOuvrier(){
+    public int[] getIdOuvrier(){
         return this.ouvrier;
     }
 
@@ -79,6 +80,27 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         return this.nom;
     }
 
+    /**
+     * Méthode qui va sommer les ressources de tous les ouvriers présent sur un chantier
+     * @return return la somme des ressources apportaient par les ouvriers
+     */
+    public void sumRessources(){
+        // On réinitialise les sum pour ne pass additionner les anciennes au nouvelles !
+        this.sumBois = 0;
+        this.sumPierre = 0;
+        this.sumTuile = 0;
+        this.sumSavoir = 0;
+        for (int i = 0; i < nbOuvrier; i++){
+            this.sumBois += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getBois();
+            this.sumPierre += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getPierre();
+            this.sumTuile += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getTuile();
+            this.sumSavoir += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getSavoir();
+            // on recupere l'id ouvrier avec "this.ouvrier", on trouve l'ouvrier à la position voulu
+            // (qui pour le moment correspond à son id => à changer) dans le deckOuvrier "findInDeck.findOuvrierInDeck"
+            // maintenant qu'on a l'objet ouvrier, on peut recuperer son bois avec "getBois()"
+        }
+    }
+
 
     /**
      * Méthode qui va constamment comparer les ressources du bâtiment et les ressources
@@ -87,13 +109,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public int isBuilt(){
         // Compare le bois de l'objet ici (bâtiment) et le le bois de l'ouvrier qu'on trouve
-        // on recupere l'id ouvrier avec "this.ouvrier", on trouve l'ouvrier à la position voulu
-        // (qui pour le moment correspond à son id => à changer) dans le deckOuvrier "findInDeck.findOuvrierInDeck"
-        // maintenant qu'on a l'objet ouvrier, on peut recuperer son bois avec "getBois()"
-        if( this.getBois() <= findInDeck.findOuvrierInDeck(this.ouvrier).getBois()
-            &&  this.getTuile() <= findInDeck.findOuvrierInDeck(this.ouvrier).getTuile()
-            &&  this.getPierre() <= findInDeck.findOuvrierInDeck(this.ouvrier).getPierre()
-            &&  this.getSavoir() <= findInDeck.findOuvrierInDeck(this.ouvrier).getSavoir()
+        if( this.getBois() <= this.sumBois
+            &&  this.getTuile() <= this.sumTuile
+            &&  this.getPierre() <= this.sumPierre
+            &&  this.getSavoir() <= this.sumSavoir
         ){
             System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
             return 1;
