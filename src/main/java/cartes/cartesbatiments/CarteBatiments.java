@@ -90,10 +90,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public String toString(){
         return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1)+", ressources présentes : "
-                + "\n -bois : " + this.sumBois
-                + "\n -pierre : " + this.sumPierre
-                + "\n -tuile : " + this.sumTuile
-                + "\n -savoir : " + this.sumSavoir;
+                + "\n -bois : " + this.sumBois + "(besoin : "+ this.bois +")"
+                + "\n -pierre : " + this.sumPierre + "(besoin : "+ this.pierre +")"
+                + "\n -tuile : " + this.sumTuile + "(besoin : "+ this.tuile +")"
+                + "\n -savoir : " + this.sumSavoir + "(besoin : "+ this.savoir +")";
     }
 
     /**

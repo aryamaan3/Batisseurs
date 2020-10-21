@@ -14,11 +14,12 @@ public class TestAfficheVariable {
         CarteOuvriers ouv = MoteurDeJeu.DeckOuvrier[3];
 
         bat.sumRessources();
-        System.out.println(bat.toString());
 
+        System.out.println(bat.toString());
         int[] b = bat.getIdOuvrier();
         System.out.println("Ouvrier n°1 : "+b[0]);
         System.out.println("Ouvrier n°2 : "+b[1]);
 
+        System.out.println(ouv.toString());
     }
 }

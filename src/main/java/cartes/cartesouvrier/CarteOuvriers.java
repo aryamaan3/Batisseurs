@@ -62,7 +62,9 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      * @return Une phrase informant le joueur sur les ouvriers qu'il possède
      */
     public String toString(){
-        return "Carte ouvrier "+nom+", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)";
+        return "Carte ouvrier "+nom
+                +", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)"
+                +" travaille sur le batiment "+ assign+"(-1 si pas assigné)";
     }
 
     public static void shuffle(CarteOuvriers[] c){
