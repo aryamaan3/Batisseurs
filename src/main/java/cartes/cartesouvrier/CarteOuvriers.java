@@ -18,7 +18,6 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
             {16,2,4,0,2,2,0,-1,-1},{17,2,4,0,0,2,2,-1,-1},{18,2,4,0,1,1,2,-1,-1},
             {19,2,4,2,0,0,2,-1,-1}};
 
-
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
         this.cout = cout;

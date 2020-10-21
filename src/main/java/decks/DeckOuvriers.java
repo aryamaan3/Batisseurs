@@ -16,14 +16,23 @@ public class DeckOuvriers {
             {16, 2, 4, 0, 2, 2, 0, -1, -1}, {17, 2, 4, 0, 0, 2, 2, -1, -1}, {18, 2, 4, 0, 1, 1, 2, -1, -1},
             {19, 2, 4, 2, 0, 0, 2, -1, -1}};
 
+    /**
+     * Pemet de créer un dec ouvrier
+     */
     public DeckOuvriers() {
         DeckOuvriers = new CarteOuvriers[carteOuv.length];
         for (int i = 0; i < carteOuv.length; i++) {
             String nom;
             if (carteOuv[i][1] == 1) {
                 nom = "maitre";
-            } else {
-                nom = "compagnon";
+            }
+            if (carteOuv[i][1] == 2){
+                nom = "compagnom";
+            }
+            if (carteOuv[i][1] == 3){
+                nom = "manoeuvre";
+            }else {
+                nom = "apprenti";
             }
             DeckOuvriers[i] = new CarteOuvriers(carteOuv[i][0], nom,
                     carteOuv[i][2],
