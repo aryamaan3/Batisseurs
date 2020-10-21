@@ -4,13 +4,15 @@ import cartes.Cartes;
 import cartes.cartesouvrier.CarteOuvriers;
 import cartes.findInDeck;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Random;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
     int id,gainEcu,gainPoints,construit,idjoueur;
-    int []ouvrier = new int[20];    // Tableau car on veut avoir plusieurs ouvriers sur un chantier, limite arbitraire de 20 ouvrier sur un chantier
+    int []ouvrier = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};    // Tableau car on veut avoir plusieurs ouvriers sur un chantier, limite arbitraire de 10 ouvrier sur un chantier
     int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
     int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
     int ecu;
@@ -87,7 +89,11 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @return Une phrase informant le joueur sur les batiments qu'il possède
      */
     public String toString(){
-        return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1);
+        return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1)+", ressources présentes : "
+                + "\n -bois : " + this.sumBois
+                + "\n -pierre : " + this.sumPierre
+                + "\n -tuile : " + this.sumTuile
+                + "\n -savoir : " + this.sumSavoir;
     }
 
     /**
@@ -119,7 +125,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
     }
 
-    /*public int getSum(String type){
+    public int getSum(String type){
         switch (type){
             case "bois": return(this.sumBois);
             case "pierre": return(this.sumPierre);
@@ -127,11 +133,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             case "savoir": return(this.sumSavoir);
             default : return 0;
         }
-    }*/
-    public int getSumBois(){
-        return(this.sumBois);
     }
-
 
     /**
      * Méthode qui va constamment comparer les ressources du bâtiment et les ressources
@@ -162,4 +164,5 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             c[i] = a;
         }
     }
+
 }

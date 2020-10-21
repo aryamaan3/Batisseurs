@@ -76,14 +76,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         choisirOuvrier(0, DeckOuvrier[6]); //joueur choisi un ouvrier
         choisirChantier(0,  DeckBatiment[2]); //joueur choisi un chantier
         placerOuvrierSurChantier(DeckBatiment[2], DeckOuvrier[3]);
-        placerOuvrierSurChantier(DeckBatiment[2], DeckOuvrier[6]);
-
-         /*int test = CarteBatiments.getSumBois("bois");
-       System.out.println("Ressources apportaient à "+batiment1.getName() +" :"
-                + "\nbois : "+ CarteBatiments.getSum("bois")
-                + "\npierre : "+ CarteBatiments.getSum("pierre")
-                + "\ntuile : "+ CarteBatiments.getSum("tuile")
-                + "\nsavoir : "+ CarteBatiments.getSum("savoir"));*/
+        //placerOuvrierSurChantier(DeckBatiment[2], DeckOuvrier[6]);
 
         placerOuvrierSurChantier(DeckBatiment[5], DeckOuvrier[5]);
         choisirOuvrier(1, DeckOuvrier[5]); //joueur choisi un ouvrier
@@ -123,6 +116,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
+
+            if (compteTour > 20){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
     }
 
