@@ -36,14 +36,7 @@ public class DeckOuvriers {
             }else {
                 nom = "apprenti";
             }
-            DeckOuvriers[i] = new CarteOuvriers(carteOuv[i][0], nom,
-                    carteOuv[i][2],
-                    carteOuv[i][3],
-                    carteOuv[i][4],
-                    carteOuv[i][5],
-                    carteOuv[i][6],
-                    carteOuv[i][7],
-                    carteOuv[i][8]);
+            DeckOuvriers[i] = new CarteOuvriers(carteOuv[i][0], nom, carteOuv[i][2], carteOuv[i][3], carteOuv[i][4], carteOuv[i][5], carteOuv[i][6], carteOuv[i][7], carteOuv[i][8]);
         }
     }
 

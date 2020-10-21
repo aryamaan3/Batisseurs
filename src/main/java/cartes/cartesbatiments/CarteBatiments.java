@@ -10,23 +10,28 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     int []ouvrier = new int[20];    // Tableau car on veut avoir plusieurs ouvriers sur un chantier, limite arbitraire de 20 ouvrier sur un chantier
     int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
     int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
+    int ecu;
+    int points;
 
     /**
-     *  Constructeur de Cartes Batiment avec des valeurs par défaut (idjoueur, ouvrier et construit)
-     * @param id
-     * @param nom
-     * @param gainEcu
-     * @param gainPoints
-     * @param bois
-     * @param tuile
-     * @param savoir
-     * @param pierre
+     * Constructeur de Cartes Batiment avec des valeurs par défaut (idjoueur, ouvrier et construit)
+     * @param id id de la carte
+     * @param nom nom du batiments
+     * @param pierre cout en pierre
+     * @param bois cout en bois
+     * @param savoir cout en savoir
+     * @param tuile cout en savoir
+     * @param ecu cout en ecu
+     * @param points cout en points
      */
-    public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre) {
+    public CarteBatiments(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points) {
         super(id, nom, bois, tuile, savoir, pierre);
-
-        this.gainEcu = gainEcu;
-        this.gainPoints = gainPoints;
+        this.pierre = pierre;
+        this.bois = bois;
+        this.savoir = savoir;
+        this.tuile = tuile;
+        this.ecu = ecu;
+        this.points = points;
         this.id = id;
         this.construit = 0;
         this.idjoueur = -1;
@@ -34,7 +39,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
     /**
      * Méthode qui permet de changer le champ idJoueur d'un objet CarteBatiment (initialisé à -1)
-     * @param idJoueur
+     * @param idJoueur i ddu joueur auquel on veu attribuer un chantier
      */
     public void AffectationChantier(int idJoueur){
         // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
@@ -67,7 +72,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
     /**
      * Affectation du champ ouvrier avec l'id; plus tard il nous faudra un tableau d'ouvrier à la place d'un int
-     * @param ouvrier
+     * @param ouvrier ouvrier qu'on veut affecter au chantier
      */
     public void AffectationOuvrierAChantier(int ouvrier){
         this.nbOuvrier ++;  // On incrémente ce compteur pour que le prochain ouvrier soit affecté à la bonne position
