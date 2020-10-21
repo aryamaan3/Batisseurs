@@ -119,6 +119,19 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
     }
 
+    /*public int getSum(String type){
+        switch (type){
+            case "bois": return(this.sumBois);
+            case "pierre": return(this.sumPierre);
+            case "tuile": return(this.sumTuile);
+            case "savoir": return(this.sumSavoir);
+            default : return 0;
+        }
+    }*/
+    public int getSumBois(){
+        return(this.sumBois);
+    }
+
 
     /**
      * Méthode qui va constamment comparer les ressources du bâtiment et les ressources

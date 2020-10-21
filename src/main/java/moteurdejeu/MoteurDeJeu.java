@@ -8,8 +8,6 @@ import decks.DeckBatiments;
 import decks.DeckOuvriers;
 import joueurs.Joueurs;
 
-
-
 public class MoteurDeJeu { //Controle le deroulement du jeu
 
     // Desk de carte : la première carte du joueur 0 sera à l'indice [0][0]
@@ -53,7 +51,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     /**
      * Méthode permettant de le bon fonctionnment du jeux
      */
-    public static void déroulementJeux(){
+    public void déroulementJeux(){
         int nbjoueurs = 2; //pour l'instant seulement 2 joueur
         int compteTour = 1; //Pour compter le nombre de tour au fil de la partie
 
@@ -66,16 +64,26 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j4 = new Joueurs(4);
 
         CarteOuvriers c1 = new CarteOuvriers(0,"Patrick",2,1,1,1,0,0,-1);
-        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,1,0,1,1);
+        CarteOuvriers c3 = new CarteOuvriers(0,"Bob",2,0,0,0,1,0,-1);
+        CarteBatiments batiment1 = new CarteBatiments(1,"TourEiffel",0,0,1,1,1,1);
         CarteOuvriers c2 = new CarteOuvriers(1,"toto",2,1,3,4,1,0,-1);
         CarteBatiments batiment2 = new CarteBatiments(2,"BigBen",0,0,0,0,0,0);
 
         DeckBatiment[0] = batiment1;
         DeckOuvrier[0] = c1;
 
-        placerOuvrierSurChantier(batiment1, c1);
         choisirOuvrier(0, c1); //joueur choisi un ouvrier
+        choisirOuvrier(0, c3); //joueur choisi un ouvrier
         choisirChantier(0, batiment1); //joueur choisi un chantier
+        placerOuvrierSurChantier(batiment1, c1);
+        placerOuvrierSurChantier(batiment1, c3);
+
+        int test = CarteBatiments.getSumBois("bois");
+        /*System.out.println("Ressources apportaient à "+batiment1.getName() +" :"
+                + "\nbois : "+ CarteBatiments.getSum("bois")
+                + "\npierre : "+ CarteBatiments.getSum("pierre")
+                + "\ntuile : "+ CarteBatiments.getSum("tuile")
+                + "\nsavoir : "+ CarteBatiments.getSum("savoir"));*/
 
         placerOuvrierSurChantier(batiment2, c2);
         choisirOuvrier(1, c2); //joueur choisi un ouvrier
@@ -119,7 +127,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void main(String[] args) {
-        déroulementJeux();
+        MoteurDeJeu m1 = new MoteurDeJeu();
+        m1.déroulementJeux();
     }
 }
 
