@@ -37,6 +37,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         carteBatiment.AffectationChantier(id);
     }
 
+
+
     /**
      * Permet de placer un ouvrier sur un chantier
      * @param batiment
