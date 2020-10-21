@@ -73,22 +73,23 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         DeckBatiment[0] = batiment1;
         DeckOuvrier[0] = c1;
 
+        placerOuvrierSurChantier(batiment1, c1);
+        choisirOuvrier(0, c1); //joueur choisi un ouvrier
+        choisirChantier(0, batiment1); //joueur choisi un chantier
+
+        placerOuvrierSurChantier(batiment2, c2);
+        choisirOuvrier(1, c2); //joueur choisi un ouvrier
+        choisirChantier(1, batiment2); //joueur choisi un chantier
+
         while (true){ //loop pour chaque tour
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
-                    placerOuvrierSurChantier(batiment1, c1);
-                    choisirOuvrier(i, c1); //joueur choisi un ouvrier
-                    choisirChantier(i, batiment1); //joueur choisi un chantier
 
                     System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
                     System.out.println("Sur le chantier " + batiment1.getName() + " on a l'ouvrier " + batiment1.getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + c1.getName() + " travail sur " + c1.getChantier());
                 }
                 if (i == 1) { //actions du joueur 2
-                    placerOuvrierSurChantier(batiment2, c2);
-                    choisirOuvrier(i, c2); //joueur choisi un ouvrier
-                    choisirChantier(i, batiment2); //joueur choisi un chantier
-
                     System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c2.getName() + " et un chantier " + batiment2.getName());
                     System.out.println("Sur le chantier " + batiment2.getName() + " on a l'ouvrier " + batiment2.getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + c2.getName() + " travail sur " + c2.getChantier());

@@ -30,7 +30,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.id = id;
         this.construit = 0;
         this.idjoueur = -1;
-        this.ouvrier[0] =-1;
     }
 
     /**
@@ -120,6 +119,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public int isBuilt(){
         // Compare le bois de l'objet ici (bâtiment) et le le bois de l'ouvrier qu'on trouve
+        sumRessources();
         if( this.getBois() <= this.sumBois
             &&  this.getTuile() <= this.sumTuile
             &&  this.getPierre() <= this.sumPierre
