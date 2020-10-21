@@ -3,9 +3,9 @@ package cartes.cartesouvrier;
 import cartes.Cartes;
 
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
-    int cout;
-    int idjoueur, id;
-    int assign; // Constiendra l'id du chantier qu'il est en train de construire
+    private int cout;
+    private int idjoueur, id;
+    private int assign; // Constiendra l'id du chantier qu'il est en train de construire
 
     // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
     // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
@@ -24,7 +24,6 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         this.cout = cout;
         this.id= id;
         this.idjoueur = idjoueur;
-
     }
 
     /**

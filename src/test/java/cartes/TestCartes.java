@@ -4,6 +4,9 @@ import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 import org.junit.jupiter.api.Test;
+
+import static moteurdejeu.MoteurDeJeu.DeckBatiment;
+import static moteurdejeu.MoteurDeJeu.DeckOuvrier;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestCartes { //test le constructeur de cartes
@@ -67,5 +70,14 @@ class TestCartes { //test le constructeur de cartes
         }
 
         assertEquals(2, cond);
+    }
+
+    @Test
+    public void TestIsBuilt(){
+        CarteOuvriers ouvrierTest = new CarteOuvriers(0,"ouvrier_test",2,1,1,1,0,0,1);
+        CarteBatiments batimentTest = new CarteBatiments(1,"batiment_test",0,0,1,0,1,1,0,1, 0);
+        DeckBatiment[0] = batimentTest;
+        DeckOuvrier[0] = ouvrierTest;
+        assertEquals(batimentTest.isBuilt(), 1);
     }
 }

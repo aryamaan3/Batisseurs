@@ -9,6 +9,7 @@ import decks.DeckOuvriers;
 import joueurs.Joueurs;
 
 
+
 public class MoteurDeJeu { //Controle le deroulement du jeu
 
     // Desk de carte : la première carte du joueur 0 sera à l'indice [0][0]
@@ -42,7 +43,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier
      */
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
-        //  On place l'id du batiment dans le champ assign de la carte ouvrier pour savoir sur quoi il travaille
         ouvrier.AffectationOuvrierAChantier(batiment.getId());
         batiment.AffectationOuvrierAChantier(ouvrier.getId());
 
