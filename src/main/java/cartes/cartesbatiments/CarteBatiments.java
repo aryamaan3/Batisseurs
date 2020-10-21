@@ -103,7 +103,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @return return la somme des ressources apportaient par les ouvriers
      */
     public void sumRessources(){
-        // On réinitialise les sum pour ne pass additionner les anciennes au nouvelles !
+        // On réinitialise les sum pour ne pas additionner les anciennes au nouvelles !
         this.sumBois = 0;
         this.sumPierre = 0;
         this.sumTuile = 0;

@@ -26,7 +26,7 @@ public class TestDeck {
   @Test
     public void testDeckOuvriers() throws Exception {
         CarteOuvriers[] deck = new DeckOuvriers().getDeck();
-        Cartes carteTest = deck[10];
+        Cartes carteTest = deck[9];
         System.out.print(carteTest);
     }
 
