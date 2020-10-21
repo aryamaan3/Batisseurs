@@ -43,9 +43,11 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier
      */
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
-        ouvrier.AffectationOuvrierAChantier(batiment.getId());
-        batiment.AffectationOuvrierAChantier(ouvrier.getId());
-
+        if(ouvrier.getAssign() == -1) { // Si l'ouvrier n'est pas déjà affecté, on peut l'affecté !
+            ouvrier.AffectationOuvrierAChantier(batiment.getId());
+            batiment.AffectationOuvrierAChantier(ouvrier.getId());
+        }
+        else{System.out.println("Cet ouvrier est déjà occupé sur le chantier n°"+ ouvrier.getAssign());}
     }
 
     /**
