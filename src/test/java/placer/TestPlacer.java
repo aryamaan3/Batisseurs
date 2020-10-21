@@ -31,7 +31,7 @@ public class TestPlacer {
         if (ouvrier.getChantier() == 1){ //on verifie si l'ouvrier est assigné au chantier
             cond++;
         }
-        if (chantier.getIdOuvrier() == 0){ //on verifie si le chantier est assigné à l'ouvrier
+        if (chantier.getIdOuvrier()[0] == 0){ //on verifie si le chantier est assigné à l'ouvrier
             cond++;
         }
         assertEquals(4, cond); // si toute les conditions sont remplis le test est validé
