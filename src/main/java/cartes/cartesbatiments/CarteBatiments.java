@@ -6,7 +6,7 @@ import cartes.findInDeck;
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
-    int id,gainEcu,gainPoints,construit,idjoueur, ouvrier;
+    private int id,gainEcu,gainPoints,construit,idjoueur, ouvrier;
     // l'avant dernier indice qui était avec false devient un int avec 0 = false, 1 = true
     public static int[][] carteBat = {{0,0,1,1,0,8,0,0,0,0,0,0,-1},
             {1,1,0,0,1,8,0,0,0,0,0,0,-1}, {2,0,2,1,0,6,1,0,0,0,0,0,-1},
@@ -86,10 +86,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     }
 
 
-    /* Méthode qui va constamment comparer les ressources du bâtiment et les ressources
-        apportaient par les ouvriers qui travaillent sur ce bâtiment.
-        Retourne un int et pas un booléen car c'était plus simple à utiliser dans le constructeur.
-        On utilise le champ "construit" => 0 si pas contruit, 1 si construit.
+    /**
+     * Méthode qui va constamment comparer les ressources du bâtiment et les ressources
+     *         apportaient par les ouvriers qui travaillent sur ce bâtiment.
+     * @return return 1 signifiant true
      */
     public int isBuilt(){
         // Compare le bois de l'objet ici (bâtiment) et le le bois de l'ouvrier qu'on trouve
@@ -102,7 +102,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getSavoir() <= findInDeck.findOuvrierInDeck(this.ouvrier).getSavoir()
         ){
             System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
-            return 1; // Return "true"
+            return 1;
         }
         return 0;
     }
