@@ -81,7 +81,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     choisirChantier(i, batiment1); //joueur choisi un chantier
 
                     System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c1.getName() + " et un chantier " + batiment1.getName());
-                    System.out.println("Sur le chantier " + batiment1.getName() + " on a l'ouvrier " + batiment1.getIdOuvrier());
+                    System.out.println("Sur le chantier " + batiment1.getName() + " on a l'ouvrier " + batiment1.getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + c1.getName() + " travail sur " + c1.getChantier());
                 }
                 if (i == 1) { //actions du joueur 2
@@ -90,7 +90,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     choisirChantier(i, batiment2); //joueur choisi un chantier
 
                     System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + c2.getName() + " et un chantier " + batiment2.getName());
-                    System.out.println("Sur le chantier " + batiment2.getName() + " on a l'ouvrier " + batiment2.getIdOuvrier());
+                    System.out.println("Sur le chantier " + batiment2.getName() + " on a l'ouvrier " + batiment2.getIdOuvrier()[0]);
                     System.out.println("L'ouvrier " + c2.getName() + " travail sur " + c2.getChantier());
                 }
 
