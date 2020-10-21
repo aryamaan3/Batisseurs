@@ -44,7 +44,7 @@ class TestCartes { //test le constructeur de cartes
     @Test
     public void TestCartesBatiments(){ //verifie création des Cartes Batiments
         int cond = 0;
-        CarteBatiments b1 = new CarteBatiments(8,"foo",0,0,0,0,0,0,0,-1, -1);
+        CarteBatiments b1 = new CarteBatiments(8,"foo",0,0,0,0,0,0);
 
         if (b1.getId() == 8){
             cond ++;
@@ -75,7 +75,7 @@ class TestCartes { //test le constructeur de cartes
     @Test
     public void TestIsBuilt(){
         CarteOuvriers ouvrierTest = new CarteOuvriers(0,"ouvrier_test",2,1,1,1,0,0,1);
-        CarteBatiments batimentTest = new CarteBatiments(1,"batiment_test",0,0,1,0,1,1,0,1, 0);
+        CarteBatiments batimentTest = new CarteBatiments(1,"batiment_test",0,0,1,0,1,1);
         DeckBatiment[0] = batimentTest;
         DeckOuvrier[0] = ouvrierTest;
         assertEquals(batimentTest.isBuilt(), 1);
