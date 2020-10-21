@@ -92,7 +92,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         On utilise le champ "construit" => 0 si pas contruit, 1 si construit.
      */
     public int isBuilt(){
-        // Compare le bois
+        // Compare le bois de l'objet ici (bâtiment) et le le bois de l'ouvrier qu'on trouve
+        // on recupere l'id ouvrier avec "this.ouvrier", on trouve l'ouvrier à la position voulu
+        // (qui pour le moment correspond à son id => à changer) dans le deckOuvrier "findInDeck.findOuvrierInDeck"
+        // maintenant qu'on a l'objet ouvrier, on peut recuperer son bois avec "getBois()"
         if( this.getBois() <= findInDeck.findOuvrierInDeck(this.ouvrier).getBois()
             &&  this.getTuile() <= findInDeck.findOuvrierInDeck(this.ouvrier).getTuile()
             &&  this.getPierre() <= findInDeck.findOuvrierInDeck(this.ouvrier).getPierre()
