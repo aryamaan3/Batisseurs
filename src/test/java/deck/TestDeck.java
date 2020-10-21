@@ -5,7 +5,13 @@ import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
+import decks.Shuffle;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class TestDeck {
@@ -24,5 +30,33 @@ public class TestDeck {
         System.out.print(carteTest);
     }
 
+    @Test
+    public void testShuffleOuvrier(){
+        CarteOuvriers[] deck = new DeckOuvriers().getDeck();
+        CarteOuvriers[] d2 = new DeckOuvriers().getDeck();
+        //Shuffle.shuffleOuvrier(deck);
+        CarteOuvriers.shuffle(deck); //on shuffle
+        int cond = 0;
+        /*System.out.println(deck[3]);
+        System.out.println(d2[3]);*/
+        if (deck[3] != d2[3] || deck[5] != d2[5] || deck[10] != d2[10]){
+            cond++; //on verifie si deck est d2 sont differenciés à au moins un des trois conditions
+        }
+        assertEquals(1, cond);
+    }
 
+    @Test
+    public void testShuffleBatiment(){
+        CarteBatiments[] deck = new DeckBatiments().getDeck();
+        CarteBatiments[] d2 = new DeckBatiments().getDeck();
+        //Shuffle.shuffleOuvrier(deck);
+        CarteBatiments.shuffle(deck); //on shuffle
+        int cond = 0;
+        /*System.out.println(deck[3]);
+        System.out.println(d2[3]);*/
+        if (deck[3] != d2[3] || deck[5] != d2[5] || deck[10] != d2[10]){
+            cond++; //on verifie si deck est d2 sont differenciés à au moins un des trois conditions
+        }
+        assertEquals(1, cond);
+    }
 }

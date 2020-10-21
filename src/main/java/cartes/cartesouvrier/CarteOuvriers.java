@@ -2,6 +2,8 @@ package cartes.cartesouvrier;
 
 import cartes.Cartes;
 
+import java.util.Random;
+
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     private int cout;
     private int idjoueur, id;
@@ -61,6 +63,17 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public String toString(){
         return "Carte ouvrier "+nom+", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)";
+    }
+
+    public static void shuffle(CarteOuvriers[] c){
+        Random gen = new Random();
+        for (int i = c.length - 1; i > 0; i--){
+            int indice = gen.nextInt(i + 1);
+            // je swap
+            CarteOuvriers a = c[indice];
+            c[indice] = c[i];
+            c[i] = a;
+        }
     }
 
     /**

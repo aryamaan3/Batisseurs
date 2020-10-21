@@ -33,4 +33,12 @@ public class DeckBatiments {
     public CarteBatiments[] getDeck(){
         return DeckBatiments;
     }
+
+    public int len(){
+        return DeckBatiments.length;
+    }
+
+    public CarteBatiments get (int i){
+        return DeckBatiments[i];
+    }
 }

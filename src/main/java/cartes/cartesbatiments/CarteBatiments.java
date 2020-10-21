@@ -1,7 +1,10 @@
 package cartes.cartesbatiments;
 
 import cartes.Cartes;
+import cartes.cartesouvrier.CarteOuvriers;
 import cartes.findInDeck;
+
+import java.util.Random;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
@@ -134,5 +137,16 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             return 1;
         }
         return 0;
+    }
+
+    public static void shuffle(CarteBatiments[] c){
+        Random gen = new Random();
+        for (int i = c.length - 1; i > 0; i--){
+            int indice = gen.nextInt(i + 1);
+            // je swap
+            CarteBatiments a = c[indice];
+            c[indice] = c[i];
+            c[i] = a;
+        }
     }
 }
