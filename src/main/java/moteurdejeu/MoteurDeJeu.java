@@ -5,6 +5,7 @@ import cartes.cartesbatiments.CarteBatiments;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
 import joueurs.Joueurs;
+import bourse.Bourse;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
 
@@ -124,6 +125,10 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j2 = new Joueurs(2);
         Joueurs j3 = new Joueurs(3);
         Joueurs j4 = new Joueurs(4);
+        Bourse BourseJ1 = new Bourse(5,1,j1.getId());
+        Bourse BourseJ2 = new Bourse(5,1,j2.getId());
+        Bourse BourseJ3 = new Bourse(5,1,j3.getId());
+        Bourse BourseJ4 = new Bourse(5,1,j4.getId());
         MoteurDeJeu m1 = new MoteurDeJeu();
         m1.deroulementJeux();
     }

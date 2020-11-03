@@ -103,7 +103,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
     /**
      * Méthode qui va sommer les ressources de tous les ouvriers présent sur un chantier
-     * @return return la somme des ressources apportaient par les ouvriers
      */
     public void sumRessources(){
         // On réinitialise les sum pour ne pas additionner les anciennes au nouvelles !
