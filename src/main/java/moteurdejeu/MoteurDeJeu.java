@@ -60,6 +60,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
+        /* A effacer si l'IA fonctionne comme il faut */
         choisirOuvrier(0, CarteOuvriersSurTable[3]); //joueur0 choisit un ouvrier
         choisirOuvrier(0, CarteOuvriersSurTable[6]); //joueur0 choisit un ouvrier
         choisirChantier(0,  CarteBatimentsSurTable[2]); //joueur0 choisit un chantier
@@ -75,6 +76,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             System.out.println("######################### Tour n°" + compteTour + "#########################");
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
+
                     System.out.println("------------------ Joueur n°" + i + "------------------");
                     System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable[3].getName() + " et un chantier " + CarteBatimentsSurTable[2].getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable[2].getName() + " on a l'ouvrier " + CarteBatimentsSurTable[2].getIdOuvrier()[0]);

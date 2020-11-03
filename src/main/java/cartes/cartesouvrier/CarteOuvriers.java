@@ -112,6 +112,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     public String getName(){
         return this.nom;
     }
+
     public static CarteOuvriers[] carteSurTable(CarteOuvriers[] c){
         CarteOuvriers[] cst = new CarteOuvriers[7];
         int i =0;
@@ -127,5 +128,24 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
             }
         }
         return cst;
+    }
+
+    /**
+     *
+     * @param idJoueur
+     * @return Retourne un tableau d'int des id de toute les cartes que le joueur possède
+     */
+    public static int[] obtenirDeckJoueur(int idJoueur, CarteOuvriers[] DeckOuvrier){
+        int[] carteDuJoueur = new int[DeckOuvrier.length];
+        // On rempli notre tableau de -1
+        java.util.Arrays.fill(carteDuJoueur, 0, DeckOuvrier.length, -1);
+        int acc = 0;
+        for(int i = 0; i< DeckOuvrier.length; i ++){
+            if(DeckOuvrier[i].getIdjoueur() == idJoueur){
+                carteDuJoueur[acc] = DeckOuvrier[i].getId();
+                acc++;
+            }
+        }
+        return carteDuJoueur;
     }
 }
