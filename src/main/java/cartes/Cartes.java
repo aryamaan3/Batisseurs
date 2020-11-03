@@ -6,7 +6,6 @@ public class Cartes { //Classe pour creer l'objet cartes
     protected String nom;
 
 
-
     public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
         this.idCart = id;
         this.bois = bois;

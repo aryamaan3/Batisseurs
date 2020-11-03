@@ -16,4 +16,13 @@ public class Bourse {
         this.idJoueur = idJoueur;
         this.ecus = pieceArgent + 5 * pieceOr;
     }
+
+    /**
+     *
+     * @param idJoueur le numéro du joueur
+     * @return le nombre d'écus que le joueur possède.
+     */
+    public int getEcus(int idJoueur){
+        return this.ecus;
+    }
 }

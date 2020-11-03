@@ -1,13 +1,13 @@
 package placer;
 
-import cartes.Cartes;
+//import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 import joueurs.Joueurs;
 import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java.util.concurrent.ThreadLocalRandom;
+//import java.util.concurrent.ThreadLocalRandom;
 
 public class TestPlacer {
    @Test
