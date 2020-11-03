@@ -35,8 +35,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         carteBatiment.AffectationChantier(id);
     }
 
-
-
     /**
      * Permet de placer un ouvrier sur un chantier
      * @param batiment
@@ -63,12 +61,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
-        Joueurs j2 = new Joueurs(2);
-        Joueurs j3 = new Joueurs(3);
-        Joueurs j4 = new Joueurs(4);
-
-
         choisirOuvrier(0, CarteOuvriersSurTable[3]); //joueur0 choisit un ouvrier
         choisirOuvrier(0, CarteOuvriersSurTable[6]); //joueur0 choisit un ouvrier
         choisirChantier(0,  CarteBatimentsSurTable[2]); //joueur0 choisit un chantier
@@ -79,7 +71,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         placerOuvrierSurChantier(CarteBatimentsSurTable[4], CarteOuvriersSurTable[4]);
         choisirOuvrier(1, CarteOuvriersSurTable[4]); //joueur2 choisit un ouvrier
         choisirChantier(1, CarteBatimentsSurTable[4]); //joueur2 choisit un chantier
-
 
 
         while (true){ //loop pour chaque tour
@@ -132,6 +123,10 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void main(String[] args) {
+        Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
+        Joueurs j2 = new Joueurs(2);
+        Joueurs j3 = new Joueurs(3);
+        Joueurs j4 = new Joueurs(4);
         MoteurDeJeu m1 = new MoteurDeJeu();
         m1.déroulementJeux();
     }
