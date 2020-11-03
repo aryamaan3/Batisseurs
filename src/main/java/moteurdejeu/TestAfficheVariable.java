@@ -8,8 +8,8 @@ import cartes.cartesouvrier.CarteOuvriers;
  */
 public class TestAfficheVariable {
     public static void main(String[] args) {
-        CarteBatiments bat = MoteurDeJeu.DeckBatiment[2];
-        CarteOuvriers ouv = MoteurDeJeu.DeckOuvrier[3];
+        CarteBatiments bat = MoteurDeJeu.DeckBatiment.get(2);
+        CarteOuvriers ouv = MoteurDeJeu.DeckOuvrier.get(3);
 
         bat.sumRessources();
 
