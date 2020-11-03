@@ -64,10 +64,10 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
         /* A effacer si l'IA fonctionne comme il faut */
         choisirOuvrier(0, CarteOuvriersSurTable.get(3)); //joueur0 choisit un ouvrier
-        choisirOuvrier(0, CarteOuvriersSurTable.get(6)); //joueur0 choisit un ouvrier
-        choisirChantier(0,  CarteBatimentsSurTable.get(2)); //joueur0 choisit un chantier
-        placerOuvrierSurChantier(CarteBatimentsSurTable.get(2), CarteOuvriersSurTable.get(3));
-        placerOuvrierSurChantier(CarteBatimentsSurTable.get(2), CarteOuvriersSurTable.get(6));
+        choisirOuvrier(0, CarteOuvriersSurTable.get(2)); //joueur0 choisit un ouvrier
+        choisirChantier(0,  CarteBatimentsSurTable.get(1)); //joueur0 choisit un chantier
+        placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(3));
+        placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(2));
 
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(4), CarteOuvriersSurTable.get(4));
         choisirOuvrier(1, CarteOuvriersSurTable.get(4)); //joueur2 choisit un ouvrier
@@ -80,22 +80,22 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 if (i == 0) { //actions du joueur 1
 
                     System.out.println("------------------ Joueur n°" + i + "------------------");
-                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(2).getName());
-                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(2).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(2).getIdOuvrier()[0]);
+                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
+                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(3).getName() + " travail sur " + CarteOuvriersSurTable.get(3).getChantier());
 
-                    int[] b = CarteBatimentsSurTable.get(2).getIdOuvrier();
-                    System.out.println("Ouvrier n°1 : "+b[0]);
-                    System.out.println("Ouvrier n°2 : "+b[1]);
-                    System.out.println("Ouvrier n°3 : "+b[2]);
+                    ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
+                    for(int j = 0; j< b.size();j++)
+                    System.out.println("Ouvrier n°"+j+" : "+b.get(j));
 
-                    CarteBatimentsSurTable.get(2).sumRessources();
-                    System.out.println(CarteBatimentsSurTable.get(2).toString());
+
+                    CarteBatimentsSurTable.get(1).sumRessources();
+                    System.out.println(CarteBatimentsSurTable.get(1).toString());
                 }
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + i + "------------------");
                     System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
-                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier()[0]);
+                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
                 }
 
@@ -108,12 +108,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 }
             }
 
-            // Condition de victoire
-            /*if(batiment1.getIdOuvrier() == c1.getId() && c1.getChantier() == batiment1.getId()){
-                System.out.println("Vous avez gagné");
-                break;
-            }*/
-            if(CarteBatimentsSurTable.get(2).isBuilt()  == 1){
+            if(CarteBatimentsSurTable.get(1).isBuilt()  == 1){
                 System.out.println("Vous avez gagné");
                 break;
             }

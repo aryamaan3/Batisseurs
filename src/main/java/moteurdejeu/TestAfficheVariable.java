@@ -3,6 +3,8 @@ package moteurdejeu;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 
+import java.util.ArrayList;
+
 /**
  * Class pour afficher librement les variables
  */
@@ -14,9 +16,9 @@ public class TestAfficheVariable {
         bat.sumRessources();
 
         System.out.println(bat.toString());
-        int[] b = bat.getIdOuvrier();
-        System.out.println("Ouvrier n°1 : "+b[0]);
-        System.out.println("Ouvrier n°2 : "+b[1]);
+        ArrayList<Integer> b = bat.getIdOuvrier();
+        System.out.println("Ouvrier n°1 : "+b.get(0));
+        System.out.println("Ouvrier n°2 : "+b.get(1));
 
         System.out.println(ouv.toString());
     }
