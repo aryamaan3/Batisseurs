@@ -78,7 +78,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public String toString(){
         return "Carte ouvrier "+nom
-                +", appartient au joueur "+idjoueur+"(-1 si il appartient à personne)"
+                +", appartient au joueur "+(idjoueur + 1)+"(-1 si il appartient à personne)"
                 +" travaille sur le batiment "+ assign+"(-1 si pas assigné)";
     }
 
