@@ -1,7 +1,5 @@
 package moteurdejeu;
 
-
-import cartes.Cartes;
 import cartes.cartesouvrier.CarteOuvriers;
 import cartes.cartesbatiments.CarteBatiments;
 import decks.DeckBatiments;
@@ -17,8 +15,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     /**
      * Choix de l'ouvrier par le joueur
-     * @param id
-     * @param ouvrier
+     * @param id id du joueur
+     * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
         ouvrier.AffectationOuvrier(id);
@@ -26,8 +24,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     /**
      * Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
-     * @param id
-     * @param carteBatiment
+     * @param id id du joueur
+     * @param carteBatiment Batiment qui va etre assigner
      */
     public static void choisirChantier(int id, CarteBatiments carteBatiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
@@ -37,8 +35,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     /**
      * Permet de placer un ouvrier sur un chantier
-     * @param batiment
-     * @param ouvrier
+     * @param batiment Batiment qui va etre assigner
+     * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
         if(ouvrier.getAssign() == -1) { // Si l'ouvrier n'est pas déjà affecté, on peut l'affecter !
@@ -51,7 +49,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     /**
      * Méthode permettant de le bon fonctionnment du jeux
      */
-    public void déroulementJeux(){
+    public void deroulementJeux(){
         int nbjoueurs = 2; //pour l'instant seulement 2 joueurs
         int compteTour = 1; //Pour compter le nombre de tour au fil de la partie
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
@@ -66,7 +64,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         choisirChantier(0,  CarteBatimentsSurTable[2]); //joueur0 choisit un chantier
         placerOuvrierSurChantier(CarteBatimentsSurTable[2], CarteOuvriersSurTable[3]);
         placerOuvrierSurChantier(CarteBatimentsSurTable[2], CarteOuvriersSurTable[6]);
-
 
         placerOuvrierSurChantier(CarteBatimentsSurTable[4], CarteOuvriersSurTable[4]);
         choisirOuvrier(1, CarteOuvriersSurTable[4]); //joueur2 choisit un ouvrier
@@ -128,7 +125,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j3 = new Joueurs(3);
         Joueurs j4 = new Joueurs(4);
         MoteurDeJeu m1 = new MoteurDeJeu();
-        m1.déroulementJeux();
+        m1.deroulementJeux();
     }
 }
 

@@ -2,8 +2,6 @@ package moteurdejeu;
 
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
-import decks.DeckBatiments;
-import moteurdejeu.MoteurDeJeu;
 
 /**
  * Class pour afficher librement les variables

@@ -2,8 +2,6 @@ package decks;
 
 import cartes.cartesouvrier.CarteOuvriers;
 
-import java.util.Random;
-
 public class DeckOuvriers {
     private CarteOuvriers[] DeckOuvriers;
 

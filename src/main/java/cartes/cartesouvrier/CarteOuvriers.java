@@ -19,7 +19,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
 
     /**
      * Méthode qui permet de changer le champ idJoueur d'un objet CarteOuvrier (initialisé à -1)
-     * @param idJoueur
+     * @param idJoueur id du joueur
      */
     public void AffectationOuvrier(int idJoueur){
         this.idjoueur = idJoueur;
@@ -66,7 +66,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
 
     /**
      * On va remplacer le champs "assign" avec l'id de la carte chantier dont l'ouvrier s'occupe
-     * @param chantier
+     * @param chantier Chantier qui va etre choisi
      */
     public void AffectationOuvrierAChantier(int chantier){
         this.assign = chantier;

@@ -1,11 +1,8 @@
 package cartes.cartesbatiments;
 
 import cartes.Cartes;
-import cartes.cartesouvrier.CarteOuvriers;
-import cartes.findInDeck;
+import cartes.FindInDeck;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
@@ -115,10 +112,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.sumTuile = 0;
         this.sumSavoir = 0;
         for (int i = 0; i < nbOuvrier; i++){
-            this.sumBois += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getBois();
-            this.sumPierre += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getPierre();
-            this.sumTuile += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getTuile();
-            this.sumSavoir += findInDeck.findOuvrierInDeck(this.ouvrier[i]).getSavoir();
+            this.sumBois += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getBois();
+            this.sumPierre += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getPierre();
+            this.sumTuile += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getTuile();
+            this.sumSavoir += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getSavoir();
             // on recupere l'id ouvrier avec "this.ouvrier", on trouve l'ouvrier à la position voulu
             // (qui pour le moment correspond à son id => à changer) dans le deckOuvrier "findInDeck.findOuvrierInDeck"
             // maintenant qu'on a l'objet ouvrier, on peut recuperer son bois avec "getBois()"
@@ -126,13 +123,13 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     }
 
     public int getSum(String type){
-        switch (type){
-            case "bois": return(this.sumBois);
-            case "pierre": return(this.sumPierre);
-            case "tuile": return(this.sumTuile);
-            case "savoir": return(this.sumSavoir);
-            default : return 0;
-        }
+        return switch (type) {
+            case "bois" -> (this.sumBois);
+            case "pierre" -> (this.sumPierre);
+            case "tuile" -> (this.sumTuile);
+            case "savoir" -> (this.sumSavoir);
+            default -> 0;
+        };
     }
 
     /**
@@ -152,7 +149,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
             // On libère nos ouvriers quand le chantier est fini
             for (int i = 0; i < nbOuvrier; i++) {
-                findInDeck.findOuvrierInDeck(this.ouvrier[i]).resetAssign();
+                FindInDeck.findOuvrierInDeck(this.ouvrier[i]).resetAssign();
             }
             return 1;
         }

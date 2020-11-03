@@ -5,10 +5,10 @@ public class Joueurs { // classe pour creer un joueur
 
     /**
      *
-     * @param id
+     * @param id id du joueur
      */
     public Joueurs (int id){
-        this.id = id;
+        Joueurs.id = id;
     }
 
     /**

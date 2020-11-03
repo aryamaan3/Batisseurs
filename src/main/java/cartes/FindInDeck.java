@@ -4,7 +4,7 @@ import cartes.cartesouvrier.CarteOuvriers;
 import decks.DeckOuvriers;
 import moteurdejeu.MoteurDeJeu;
 
-public class findInDeck {
+public class FindInDeck {
     // Classe qui permet de récupérer les objets contenus dans les decks
     // On ne demandera pas d'objet pour utiliser les méthodes de cette class
 
