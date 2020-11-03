@@ -14,6 +14,6 @@ public class Bourse {
         this.pieceArgent = pieceArgent;
         this.pieceOr = pieceOr;
         this.idJoueur = idJoueur;
-        this.ecus = 5 * pieceArgent + pieceOr;
+        this.ecus = pieceArgent + 5 * pieceOr;
     }
 }
