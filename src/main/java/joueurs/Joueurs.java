@@ -15,7 +15,7 @@ public class Joueurs { // classe pour creer un joueur
      *
      * @return L'id du joueur
      */
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
