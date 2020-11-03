@@ -93,6 +93,10 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         }
     }
 
+    /**
+     *
+     * @return Cette méthode prend aléatoirement un apprenti dans les apprentis possibles et l'assigne au joueur désiré
+     */
     public static void getApprenti(int idJoueur, CarteOuvriers[] c) {
         Random gen = new Random();
         int rand = gen.nextInt(6);
