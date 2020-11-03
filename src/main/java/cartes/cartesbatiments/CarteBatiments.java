@@ -2,6 +2,7 @@ package cartes.cartesbatiments;
 
 import cartes.Cartes;
 import cartes.FindInDeck;
+import cartes.cartesouvrier.CarteOuvriers;
 
 import java.util.Random;
 
@@ -181,6 +182,25 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             }
         }
         return cst;
+    }
+
+    /**
+     *
+     * @param idJoueur
+     * @return Retourne un tableau d'int des id de toute les cartes que le joueur possède
+     */
+    public static int[] obtenirDeckJoueur(int idJoueur, CarteBatiments[] DeckBatiment){
+        int[] carteDuJoueur = new int[DeckBatiment.length];
+        // On rempli notre tableau de -1
+        java.util.Arrays.fill(carteDuJoueur, 0, DeckBatiment.length, -1);
+        int acc = 0;
+        for(int i = 0; i< DeckBatiment.length; i ++){
+            if(DeckBatiment[i].getIdjoueur() == idJoueur){
+                carteDuJoueur[acc] = DeckBatiment[i].getId();
+                acc++;
+            }
+        }
+        return carteDuJoueur;
     }
 
 }
