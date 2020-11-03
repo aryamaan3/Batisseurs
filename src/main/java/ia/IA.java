@@ -2,8 +2,10 @@ package ia;
 
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
+import decks.DeckBatiments;
 
 import static cartes.cartesouvrier.CarteOuvriers.obtenirDeckJoueur;
+import static cartes.cartesbatiments.CarteBatiments.obtenirDeckJoueur;
 import static moteurdejeu.MoteurDeJeu.choisirOuvrier;
 import static moteurdejeu.MoteurDeJeu.choisirChantier;
 import static moteurdejeu.MoteurDeJeu.placerOuvrierSurChantier;
@@ -39,7 +41,8 @@ public class IA {
 
     public void iaAttributOuvrierAChantier(int idJoueur, CarteOuvriers[] DeckOuvrier, CarteBatiments[] DeckBatiment){
         // On veut les id des  cartes qui appartiennent au joueur
-        int [] carteDuJoueur = obtenirDeckJoueur(idJoueur, DeckOuvrier);
+        int [] carteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, DeckOuvrier);
+        int [] carteBatimentDuJoueur = obtenirDeckJoueur(idJoueur, DeckBatiment);
         //placerOuvrierSurChantier(CarteBatimentsSurTable[2], CarteOuvriersSurTable[6]);
     }
 
