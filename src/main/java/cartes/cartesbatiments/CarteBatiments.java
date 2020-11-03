@@ -178,7 +178,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
                 j++;
             } else {
                 j++;
-
             }
         }
         return cst;

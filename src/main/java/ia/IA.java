@@ -41,8 +41,25 @@ public class IA {
 
     public void iaAttributOuvrierAChantier(int idJoueur, CarteOuvriers[] DeckOuvrier, CarteBatiments[] DeckBatiment){
         // On veut les id des  cartes qui appartiennent au joueur
-        int [] carteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, DeckOuvrier);
-        int [] carteBatimentDuJoueur = obtenirDeckJoueur(idJoueur, DeckBatiment);
+        int [] idCarteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, DeckOuvrier);
+        int [] idCarteBatimentDuJoueur = obtenirDeckJoueur(idJoueur, DeckBatiment);
+        int i = 0;
+        int lenB = 0;
+        int lenO = 0;
+        while (idCarteBatimentDuJoueur[i] != -1){
+            i++;
+        }
+        lenB = i + 1;
+        i = 0;
+        while (idCarteOuvrierDuJoueur[i] != -1){
+            i++;
+        }
+        lenO = i + 1;
+        i = 0;
+        CarteBatiments[] carteBatDuJoueur = new CarteBatiments[lenB];
+        CarteOuvriers[] carteOuvDuJoueur = new CarteOuvriers[lenO];
+        placerOuvrierSurChantier(carteBatDuJoueur[0], carteOuvDuJoueur[0]);
+        placerOuvrierSurChantier(carteBatDuJoueur[0], carteOuvDuJoueur[1]);
         //placerOuvrierSurChantier(CarteBatimentsSurTable[2], CarteOuvriersSurTable[6]);
     }
 

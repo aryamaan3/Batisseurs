@@ -15,6 +15,38 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     public static CarteBatiments[] DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
     /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public CarteBatiments getCarteBatById (int idCarte, CarteBatiments[] deck){
+        CarteBatiments Carte = null;
+        for (int i = 0; i < deck.length; i++){
+            if (deck[i].getId() == idCarte){
+                Carte = deck[i];
+            }
+        }
+        return Carte;
+    }
+
+    /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public CarteOuvriers getCarteOuvById (int idCarte, CarteOuvriers[] deck){
+        CarteOuvriers Carte = null;
+        for (int i = 0; i < deck.length; i++){
+            if (deck[i].getId() == idCarte){
+                Carte = deck[i];
+            }
+        }
+        return Carte;
+    }
+
+    /**
      * Choix de l'ouvrier par le joueur
      * @param id id du joueur
      * @param ouvrier Ouvrier qui va etre assigner
