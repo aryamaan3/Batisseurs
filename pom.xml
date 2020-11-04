@@ -32,7 +32,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <javadocExecutable>C:\Program Files\Java\jdk-11.0.6/bin/javadoc</javadocExecutable>
+                    <javadocExecutable>C:\Program Files\Java\jdk-14.0.2\bin\javadoc</javadocExecutable>
                     <show>package</show>
                     <nohelp>true</nohelp>
                     <encoding>utf-8</encoding> <!-- éventuellement à changer : encodage de vos fichiers -->
@@ -41,10 +41,30 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>prepare-package</phase>
+                        <id>javadoc</id>
                         <goals>
                             <goal>javadoc</goal>
                         </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <overview>${basedir}/src/main/java/moteurdejeu/overview.html</overview>
+                            <!-- endroit où seront les fichiers html générés ! attention au .gitignore ! -->
+                            <!-- ici, c'est dans src/main/apidocs -->
+                            <outputDirectory>${basedir}/src/main/java/moteurdejeu</outputDirectory>
+                            <reportOutputDirectory>${basedir}/src/main/java/moteurdejeu</reportOutputDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>test-javadoc</id>
+                        <goals>
+                            <goal>test-javadoc</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <!-- endroit où seront les fichiers html générés ! attention au .gitignore ! -->
+                            <!-- ici, c'est dans src/test/apidocs -->
+                            <reportOutputDirectory>${basedir}/src/test/</reportOutputDirectory>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

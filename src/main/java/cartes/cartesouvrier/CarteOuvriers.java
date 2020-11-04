@@ -85,7 +85,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     }
     /**
      *
-     * @return Cette méthode prend aléatoirement un apprenti dans les apprentis possibles et l'assigne au joueur désiré
+     * Cette méthode prend aléatoirement un apprenti dans les apprentis possibles et l'assigne au joueur désiré
      * @param idJoueur le numéro du joueur auquel on assigne l'ouvrier.
      * @param c le tableau contenant les cartes apprenti.
      */
