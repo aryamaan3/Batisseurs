@@ -121,17 +121,13 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     /**
      *
      * @param idJoueur
-     * @return Retourne un tableau d'int des id de toute les cartes que le joueur possède
+     * @return Retourne un ArrayList d'int des id de toute les cartes que le joueur possède
      */
-    public static int[] obtenirDeckJoueur(int idJoueur, CarteOuvriers[] DeckOuvrier){
-        int[] carteDuJoueur = new int[DeckOuvrier.length];
-        // On rempli notre tableau de -1
-        java.util.Arrays.fill(carteDuJoueur, 0, DeckOuvrier.length, -1);
-        int acc = 0;
-        for(int i = 0; i< DeckOuvrier.length; i ++){
-            if(DeckOuvrier[i].getIdjoueur() == idJoueur){
-                carteDuJoueur[acc] = DeckOuvrier[i].getId();
-                acc++;
+    public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteOuvriers> DeckOuvrier){
+        ArrayList<Integer> carteDuJoueur = new  ArrayList<>();
+        for(int i = 0; i< carteDuJoueur.size(); i ++){
+            if(DeckOuvrier.get(i).getIdjoueur() == idJoueur){
+                carteDuJoueur.add(DeckOuvrier.get(i).getId());
             }
         }
         return carteDuJoueur;
