@@ -1,6 +1,7 @@
 package cartes.cartesouvrier;
 
 import cartes.Cartes;
+import cartes.cartesbatiments.CarteBatiments;
 
 
 import java.util.ArrayList;
@@ -132,4 +133,19 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         }
         return carteDuJoueur;
     }
+
+    /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public static CarteOuvriers getCarteOuvById (int idCarte, ArrayList<CarteOuvriers> deck){
+        CarteOuvriers Carte = null;
+        for (int i = 0; i < deck.size(); i++){
+            if (deck.get(i).getId() == idCarte){
+                Carte = deck.get(i);
+            }
+        }
+        return Carte;}
 }

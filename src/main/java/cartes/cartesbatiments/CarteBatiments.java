@@ -166,23 +166,29 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         return cst;
     }
 
-    /**
-     *
-     * @param idJoueur
-     * @return Retourne un tableau d'int des id de toute les cartes que le joueur possède
-     */
-    public static int[] obtenirDeckJoueur(int idJoueur, CarteBatiments[] DeckBatiment){
-        int[] carteDuJoueur = new int[DeckBatiment.length];
-        // On rempli notre tableau de -1
-        java.util.Arrays.fill(carteDuJoueur, 0, DeckBatiment.length, -1);
-        int acc = 0;
-        for(int i = 0; i< DeckBatiment.length; i ++){
-            if(DeckBatiment[i].getIdjoueur() == idJoueur){
-                carteDuJoueur[acc] = DeckBatiment[i].getId();
-                acc++;
+    public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
+        ArrayList<Integer> carteDuJoueur = new ArrayList<>();
+        for(int i = 0; i < DeckBatiment.size(); i ++){
+            if(DeckBatiment.get(i).getIdjoueur() == idJoueur){
+                carteDuJoueur.add(DeckBatiment.get(i).getId());
             }
         }
         return carteDuJoueur;
     }
+
+    /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public static CarteBatiments getCarteBatById (int idCarte, ArrayList<CarteBatiments> deck){
+        CarteBatiments Carte = null;
+        for (int i = 0; i < deck.size(); i++){
+            if (deck.get(i).getId() == idCarte){
+                Carte = deck.get(i);
+            }
+        }
+        return Carte;}
 
 }
