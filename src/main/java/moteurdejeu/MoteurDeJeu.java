@@ -17,11 +17,44 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     public static ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
     /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public CarteBatiments getCarteBatById (int idCarte, CarteBatiments[] deck){
+        CarteBatiments Carte = null;
+        for (int i = 0; i < deck.length; i++){
+            if (deck[i].getId() == idCarte){
+                Carte = deck[i];
+            }
+        }
+        return Carte;
+    }
+
+    /**
+     *
+     * @param idCarte
+     * @param deck
+     * @return carte qui a l'id donnée en param
+     */
+    public CarteOuvriers getCarteOuvById (int idCarte, CarteOuvriers[] deck){
+        CarteOuvriers Carte = null;
+        for (int i = 0; i < deck.length; i++){
+            if (deck[i].getId() == idCarte){
+                Carte = deck[i];
+            }
+        }
+        return Carte;
+    }
+
+    /**
      * Choix de l'ouvrier par le joueur
      * @param id id du joueur
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
+
         ouvrier.AffectationOuvrier(id);
     }
 
@@ -79,8 +112,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
 
-                    System.out.println("------------------ Joueur n°" + i + "------------------");
-                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
+                    System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
+                    System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(3).getName() + " travail sur " + CarteOuvriersSurTable.get(3).getChantier());
 
@@ -93,8 +126,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println(CarteBatimentsSurTable.get(1).toString());
                 }
                 if (i == 1) { //actions du joueur 2
-                    System.out.println("------------------ Joueur n°" + i + "------------------");
-                    System.out.println("Le joueur " + i + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
+                    System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
+                    System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
                 }
