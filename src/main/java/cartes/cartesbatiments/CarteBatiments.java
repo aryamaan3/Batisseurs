@@ -140,7 +140,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getPierre() <= this.sumPierre
             &&  this.getSavoir() <= this.sumSavoir
         ){
-            System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
+            System.out.println("Le joueur "+ (this.idjoueur) + " a terminé "+ this.getName());
 
             // On libère nos ouvriers quand le chantier est fini
             for (int i = 0; i < nbOuvrier; i++) {
