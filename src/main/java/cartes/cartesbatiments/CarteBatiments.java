@@ -178,8 +178,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
     /**
      *
-     * @param idCarte
-     * @param deck
+     * @param idCarte le numéro de la carte
+     * @param deck le deck contenant les cartes batiments
      * @return carte qui a l'id donnée en param
      */
     public static CarteBatiments getCarteBatById (int idCarte, ArrayList<CarteBatiments> deck){

@@ -121,7 +121,8 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
 
     /**
      *
-     * @param idJoueur
+     * @param idJoueur le numéro du joueur
+     * @param DeckOuvrier le deck contenant les cartes ouvriers
      * @return Retourne un ArrayList d'int des id de toute les cartes que le joueur possède
      */
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteOuvriers> DeckOuvrier){
@@ -136,8 +137,8 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
 
     /**
      *
-     * @param idCarte
-     * @param deck
+     * @param idCarte le numéro de la carte
+     * @param deck le deck contenant les cartes ouvriers
      * @return carte qui a l'id donnée en param
      */
     public static CarteOuvriers getCarteOuvById (int idCarte, ArrayList<CarteOuvriers> deck){

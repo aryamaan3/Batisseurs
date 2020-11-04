@@ -19,6 +19,7 @@ public class IA {
     /**
      * L'IA va choisir une ou plusieurs carte ouvrier parmit celles présentes dans les CartesOuvriersSurTables[]
      * @param idJoueur idDuJoueur
+     * @param nbChoix le nombre de choix que l'IA peut faire
      * @param CartesDisponibles CartesOuvriersSurTables[]
      */
     public void iaChoisitOuvrier(int idJoueur, ArrayList<CarteOuvriers> CartesDisponibles, int nbChoix){
@@ -33,6 +34,7 @@ public class IA {
     /**
      * L'IA va choisir une ou plusieurs carte chantier parmi celles présentes dans les CartesChantiersSurTables[]
      * @param idJoueur idDuJoueur
+     * @param nbChoix le nombre de choix que l'IA peut faire
      * @param CartesDisponibles CartesChantiersSurTables[]
      */
     public void iaChoisitChantier(int idJoueur, ArrayList<CarteBatiments> CartesDisponibles, int nbChoix){

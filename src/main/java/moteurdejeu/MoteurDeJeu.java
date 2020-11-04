@@ -53,6 +53,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     /**
      * Méthode permettant de le bon fonctionnment du jeux
+     * @param joueurs tableaux contenant les joueurs créés dans le main
      */
     public void deroulementJeux(Joueurs ...joueurs){
         int nbjoueurs = joueurs.length; //pour l'instant seulement 2 joueurs
