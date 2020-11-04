@@ -1,16 +1,16 @@
 package cartes.cartesbatiments;
 
 import cartes.Cartes;
-import cartes.FindInDeck;
-import cartes.cartesouvrier.CarteOuvriers;
-
+import moteurdejeu.MoteurDeJeu;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
-    int id,gainEcu,gainPoints,construit,idjoueur;
+    int gainEcu,gainPoints,construit,idjoueur;
     int []ouvrier = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};    // Tableau car on veut avoir plusieurs ouvriers sur un chantier, limite arbitraire de 10 ouvrier sur un chantier
+    ArrayList<Integer> ouvriers = new ArrayList<>();
     int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
     int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
     int ecu;
@@ -19,7 +19,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     /**
      * Constructeur de Cartes Batiment avec des valeurs par défaut (idjoueur, ouvrier et construit)
      * @param id id de la carte
-     * @param nom nom du batiments
+     * @param nom nom du batiment
      * @param pierre cout en pierre
      * @param bois cout en bois
      * @param savoir cout en savoir
@@ -29,13 +29,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public CarteBatiments(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points) {
         super(id, nom, bois, tuile, savoir, pierre);
-        this.pierre = pierre;
-        this.bois = bois;
-        this.savoir = savoir;
-        this.tuile = tuile;
         this.ecu = ecu;
         this.points = points;
-        this.id = id;
         this.construit = 0;
         this.idjoueur = -1;
     }
@@ -47,6 +42,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     public void AffectationChantier(int idJoueur){
         // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
         this.idjoueur = idJoueur;
+
     }
 
     /**
@@ -62,15 +58,15 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @return L'id de la carte
      */
     public int getId(){
-        return this.id;
+        return super.id;
     }
 
     /**
      *
      * @return L'id de l'ouvrier
      */
-    public int[] getIdOuvrier(){
-        return this.ouvrier;
+    public ArrayList<Integer> getIdOuvrier(){
+        return this.ouvriers;
     }
 
     /**
@@ -78,8 +74,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @param ouvrier ouvrier qu'on veut affecter au chantier
      */
     public void AffectationOuvrierAChantier(int ouvrier){
-        this.nbOuvrier ++;  // On incrémente ce compteur pour que le prochain ouvrier soit affecté à la bonne position
-        this.ouvrier[nbOuvrier - 1] = ouvrier;
+       ouvriers.add(ouvrier);
     }
 
     /**
@@ -99,7 +94,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @return Le nom du batiment
      */
     public String getName(){
-        return this.nom;
+        return super.nom;
     }
 
     /**
@@ -111,11 +106,11 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.sumPierre = 0;
         this.sumTuile = 0;
         this.sumSavoir = 0;
-        for (int i = 0; i < nbOuvrier; i++){
-            this.sumBois += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getBois();
-            this.sumPierre += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getPierre();
-            this.sumTuile += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getTuile();
-            this.sumSavoir += FindInDeck.findOuvrierInDeck(this.ouvrier[i]).getSavoir();
+        for (int i = 0; i < ouvriers.size(); i++){
+            this.sumBois += MoteurDeJeu.DeckOuvrier.get(this.ouvriers.get(i)).getBois();
+            this.sumPierre += MoteurDeJeu.DeckOuvrier.get(this.ouvriers.get(i)).getPierre();
+            this.sumTuile += MoteurDeJeu.DeckOuvrier.get(this.ouvriers.get(i)).getTuile();
+            this.sumSavoir += MoteurDeJeu.DeckOuvrier.get(this.ouvriers.get(i)).getSavoir();
             // on recupere l'id ouvrier avec "this.ouvrier", on trouve l'ouvrier à la position voulu
             // (qui pour le moment correspond à son id => à changer) dans le deckOuvrier "findInDeck.findOuvrierInDeck"
             // maintenant qu'on a l'objet ouvrier, on peut recuperer son bois avec "getBois()"
@@ -149,31 +144,19 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
             // On libère nos ouvriers quand le chantier est fini
             for (int i = 0; i < nbOuvrier; i++) {
-                FindInDeck.findOuvrierInDeck(this.ouvrier[i]).resetAssign();
+                MoteurDeJeu.DeckOuvrier.get(this.ouvrier[i]).resetAssign();
             }
             return 1;
         }
         return 0;
     }
-
-    public static void shuffle(CarteBatiments[] c){
-        Random gen = new Random();
-        for (int i = c.length - 1; i > 0; i--){
-            int indice = gen.nextInt(i + 1);
-            // je swap
-            CarteBatiments a = c[indice];
-            c[indice] = c[i];
-            c[i] = a;
-        }
-    }
-
-    public static CarteBatiments[] carteSurTable(CarteBatiments[] c){
-        CarteBatiments[] cst = new CarteBatiments[5];
+    public static ArrayList<CarteBatiments> carteSurTable(ArrayList<CarteBatiments> c){
+        ArrayList<CarteBatiments> cst = new ArrayList<>();
         int i =0;
         int j =0;
-        while(i< cst.length){
-            if(c[j].idjoueur==-1){
-                cst[i]=c[j];
+        while(i< 5){
+            if(c.get(j).idjoueur==-1){
+                cst.add(c.get(j));
                 i++;
                 j++;
             } else {

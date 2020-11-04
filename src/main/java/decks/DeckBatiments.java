@@ -3,9 +3,11 @@ package decks;
 
 import cartes.cartesbatiments.CarteBatiments;
 
+import java.util.ArrayList;
+
 
 public class DeckBatiments {
-    private CarteBatiments[] DeckBatiments;
+     private ArrayList<CarteBatiments> deck = new ArrayList<>();
     // l'avant dernier indice qui était avec false devient un int avec 0 = false, 1 = true
     //public CarteBatiments(int id, String nom, int gainEcu, int  gainPoints, int bois, int tuile, int savoir, int pierre)
     private static int[][] carteBat = {{0, 0, 1, 1, 0, 8, 0}, {1, 1, 0, 0, 1, 8, 0}, {2, 0, 2, 1, 0, 6, 1}, {3, 1, 0, 0, 2, 6, 1 },
@@ -21,24 +23,22 @@ public class DeckBatiments {
             "une grue", "une scie circulaire", "le pont couvert"};
 
     public DeckBatiments(){
-        DeckBatiments = new CarteBatiments[carteBat.length];
+
         for(int i=0;i<carteBat.length;i++){
-            DeckBatiments[i] = new CarteBatiments(i, carteBatName[i], carteBat[i][1], carteBat[i][2], carteBat[i][3], carteBat[i][4], carteBat[i][5], carteBat[i][6]);
-    }}
+            deck.add(new CarteBatiments(i, carteBatName[i], carteBat[i][1], carteBat[i][2], carteBat[i][3], carteBat[i][4], carteBat[i][5], carteBat[i][6]));
+        }
+        }
 
     /**
      *
      * @return Le deck batiment
      */
-    public CarteBatiments[] getDeck(){
-        return DeckBatiments;
+    public ArrayList<CarteBatiments> getDeck(){
+        return deck;
     }
 
     public int len(){
-        return DeckBatiments.length;
+        return deck.size();
     }
 
-    public CarteBatiments get (int i){
-        return DeckBatiments[i];
-    }
 }

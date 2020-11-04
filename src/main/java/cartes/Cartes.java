@@ -1,13 +1,13 @@
 package cartes;
 
-public class Cartes { //Classe pour creer l'objet cartes
+public class Cartes { //Classe mère des classes CarteBatiments et CarteOuvriers
 
-    protected int idCart,bois,tuile,savoir,pierre;
+    protected int id,bois,tuile,savoir,pierre;
     protected String nom;
 
 
     public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
-        this.idCart = id;
+        this.id = id;
         this.bois = bois;
         this.tuile = tuile;
         this.savoir = savoir;
@@ -56,7 +56,7 @@ public class Cartes { //Classe pour creer l'objet cartes
      * @return L'id d'une carte
      */
     public int getIdCarte(){
-        return idCart;
+        return id;
     }
 
     /**

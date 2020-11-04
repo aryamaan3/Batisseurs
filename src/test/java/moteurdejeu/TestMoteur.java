@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import static moteurdejeu.MoteurDeJeu.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TestMoteur {
@@ -27,25 +29,25 @@ public class TestMoteur {
 
     @Test
     void TestPlacerOuvrierSurChantier(){
-        CarteOuvriers[] OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
-        CarteBatiments[] BatTest = CarteBatiments.carteSurTable(DeckBatiment);
-        placerOuvrierSurChantier(BatTest[2], OuvTest[3]);
-        assertEquals(OuvTest[3].getAssign(),BatTest[2].getId());
+        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
+        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(DeckBatiment);
+        placerOuvrierSurChantier(BatTest.get(2), OuvTest.get(3));
+        assertEquals(OuvTest.get(3).getAssign(),BatTest.get(2).getId());
     }
 
     @Test
     void TestChoisirChantier(){
         Joueurs toto = new Joueurs(1);
-        CarteBatiments[] BatTest = CarteBatiments.carteSurTable(DeckBatiment);
-        choisirChantier(1, BatTest[3]);
-        assertEquals(toto.getId(),BatTest[3].getIdjoueur());
+        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(DeckBatiment);
+        choisirChantier(1, BatTest.get(3));
+        assertEquals(toto.getId(),BatTest.get(3).getIdjoueur());
     }
 
     @Test
     void TestChoisirOuvirier(){
         Joueurs toto = new Joueurs(1);
-        CarteOuvriers[] OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
-        choisirOuvrier(1, OuvTest[2]);
-        assertEquals(toto.getId(), OuvTest[2].getIdjoueur());
+        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
+        choisirOuvrier(1, OuvTest.get(2));
+        assertEquals(toto.getId(), OuvTest.get(2).getIdjoueur());
     }
 }

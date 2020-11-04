@@ -2,17 +2,18 @@ package cartes.cartesouvrier;
 
 import cartes.Cartes;
 
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     private int cout;
-    private int idjoueur, id;
+    private int idjoueur;
     private int assign = -1; // Constiendra l'id du chantier qu'il est en train de construire et -1 si il est libre
     
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
         this.cout = cout;
-        this.id= id;
         this.idjoueur = idjoueur;
     }
 
@@ -38,7 +39,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      * @return L'id d'une carte ouvrier
      */
     public int getId(){
-        return this.id;
+        return super.id;
     }
 
     /**
@@ -81,28 +82,16 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
                 +", appartient au joueur "+(idjoueur + 1)+"(-1 si il appartient à personne)"
                 +" travaille sur le batiment "+ assign+"(-1 si pas assigné)";
     }
-
-    public static void shuffle(CarteOuvriers[] c){
-        Random gen = new Random();
-        for (int i = c.length - 1; i > 0; i--){
-            int indice = gen.nextInt(i + 1);
-            // je swap
-            CarteOuvriers a = c[indice];
-            c[indice] = c[i];
-            c[i] = a;
-        }
-    }
-
     /**
      *
      * @return Cette méthode prend aléatoirement un apprenti dans les apprentis possibles et l'assigne au joueur désiré
      * @param idJoueur le numéro du joueur auquel on assigne l'ouvrier.
      * @param c le tableau contenant les cartes apprenti.
      */
-    public static void getApprenti(int idJoueur, CarteOuvriers[] c) {
+    public static void getApprenti(int idJoueur,  ArrayList<CarteOuvriers> c) {
         Random gen = new Random();
         int rand = gen.nextInt(6);
-        c[36+rand].AffectationOuvrier(1);
+        c.get(36+rand).AffectationOuvrier(idJoueur);
     }
     
     /**
@@ -110,21 +99,20 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      * @return Le nom de l'ouvrier
      */
     public String getName(){
-        return this.nom;
+        return super.nom;
     }
 
-    public static CarteOuvriers[] carteSurTable(CarteOuvriers[] c){
-        CarteOuvriers[] cst = new CarteOuvriers[7];
+    public static  ArrayList<CarteOuvriers> carteSurTable(ArrayList<CarteOuvriers> c){
+        ArrayList<CarteOuvriers> cst = new  ArrayList<>();
         int i =0;
         int j =0;
         while(i< 7){                        // Il y a 7 cartes pour le moment, car la 6ème carte du deck est nécessaire
-            if(c[j].getIdjoueur()==-1){     // pour valider la condition de victoire.
-                cst[i]=c[j];
+            if(c.get(j).getIdjoueur()==-1){     // pour valider la condition de victoire.
+                cst.add(c.get(j));
                 i++;
                 j++;
             } else {
                 j++;
-
             }
         }
         return cst;

@@ -1,9 +1,12 @@
 package decks;
 
+import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 
+import java.util.ArrayList;
+
 public class DeckOuvriers {
-    private CarteOuvriers[] DeckOuvriers;
+    private ArrayList<CarteOuvriers> deck = new ArrayList<>();
 
     // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
     // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
@@ -27,7 +30,6 @@ public class DeckOuvriers {
      * Pemet de créer un dec ouvrier
      */
     public DeckOuvriers() {
-        DeckOuvriers = new CarteOuvriers[carteOuv.length];
         for (int i = 0; i < carteOuv.length; i++) {
             String nom = null;
             if (carteOuv[i][1] == 1) {
@@ -42,7 +44,7 @@ public class DeckOuvriers {
             if (carteOuv[i][1] == 4) {
                 nom = "apprenti";
             }
-            DeckOuvriers[i] = new CarteOuvriers(carteOuv[i][0], nom, carteOuv[i][2], carteOuv[i][3], carteOuv[i][4], carteOuv[i][5], carteOuv[i][6], carteOuv[i][7], carteOuv[i][8]);
+            deck.add(new CarteOuvriers(carteOuv[i][0], nom, carteOuv[i][2], carteOuv[i][3], carteOuv[i][4], carteOuv[i][5], carteOuv[i][6], carteOuv[i][7], carteOuv[i][8]));
         }
     }
 
@@ -50,8 +52,8 @@ public class DeckOuvriers {
     /**
      * @return Le deck ouvrier
      */
-    public CarteOuvriers[] getDeck() {
-        return DeckOuvriers;
+    public ArrayList<CarteOuvriers> getDeck() {
+        return deck;
     }
 
 }
