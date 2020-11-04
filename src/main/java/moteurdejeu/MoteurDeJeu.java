@@ -6,8 +6,8 @@ import decks.DeckBatiments;
 import decks.DeckOuvriers;
 import joueurs.Joueurs;
 import bourse.Bourse;
-
 import java.util.ArrayList;
+import static display.Display.*;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
 
@@ -86,6 +86,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
 
+                    displayOuvriersDuJoueur(i);
+                    displayChantierDuJoueur(i);
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
