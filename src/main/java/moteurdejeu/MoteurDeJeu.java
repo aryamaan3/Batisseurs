@@ -85,12 +85,16 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     /**
      * Méthode permettant de le bon fonctionnment du jeux
      */
-    public void deroulementJeux(){
-        int nbjoueurs = 2; //pour l'instant seulement 2 joueurs
-        int compteTour = 1; //Pour compter le nombre de tour au fil de la partie
+    public void deroulementJeux(Joueurs ...joueurs){
+        int nbjoueurs = joueurs.length; //pour l'instant seulement 2 joueurs
+        int compteTour = 1; //Pour compter le nombre de tour au fil de la
+        ArrayList<Bourse> bourse = new ArrayList<>();
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
         ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
         ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
+        for(int acc = 0; acc < nbjoueurs; acc++){
+            bourse.add(new Bourse(5,1,joueurs[acc].getId()));
+        }
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
@@ -157,12 +161,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         Joueurs j2 = new Joueurs(2);
         Joueurs j3 = new Joueurs(3);
         Joueurs j4 = new Joueurs(4);
-        Bourse BourseJ1 = new Bourse(5,1,j1.getId());
-        Bourse BourseJ2 = new Bourse(5,1,j2.getId());
-        Bourse BourseJ3 = new Bourse(5,1,j3.getId());
-        Bourse BourseJ4 = new Bourse(5,1,j4.getId());
         MoteurDeJeu m1 = new MoteurDeJeu();
-        m1.deroulementJeux();
+        m1.deroulementJeux(j1,j2,j3,j4);
     }
 }
 
