@@ -13,8 +13,6 @@ public class Cartes { //Classe mère des classes CarteBatiments et CarteOuvriers
         this.savoir = savoir;
         this.pierre = pierre;
         this.nom = nom;
-
-
     }
 
 
@@ -31,9 +29,7 @@ public class Cartes { //Classe mère des classes CarteBatiments et CarteOuvriers
      *
      * @return La valeur en pierre de la carte
      */
-    public int getPierre() {
-        return pierre;
-    }
+    public int getPierre() { return pierre; }
 
     /**
      *

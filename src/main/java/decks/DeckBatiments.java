@@ -1,9 +1,11 @@
 package decks;
 
 
+import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class DeckBatiments {
@@ -25,7 +27,7 @@ public class DeckBatiments {
     public DeckBatiments(){
 
         for(int i=0;i<carteBat.length;i++){
-            deck.add(new CarteBatiments(i, carteBatName[i], carteBat[i][1], carteBat[i][2], carteBat[i][3], carteBat[i][4], carteBat[i][5], carteBat[i][6]));
+            deck.add(new CarteBatiments(carteBat[i][0], carteBatName[i], carteBat[i][1], carteBat[i][2], carteBat[i][3], carteBat[i][4], carteBat[i][5], carteBat[i][6]));
         }
         }
 

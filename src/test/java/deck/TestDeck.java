@@ -21,42 +21,12 @@ public class TestDeck {
         assertEquals("la maisonnette",carteTest.getNom());
     }
     // On fait un second test pour vérifier qu'on récupère bien les cartes dans le deck des batiments
-  @Test
+    @Test
     public void testDeckOuvriers() throws Exception {
         ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
         Cartes carteTest = deck.get(9);
       assertEquals("compagnon",carteTest.getNom());
     }
-
-    /*@Test
-    public void testShuffleOuvrier(){
-        CarteOuvriers[] deck = new DeckOuvriers().getDeck();
-        CarteOuvriers[] d2 = new DeckOuvriers().getDeck();
-        //Shuffle.shuffleOuvrier(deck);
-        CarteOuvriers.shuffle(deck); //on shuffle
-        int cond = 0;
-        System.out.println(deck[3]);
-        System.out.println(d2[3]);
-        if (deck[3] != d2[3] || deck[5] != d2[5] || deck[10] != d2[10]){
-            cond++; //on verifie si deck est d2 sont differenciés à au moins un des trois conditions
-        }
-        assertEquals(1, cond);
-    }*/
-
-    /*@Test
-    public void testShuffleBatiment(){
-        CarteBatiments[] deck = new DeckBatiments().getDeck();
-        CarteBatiments[] d2 = new DeckBatiments().getDeck();
-        //Shuffle.shuffleOuvrier(deck);
-        CarteBatiments.shuffle(deck); //on shuffle
-        int cond = 0;
-        System.out.println(deck[3]);
-        System.out.println(d2[3]);
-        if (deck[3] != d2[3] || deck[5] != d2[5] || deck[10] != d2[10]){
-            cond++; //on verifie si deck est d2 sont differenciés à au moins un des trois conditions
-        }
-        assertEquals(1, cond);
-    }*/
 
     @Test
     public void testGetApprenti(){
@@ -92,4 +62,5 @@ public class TestDeck {
             assertEquals(i,CartesBatimentSurTable.get(i).getId());
         }
     }
+
 }

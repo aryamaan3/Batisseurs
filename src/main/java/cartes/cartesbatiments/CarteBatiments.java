@@ -9,9 +9,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
 
 
     int gainEcu,gainPoints,construit,idjoueur;
-    int []ouvrier = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};    // Tableau car on veut avoir plusieurs ouvriers sur un chantier, limite arbitraire de 10 ouvrier sur un chantier
     ArrayList<Integer> ouvriers = new ArrayList<>();
-    int nbOuvrier = 0; // Compteur d'ouvriers posés sur le batiment : permet d'avoir l'indice du tableau "ouvriers[]"
     int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
     int ecu;
     int points;
@@ -132,7 +130,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      *         apportaient par les ouvriers qui travaillent sur ce bâtiment.
      * @return return 1 signifiant true
      */
-    public int isBuilt(){
+    public boolean isBuilt(){
         // Compare le bois de l'objet ici (bâtiment) et le le bois de l'ouvrier qu'on trouve
         sumRessources();
         if( this.getBois() <= this.sumBois
@@ -140,15 +138,16 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getPierre() <= this.sumPierre
             &&  this.getSavoir() <= this.sumSavoir
         ){
+            this.construit = 1;
             System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
 
             // On libère nos ouvriers quand le chantier est fini
-            for (int i = 0; i < nbOuvrier; i++) {
-                MoteurDeJeu.DeckOuvrier.get(this.ouvrier[i]).resetAssign();
+            for (int i = 0; i < ouvriers.size(); i++) {
+                MoteurDeJeu.DeckOuvrier.get(ouvriers.get(i)).resetAssign();
             }
-            return 1;
+            return true;
         }
-        return 0;
+        return false;
     }
     public static ArrayList<CarteBatiments> carteSurTable(ArrayList<CarteBatiments> c){
         ArrayList<CarteBatiments> cst = new ArrayList<>();

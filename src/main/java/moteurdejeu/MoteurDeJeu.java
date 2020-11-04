@@ -117,7 +117,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 }
             }
 
-            if(CarteBatimentsSurTable.get(1).isBuilt()  == 1){
+            if(CarteBatimentsSurTable.get(1).isBuilt()){
                 System.out.println("Vous avez gagné");
                 break;
             }

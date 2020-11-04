@@ -1,9 +1,10 @@
 package decks;
 
-import cartes.cartesbatiments.CarteBatiments;
+
 import cartes.cartesouvrier.CarteOuvriers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DeckOuvriers {
     private ArrayList<CarteOuvriers> deck = new ArrayList<>();
@@ -55,5 +56,4 @@ public class DeckOuvriers {
     public ArrayList<CarteOuvriers> getDeck() {
         return deck;
     }
-
 }

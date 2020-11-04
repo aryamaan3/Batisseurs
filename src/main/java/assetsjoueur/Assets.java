@@ -1,0 +1,46 @@
+package assetsjoueur;
+
+import cartes.cartesbatiments.CarteBatiments;
+import cartes.cartesouvrier.CarteOuvriers;
+import joueurs.Joueurs;
+
+import java.util.ArrayList;
+
+public class Assets {
+
+
+
+    public static ArrayList<CarteOuvriers> getOuvriersDisponibles(int idJoueur, ArrayList<CarteOuvriers> deck){
+        int i = 0;
+        ArrayList<CarteOuvriers> OuvriersDisponibles = new ArrayList<>();
+        while(i< deck.size()){
+            if(deck.get(i).getIdjoueur()==idJoueur && deck.get(i).getChantier()==-1){
+                OuvriersDisponibles.add(deck.get(i));
+            }
+        }
+        return OuvriersDisponibles;
+    }
+
+    public ArrayList<CarteOuvriers> getOuvriersOccupes(int idJoueur, ArrayList<CarteOuvriers> deck){
+        int i = 0;
+        ArrayList<CarteOuvriers> OuvriersOccupes = new ArrayList<>();
+        while(i< deck.size()){
+            if(deck.get(i).getIdjoueur()==idJoueur && deck.get(i).getChantier()!=-1){
+                OuvriersOccupes.add(deck.get(i));
+            }
+        }
+        return OuvriersOccupes;
+    }
+
+
+    public ArrayList<CarteBatiments> getChantiers(int idJoueur, ArrayList<CarteBatiments> deck) {
+        int i = 0;
+        ArrayList<CarteBatiments> Chantiers = new ArrayList<>();
+        while (i < deck.size()) {
+            if (deck.get(i).getIdjoueur() == idJoueur) {
+                Chantiers.add(deck.get(i));
+            }
+        }
+        return Chantiers;
+    }
+}
