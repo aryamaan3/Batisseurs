@@ -13,8 +13,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
-    public static ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
-    public static ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
+    private static ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
+    private static ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
 
     /**
@@ -109,7 +109,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 }
 
                 if (i == 2) { //actions joueur 3
-                    System.out.println("error");
+                    System.out.println("Il n'y a pas de 3ème joueur");
                 }
 
                 if (i == 3) { // actions joueur 4

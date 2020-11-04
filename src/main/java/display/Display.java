@@ -1,8 +1,16 @@
 package display;
 
+import cartes.cartesbatiments.CarteBatiments;
+import cartes.cartesouvrier.CarteOuvriers;
+import decks.DeckBatiments;
+import decks.DeckOuvriers;
 import moteurdejeu.MoteurDeJeu;
 
+import java.util.ArrayList;
+
 public class Display {
+    private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
+    private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
     /**
      *  Classe qui imprime les ouvriers d'un joueur
      * @param idJoueur id joueur
@@ -11,10 +19,10 @@ public class Display {
         // On itère sur le DeckOuvrier du moteur de jeu
         // si on trouve un ouvrier qui à un assign == idJoueur donné en paramètre : on l'imprime
         System.out.println("Le joueur " + idJoueur + " possède ce(s) ouvrier(s) :");
-        for(int i = 0; i < MoteurDeJeu.DeckOuvrier.size(); i ++){
-            if(idJoueur == MoteurDeJeu.DeckOuvrier.get(i).getIdjoueur()){
-                System.out.println(" - " + MoteurDeJeu.DeckOuvrier.get(i).getName()
-                        + " (id = " + MoteurDeJeu.DeckOuvrier.get(i).getId() + ")");
+        for(int i = 0; i < deckOuvrier.size(); i ++){
+            if(idJoueur == deckOuvrier.get(i).getIdjoueur()){
+                System.out.println(" - " + deckOuvrier.get(i).getName()
+                        + " (id = " + deckOuvrier.get(i).getId() + ")");
             }
         }
     }
@@ -27,18 +35,18 @@ public class Display {
         // On itère sur le DeckBatiment du moteur de jeu
         // si on trouve un batiment qui à un assign == idJoueur donné en paramètre : on l'imprime
         System.out.println("Le joueur " + idJoueur + " construit ce(s) chantier(s) :");
-        for(int i = 0; i < MoteurDeJeu.DeckBatiment.size(); i ++){
-            if(idJoueur == MoteurDeJeu.DeckBatiment.get(i).getIdjoueur()){
-                System.out.println(" - " + MoteurDeJeu.DeckBatiment.get(i).getName()
-                        + " (id = " + MoteurDeJeu.DeckBatiment.get(i).getId() + ")");
+        for(int i = 0; i < deckBatiment.size(); i ++){
+            if(idJoueur == deckBatiment.get(i).getIdjoueur()){
+                System.out.println(" - " + deckBatiment.get(i).getName()
+                        + " (id = " + deckBatiment.get(i).getId() + ")");
             }
         }
     }
 
     public static void displayEtatChantiersDuJoueur(int idJoueur){
-        for(int i = 0; i < MoteurDeJeu.DeckBatiment.size(); i ++){
-            if(idJoueur == MoteurDeJeu.DeckBatiment.get(i).getIdjoueur()){
-                System.out.println(MoteurDeJeu.DeckBatiment.get(i).toString());
+        for(int i = 0; i < deckBatiment.size(); i ++){
+            if(idJoueur == deckBatiment.get(i).getIdjoueur()){
+                System.out.println(deckBatiment.get(i).toString());
             }
         }
     }

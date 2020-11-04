@@ -3,6 +3,8 @@ package moteurdejeu;
 import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
+import decks.DeckBatiments;
+import decks.DeckOuvriers;
 import joueurs.Joueurs;
 import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,8 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TestMoteur {
+    private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
+    private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
     
     //@Test
     /*void TestPiocher (){
@@ -29,8 +33,8 @@ public class TestMoteur {
 
     @Test
     void TestPlacerOuvrierSurChantier(){
-        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
-        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(DeckBatiment);
+        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(deckOuvrier);
+        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(deckBatiment);
         placerOuvrierSurChantier(BatTest.get(2), OuvTest.get(3));
         assertEquals(OuvTest.get(3).getAssign(),BatTest.get(2).getId());
     }
@@ -38,7 +42,7 @@ public class TestMoteur {
     @Test
     void TestChoisirChantier(){
         Joueurs toto = new Joueurs(1);
-        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(DeckBatiment);
+        ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(deckBatiment);
         choisirChantier(1, BatTest.get(3));
         assertEquals(toto.getId(),BatTest.get(3).getIdjoueur());
     }
@@ -46,7 +50,7 @@ public class TestMoteur {
     @Test
     void TestChoisirOuvirier(){
         Joueurs toto = new Joueurs(1);
-        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(DeckOuvrier);
+        ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(deckOuvrier);
         choisirOuvrier(1, OuvTest.get(2));
         assertEquals(toto.getId(), OuvTest.get(2).getIdjoueur());
     }

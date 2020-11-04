@@ -3,6 +3,8 @@ package ia;
 //import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
+import decks.DeckBatiments;
+import decks.DeckOuvriers;
 import moteurdejeu.MoteurDeJeu;
 //import decks.DeckBatiments;
 
@@ -17,6 +19,8 @@ import static moteurdejeu.MoteurDeJeu.placerOuvrierSurChantier;
 import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
 
 public class IA {
+     private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
+     private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
     /**
      * L'IA va choisir une ou plusieurs carte ouvrier parmit celles présentes dans les CartesOuvriersSurTables[]
      * @param idJoueur idDuJoueur
@@ -24,7 +28,7 @@ public class IA {
      * @param  nbChoix
      */
     public static void iaChoisitOuvrier(int idJoueur, int nbChoix){
-        ArrayList<CarteOuvriers> CartesDisponibles = CarteOuvriers.carteSurTable(MoteurDeJeu.DeckOuvrier);
+        ArrayList<CarteOuvriers> CartesDisponibles = CarteOuvriers.carteSurTable(deckOuvrier);
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         for (int i = 0; i < nbChoix; i ++) {
             choisirOuvrier(idJoueur, CartesDisponibles.get(i));
@@ -41,7 +45,7 @@ public class IA {
      */
     public static void iaChoisitChantier(int idJoueur, int nbChoix){
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
-        ArrayList<CarteBatiments> CartesDisponibles = carteSurTable(MoteurDeJeu.DeckBatiment);
+        ArrayList<CarteBatiments> CartesDisponibles = carteSurTable(deckBatiment);
         for (int i = 0; i < nbChoix; i ++) {
             choisirChantier(idJoueur, CartesDisponibles.get(i));
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois
@@ -50,8 +54,8 @@ public class IA {
     }
 
     public static void iaAttributOuvrierAChantier(int idJoueur){
-        ArrayList<CarteOuvriers> DeckOuvrier = MoteurDeJeu.DeckOuvrier;
-        ArrayList<CarteBatiments> DeckBatiment = MoteurDeJeu.DeckBatiment;
+        ArrayList<CarteOuvriers> DeckOuvrier = deckOuvrier;
+        ArrayList<CarteBatiments> DeckBatiment = deckBatiment;
         // On veut les id des  cartes qui appartiennent au joueur
         ArrayList<Integer> idCarteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, DeckOuvrier);
         ArrayList<Integer> idCarteBatimentDuJoueur = obtenirDeckJoueur(idJoueur, DeckBatiment);

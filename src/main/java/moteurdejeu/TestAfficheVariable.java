@@ -2,6 +2,8 @@ package moteurdejeu;
 
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
+import decks.DeckBatiments;
+import decks.DeckOuvriers;
 
 import java.util.ArrayList;
 
@@ -9,9 +11,13 @@ import java.util.ArrayList;
  * Class pour afficher librement les variables
  */
 public class TestAfficheVariable {
+    private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
+    private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
+
     public static void main(String[] args) {
-        CarteBatiments bat = MoteurDeJeu.DeckBatiment.get(2);
-        CarteOuvriers ouv = MoteurDeJeu.DeckOuvrier.get(3);
+
+        CarteBatiments bat = deckBatiment.get(2);
+        CarteOuvriers ouv = deckOuvrier.get(3);
 
         bat.sumRessources();
 
