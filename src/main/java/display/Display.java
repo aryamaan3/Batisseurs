@@ -43,6 +43,10 @@ public class Display {
         }
     }
 
+    /**
+     * Classe qui affiche l'etat des chantiers d'un joueur
+     * @param idJoueur
+     */
     public static void displayEtatChantiersDuJoueur(int idJoueur){
         for(int i = 0; i < deckBatiment.size(); i ++){
             if(idJoueur == deckBatiment.get(i).getIdjoueur()){

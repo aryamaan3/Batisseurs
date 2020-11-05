@@ -74,6 +74,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         this.assign = chantier;
     }
 
+
     /**
      *
      * @return Une phrase informant le joueur sur les ouvriers qu'il possède
