@@ -1,14 +1,15 @@
 package joueurs;
 
 public class Joueurs { // classe pour creer un joueur
-    private static int id;
+    private static  int id;
+
 
     /**
      *
      * @param id id du joueur
      */
     public Joueurs (int id){
-        Joueurs.id = id;
+        this.id = id;
     }
 
     /**

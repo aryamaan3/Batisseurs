@@ -91,13 +91,13 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(3).getName() + " travail sur " + CarteOuvriersSurTable.get(3).getChantier());
                     */
-                    displayOuvriersDuJoueur(i);
-                    displayChantierDuJoueur(i);
+                    displayOuvriersDuJoueur(i,DeckOuvrier);
+                    displayChantierDuJoueur(i,DeckBatiment);
 
                     //ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
                     CarteBatimentsSurTable.get(1).sumRessources();
                     // Il faudra peut etre faire le sumRessources dans le display ?
-                    displayEtatChantiersDuJoueur(i);
+                    displayEtatChantiersDuJoueur(i,DeckBatiment);
                 }
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
@@ -105,11 +105,11 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
                      */
-                    displayOuvriersDuJoueur(i);
-                    displayChantierDuJoueur(i);
+                    displayOuvriersDuJoueur(i,DeckOuvrier);
+                    displayChantierDuJoueur(i,DeckBatiment);
 
                     CarteBatimentsSurTable.get(1).sumRessources();
-                    displayEtatChantiersDuJoueur(i);
+                    displayEtatChantiersDuJoueur(i,DeckBatiment);
 
                 }
 
