@@ -23,7 +23,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
-
         ouvrier.AffectationOuvrier(id);
     }
 
@@ -62,6 +61,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
         ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
         ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
+
         for(int acc = 0; acc < nbjoueurs; acc++){
             bourse.add(new Bourse(5,1,joueurs[acc].getId()));
         }
@@ -83,27 +83,34 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
         while (true){ //loop pour chaque tour
             System.out.println("######################### Tour n°" + compteTour + "#########################");
-            for (int i = 1; i <= nbjoueurs; i++) { //actions de chaque joueur
-                if (i == 1) { //actions du joueur 1
-                    System.out.println("------------------Joueur n°" + (i) + "------------------");
-                    System.out.println("Le joueur " + (i) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
-                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " le joueur " + i + " place l'ouvrier " + CarteOuvriersSurTable.get(3).getName());
+            for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
+                if (i == 0) { //actions du joueur 1
+                    System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
+                    /* A supprimer si display marche bien
+                    System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
+                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
+                    System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(3).getName() + " travail sur " + CarteOuvriersSurTable.get(3).getChantier());
+                    */
+                    displayOuvriersDuJoueur(i);
+                    displayChantierDuJoueur(i);
 
-                    /*ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
-                    for(int j = 0; j< b.size();j++)
-                    System.out.println("Ouvrier n°"+j+" : "+b.get(j));*/
+                    //ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
+                    CarteBatimentsSurTable.get(1).sumRessources();
+                    // Il faudra peut etre faire le sumRessources dans le display ?
+                    displayEtatChantiersDuJoueur(i);
+                }
+                if (i == 1) { //actions du joueur 2
+                    System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
+                    /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
+                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
+                    System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
+                     */
+                    displayOuvriersDuJoueur(i);
+                    displayChantierDuJoueur(i);
 
                     CarteBatimentsSurTable.get(1).sumRessources();
-                    System.out.println(CarteBatimentsSurTable.get(1).toString() + "\n");
-                }
+                    displayEtatChantiersDuJoueur(i);
 
-                if (i == 2) { //actions du joueur 2
-                    System.out.println("------------------ Joueur n°" + (i) + "------------------");
-                    System.out.println("Le joueur " + (i) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
-                    System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " le joueur " + i + " place l'ouvrier " + CarteOuvriersSurTable.get(4).getName());
-
-                    CarteBatimentsSurTable.get(4).sumRessources();
-                    System.out.println(CarteBatimentsSurTable.get(4).toString() + "\n");
                 }
 
                 if (i == 3) { //actions joueur 3
