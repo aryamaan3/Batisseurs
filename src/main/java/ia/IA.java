@@ -5,6 +5,7 @@ import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
+import org.fusesource.jansi.AnsiConsole;
 import moteurdejeu.MoteurDeJeu;
 //import decks.DeckBatiments;
 
@@ -21,6 +22,10 @@ import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
 public class IA {
      private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
      private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
+
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     /**
      * L'IA va choisir une ou plusieurs carte ouvrier parmit celles présentes dans les CartesOuvriersSurTables[]
      * @param idJoueur idDuJoueur
@@ -46,6 +51,7 @@ public class IA {
     public static void iaChoisitChantier(int idJoueur, int nbChoix){
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         ArrayList<CarteBatiments> CartesDisponibles = carteSurTable(deckBatiment);
+        System.out.println(ANSI_BLUE + "On est bien dans iaChoisitChantier"+ANSI_RESET);
         for (int i = 0; i < nbChoix; i ++) {
             choisirChantier(idJoueur, CartesDisponibles.get(i));
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois

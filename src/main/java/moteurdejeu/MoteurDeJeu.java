@@ -4,13 +4,15 @@ import cartes.cartesouvrier.CarteOuvriers;
 import cartes.cartesbatiments.CarteBatiments;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
+import display.Couleur;
 import joueurs.Joueurs;
 import bourse.Bourse;
 import java.util.ArrayList;
 import static display.Display.*;
+import static display.Couleur.*;
+import static ia.IA.iaChoisitOuvrier;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
-
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
     private static ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
@@ -72,6 +74,8 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         /* A effacer si l'IA fonctionne comme il faut */
         choisirOuvrier(0, CarteOuvriersSurTable.get(3)); //joueur0 choisit un ouvrier
         choisirOuvrier(0, CarteOuvriersSurTable.get(2)); //joueur0 choisit un ouvrier
+        //iaChoisitOuvrier(0, 2);
+
         choisirChantier(0,  CarteBatimentsSurTable.get(1)); //joueur0 choisit un chantier
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(3));
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(2));
@@ -82,7 +86,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
 
         while (true){ //loop pour chaque tour
-            System.out.println("######################### Tour n°" + compteTour + "#########################");
+            System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
@@ -125,7 +129,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             }
 
             if(CarteBatimentsSurTable.get(1).isBuilt()){
-                System.out.println("Le joueur 1 a fini un batiment, il a donc gagné");
+                System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"Le joueur 1 a fini un batiment, il a donc gagné"+ANSI_RESET);
                 System.out.println("#########################--FIN DE LA PARTIE--#########################");
                 break;
             }
@@ -137,6 +141,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void main(String[] args) {
+        System.out.println(ANSI_BLUE + "On est bien dans iaChoisitChantier"+ANSI_RESET);
         Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
         Joueurs j2 = new Joueurs(2);
         Joueurs j3 = new Joueurs(3);
