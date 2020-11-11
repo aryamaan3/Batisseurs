@@ -4,7 +4,6 @@ import cartes.cartesouvrier.CarteOuvriers;
 import cartes.cartesbatiments.CarteBatiments;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
-import display.Couleur;
 import joueurs.Joueurs;
 import bourse.Bourse;
 import java.util.ArrayList;
@@ -141,7 +140,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void main(String[] args) {
-        System.out.println(ANSI_BLUE + "On est bien dans iaChoisitChantier"+ANSI_RESET);
         Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
         Joueurs j2 = new Joueurs(2);
         Joueurs j3 = new Joueurs(3);

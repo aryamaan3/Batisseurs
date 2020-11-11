@@ -18,13 +18,11 @@ import static moteurdejeu.MoteurDeJeu.choisirOuvrier;
 import static moteurdejeu.MoteurDeJeu.choisirChantier;
 import static moteurdejeu.MoteurDeJeu.placerOuvrierSurChantier;
 import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
+import static display.Couleur.*;
 
 public class IA {
      private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
      private static ArrayList<CarteBatiments> deckBatiment= new DeckBatiments().getDeck();
-
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_RESET = "\u001B[0m";
 
     /**
      * L'IA va choisir une ou plusieurs carte ouvrier parmit celles présentes dans les CartesOuvriersSurTables[]
@@ -59,6 +57,11 @@ public class IA {
         }
     }
 
+    /**
+     * Permet l'attribution d'un ouvrier à un chantier (que le joueur possède)
+     * en fonction du choix de l'IA
+     * @param idJoueur id du joueur
+     */
     public static void iaAttributOuvrierAChantier(int idJoueur){
         ArrayList<CarteOuvriers> DeckOuvrier = deckOuvrier;
         ArrayList<CarteBatiments> DeckBatiment = deckBatiment;
@@ -79,6 +82,10 @@ public class IA {
         //return carteBatDuJoueur;
     }
 
+    /**
+     * Permet d'executer l'ensemble des méthodes de cette class en un appel de méthode
+     * @param idJoueur id du joueur
+     */
     public static void  ActionsIA(int idJoueur){
         iaChoisitOuvrier(idJoueur,3);
         iaChoisitChantier(idJoueur, 1);

@@ -153,6 +153,12 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
         return false;
     }
+
+    /**
+     *
+     * @param c Collection de carte batiment
+     * @return
+     */
     public static ArrayList<CarteBatiments> carteSurTable(ArrayList<CarteBatiments> c){
         ArrayList<CarteBatiments> cst = new ArrayList<>();
         int i =0;
@@ -169,6 +175,12 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         return cst;
     }
 
+    /**
+     * Permet d'obtenir une collection des cartes qu'un joueur possède
+     * @param idJoueur id joueur
+     * @param DeckBatiment DeckBatiment du main
+     * @return
+     */
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
         ArrayList<Integer> carteDuJoueur = new ArrayList<>();
         for(int i = 0; i < DeckBatiment.size(); i ++){

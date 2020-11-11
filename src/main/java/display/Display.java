@@ -45,7 +45,7 @@ public class Display {
 
     /**
      * Classe qui affiche l'etat des chantiers d'un joueur
-     * @param idJoueur
+     * @param idJoueur id joueur
      */
     public static void displayEtatChantiersDuJoueur(int idJoueur, ArrayList<CarteBatiments> deckBatiment){
         for(int i = 0; i < deckBatiment.size(); i ++){
