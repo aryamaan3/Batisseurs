@@ -2,7 +2,7 @@ package bourse;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import bourse.Bourse;
+import joueurs.Bourse;
 
 public class TestBourse {
 

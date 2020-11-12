@@ -1,23 +1,22 @@
-package ia;
+package joueurs;
 
 //import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
-import cartes.cartesouvrier.CarteOuvriers;
-import decks.DeckBatiments;
-import decks.DeckOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.ouvrier.CarteOuvriers;
+import cartes.batiments.DeckBatiments;
+import cartes.ouvrier.DeckOuvriers;
 //import org.fusesource.jansi.AnsiConsole;
-import moteurdejeu.MoteurDeJeu;
-//import decks.DeckBatiments;
+//import cartes.batiments.DeckBatiments;
 
 import java.util.ArrayList;
 
-import static cartes.cartesbatiments.CarteBatiments.*;
-import static cartes.cartesouvrier.CarteOuvriers.obtenirDeckJoueur;
-import static cartes.cartesbatiments.CarteBatiments.obtenirDeckJoueur;
+import static cartes.batiments.CarteBatiments.*;
+import static cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur;
+import static cartes.batiments.CarteBatiments.obtenirDeckJoueur;
 import static moteurdejeu.MoteurDeJeu.choisirOuvrier;
 import static moteurdejeu.MoteurDeJeu.choisirChantier;
 import static moteurdejeu.MoteurDeJeu.placerOuvrierSurChantier;
-import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
+import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Couleur.*;
 
 public class IA {

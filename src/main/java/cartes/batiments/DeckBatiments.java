@@ -1,11 +1,9 @@
-package decks;
+package cartes.batiments;
 
 
-import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
+import cartes.batiments.CarteBatiments;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class DeckBatiments {

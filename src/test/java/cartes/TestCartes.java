@@ -1,10 +1,9 @@
 package cartes;
 
-import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
-import cartes.cartesouvrier.CarteOuvriers;
-import decks.DeckBatiments;
-import decks.DeckOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.ouvrier.CarteOuvriers;
+import cartes.batiments.DeckBatiments;
+import cartes.ouvrier.DeckOuvriers;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

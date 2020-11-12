@@ -1,8 +1,8 @@
 package placer;
 
 //import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
-import cartes.cartesouvrier.CarteOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.ouvrier.CarteOuvriers;
 import joueurs.Joueurs;
 import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;

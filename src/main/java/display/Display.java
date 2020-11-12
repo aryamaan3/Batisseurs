@@ -1,8 +1,8 @@
 package display;
 
 import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
-import cartes.cartesouvrier.CarteOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.ouvrier.CarteOuvriers;
 
 import java.util.ArrayList;
 

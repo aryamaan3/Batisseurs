@@ -1,10 +1,9 @@
-package decks;
+package cartes.ouvrier;
 
 
-import cartes.cartesouvrier.CarteOuvriers;
+import cartes.ouvrier.CarteOuvriers;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class DeckOuvriers {
     private ArrayList<CarteOuvriers> deck = new ArrayList<>();

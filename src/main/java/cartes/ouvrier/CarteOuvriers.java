@@ -1,7 +1,7 @@
-package cartes.cartesouvrier;
+package cartes.ouvrier;
 
 import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
+import cartes.batiments.CarteBatiments;
 
 
 import java.util.ArrayList;

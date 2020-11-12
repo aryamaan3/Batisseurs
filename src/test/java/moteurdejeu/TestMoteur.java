@@ -1,9 +1,9 @@
 package moteurdejeu;
 
-import cartes.cartesbatiments.CarteBatiments;
-import cartes.cartesouvrier.CarteOuvriers;
-import decks.DeckBatiments;
-import decks.DeckOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.ouvrier.CarteOuvriers;
+import cartes.batiments.DeckBatiments;
+import cartes.ouvrier.DeckOuvriers;
 import joueurs.Joueurs;
 import org.junit.jupiter.api.Test;
 

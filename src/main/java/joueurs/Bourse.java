@@ -1,4 +1,4 @@
-package bourse;
+package joueurs;
 
 public class Bourse {
      private int pieceArgent, pieceOr, ecus, idJoueur;

@@ -1,18 +1,18 @@
 package moteurdejeu;
 
-import cartes.cartesouvrier.CarteOuvriers;
-import cartes.cartesbatiments.CarteBatiments;
-import decks.DeckBatiments;
-import decks.DeckOuvriers;
+import cartes.ouvrier.CarteOuvriers;
+import cartes.batiments.CarteBatiments;
+import cartes.batiments.DeckBatiments;
+import cartes.ouvrier.DeckOuvriers;
 import joueurs.Joueurs;
-import bourse.Bourse;
+import joueurs.Bourse;
 import java.util.ArrayList;
 
-import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
+import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Display.*;
 import static display.Couleur.*;
-import static ia.IA.iaChoisitChantier;
-import static ia.IA.iaChoisitOuvrier;
+import static joueurs.IA.iaChoisitChantier;
+import static joueurs.IA.iaChoisitOuvrier;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]

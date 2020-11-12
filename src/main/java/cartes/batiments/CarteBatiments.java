@@ -1,8 +1,8 @@
-package cartes.cartesbatiments;
+package cartes.batiments;
 
 import cartes.Cartes;
-import cartes.cartesouvrier.CarteOuvriers;
-import decks.DeckOuvriers;
+import cartes.ouvrier.CarteOuvriers;
+import cartes.ouvrier.DeckOuvriers;
 
 import java.util.ArrayList;
 
