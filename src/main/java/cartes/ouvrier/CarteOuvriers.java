@@ -81,7 +81,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public String toString(){
         return "Carte ouvrier "+nom
-                +", appartient au joueur "+(idJoueur + 1)+"(-1 si il appartient à personne)"
+                +", appartient au joueur "+(idJoueur)+"(-1 si il appartient à personne)"
                 +" travaille sur le batiment "+ assign+"(-1 si pas assigné)";
     }
     /**
@@ -128,7 +128,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteOuvriers> DeckOuvrier){
         ArrayList<Integer> carteDuJoueur = new  ArrayList<>();
-        for(int i = 0; i< carteDuJoueur.size(); i ++){
+        for(int i = 0; i< DeckOuvrier.size(); i ++){
             if(DeckOuvrier.get(i).getIdJoueur() == idJoueur){
                 carteDuJoueur.add(DeckOuvrier.get(i).getId());
             }

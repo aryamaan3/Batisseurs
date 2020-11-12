@@ -4,15 +4,16 @@ import cartes.ouvrier.CarteOuvriers;
 import cartes.batiments.CarteBatiments;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.DeckOuvriers;
+import joueurs.IA;
 import joueurs.Joueurs;
 import joueurs.Bourse;
 import java.util.ArrayList;
 
+import static cartes.batiments.CarteBatiments.getCarteBatById;
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Display.*;
 import static display.Couleur.*;
-import static joueurs.IA.iaChoisitChantier;
-import static joueurs.IA.iaChoisitOuvrier;
+import joueurs.IA.*;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
@@ -27,7 +28,6 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
-        System.out.println(ANSI_RED+"L'ouvrier "+ ouvrier.getId()+" va etre attribué au joueur "+id+ANSI_RESET);
         ouvrier.AffectationOuvrier(id);
     }
 
@@ -76,21 +76,15 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        /* A effacer si l'IA fonctionne comme il faut */
-        //choisirOuvrier(0, CarteOuvriersSurTable.get(3)); //joueur0 choisit un ouvrier
-        //choisirOuvrier(0, CarteOuvriersSurTable.get(2)); //joueur0 choisit un ouvrier
-        iaChoisitOuvrier(0, 2);
+        // On créer un objet IA
+        IA notreIA = new IA(DeckOuvrier, DeckBatiment);
 
-        choisirChantier(0,  CarteBatimentsSurTable.get(1)); //joueur0 choisit un chantier
-        placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(3));
-        placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(2));
 
-        placerOuvrierSurChantier(CarteBatimentsSurTable.get(4), CarteOuvriersSurTable.get(4));
-        //choisirOuvrier(1, CarteOuvriersSurTable.get(4)); //joueur2 choisit un ouvrier
-        iaChoisitOuvrier(1, 1);
-        choisirChantier(1, CarteBatimentsSurTable.get(4)); //joueur2 choisit un chantier
+        notreIA.iaChoisitOuvrier(0, 2);
+        notreIA.iaChoisitChantier(0, 1);
+        notreIA.iaAttributOuvrierAChantier(0);
 
-        System.out.println(ANSI_RED+ getCarteOuvById(0, DeckOuvrier).getIdJoueur() +ANSI_RESET);
+        notreIA.ActionsIA(1);
 
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
@@ -107,7 +101,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                     displayChantierDuJoueur(i,DeckBatiment);
 
                     //ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
-                    CarteBatimentsSurTable.get(1).sumRessources();
+                    CarteBatimentsSurTable.get(0).sumRessources();
                     // Il faudra peut etre faire le sumRessources dans le display ?
                     displayEtatChantiersDuJoueur(i,DeckBatiment);
                 }
@@ -137,7 +131,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
             }
 
             if(CarteBatimentsSurTable.get(1).isBuilt()){
-                System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"Le joueur 1 a fini un batiment, il a donc gagné"+ANSI_RESET);
+                System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"Le joueur a fini un batiment, il a donc gagné"+ANSI_RESET);
                 System.out.println("#########################--FIN DE LA PARTIE--#########################");
                 break;
             }
