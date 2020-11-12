@@ -11,46 +11,56 @@ import java.util.ArrayList;
 
 public class DeckOuvriers {
     private ArrayList<CarteOuvriers> deck = new ArrayList<>();
-
-    // le deuxième indice sert le type d'ouvrier pour l'instant 1 = maitre et 2 = compagnon
     // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
     // sinon l'id du batiment auquel il est assigné
-    private static int[][] carteOuv = {{0, 1, 5, 0, 0, 2, 3, -1, -1}, {1, 1, 5, 2, 0, 0, 3, -1, -1}, {2, 1, 5, 3, 0, 0, 2, -1, -1},
-            {3, 1, 5, 3, 2, 0, 0, -1, -1}, {4, 1, 5, 0, 3, 2, 0, -1, -1}, {5, 1, 5, 2, 3, 0, 0, -1, -1}, {6, 1, 5, 0, 2, 3, 0, -1, -1},
-            {7, 1, 5, 0, 0, 3, 2, -1, -1}, {8, 2, 4, 3, 1, 0, 0, -1, -1}, {9, 2, 4, 0, 0, 1, 3, -1, -1},
-            {10, 2, 4, 1, 0, 3, 0, -1, -1}, {11, 2, 4, 0, 3, 0, 1, -1, -1}, {12, 2, 4, 2, 0, 0, 2, -1, -1},
-            {13, 2, 4, 2, 2, 0, 0, -1, -1}, {14, 2, 4, 2, 0, 2, 0, -1, -1}, {15, 2, 4, 0, 2, 0, 2, -1, -1},
-            {16, 2, 4, 0, 2, 2, 0, -1, -1}, {17, 2, 4, 0, 0, 2, 2, -1, -1}, {18, 2, 4, 0, 1, 1, 2, -1, -1},
-            {19, 2, 4, 2, 1, 1, 0, -1, -1}, {20, 2, 4, 1, 2, 0, 1, -1, -1}, {21, 2, 4, 1, 0, 2, 1, -1, -1},
-            {22, 2, 4, 1, 1, 1, 1, -1, -1}, {23, 2, 4, 1, 1, 1, 1, -1, -1}, {24, 3, 3, 0, 0, 2, 1, -1, -1},
-            {25, 3, 3, 1, 0, 2, 0, -1, -1}, {26, 3, 3, 0, 1, 2, 0, -1, -1}, {27, 3, 3, 1, 2, 0, 0, -1, -1},
-            {28, 3, 3, 0, 2, 0, 1, -1, -1}, {29, 3, 3, 0, 2, 1, 0, -1, -1}, {30, 3, 3, 1, 0, 0, 2, -1, -1},
-            {31, 3, 3, 1, 0, 0, 2, -1, -1}, {32, 3, 3, 0, 0, 1, 2, -1, -1}, {33, 3, 3, 2, 0, 0, 1, -1, -1},
-            {34, 3, 3, 2, 0, 1, 1, -1, -1}, {35, 3, 3, 2, 1, 0, 0, -1, -1}, {36, 4, 2, 0, 0, 1, 1, -1, -1},
-            {37, 4, 2, 0, 1, 1, 0, -1, -1}, {38, 4, 2, 0, 1, 0, 1, -1, -1}, {39, 4, 2, 1, 0, 1, 0, -1, -1},
-            {40, 4, 2, 1, 1, 0, 0, -1, -1}, {41, 4, 2, 1, 0, 0, 1, -1, -1}};
-
-    /**
+        /**
      * Pemet de créer un dec ouvrier
      */
     public DeckOuvriers() {
-        for (int i = 0; i < carteOuv.length; i++) {
-            String nom = null;
-            if (carteOuv[i][1] == 1) {
-                nom = "maitre";
-            }
-            if (carteOuv[i][1] == 2) {
-                nom = "compagnon";
-            }
-            if (carteOuv[i][1] == 3) {
-                nom = "manoeuvre";
-            }
-            if (carteOuv[i][1] == 4) {
-                nom = "apprenti";
-            }
-            deck.add(new CarteOuvriers(carteOuv[i][0], nom, carteOuv[i][2], carteOuv[i][3], carteOuv[i][4], carteOuv[i][5], carteOuv[i][6], carteOuv[i][7], carteOuv[i][8]));
-        }
+            deck.add(new CarteOuvriers(0, "maitre", 5, 0, 0, 2, 3, -1, -1));
+            deck.add(new CarteOuvriers(1, "maitre", 5, 2, 0, 0, 3, -1, -1));
+            deck.add(new CarteOuvriers(2, "maitre", 5, 3, 0, 0, 2, -1, -1));
+            deck.add(new CarteOuvriers(3, "maitre", 5, 3, 2, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(4, "maitre", 5, 0, 3, 2, 0, -1, -1));
+            deck.add(new CarteOuvriers(5, "maitre", 5, 2, 3, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(6, "maitre", 5, 0, 2, 3, 0, -1, -1));
+            deck.add(new CarteOuvriers(7, "maitre", 5, 0, 0, 3, 2, -1, -1));
+            deck.add(new CarteOuvriers(8, "compagnon", 4, 3, 1, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(9, "compagnon", 4, 0, 0, 1, 3, -1, -1));
+            deck.add(new CarteOuvriers(10, "compagnon", 4, 1, 0, 3, 0, -1, -1));
+            deck.add(new CarteOuvriers(11, "compagnon", 4, 0, 3, 0, 1, -1, -1));
+            deck.add(new CarteOuvriers(12, "compagnon", 4, 2, 0, 0, 2, -1, -1));
+            deck.add(new CarteOuvriers(13, "compagnon", 4, 2, 2, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(14, "compagnon", 4, 2, 0, 2, 0, -1, -1));
+            deck.add(new CarteOuvriers(15, "compagnon", 4, 0, 2, 0, 2, -1, -1));
+            deck.add(new CarteOuvriers(16, "compagnon", 4, 0, 2, 2, 0, -1, -1));
+            deck.add(new CarteOuvriers(17, "compagnon", 4, 0, 0, 2, 2, -1, -1));
+            deck.add(new CarteOuvriers(18, "compagnon", 4, 0, 1, 1, 2, -1, -1));
+            deck.add(new CarteOuvriers(19, "compagnon", 4, 2, 1, 1, 0, -1, -1));
+            deck.add(new CarteOuvriers(20, "compagnon", 4, 1, 2, 0, 1, -1, -1));
+            deck.add(new CarteOuvriers(21, "compagnon", 4, 1, 0, 2, 1, -1, -1));
+            deck.add(new CarteOuvriers(22, "compagnon", 4, 1, 1, 1, 1, -1, -1));
+            deck.add(new CarteOuvriers(23, "compagnon", 4, 1, 1, 1, 1, -1, -1));
+            deck.add(new CarteOuvriers(24, "manœuvre", 3, 0, 0, 2, 1, -1, -1));
+            deck.add(new CarteOuvriers(25, "manœuvre", 3, 1, 0, 2, 0, -1, -1));
+            deck.add(new CarteOuvriers(26, "manœuvre", 3, 0, 1, 2, 0, -1, -1));
+            deck.add(new CarteOuvriers(27, "manœuvre", 3, 1, 2, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(28, "manœuvre", 3, 0, 2, 0, 1, -1, -1));
+            deck.add(new CarteOuvriers(29, "manœuvre", 3, 0, 2, 1, 0, -1, -1));
+            deck.add(new CarteOuvriers(30, "manœuvre", 3, 1, 0, 0, 2, -1, -1));
+            deck.add(new CarteOuvriers(31, "manœuvre", 3, 1, 0, 0, 2, -1, -1));
+            deck.add(new CarteOuvriers(32, "manœuvre", 3, 0, 0, 1, 2, -1, -1));
+            deck.add(new CarteOuvriers(33, "manœuvre", 3, 2, 0, 0, 1, -1, -1));
+            deck.add(new CarteOuvriers(34, "manœuvre", 3, 2, 0, 1, 1, -1, -1));
+            deck.add(new CarteOuvriers(35, "manœuvre", 3, 2, 1, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(36, "manœuvre", 2, 0, 0, 1, 1, -1, -1));
+            deck.add(new CarteOuvriers(37, "manœuvre", 2, 0, 1, 1, 0, -1, -1));
+            deck.add(new CarteOuvriers(38, "manœuvre", 2, 0, 1, 0, 1, -1, -1));
+            deck.add(new CarteOuvriers(39, "manœuvre", 2, 1, 0, 1, 0, -1, -1));
+            deck.add(new CarteOuvriers(40, "manœuvre", 2, 1, 1, 0, 0, -1, -1));
+            deck.add(new CarteOuvriers(41, "manœuvre", 2, 1, 0, 0, 1, -1, -1));
     }
+
 
 
     /**

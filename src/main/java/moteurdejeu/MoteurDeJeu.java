@@ -23,8 +23,8 @@ import joueurs.IA.*;
 public class MoteurDeJeu { //Controle le deroulement du jeu
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
-    private static ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
-    private static ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
+    private  ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
+    private  ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
 
 
     /**
