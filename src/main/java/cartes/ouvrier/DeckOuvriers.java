@@ -5,6 +5,10 @@ import cartes.ouvrier.CarteOuvriers;
 
 import java.util.ArrayList;
 
+/**
+ * Classe qui permet de créer le deck contenant les cartes ouvriers
+ */
+
 public class DeckOuvriers {
     private ArrayList<CarteOuvriers> deck = new ArrayList<>();
 

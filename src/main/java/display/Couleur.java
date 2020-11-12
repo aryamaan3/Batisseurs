@@ -2,6 +2,10 @@ package display;
 
 // import org.fusesource.jansi.AnsiConsole;
 
+/**
+ * Classe qui permet l'ajout de couleur dans le terminal
+ */
+
 public class Couleur {
     // Si les couleurs ne s'affichent pas pour les utilisateurs windows : utiliser la library jansi
     //AnsiConsole.systemInstall(); // permet d'avoir des sorties textuelles colorées

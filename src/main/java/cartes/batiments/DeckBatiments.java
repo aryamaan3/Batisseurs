@@ -5,6 +5,9 @@ import cartes.batiments.CarteBatiments;
 
 import java.util.ArrayList;
 
+/**
+ * Classe qui permet la création du deck contenant les cartes bâtiments
+ */
 
 public class DeckBatiments {
      private ArrayList<CarteBatiments> deck = new ArrayList<>();

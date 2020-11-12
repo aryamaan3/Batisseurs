@@ -1,5 +1,9 @@
 package cartes;
 
+/**
+ * La classe Cartes contient des méthodes générales sur les cartes (ouvriers et batiments)
+ */
+
 public class Cartes { //Classe mère des classes CarteBatiments et CarteOuvriers
 
     protected int id,bois,tuile,savoir,pierre;
