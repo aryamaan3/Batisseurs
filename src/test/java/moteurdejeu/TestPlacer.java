@@ -1,4 +1,4 @@
-package placer;
+package moteurdejeu;
 
 //import cartes.Cartes;
 import cartes.batiments.CarteBatiments;

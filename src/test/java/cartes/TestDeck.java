@@ -1,4 +1,4 @@
-package deck;
+package cartes;
 
 import cartes.Cartes;
 import cartes.batiments.CarteBatiments;

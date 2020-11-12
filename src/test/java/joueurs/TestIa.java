@@ -1,4 +1,4 @@
-package ia;
+package joueurs;
 
 public class TestIa {
 }
