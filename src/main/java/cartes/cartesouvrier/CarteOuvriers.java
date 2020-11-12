@@ -1,7 +1,6 @@
 package cartes.cartesouvrier;
 
 import cartes.Cartes;
-import cartes.cartesbatiments.CarteBatiments;
 
 
 import java.util.ArrayList;
@@ -9,13 +8,13 @@ import java.util.Random;
 
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     private int cout;
-    private int idjoueur;
+    private int idJoueur;
     private int assign = -1; // Constiendra l'id du chantier qu'il est en train de construire et -1 si il est libre
     
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile, int assign,int idjoueur) {
         super(id, nom , bois, tuile, savoir, pierre);
         this.cout = cout;
-        this.idjoueur = idjoueur;
+        this.idJoueur = idjoueur;
     }
 
 
@@ -24,15 +23,15 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      * @param idJoueur id du joueur
      */
     public void AffectationOuvrier(int idJoueur){
-        this.idjoueur = idJoueur;
+        this.idJoueur = idJoueur;
     }
 
     /**
      *
      * @return L'id d'un joueur
      */
-    public int getIdjoueur(){
-        return this.idjoueur;
+    public int getIdJoueur(){
+        return this.idJoueur;
     }
 
     /**
@@ -81,7 +80,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public String toString(){
         return "Carte ouvrier "+nom
-                +", appartient au joueur "+(idjoueur + 1)+"(-1 si il appartient à personne)"
+                +", appartient au joueur "+(idJoueur + 1)+"(-1 si il appartient à personne)"
                 +" travaille sur le batiment "+ assign+"(-1 si pas assigné)";
     }
     /**
@@ -109,7 +108,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         int i =0;
         int j =0;
         while(i< 7){                        // Il y a 7 cartes pour le moment, car la 6ème carte du deck est nécessaire
-            if(c.get(j).getIdjoueur()==-1){     // pour valider la condition de victoire.
+            if(c.get(j).getIdJoueur()==-1){     // pour valider la condition de victoire.
                 cst.add(c.get(j));
                 i++;
                 j++;
@@ -129,7 +128,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteOuvriers> DeckOuvrier){
         ArrayList<Integer> carteDuJoueur = new  ArrayList<>();
         for(int i = 0; i< carteDuJoueur.size(); i ++){
-            if(DeckOuvrier.get(i).getIdjoueur() == idJoueur){
+            if(DeckOuvrier.get(i).getIdJoueur() == idJoueur){
                 carteDuJoueur.add(DeckOuvrier.get(i).getId());
             }
         }

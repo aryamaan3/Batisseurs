@@ -18,13 +18,13 @@ public class TestPlacer {
         MoteurDeJeu jeu = new MoteurDeJeu();
         jeu.choisirChantier (j1.getId(), chantier); //on donne au j1 la carte chantier
         int cond = 0;
-        if (chantier.getIdjoueur()==1){ //on regarde si la carte chantier appartient au joueur
+        if (chantier.getIdJoueur()==1){ //on regarde si la carte chantier appartient au joueur
             cond++;
         }
         assertEquals(1, cond);
         CarteOuvriers ouvrier = new CarteOuvriers(0,"ouvrier",2,1,3,4,1,0,-1);
         jeu.choisirOuvrier(j1.getId(), ouvrier); //on donne au j1 la carte ouvrier
-        if (ouvrier.getIdjoueur() == 1){ //on regarde si la carte ouvrier appartient à j1
+        if (ouvrier.getIdJoueur() == 1){ //on regarde si la carte ouvrier appartient à j1
             cond++;
         }
 

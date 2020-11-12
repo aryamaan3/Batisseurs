@@ -37,7 +37,7 @@ public class TestDeck {
 
         for(int i = 36; i < 42; i++){
             System.out.println(deck.get(i));
-            if(deck.get(i).getIdjoueur() == 1){
+            if(deck.get(i).getIdJoueur() == 1){
 
                 cond++;
             }

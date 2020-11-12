@@ -1,19 +1,16 @@
 package moteurdejeu;
 
-import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 import decks.DeckBatiments;
 import decks.DeckOuvriers;
 import joueurs.Joueurs;
-import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;
 
 import static moteurdejeu.MoteurDeJeu.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class TestMoteur {
     private static ArrayList<CarteOuvriers> deckOuvrier = new DeckOuvriers().getDeck();
@@ -44,7 +41,7 @@ public class TestMoteur {
         Joueurs toto = new Joueurs(1);
         ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(deckBatiment);
         choisirChantier(1, BatTest.get(3));
-        assertEquals(toto.getId(),BatTest.get(3).getIdjoueur());
+        assertEquals(toto.getId(),BatTest.get(3).getIdJoueur());
     }
 
     @Test
@@ -52,6 +49,6 @@ public class TestMoteur {
         Joueurs toto = new Joueurs(1);
         ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(deckOuvrier);
         choisirOuvrier(1, OuvTest.get(2));
-        assertEquals(toto.getId(), OuvTest.get(2).getIdjoueur());
+        assertEquals(toto.getId(), OuvTest.get(2).getIdJoueur());
     }
 }

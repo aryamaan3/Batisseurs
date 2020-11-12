@@ -1,7 +1,7 @@
 package bourse;
 
 public class Bourse {
-    int pieceArgent, pieceOr, ecus, idJoueur;
+     private int pieceArgent, pieceOr, ecus, idJoueur;
 
     /**
      * Constructeur de la Bourse, on récupère les pièces d'argent et d'or pour créer le nombre d'écus.

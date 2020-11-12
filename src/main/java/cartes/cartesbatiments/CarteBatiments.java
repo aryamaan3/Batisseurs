@@ -3,19 +3,18 @@ package cartes.cartesbatiments;
 import cartes.Cartes;
 import cartes.cartesouvrier.CarteOuvriers;
 import decks.DeckOuvriers;
-import moteurdejeu.MoteurDeJeu;
+
 import java.util.ArrayList;
-import java.util.Random;
 
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
-    private int gainEcu,gainPoints,construit,idjoueur;
+    private int gainEcu,gainPoints,construit, idJoueur;
     private ArrayList<Integer> ouvriers = new ArrayList<>();
     private int sumBois = 0, sumPierre = 0, sumTuile=0, sumSavoir=0;
     private int ecu;
     private int points;
-    ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
+    private ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
 
     /**
      * Constructeur de Cartes Batiment avec des valeurs par défaut (idjoueur, ouvrier et construit)
@@ -33,7 +32,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         this.ecu = ecu;
         this.points = points;
         this.construit = 0;
-        this.idjoueur = -1;
+        this.idJoueur = -1;
     }
 
     /**
@@ -42,7 +41,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      */
     public void AffectationChantier(int idJoueur){
         // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
-        this.idjoueur = idJoueur;
+        this.idJoueur = idJoueur;
 
     }
 
@@ -50,8 +49,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      *
      * @return L'id du joueur
      */
-    public int getIdjoueur(){
-        return this.idjoueur;
+    public int getIdJoueur(){
+        return this.idJoueur;
     }
 
     /**
@@ -83,7 +82,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @return Une phrase informant le joueur sur les batiments qu'il possède
      */
     public String toString(){
-        return "\nCarte Batiment "+nom+", appartient au joueur "+(idjoueur+1)+", ressources présentes : "
+        return "\nCarte Batiment "+nom+", appartient au joueur "+(idJoueur +1)+", ressources présentes : "
                 + "\n - bois : " + this.sumBois + "  (besoin : "+ this.bois +")"
                 + "\n - pierre : " + this.sumPierre + "  (besoin : "+ this.pierre +")"
                 + "\n - tuile : " + this.sumTuile + "    (besoin : "+ this.tuile +")"
@@ -143,7 +142,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getSavoir() <= this.sumSavoir
         ){
             this.construit = 1;
-            System.out.println("Le joueur "+ (this.idjoueur + 1) + " a terminé "+ this.getName());
+            System.out.println("Le joueur "+ (this.idJoueur + 1) + " a terminé "+ this.getName());
 
             // On libère nos ouvriers quand le chantier est fini
             for (int i = 0; i < ouvriers.size(); i++) {
@@ -164,7 +163,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         int i =0;
         int j =0;
         while(i< 5){
-            if(c.get(j).idjoueur==-1){
+            if(c.get(j).idJoueur ==-1){
                 cst.add(c.get(j));
                 i++;
                 j++;
@@ -184,7 +183,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
         ArrayList<Integer> carteDuJoueur = new ArrayList<>();
         for(int i = 0; i < DeckBatiment.size(); i ++){
-            if(DeckBatiment.get(i).getIdjoueur() == idJoueur){
+            if(DeckBatiment.get(i).getIdJoueur() == idJoueur){
                 carteDuJoueur.add(DeckBatiment.get(i).getId());
             }
         }

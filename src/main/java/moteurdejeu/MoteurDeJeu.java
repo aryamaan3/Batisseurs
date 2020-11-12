@@ -30,12 +30,12 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     /**
      * Permet à un joueur de choisir une carteBatiment d'assigner le champs "idJoueur" de carteBatiment (qui est initialisé à -1 au début)
      * @param id id du joueur
-     * @param carteBatiment Batiment qui va etre assigner
+     * @param Batiment Batiment qui va etre assigner
      */
-    public static void choisirChantier(int id, CarteBatiments carteBatiment){
+    public static void choisirChantier(int id, CarteBatiments Batiment){
         // [13] correspond à l'indice du champ idJoueur de la carteBatiment
         // [0] correspond à la première carte (n°0) qui devrait aussi etre la carteBatiment dont l'id est 0
-        carteBatiment.AffectationChantier(id);
+        Batiment.AffectationChantier(id);
     }
 
     /**
@@ -60,12 +60,14 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         int compteTour = 1; //Pour compter le nombre de tour au fil de la
         ArrayList<Bourse> bourse = new ArrayList<>();
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
-        ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
-        ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
 
         for(int acc = 0; acc < nbjoueurs; acc++){
             bourse.add(new Bourse(5,1,joueurs[acc].getId()));
         }
+        ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
+        ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
+
+
 
         System.out.println("Il y a "+nbjoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");

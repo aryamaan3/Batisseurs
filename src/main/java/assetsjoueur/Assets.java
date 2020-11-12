@@ -2,7 +2,6 @@ package assetsjoueur;
 
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
-import joueurs.Joueurs;
 
 import java.util.ArrayList;
 
@@ -14,7 +13,7 @@ public class Assets {
         int i = 0;
         ArrayList<CarteOuvriers> OuvriersDisponibles = new ArrayList<>();
         while(i< deck.size()){
-            if(deck.get(i).getIdjoueur()==idJoueur && deck.get(i).getChantier()==-1){
+            if(deck.get(i).getIdJoueur()==idJoueur && deck.get(i).getChantier()==-1){
                 OuvriersDisponibles.add(deck.get(i));
             }
         }
@@ -25,7 +24,7 @@ public class Assets {
         int i = 0;
         ArrayList<CarteOuvriers> OuvriersOccupes = new ArrayList<>();
         while(i< deck.size()){
-            if(deck.get(i).getIdjoueur()==idJoueur && deck.get(i).getChantier()!=-1){
+            if(deck.get(i).getIdJoueur()==idJoueur && deck.get(i).getChantier()!=-1){
                 OuvriersOccupes.add(deck.get(i));
             }
         }
@@ -37,7 +36,7 @@ public class Assets {
         int i = 0;
         ArrayList<CarteBatiments> Chantiers = new ArrayList<>();
         while (i < deck.size()) {
-            if (deck.get(i).getIdjoueur() == idJoueur) {
+            if (deck.get(i).getIdJoueur() == idJoueur) {
                 Chantiers.add(deck.get(i));
             }
         }
