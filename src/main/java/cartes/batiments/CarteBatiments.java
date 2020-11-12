@@ -122,15 +122,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
     }
 
-    public int getSum(String type){
-        return switch (type) {
-            case "bois" -> (this.sumBois);
-            case "pierre" -> (this.sumPierre);
-            case "tuile" -> (this.sumTuile);
-            case "savoir" -> (this.sumSavoir);
-            default -> 0;
-        };
-    }
 
     /**
      * Méthode qui va constamment comparer les ressources du bâtiment et les ressources
@@ -146,7 +137,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getSavoir() <= this.sumSavoir
         ){
             this.construit = 1;
-            System.out.println("Le joueur "+ (this.idJoueur + 1) + " a terminé "+ this.getName());
+            //System.out.println("Le joueur "+ (this.idJoueur + 1) + " a terminé "+ this.getName());
 
             // On libère nos ouvriers quand le chantier est fini
             for (int i = 0; i < ouvriers.size(); i++) {

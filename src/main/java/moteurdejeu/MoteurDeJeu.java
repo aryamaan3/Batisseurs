@@ -31,7 +31,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
-        System.out.println(ANSI_RED+"L'ouvrier "+ ouvrier.getId()+" va etre attribué au joueur "+id+ANSI_RESET);
+        //System.out.println(ANSI_RED+"L'ouvrier "+ ouvrier.getId()+" va etre attribué au joueur "+id+ANSI_RESET); //le systemoutprintln s'affiche lors des tests
         ouvrier.AffectationOuvrier(id);
     }
 

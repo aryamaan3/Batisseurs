@@ -40,7 +40,7 @@ class TestCartes { //test le constructeur de cartes
             cond++;
         }
         assertEquals(6, cond);
-        //assertEquals("test", test);
+
     }
 
     @Test
