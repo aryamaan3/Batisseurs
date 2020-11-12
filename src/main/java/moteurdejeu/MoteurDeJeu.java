@@ -83,19 +83,13 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         // On créer un objet IA
         IA notreIA = new IA(DeckOuvrier, DeckBatiment);
 
-
-        notreIA.iaChoisitOuvrier(0, 2);
-        notreIA.iaChoisitChantier(0, 1);
-        notreIA.iaAttributOuvrierAChantier(0);
-
-        notreIA.ActionsIA(1);
-
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             displayCarteDispo(CarteOuvriersSurTable, CarteBatimentsSurTable);
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
+                    notreIA.ActionsIA(i);
                     /* A supprimer si display marche bien
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
@@ -111,6 +105,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 }
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
+                    notreIA.ActionsIA(i);
                     /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
