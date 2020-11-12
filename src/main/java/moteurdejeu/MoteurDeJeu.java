@@ -10,6 +10,7 @@ import joueurs.Bourse;
 import java.util.ArrayList;
 
 import static cartes.batiments.CarteBatiments.getCarteBatById;
+import static cartes.batiments.CarteBatiments.obtenirDeckJoueur;
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Display.*;
 import static display.Couleur.*;
@@ -83,6 +84,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         // On créer un objet IA
         IA notreIA = new IA(DeckOuvrier, DeckBatiment);
 
+        a:
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             displayCarteDispo(CarteOuvriersSurTable, CarteBatimentsSurTable);
@@ -129,16 +131,25 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
                 }
             }
 
-            if(CarteBatimentsSurTable.get(1).isBuilt()){
-                System.out.println(ANSI_GREEN_BACKGROUND+ANSI_BLACK+"Le joueur a fini un batiment, il a donc gagné"+ANSI_RESET);
-                System.out.println("#########################--FIN DE LA PARTIE--#########################");
-                break;
+            ArrayList<Integer> enConstruction = new ArrayList<Integer>();
+            enConstruction = obtenirDeckJoueur(0, DeckBatiment);
+            for (int k = 0; k < obtenirDeckJoueur(1, DeckBatiment).size(); k++) {
+                enConstruction.add(obtenirDeckJoueur(1, DeckBatiment).get(k));
+            }
+            b:
+            for (int j = 0; j < enConstruction.size(); j++) {
+                if (getCarteBatById(enConstruction.get(j), DeckBatiment).isBuilt()) {
+                    System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK + "Le joueur "+ (getCarteBatById(enConstruction.get(j), DeckBatiment).getIdJoueur()+1)+ " a fini un batiment, il a donc gagné" + ANSI_RESET);
+                    System.out.println("#########################--FIN DE LA PARTIE--#########################");
+                    break a;
+                }
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
 
             if (compteTour > 20){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
-        }
+            }
+
     }
 
     public static void main(String[] args) {
