@@ -31,13 +31,23 @@ public class IA {
      * @param  nbChoix
      */
     public static void iaChoisitOuvrier(int idJoueur, int nbChoix){
+        System.out.println(ANSI_BLUE+"L'ia choisit un/des ouvrier(s) pour le joueur "+idJoueur+ANSI_RESET);
         ArrayList<CarteOuvriers> CartesDisponibles = CarteOuvriers.carteSurTable(deckOuvrier);
+        System.out.println(ANSI_BLUE+
+                "Carte dispo [0] (dont id="+ CartesDisponibles.get(0).getId() +") = "+CartesDisponibles.get(0)
+                + "\nCarte dispo [1] (dont id=" + CartesDisponibles.get(1).getId() + ") = "+CartesDisponibles.get(1)
+                + "\nCarte dispo [2] (dont id="+ CartesDisponibles.get(2).getId() +") = "+CartesDisponibles.get(2)
+                +ANSI_RESET);
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         for (int i = 0; i < nbChoix; i ++) {
             choisirOuvrier(idJoueur, CartesDisponibles.get(i));
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois
              puisse que CartesDisponibles est censé se MAJ en focntion de l'assign */
         }
+        System.out.println(ANSI_BLUE+ getCarteOuvById(0, deckOuvrier).getIdJoueur() +ANSI_RESET);
+        System.out.println(ANSI_BLUE+ getCarteOuvById(1, deckOuvrier).getIdJoueur() +ANSI_RESET);
+        System.out.println(ANSI_BLUE+ getCarteOuvById(2, deckOuvrier).getIdJoueur() +ANSI_RESET);
+        // Affectation vérifiée ! Tout ok
     }
 
     /**
@@ -49,7 +59,6 @@ public class IA {
     public static void iaChoisitChantier(int idJoueur, int nbChoix){
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         ArrayList<CarteBatiments> CartesDisponibles = carteSurTable(deckBatiment);
-        System.out.println(ANSI_BLUE + "On est bien dans iaChoisitChantier"+ANSI_RESET);
         for (int i = 0; i < nbChoix; i ++) {
             choisirChantier(idJoueur, CartesDisponibles.get(i));
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois

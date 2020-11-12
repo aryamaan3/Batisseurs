@@ -7,8 +7,11 @@ import decks.DeckOuvriers;
 import joueurs.Joueurs;
 import bourse.Bourse;
 import java.util.ArrayList;
+
+import static cartes.cartesouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Display.*;
 import static display.Couleur.*;
+import static ia.IA.iaChoisitChantier;
 import static ia.IA.iaChoisitOuvrier;
 
 public class MoteurDeJeu { //Controle le deroulement du jeu
@@ -24,6 +27,7 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void choisirOuvrier(int id, CarteOuvriers ouvrier){
+        System.out.println(ANSI_RED+"L'ouvrier "+ ouvrier.getId()+" va etre attribué au joueur "+id+ANSI_RESET);
         ouvrier.AffectationOuvrier(id);
     }
 
@@ -73,21 +77,24 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
         System.out.println("Debut du jeu...");
 
         /* A effacer si l'IA fonctionne comme il faut */
-        choisirOuvrier(0, CarteOuvriersSurTable.get(3)); //joueur0 choisit un ouvrier
-        choisirOuvrier(0, CarteOuvriersSurTable.get(2)); //joueur0 choisit un ouvrier
-        //iaChoisitOuvrier(0, 2);
+        //choisirOuvrier(0, CarteOuvriersSurTable.get(3)); //joueur0 choisit un ouvrier
+        //choisirOuvrier(0, CarteOuvriersSurTable.get(2)); //joueur0 choisit un ouvrier
+        iaChoisitOuvrier(0, 2);
 
         choisirChantier(0,  CarteBatimentsSurTable.get(1)); //joueur0 choisit un chantier
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(3));
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(1), CarteOuvriersSurTable.get(2));
 
         placerOuvrierSurChantier(CarteBatimentsSurTable.get(4), CarteOuvriersSurTable.get(4));
-        choisirOuvrier(1, CarteOuvriersSurTable.get(4)); //joueur2 choisit un ouvrier
+        //choisirOuvrier(1, CarteOuvriersSurTable.get(4)); //joueur2 choisit un ouvrier
+        iaChoisitOuvrier(1, 1);
         choisirChantier(1, CarteBatimentsSurTable.get(4)); //joueur2 choisit un chantier
 
+        System.out.println(ANSI_RED+ getCarteOuvById(0, DeckOuvrier).getIdJoueur() +ANSI_RESET);
 
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
+            displayCarteDispo(CarteOuvriersSurTable, CarteBatimentsSurTable);
             for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");

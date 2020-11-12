@@ -1,15 +1,21 @@
 package display;
 
+import cartes.Cartes;
 import cartes.cartesbatiments.CarteBatiments;
 import cartes.cartesouvrier.CarteOuvriers;
 
 import java.util.ArrayList;
 
+import static display.Couleur.*;
+
+/**
+ * Class qui permet l'affichage en System.out.println des différents objets
+ */
+
 public class Display {
 
-
     /**
-     *  Classe qui imprime les ouvriers d'un joueur
+     *  Méthode qui imprime les ouvriers d'un joueur
      * @param idJoueur id joueur
      */
     public static void displayOuvriersDuJoueur(int idJoueur, ArrayList<CarteOuvriers> deckOuvrier){
@@ -25,7 +31,7 @@ public class Display {
     }
 
     /**
-     *  Classe qui imprime les chantiers d'un joueur
+     *  Méthode qui imprime les chantiers d'un joueur
      * @param idJoueur id joueur
      */
     public static void displayChantierDuJoueur(int idJoueur, ArrayList<CarteBatiments> deckBatiment){
@@ -41,7 +47,7 @@ public class Display {
     }
 
     /**
-     * Classe qui affiche l'etat des chantiers d'un joueur
+     * Méthode qui affiche l'etat des chantiers d'un joueur
      * @param idJoueur id joueur
      */
     public static void displayEtatChantiersDuJoueur(int idJoueur, ArrayList<CarteBatiments> deckBatiment){
@@ -50,5 +56,22 @@ public class Display {
                 System.out.println(deckBatiment.get(i).toString());
             }
         }
+    }
+
+    /**
+     * Imprime dans l'invite de commande l'état des cartes à piocher (toutes les cartes disponibles, ouvrier ou chantier)
+     * @param ouvriersDispo Ouvriers Disponibles
+     * @param chantiersDispo  Chantiers disponibles
+     */
+    public static void displayCarteDispo(ArrayList<CarteOuvriers> ouvriersDispo, ArrayList<CarteBatiments> chantiersDispo){
+        System.out.print(ANSI_GREEN + "Cartes ouvriers disponibles :"+ ANSI_RESET);
+        for(int i = 0; i < ouvriersDispo.size(); i ++){
+                System.out.print(" " + ouvriersDispo.get(i).getName() + "(id=" + ouvriersDispo.get(i).getId() + ")");
+        }
+        System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :"+ ANSI_RESET);
+        for(int i = 0; i < chantiersDispo.size(); i ++){
+            System.out.print(" " + chantiersDispo.get(i).getName());
+        }
+        System.out.println(); // Juste pour un retour à la ligne
     }
 }

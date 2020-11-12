@@ -1,6 +1,7 @@
 package cartes.cartesouvrier;
 
 import cartes.Cartes;
+import cartes.cartesbatiments.CarteBatiments;
 
 
 import java.util.ArrayList;
