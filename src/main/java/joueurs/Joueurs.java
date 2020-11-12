@@ -1,5 +1,8 @@
 package joueurs;
 
+/**
+ * La classe Joueurs nous permet de créer les joueurs et d'avoir son numéro.
+ */
 public class Joueurs { // classe pour creer un joueur
     private static  int id;
 

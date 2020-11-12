@@ -19,6 +19,10 @@ import static moteurdejeu.MoteurDeJeu.placerOuvrierSurChantier;
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Couleur.*;
 
+/**
+ * La classe IA contient les méthodes qui permettent à l'IA de faire des choix et de jouer
+ */
+
 public class IA {
     ArrayList<CarteOuvriers> deckOuvrier;
     ArrayList<CarteBatiments> deckBatiment;
@@ -32,7 +36,6 @@ public class IA {
      * L'IA va choisir une ou plusieurs carte ouvrier parmit celles présentes dans les CartesOuvriersSurTables[]
      * @param idJoueur idDuJoueur
      * @param nbChoix le nombre de choix que l'IA peut faire
-     * @param  nbChoix
      */
     public void iaChoisitOuvrier(int idJoueur, int nbChoix){
         ArrayList<CarteOuvriers> CartesDisponibles = CarteOuvriers.carteSurTable(deckOuvrier);
@@ -53,7 +56,6 @@ public class IA {
      * L'IA va choisir une ou plusieurs carte chantier parmi celles présentes dans les CartesChantiersSurTables[]
      * @param idJoueur idDuJoueur
      * @param nbChoix le nombre de choix que l'IA peut faire
-     * @param nbChoix
      */
     public void iaChoisitChantier(int idJoueur, int nbChoix){
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])

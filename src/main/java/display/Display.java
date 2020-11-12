@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import static display.Couleur.*;
 
 /**
- * Class qui permet l'affichage en System.out.println des différents objets
+ * Classe qui permet l'affichage en System.out.println des différents objets
  */
 
 public class Display {
@@ -17,6 +17,7 @@ public class Display {
     /**
      *  Méthode qui imprime les ouvriers d'un joueur
      * @param idJoueur id joueur
+     * @param deckOuvrier Arraylist contenant les cartes ouvriers
      */
     public static void displayOuvriersDuJoueur(int idJoueur, ArrayList<CarteOuvriers> deckOuvrier){
         // On itère sur le DeckOuvrier du moteur de jeu
@@ -33,6 +34,7 @@ public class Display {
     /**
      *  Méthode qui imprime les chantiers d'un joueur
      * @param idJoueur id joueur
+     * @param deckBatiment ArrayList contenant les cartes batiments
      */
     public static void displayChantierDuJoueur(int idJoueur, ArrayList<CarteBatiments> deckBatiment){
         // On itère sur le DeckBatiment du moteur de jeu
@@ -49,6 +51,7 @@ public class Display {
     /**
      * Méthode qui affiche l'etat des chantiers d'un joueur
      * @param idJoueur id joueur
+     * @param deckBatiment ArrayList contenant les cartes batiments
      */
     public static void displayEtatChantiersDuJoueur(int idJoueur, ArrayList<CarteBatiments> deckBatiment){
         for(int i = 0; i < deckBatiment.size(); i ++){

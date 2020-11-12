@@ -15,6 +15,10 @@ import static display.Display.*;
 import static display.Couleur.*;
 import joueurs.IA.*;
 
+/**
+ * La classe MoteurDeJeu nous permet le déroulement du jeu
+ */
+
 public class MoteurDeJeu { //Controle le deroulement du jeu
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs

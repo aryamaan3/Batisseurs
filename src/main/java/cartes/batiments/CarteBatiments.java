@@ -6,6 +6,10 @@ import cartes.ouvrier.DeckOuvriers;
 
 import java.util.ArrayList;
 
+/**
+ * CarteBatiments contient des méthodes permettant la gestion des cartes batiments
+ */
+
 public class CarteBatiments extends Cartes { //Implemente les carte Batiments heritant Cartes
 
 
@@ -118,15 +122,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
     }
 
-    public int getSum(String type){
-        return switch (type) {
-            case "bois" -> (this.sumBois);
-            case "pierre" -> (this.sumPierre);
-            case "tuile" -> (this.sumTuile);
-            case "savoir" -> (this.sumSavoir);
-            default -> 0;
-        };
-    }
 
     /**
      * Méthode qui va constamment comparer les ressources du bâtiment et les ressources
@@ -154,9 +149,9 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     }
 
     /**
-     *
+     * Méthode retournant les 5 cartes se trouvant sur le plateau
      * @param c Collection de carte batiment
-     * @return
+     * @return ArrayList des 5 cartes sur le plateau
      */
     public static ArrayList<CarteBatiments> carteSurTable(ArrayList<CarteBatiments> c){
         ArrayList<CarteBatiments> cst = new ArrayList<>();
@@ -175,10 +170,10 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     }
 
     /**
-     * Permet d'obtenir une collection des cartes qu'un joueur possède
+     * Permet d'obtenir une collection des cartes batiments qu'un joueur possède
      * @param idJoueur id joueur
      * @param DeckBatiment DeckBatiment du main
-     * @return
+     * @return ArrayList contenant les batiments que le joueur possède
      */
     public static ArrayList<Integer> obtenirDeckJoueur(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
         ArrayList<Integer> carteDuJoueur = new ArrayList<>();

@@ -1,5 +1,9 @@
 package joueurs;
 
+/**
+ * La classe Bourse permet de créer une bourse pour chaque joueur et de savoir les écus qu'ils possèdent
+ */
+
 public class Bourse {
      private int pieceArgent, pieceOr, ecus, idJoueur;
 

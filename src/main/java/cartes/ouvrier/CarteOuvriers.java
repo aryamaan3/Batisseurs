@@ -7,6 +7,10 @@ import cartes.batiments.CarteBatiments;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * CarteOuvriers contient des méthodes pour la gestion des cartes ouvriers
+ */
+
 public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers heritant cartes
     private int cout;
     private int idJoueur;

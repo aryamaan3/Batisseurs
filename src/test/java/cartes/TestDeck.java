@@ -31,12 +31,10 @@ public class TestDeck {
     @Test
     public void testGetApprenti(){
         ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
-        //CarteOuvriers carteTest = deck[39];
         CarteOuvriers.getApprenti(1, deck);
         int cond = 0;
 
         for(int i = 36; i < 42; i++){
-            System.out.println(deck.get(i));
             if(deck.get(i).getIdJoueur() == 1){
 
                 cond++;
