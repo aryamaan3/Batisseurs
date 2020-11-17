@@ -40,11 +40,6 @@ public class IA {
      */
     public void iaChoisitOuvrier(int nbChoix){
         ArrayList<CarteOuvriers> CartesDisponibles = CarteOuvriers.carteSurTable(deckOuvrier);
-        /*System.out.println(ANSI_BLUE+
-                "Carte dispo [0] (dont id="+ CartesDisponibles.get(0).getId() +") = "+CartesDisponibles.get(0)
-                + "\nCarte dispo [1] (dont id=" + CartesDisponibles.get(1).getId() + ") = "+CartesDisponibles.get(1)
-                + "\nCarte dispo [2] (dont id="+ CartesDisponibles.get(2).getId() +") = "+CartesDisponibles.get(2)
-                +ANSI_RESET);*/
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         for (int i = 0; i < nbChoix; i ++) {
             choisirOuvrier(j.getId(), CartesDisponibles.get(i));

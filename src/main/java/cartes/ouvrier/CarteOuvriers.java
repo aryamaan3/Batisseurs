@@ -114,6 +114,8 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
         return super.nom;
     }
 
+
+    //A Commenter
     public static  ArrayList<CarteOuvriers> carteSurTable(ArrayList<CarteOuvriers> c){
         ArrayList<CarteOuvriers> cst = new  ArrayList<>();
         int i =0;

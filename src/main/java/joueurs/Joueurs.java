@@ -67,7 +67,7 @@ public class Joueurs { // classe pour creer un joueur
      * Permet de retourner l'objet joueur qui correspond à l'id donné
      * @param idJoueur ID du joueur qu'on veut recuperer
      * @return Retourne l'objet joueur qui correspond à l'ID
-     */
+    **/
     static public Joueurs getJoueurById (int idJoueur){
         for (int i =0; i < MoteurDeJeu.nombreDeJoueurActifs; i++){
             if (MoteurDeJeu.listJoueurs.get(i).getId() == idJoueur){

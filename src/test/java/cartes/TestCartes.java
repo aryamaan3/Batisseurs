@@ -4,6 +4,8 @@ import cartes.batiments.CarteBatiments;
 import cartes.ouvrier.CarteOuvriers;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.DeckOuvriers;
+import joueurs.Joueurs;
+import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -76,6 +78,8 @@ class TestCartes { //test le constructeur de cartes
 
     @Test
     public void TestIsBuilt(){
+        MoteurDeJeu test= new MoteurDeJeu();
+        test.creationDesJoueurs(1);
         CarteOuvriers c1 = new CarteOuvriers(3,"toto",2,1,3,4,1,0,-1);
         CarteBatiments b1 = new CarteBatiments(8,"foo",0,0,0,0,0,0);
         placerOuvrierSurChantier(b1,c1);
@@ -92,5 +96,11 @@ class TestCartes { //test le constructeur de cartes
     public void testGetCarteOuvrier(){
         ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
         assertEquals(7,CarteOuvriers.getCarteOuvById(7,deck).getIdCarte());
+    }
+
+    @Test
+    public void testCarteSurTable(){
+        ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();
+        ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();
     }
 }
