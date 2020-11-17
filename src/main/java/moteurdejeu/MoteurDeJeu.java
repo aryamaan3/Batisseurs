@@ -10,8 +10,7 @@ import joueurs.Joueurs;
 import joueurs.Bourse;
 import java.util.ArrayList;
 
-import static cartes.batiments.CarteBatiments.getCarteBatById;
-import static cartes.batiments.CarteBatiments.obtenirDeckJoueur;
+import static cartes.batiments.CarteBatiments.*;
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static display.Display.*;
 import static display.Couleur.*;
@@ -112,6 +111,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         a:
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
+
             displayCarteDispo(CarteOuvriersSurTable, CarteBatimentsSurTable);
             for (int i = 0; i < nombreDeJoueurActifs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
@@ -130,6 +130,14 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                     //ArrayList<Integer> b = CarteBatimentsSurTable.get(1).getIdOuvrier();
                     CarteBatimentsSurTable.get(0).sumRessources();
                     // Il faudra peut etre faire le sumRessources dans le display ?
+
+                    // On vérifie si le joueurs a fini des chantiers à la fin du tour
+                    ArrayList<CarteBatiments> chantiersEnCours = obtenirChantierEnCours(i,DeckBatiment);
+                    for(int j = 0; j < chantiersEnCours.size() ; j++){
+                        chantiersEnCours.get(j).isBuilt();
+                    }
+
+                    displayPoint(j1);
                     displayEtatChantiersDuJoueur(i,DeckBatiment);
                     c1.reset();
                 }
@@ -146,6 +154,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                     displayChantierDuJoueur(i,DeckBatiment);
 
                     CarteBatimentsSurTable.get(1).sumRessources();
+                    displayPoint(j2);
                     displayEtatChantiersDuJoueur(i,DeckBatiment);
                     c2.reset();
 
@@ -162,23 +171,18 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 }
             }
 
-            ArrayList<Integer> enConstruction = new ArrayList<Integer>();
-            enConstruction = obtenirDeckJoueur(0, DeckBatiment);
-            for (int k = 0; k < obtenirDeckJoueur(1, DeckBatiment).size(); k++) {
-                enConstruction.add(obtenirDeckJoueur(1, DeckBatiment).get(k));
-            }
-            b:
+            /* Ancienne condition de victoire
             for (int j = 0; j < enConstruction.size(); j++) {
                 if (getCarteBatById(enConstruction.get(j), DeckBatiment).isBuilt()) {
                     System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK + "Le joueur "+ (getCarteBatById(enConstruction.get(j), DeckBatiment).getIdJoueur()+1)+ " a fini un batiment, il a donc gagné" + ANSI_RESET);
                     System.out.println("#########################--FIN DE LA PARTIE--#########################");
                     break a;
                 }
-            }
+            }*/
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
 
-            if (compteTour > 20){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
+            if (compteTour > 2){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
             }
 
     }
