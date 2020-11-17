@@ -132,13 +132,17 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                     // Il faudra peut etre faire le sumRessources dans le display ?
 
                     // On vérifie si le joueurs a fini des chantiers à la fin du tour
-                    ArrayList<CarteBatiments> chantiersEnCours = obtenirChantierEnCours(i,DeckBatiment);
+                    ArrayList<CarteBatiments> chantiersEnCours = obtenirChantierEnCours(j1.getId(),DeckBatiment);
                     for(int j = 0; j < chantiersEnCours.size() ; j++){
-                        chantiersEnCours.get(j).isBuilt();
+                        if(chantiersEnCours.get(j).isBuilt()){
+                            System.out.println("Le joueur "+ (i+1)
+                                    +" a fini le batiment "+chantiersEnCours.get(j).getName()
+                                    +", il gagne donc "+ANSI_GREEN+chantiersEnCours.get(j).getPoint()+" point(s)"+ANSI_RESET);
+                        }
                     }
 
                     displayPoint(j1);
-                    displayEtatChantiersDuJoueur(i,DeckBatiment);
+                    displayEtatChantiersDuJoueur(j1.getId(),chantiersEnCours);
                     c1.reset();
                 }
                 if (i == 1) { //actions du joueur 2
@@ -154,8 +158,19 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                     displayChantierDuJoueur(i,DeckBatiment);
 
                     CarteBatimentsSurTable.get(1).sumRessources();
+
+                    // On vérifie si le joueurs a fini des chantiers à la fin du tour
+                    ArrayList<CarteBatiments> chantiersEnCours = obtenirChantierEnCours(j2.getId(),DeckBatiment);
+                    for(int j = 0; j < chantiersEnCours.size() ; j++){
+                        if(chantiersEnCours.get(j).isBuilt()){
+                            System.out.println("Le joueur "+ (i+1)
+                                    +" a fini le batiment "+chantiersEnCours.get(j).getName()
+                                    +", il gagne donc "+ANSI_GREEN+chantiersEnCours.get(j).getPoint()+" point(s)"+ANSI_RESET);
+                        }
+                    }
+
                     displayPoint(j2);
-                    displayEtatChantiersDuJoueur(i,DeckBatiment);
+                    displayEtatChantiersDuJoueur(i,chantiersEnCours);
                     c2.reset();
 
                 }
@@ -182,7 +197,15 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
 
-            if (compteTour > 2){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
+            // Condition de victoire en fonction du nombre de point (+ de 5)
+            for(int j = 0; j<nombreDeJoueurActifs; j++){
+                if(listJoueurs.get(j).getPoints() > 5){
+                    System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+listJoueurs.get(j).getId()
+                            +" a gagné ! Il a "+listJoueurs.get(j).getPoints()+ " points."+ANSI_RESET);
+                    break;
+                }
+            }
+            if (compteTour > 20){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
             }
 
     }

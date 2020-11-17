@@ -6,6 +6,9 @@ import moteurdejeu.MoteurDeJeu;
 
 import java.util.ArrayList;
 
+import static display.Couleur.ANSI_RED;
+import static display.Couleur.ANSI_RESET;
+
 /**
  * La classe Joueurs nous permet de créer les joueurs et d'avoir son numéro.
  */
@@ -47,7 +50,7 @@ public class Joueurs { // classe pour creer un joueur
      * @param nbPoints Nombre de points à ajouter au joueur
      */
     public void addPoints(int nbPoints){
-        System.out.println("Attribution de points");
+        System.out.println(ANSI_RED+"Attribution de points"+ANSI_RESET);
         this.points += nbPoints;
     }
 
@@ -59,7 +62,7 @@ public class Joueurs { // classe pour creer un joueur
         return points;
     }
 
-    /*
+
     /**
      * Permet de retourner l'objet joueur qui correspond à l'id donné
      * @param idJoueur ID du joueur qu'on veut recuperer
