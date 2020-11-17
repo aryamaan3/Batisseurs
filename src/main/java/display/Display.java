@@ -62,6 +62,20 @@ public class Display {
     }
 
     /**
+     * Imprime les Bâtiments (chantiers terminés) d'un joueur
+     * @param joueurs Objet joueur
+     * @param deckBatiment Deck Batiment du main
+     */
+    public static void displayChantierFini(Joueurs joueurs, ArrayList<CarteBatiments> deckBatiment){
+        System.out.print("Joueur "+(joueurs.getId()+1) + " a ce(s) bâtiment(s) de construit(s): ");
+        for(int i = 0; i < deckBatiment.size(); i ++){
+            if((deckBatiment.get(i).getIdJoueur() == joueurs.getId()) && deckBatiment.get(i).isBuiltShort())
+                System.out.print(deckBatiment.get(i).getName());
+        }
+        System.out.println(); // juste pour le retour à la ligne
+    }
+
+    /**
      * Imprime dans l'invite de commande l'état des cartes à piocher (toutes les cartes disponibles, ouvrier ou chantier)
      * @param ouvriersDispo Ouvriers Disponibles
      * @param chantiersDispo  Chantiers disponibles
