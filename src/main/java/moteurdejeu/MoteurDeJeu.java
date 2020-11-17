@@ -117,8 +117,8 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     displayActions(c1);
+                    IAduJoueur1.ActionsIA(c1,bourse.get(0));
                     displayActions(c1);
-                    IAduJoueur1.ActionsIA(i,c1,bourse.get(0));
                     /* A supprimer si display marche bien
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
@@ -144,7 +144,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
                     displayActions(c2);
-                    IAduJoueur2.ActionsIA(i, c2, bourse.get(1));
+                    IAduJoueur2.ActionsIA(c2, bourse.get(1));
                     displayActions(c2);
                     /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
