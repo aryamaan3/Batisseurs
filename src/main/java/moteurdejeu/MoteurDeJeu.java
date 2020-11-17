@@ -20,7 +20,26 @@ import joueurs.IA.*;
  * La classe MoteurDeJeu nous permet le déroulement du jeu
  */
 
-public class MoteurDeJeu { //Controle le deroulement du jeu
+public class MoteurDeJeu{ //Controle le deroulement du jeu
+    //Déclaration du nombre maximum de joueurs
+    Joueurs j1,j2,j3,j4;
+    ArrayList<Joueurs> listJoueurs = new ArrayList<>();
+    int nombreDeJoueurActifs = 0;
+
+    // Création des joueurs
+    public void creationDesJoueurs(int nombreDeJoueur){
+        // Corriger en faisant une boucle for en focntion du nb de joueur désiré
+        this.nombreDeJoueurActifs = nombreDeJoueur;
+        j1 = new Joueurs(0);
+        j2 = new Joueurs(1);
+        j3 = new Joueurs(2);
+        j4 = new Joueurs(3);
+        listJoueurs.add(j1);
+        listJoueurs.add(j2);
+        listJoueurs.add(j3);
+        listJoueurs.add(j4);
+    }
+
     // Deck de carte : la première carte du joueur 0 sera à l'indice [0][0]
     // Contient donc les cartes ouvrier de TOUS les joueurs
     private  ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
@@ -62,34 +81,33 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
 
     /**
      * Méthode permettant de le bon fonctionnment du jeux
-     * @param joueurs tableaux contenant les joueurs créés dans le main
      */
-    public void deroulementJeux(Joueurs ...joueurs){
-        int nbjoueurs = joueurs.length; //pour l'instant seulement 2 joueurs
+    public void deroulementJeux(){
+        //int nbjoueurs = joueurs.length; //pour l'instant seulement 2 joueurs
         int compteTour = 1; //Pour compter le nombre de tour au fil de la
         ArrayList<Bourse> bourse = new ArrayList<>();
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
 
-        for(int acc = 0; acc < nbjoueurs; acc++){
-            bourse.add(new Bourse(5,1,joueurs[acc].getId()));
+        for(int acc = 0; acc < nombreDeJoueurActifs; acc++){
+            bourse.add(new Bourse(5,1,listJoueurs.get(acc).getId()));
         }
         ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
         ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
 
 
 
-        System.out.println("Il y a "+nbjoueurs+" joueur(s)");
+        System.out.println("Il y a "+nombreDeJoueurActifs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
         // On créer un objet IA
-        IA IAduJoueur1 = new IA(joueurs[0], DeckOuvrier, DeckBatiment);
-        IA IAduJoueur2 = new IA(joueurs[1], DeckOuvrier, DeckBatiment);
+        IA IAduJoueur1 = new IA(j1, DeckOuvrier, DeckBatiment);
+        IA IAduJoueur2 = new IA(j2, DeckOuvrier, DeckBatiment);
 
         a:
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             displayCarteDispo(CarteOuvriersSurTable, CarteBatimentsSurTable);
-            for (int i = 0; i < nbjoueurs; i++) { //actions de chaque joueur
+            for (int i = 0; i < nombreDeJoueurActifs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     IAduJoueur1.ActionsIA(i);
@@ -154,12 +172,10 @@ public class MoteurDeJeu { //Controle le deroulement du jeu
     }
 
     public static void main(String[] args) {
-        Joueurs j1 = new Joueurs(1); //création de tous les joueurs possibles
-        Joueurs j2 = new Joueurs(2);
-        Joueurs j3 = new Joueurs(3);
-        Joueurs j4 = new Joueurs(4);
+
         MoteurDeJeu m1 = new MoteurDeJeu();
-        m1.deroulementJeux(j1,j2,j3,j4);
+        m1.creationDesJoueurs(4);
+        m1.deroulementJeux();
     }
 }
 
