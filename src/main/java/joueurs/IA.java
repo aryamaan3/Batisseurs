@@ -73,8 +73,9 @@ public class IA {
      * Permet l'attribution d'un ouvrier à un chantier (que le joueur possède)
      * en fonction du choix de l'IA
      * @param idJoueur id du joueur
+     * @param bourse la bourse du joueur
      */
-    public void iaAttributOuvrierAChantier(int idJoueur){
+    public void iaAttributOuvrierAChantier(int idJoueur,Bourse bourse){
         // On veut les id des  cartes qui appartiennent au joueur
         ArrayList<Integer> idCarteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, deckOuvrier);
         ArrayList<Integer> idCarteBatimentDuJoueur = obtenirDeckJoueur(idJoueur, deckBatiment);
@@ -82,18 +83,20 @@ public class IA {
             //carteOuvDuJoueur.add(getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));
             //placerOuvrierSurChantier(carteBatDuJoueur.get(0), carteOuvDuJoueur.get(i));
             // à modifier quand on a plusieurs carteBat
-            placerOuvrierSurChantier( getCarteBatById(idCarteBatimentDuJoueur.get(0), deckBatiment) ,getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));
+            if(bourse.actionAutorisee(idJoueur,deckOuvrier,i) == true){
+            placerOuvrierSurChantier( getCarteBatById(idCarteBatimentDuJoueur.get(0), deckBatiment) ,getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));}
         }
     }
 
     /**
      * Permet d'executer l'ensemble des méthodes de cette class en un appel de méthode
      * @param idJoueur id du joueur
+     * @param
      */
-    public void  ActionsIA(int idJoueur){
+    public void  ActionsIA(int idJoueur, Bourse bourse){
         iaChoisitOuvrier(idJoueur,2);
         iaChoisitChantier(idJoueur, 1);
-        iaAttributOuvrierAChantier(idJoueur);
+        iaAttributOuvrierAChantier(idJoueur, bourse);
     }
 
 }

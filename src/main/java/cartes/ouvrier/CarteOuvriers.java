@@ -48,6 +48,12 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
     }
 
     /**
+     * getCout retourne le cout de l'ouvrier
+     * @return le cout de l'ouvrier
+     */
+    public int getCout(){return this.cout;}
+
+    /**
      *
      * @return Retourne l'id du chantier sur lequel il travaille ou -1 si il est libre
      */
