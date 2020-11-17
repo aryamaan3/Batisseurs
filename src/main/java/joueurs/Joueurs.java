@@ -59,6 +59,7 @@ public class Joueurs { // classe pour creer un joueur
         return points;
     }
 
+    /*
     /**
      * Permet de retourner l'objet joueur qui correspond à l'id donné
      * @param idJoueur ID du joueur qu'on veut recuperer

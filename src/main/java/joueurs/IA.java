@@ -88,15 +88,23 @@ public class IA {
         }
     }
 
+    public void passeTour(){
+
+    }
+
     /**
      * Permet d'executer l'ensemble des méthodes de cette class en un appel de méthode
      * @param idJoueur id du joueur
      * @param
      */
-    public void  ActionsIA(int idJoueur, Bourse bourse){
-        iaChoisitOuvrier(idJoueur,2);
-        iaChoisitChantier(idJoueur, 1);
+    public void  ActionsIA(int idJoueur, Compteur c, Bourse bourse){
+        iaChoisitOuvrier(idJoueur,c.nb - 1);
+        c.actionsFait(2);
+        iaChoisitChantier(idJoueur, c.nb);
+        c.actionsFait(1);
         iaAttributOuvrierAChantier(idJoueur, bourse);
+        c.buyActions(1);
+        c.actionsFait(1);
     }
 
 }
