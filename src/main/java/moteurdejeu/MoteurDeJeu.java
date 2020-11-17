@@ -23,8 +23,8 @@ import joueurs.IA.*;
 public class MoteurDeJeu{ //Controle le deroulement du jeu
     //Déclaration du nombre maximum de joueurs
     Joueurs j1,j2,j3,j4;
-    ArrayList<Joueurs> listJoueurs = new ArrayList<>();
-    int nombreDeJoueurActifs = 0;
+    public static ArrayList<Joueurs> listJoueurs = new ArrayList<>();
+    public static int nombreDeJoueurActifs = 0;
 
     // Création des joueurs
     public void creationDesJoueurs(int nombreDeJoueur){
@@ -110,7 +110,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
             for (int i = 0; i < nombreDeJoueurActifs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
-                    IAduJoueur1.ActionsIA(i);
+                    IAduJoueur1.ActionsIA(i,bourse.get(0));
                     /* A supprimer si display marche bien
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
@@ -126,7 +126,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 }
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
-                    IAduJoueur2.ActionsIA(i);
+                    IAduJoueur2.ActionsIA(i,bourse.get(1));
                     /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
