@@ -3,6 +3,7 @@ package cartes.batiments;
 import cartes.Cartes;
 import cartes.ouvrier.CarteOuvriers;
 import cartes.ouvrier.DeckOuvriers;
+import joueurs.Joueurs;
 
 import java.util.ArrayList;
 
@@ -29,13 +30,13 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
      * @param savoir cout en savoir
      * @param tuile cout en savoir
      * @param ecu cout en ecu
-     * @param points cout en points
+     * @param points Points que rapporte la construction d'un batiment
      */
     public CarteBatiments(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points) {
         super(id, nom, bois, tuile, savoir, pierre);
         this.ecu = ecu;
         this.points = points;
-        this.construit = 0;
+        this.construit = 0; // 0 si pas encore construit et 1 si construit
         this.idJoueur = -1;
     }
 
@@ -46,7 +47,6 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     public void AffectationChantier(int idJoueur){
         // this represente la carte qu'on passe : batiment1.AffectationChantier(id);
         this.idJoueur = idJoueur;
-
     }
 
     /**
@@ -135,7 +135,7 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             &&  this.getTuile() <= this.sumTuile
             &&  this.getPierre() <= this.sumPierre
             &&  this.getSavoir() <= this.sumSavoir
-        ){
+        ){  //Notre batiment est contruit
             this.construit = 1;
             System.out.println("Le joueur "+ (this.idJoueur + 1) + " a terminé "+ this.getName());
 
@@ -143,6 +143,19 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             for (int i = 0; i < ouvriers.size(); i++) {
                 deck.get(ouvriers.get(i)).resetAssign();
             }
+            // On ajoute les points de la carte au points du joueur
+            Joueurs.getJoueurById(idJoueur).addPoints(points);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Permet juste de recupérer le boolean et non de recalculer comme isBuilt()
+     * @return Boolean pour savoir si un chantier est fini ou non
+     */
+    public boolean isBuiltShort(){
+        if(construit == 1){
             return true;
         }
         return false;
@@ -183,6 +196,23 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             }
         }
         return carteDuJoueur;
+    }
+
+    /**
+     *
+     * @param idJoueur id du joueur dont on veut récupérer le deck
+     * @param DeckBatiment Deck du Moteur de jeu
+     * @return Retourne la collection des chantiers en construction d'un joueur
+     */
+    public static ArrayList<CarteBatiments> obtenirChantierEnCours(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
+        ArrayList<CarteBatiments> chantierEnCours = new ArrayList<>();
+        for(int i = 0; i < DeckBatiment.size(); i ++){
+            // Si une carte appartient au joueur
+            if( (DeckBatiment.get(i).getIdJoueur() == idJoueur) && (DeckBatiment.get(i).isBuilt())){
+                chantierEnCours.add(DeckBatiment.get(i));
+            }
+        }
+        return chantierEnCours;
     }
 
     /**

@@ -3,6 +3,7 @@ package display;
 import cartes.Cartes;
 import cartes.batiments.CarteBatiments;
 import cartes.ouvrier.CarteOuvriers;
+import joueurs.Joueurs;
 import joueurs.Compteur;
 
 import java.util.ArrayList;
@@ -77,6 +78,14 @@ public class Display {
             System.out.print(" " + chantiersDispo.get(i).getName());
         }
         System.out.println(); // Juste pour un retour à la ligne
+    }
+
+    /**
+     *
+     */
+    public static void displayPoint(Joueurs joueur){
+        System.out.println("Le joueur n°" + (joueur.getId()+1) + " a "
+                + ANSI_GREEN + joueur.getPoints() + " point(s)" +ANSI_RESET);
     }
     public static void displayActions(Compteur c){
         System.out.println("Il reste "+c.nb+" action(s)");
