@@ -4,6 +4,7 @@ import cartes.ouvrier.CarteOuvriers;
 import cartes.batiments.CarteBatiments;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.DeckOuvriers;
+import joueurs.Compteur;
 import joueurs.IA;
 import joueurs.Joueurs;
 import joueurs.Bourse;
@@ -83,6 +84,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
      * Méthode permettant de le bon fonctionnment du jeux
      */
     public void deroulementJeux(){
+
         //int nbjoueurs = joueurs.length; //pour l'instant seulement 2 joueurs
         int compteTour = 1; //Pour compter le nombre de tour au fil de la
         ArrayList<Bourse> bourse = new ArrayList<>();
@@ -103,6 +105,10 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         IA IAduJoueur1 = new IA(j1, DeckOuvrier, DeckBatiment);
         IA IAduJoueur2 = new IA(j2, DeckOuvrier, DeckBatiment);
 
+        // On crée les objets compteurs pour chaque joueur
+        Compteur c1 = new Compteur(j1.getId());
+        Compteur c2 = new Compteur(j2.getId());
+
         a:
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
@@ -110,7 +116,9 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
             for (int i = 0; i < nombreDeJoueurActifs; i++) { //actions de chaque joueur
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
-                    IAduJoueur1.ActionsIA(i,bourse.get(0));
+                    displayActions(c1);
+                    displayActions(c1);
+                    IAduJoueur1.ActionsIA(i,c1,bourse.get(0));
                     /* A supprimer si display marche bien
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(1).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(1).getIdOuvrier().get(0));
@@ -123,10 +131,13 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                     CarteBatimentsSurTable.get(0).sumRessources();
                     // Il faudra peut etre faire le sumRessources dans le display ?
                     displayEtatChantiersDuJoueur(i,DeckBatiment);
+                    c1.reset();
                 }
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
-                    IAduJoueur2.ActionsIA(i,bourse.get(1));
+                    displayActions(c2);
+                    IAduJoueur2.ActionsIA(i, c2, bourse.get(1));
+                    displayActions(c2);
                     /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
                     System.out.println("L'ouvrier " + CarteOuvriersSurTable.get(4).getName() + " travail sur " + CarteOuvriersSurTable.get(4).getChantier());
@@ -136,6 +147,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
 
                     CarteBatimentsSurTable.get(1).sumRessources();
                     displayEtatChantiersDuJoueur(i,DeckBatiment);
+                    c2.reset();
 
                 }
 
