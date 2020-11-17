@@ -18,7 +18,7 @@ public class TestDeck {
     public void testDeckBatiments() {
         ArrayList<CarteBatiments> deck = new DeckBatiments().getDeck();
         Cartes carteTest = deck.get(6);
-        assertEquals("la maisonnette",carteTest.getNom());
+        assertEquals("la pont couvert",carteTest.getNom());
     }
     // On fait un second test pour vérifier qu'on récupère bien les cartes dans le deck des batiments
     @Test

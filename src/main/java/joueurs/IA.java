@@ -26,10 +26,12 @@ import static display.Couleur.*;
 public class IA {
     ArrayList<CarteOuvriers> deckOuvrier;
     ArrayList<CarteBatiments> deckBatiment;
+    Joueurs j;
 
-    public IA(ArrayList<CarteOuvriers> deckOuvrier, ArrayList<CarteBatiments> deckBatiment){
+    public IA(Joueurs j, ArrayList<CarteOuvriers> deckOuvrier, ArrayList<CarteBatiments> deckBatiment){
         this.deckBatiment = deckBatiment;
         this.deckOuvrier = deckOuvrier;
+        this.j = j;
     }
 
     /**

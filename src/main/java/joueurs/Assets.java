@@ -40,7 +40,6 @@ public class Assets {
             if(deck.get(i).getIdJoueur()==idJoueur && deck.get(i).getChantier()!=-1){
                 OuvriersOccupes.add(deck.get(i));
             }
-
         }
         return OuvriersOccupes;
     }
