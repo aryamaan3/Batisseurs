@@ -207,8 +207,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
     public static ArrayList<CarteBatiments> obtenirChantierEnCours(int idJoueur, ArrayList<CarteBatiments> DeckBatiment){
         ArrayList<CarteBatiments> chantierEnCours = new ArrayList<>();
         for(int i = 0; i < DeckBatiment.size(); i ++){
-            // Si une carte appartient au joueur
-            if( (DeckBatiment.get(i).getIdJoueur() == idJoueur) && (DeckBatiment.get(i).isBuilt())){
+            // Si une carte appartient au joueur et qu'elle n'est pas encore construite
+            if( (DeckBatiment.get(i).getIdJoueur() == idJoueur) && !(DeckBatiment.get(i).isBuiltShort())){
                 chantierEnCours.add(DeckBatiment.get(i));
             }
         }
@@ -230,4 +230,11 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
         }
         return Carte;}
 
+    /**
+     *
+     * @return Retourne le nombre de point que donne un chantier lorsqu'il est terminé
+     */
+    public int getPoint() {
+        return points;
+    }
 }

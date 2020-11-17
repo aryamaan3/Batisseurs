@@ -21,30 +21,30 @@ public class TestIA {
 
     @Test
     public void TestChoisitChantier(){
-        test.iaChoisitChantier(1, 1);
+        test.iaChoisitChantier(1);
         ArrayList<Integer> nb;
-        nb = cartes.batiments.CarteBatiments.obtenirDeckJoueur(1, deckBat);
+        nb = cartes.batiments.CarteBatiments.obtenirDeckJoueur(0, deckBat);
         assertEquals(1, nb.size());
     }
 
     @Test
     public void TestChoisitOuvrier(){
-        test.iaChoisitOuvrier(1, 1);
+        test.iaChoisitOuvrier(1);
         ArrayList<Integer> nb;
-        nb = cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur(1, deckOuv);
+        nb = cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur(0, deckOuv);
         assertEquals(1, nb.size());
     }
 
     @Test
     public void TestAttribution(){
-        test.iaChoisitChantier(1, 1);
-        test.iaChoisitOuvrier(1, 1);
-        test.iaAttributOuvrierAChantier(1,b1);
+        test.iaChoisitChantier(1);
+        test.iaChoisitOuvrier(1);
+        test.iaAttributOuvrierAChantier(b1);
 
         ArrayList<Integer> nbO;
-        nbO = cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur(1, deckOuv);
+        nbO = cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur(0, deckOuv);
         ArrayList<Integer> nbC;
-        nbC = cartes.batiments.CarteBatiments.obtenirDeckJoueur(1, deckBat);
+        nbC = cartes.batiments.CarteBatiments.obtenirDeckJoueur(0, deckBat);
 
         CarteOuvriers testOuv = CarteOuvriers.getCarteOuvById(nbO.get(0), deckOuv);
         CarteBatiments testBat = CarteBatiments.getCarteBatById(nbC.get(0), deckBat);

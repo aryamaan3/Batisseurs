@@ -19,6 +19,16 @@ public class Compteur {
         System.out.println("Il lui reste "+nb+" actions à faire");
     }
 
+    public void sellActions (int n){
+        if (n <= 3) {
+            System.out.println("Le joueur a vendu ses " + nb + " action(s) restant");
+            this.nb = nb - n;
+        }
+        else{
+            System.out.println("on ne peut vendre seulement 3 actions");
+        }
+    }
+
     public void reset (){
         this.nb = 3;
     }
