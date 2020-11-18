@@ -17,7 +17,8 @@ Fonctionnalités livrées et issues réalisées :
     - Test IA
     - Test compteur
     - Test bourse
-    -
+    - Réorganisation des tests
+    - ajout des tests manquants
 
 - Organisation du code :
     - 
