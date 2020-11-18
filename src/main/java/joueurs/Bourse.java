@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
 import static cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur;
+import static display.Couleur.*;
 
 /**
  * La classe Bourse permet de créer une bourse pour chaque joueur et de savoir les écus qu'ils possèdent
@@ -17,23 +18,20 @@ public class Bourse {
 
     /**
      * Constructeur de la Bourse, on récupère les pièces d'argent et d'or pour créer le nombre d'écus.
-     * @param pieceArgent le nombre de piece d'argent qu'on donne au joueur en début de partie.
-     * @param pieceOr     le nombre de piece d'or qu'on donne au joueur en début de partie
      * @param idJoueur    le numero du joueur auquel on assigne la bourse.
      */
 
-    public Bourse(int pieceArgent, int pieceOr, int idJoueur) {
-        this.pieceArgent = pieceArgent;
-        this.pieceOr = pieceOr;
+    public Bourse(int idJoueur) {
+        this.pieceArgent = 5;
+        this.pieceOr = 1;
         this.idJoueur = idJoueur;
         this.ecus = pieceArgent + 5 * pieceOr;
     }
 
     /**
-     * @param idJoueur le numéro du joueur
      * @return le nombre d'écus que le joueur possède.
      */
-    public int getEcus(int idJoueur) {
+    public int getEcus() {
         return this.ecus;
     }
 
@@ -46,6 +44,14 @@ public class Bourse {
      */
     public boolean actionAutorisee(int idJoueur, ArrayList<CarteOuvriers> deckOuvrier, int idCarte){
         ArrayList<Integer> idCarteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, deckOuvrier);
-        return getCarteOuvById(idCarteOuvrierDuJoueur.get(idCarte),deckOuvrier).getCout() <= getEcus(idJoueur);
+        return getCarteOuvById(idCarteOuvrierDuJoueur.get(idCarte),deckOuvrier).getCout() <= getEcus();
+    }
+
+    /**
+     * @param somme somme d'écus a ajouter à la bourse
+     */
+    public void addEcus(int somme) {
+        this.ecus += somme;
+        System.out.println(ANSI_RED + "Le joueur " +(idJoueur+1) +" gagne "+ somme + " écus"+ANSI_RESET);
     }
 }

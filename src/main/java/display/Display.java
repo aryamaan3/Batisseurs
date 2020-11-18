@@ -105,7 +105,7 @@ public class Display {
     }
 
     public static void displayBourse(Joueurs joueurs,ArrayList<Bourse>bourses){
-            System.out.println("Le joueur "+ (joueurs.getId()+1) + " possede "+bourses.get(joueurs.getId()).getEcus(joueurs.getId())+" ecus");
+            System.out.println("Le joueur "+ (joueurs.getId()+1) + " possede "+bourses.get(joueurs.getId()).getEcus()+" ecus");
 
     }
 }

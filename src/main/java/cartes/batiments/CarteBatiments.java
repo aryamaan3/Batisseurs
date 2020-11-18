@@ -145,6 +145,8 @@ public class CarteBatiments extends Cartes { //Implemente les carte Batiments he
             }
             // On ajoute les points de la carte au points du joueur
             Joueurs.getJoueurById(idJoueur).addPoints(points);
+            // On ajoute les ecus
+            Joueurs.getJoueurById(idJoueur).getBourseJoueur().addEcus(ecu);
             return true;
         }
         return false;

@@ -17,7 +17,7 @@ public class TestIA {
     ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
     Joueurs j1 = new Joueurs(0);
     IA test = new IA(j1, deckOuv, deckBat) ;
-    Bourse b1 = new Bourse(5,1,0);
+    Bourse b1 = new Bourse(0);
 
     @Test
     public void TestChoisitChantier(){

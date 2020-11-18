@@ -16,6 +16,7 @@ public class Joueurs { // classe pour creer un joueur
     int id;
     // Pour compter les points de victoire
     private int points;
+    Bourse bourseJoueur;
 
     /**
      *
@@ -24,6 +25,8 @@ public class Joueurs { // classe pour creer un joueur
     public Joueurs (int id){
         this.id = id;
         this.points = 0;
+        // On lie notre joueur à une bourse
+        bourseJoueur = new Bourse(id);
     }
 
     /**
@@ -75,6 +78,14 @@ public class Joueurs { // classe pour creer un joueur
             }
         }
         return null;
+    }
+
+    /**
+     *
+     * @return retourne la bourse du joueur en question
+     */
+    public Bourse getBourseJoueur(){
+        return bourseJoueur;
     }
 
 }

@@ -96,7 +96,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         //On prends seulement 5 cartes sur DeckBatiment et du DeckOuvrier pour les poser au milieu du plateau
 
         for(int acc = 0; acc < nombreDeJoueurActifs; acc++){
-            bourse.add(new Bourse(5,1,listJoueurs.get(acc).getId()));
+            bourse.add(new Bourse(listJoueurs.get(acc).getId()));
         }
         ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
         ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);

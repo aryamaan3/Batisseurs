@@ -8,8 +8,8 @@ public class TestBourse {
 
     @Test
     public void TestGetEcus(){
-        Bourse BourseTest = new Bourse(5,1,1);
-        int bourse = BourseTest.getEcus(1);
+        Bourse BourseTest = new Bourse(1);
+        int bourse = BourseTest.getEcus();
         assertEquals(10,bourse);
     }
 
