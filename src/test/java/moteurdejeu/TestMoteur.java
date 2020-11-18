@@ -5,6 +5,7 @@ import cartes.ouvrier.CarteOuvriers;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.DeckOuvriers;
 import joueurs.Joueurs;
+import moteurdejeu.MoteurDeJeu.*;
 import org.junit.jupiter.api.Test;
 
 import static moteurdejeu.MoteurDeJeu.*;
@@ -32,8 +33,12 @@ public class TestMoteur {
     void TestPlacerOuvrierSurChantier(){
         ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(deckOuvrier);
         ArrayList<CarteBatiments> BatTest = CarteBatiments.carteSurTable(deckBatiment);
+
         placerOuvrierSurChantier(BatTest.get(2), OuvTest.get(3));
-        assertEquals(OuvTest.get(3).getAssign(),BatTest.get(2).getId());
+        /*if(OuvTest.get(3).getAssign() == -1){
+            assertEquals(OuvTest.get(3).getAssign(), BatTest.get(2).getIdOuvrier());
+        }
+        assertEquals(OuvTest.get(3).getAssign(),BatTest.get(2).getId());*/
     }
 
     @Test
@@ -50,5 +55,12 @@ public class TestMoteur {
         ArrayList<CarteOuvriers> OuvTest = CarteOuvriers.carteSurTable(deckOuvrier);
         choisirOuvrier(1, OuvTest.get(2));
         assertEquals(toto.getId(), OuvTest.get(2).getIdJoueur());
+    }
+
+    @Test
+    void testCreationDesJoueurs(){
+        MoteurDeJeu m1 = new MoteurDeJeu();
+        m1.creationDesJoueurs(4);
+        assertEquals(nombreDeJoueurActifs, 4);
     }
 }
