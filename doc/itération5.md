@@ -12,6 +12,7 @@ Fonctionnalités livrées et issues réalisées :
     - Modification display
     - Implemenatation de bourse dans joueur 
     - IA qui peut placer un ouvrier seulement si elle a les moyens
+    - Manipulation de la bourse (ajout et suppression d'écus)
 
 - Tests :
     - Test IA
