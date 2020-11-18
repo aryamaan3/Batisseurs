@@ -27,6 +27,7 @@ public class IA {
     ArrayList<CarteOuvriers> deckOuvrier;
     ArrayList<CarteBatiments> deckBatiment;
     Joueurs j;
+    int compteurChantierTerminé = 0;
 
     public IA(Joueurs j, ArrayList<CarteOuvriers> deckOuvrier, ArrayList<CarteBatiments> deckBatiment){
         this.deckBatiment = deckBatiment;
@@ -55,10 +56,16 @@ public class IA {
     public void iaChoisitChantier(int nbChoix){
         // Pour l'instant, choisi 2 ouvrier (les deux premiers de CartesDisponibles[0])
         ArrayList<CarteBatiments> CartesDisponibles = carteSurTable(deckBatiment);
-        for (int i = 0; i < nbChoix; i ++) {
-            choisirChantier(j.getId(), CartesDisponibles.get(i));
+        ArrayList<CarteBatiments> chantiersEnCours = obtenirChantierEnCours(j.getId(), deckBatiment);
+        // Si on a encore des chantiers en cours, on ne pioche pas de chantier
+        if(chantiersEnCours.size() <= 0){
+            for (int i = 0; i < nbChoix; i ++) {
+                choisirChantier(j.getId(), CartesDisponibles.get(i));
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois
              puisse que CartesDisponibles est censé se MAJ en focntion de l'assign */
+            }
+        } else {
+            // Reattribuer les actions qui non pas été utilisées
         }
     }
 
@@ -74,9 +81,13 @@ public class IA {
         for (int i = 0; i < idCarteOuvrierDuJoueur.size(); i++){
             //carteOuvDuJoueur.add(getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));
             //placerOuvrierSurChantier(carteBatDuJoueur.get(0), carteOuvDuJoueur.get(i));
-            // à modifier quand on a plusieurs carteBat
-            if(bourse.actionAutorisee(j.id,deckOuvrier,i) == true){
-            placerOuvrierSurChantier( getCarteBatById(idCarteBatimentDuJoueur.get(0), deckBatiment) ,getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));}
+
+            // Est ce que le premier batiment est fini ? Si oui, on passe au deuxième
+            if(getCarteBatById(idCarteBatimentDuJoueur.get(compteurChantierTerminé), deckBatiment).isBuiltShort()){
+                compteurChantierTerminé ++;
+            }
+            if((bourse.actionAutorisee(j.id,deckOuvrier,i) == true) && getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier).getAssign() == -1){
+                placerOuvrierSurChantier( getCarteBatById(idCarteBatimentDuJoueur.get(compteurChantierTerminé), deckBatiment) ,getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));}
         }
     }
 

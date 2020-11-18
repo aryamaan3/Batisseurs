@@ -44,7 +44,7 @@ public class Display {
         // si on trouve un batiment qui à un assign == idJoueur donné en paramètre : on l'imprime
         System.out.println("Le joueur " + (idJoueur+1) + " construit ce(s) chantier(s) :");
         for(int i = 0; i < deckBatiment.size(); i ++){
-            if(idJoueur == deckBatiment.get(i).getIdJoueur()){
+            if(idJoueur == deckBatiment.get(i).getIdJoueur() && !(deckBatiment.get(i).isBuiltShort())){
                 System.out.println(" - " + deckBatiment.get(i).getName()
                         + " (id = " + deckBatiment.get(i).getId() + ")");
             }

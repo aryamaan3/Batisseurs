@@ -2,10 +2,13 @@ package cartes.ouvrier;
 
 import cartes.Cartes;
 import cartes.batiments.CarteBatiments;
+import display.Couleur.*;
 
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import static display.Couleur.*;
 
 /**
  * CarteOuvriers contient des méthodes pour la gestion des cartes ouvriers
@@ -66,6 +69,7 @@ public class CarteOuvriers extends Cartes { //Implemente les cartes ouvriers her
      */
     public void resetAssign(){
         this.assign = -1;
+        System.out.println(ANSI_RED + "L'ouvrier "+ id + " a été libéré" +ANSI_RESET);
     }
 
     /**

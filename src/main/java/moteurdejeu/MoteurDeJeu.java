@@ -72,11 +72,17 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
      * @param ouvrier Ouvrier qui va etre assigner
      */
     public static void placerOuvrierSurChantier(CarteBatiments batiment, CarteOuvriers ouvrier){
-        if(ouvrier.getAssign() == -1) { // Si l'ouvrier n'est pas déjà affecté, on peut l'affecter !
+        // Si l'ouvrier n'est pas déjà affecté, on peut l'affecter !
+        // Si le batiment est construit, ne pas placer un ouvrier dessus !
+        if( (ouvrier.getAssign() == -1) && !(batiment.isBuiltShort())) {
             ouvrier.AffectationOuvrierAChantier(batiment.getId());
             batiment.AffectationOuvrierAChantier(ouvrier.getId());
         }
-        else{System.out.println("Cet ouvrier est déjà occupé sur le chantier n°"+ ouvrier.getAssign());}
+        else if(batiment.isBuiltShort()){
+            System.out.println("Cet bâtiment est déjà fini !");}
+        else {
+            System.out.println("Cet ouvrier est déjà occupé sur le chantier n°"+ ouvrier.getAssign());
+        }
     }
 
     /**
@@ -108,7 +114,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         Compteur c1 = new Compteur(j1.getId());
         Compteur c2 = new Compteur(j2.getId());
 
-        a:
+        whileTour:
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
 
@@ -203,10 +209,11 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 if(listJoueurs.get(j).getPoints() > 5){
                     System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+listJoueurs.get(j).getId()
                             +" a gagné ! Il a "+listJoueurs.get(j).getPoints()+ " points."+ANSI_RESET);
-                    break;
+                    break whileTour;
                 }
             }
-            if (compteTour > 5){break;} //Pour eviter des millions de tours ... a retirer à l'avenir
+            if (compteTour > 20){
+                break;} //Pour eviter des millions de tours ... a retirer à l'avenir
             }
 
     }
