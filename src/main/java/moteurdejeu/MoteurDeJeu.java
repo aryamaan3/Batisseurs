@@ -215,7 +215,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 displayBourse(listJoueurs.get(j));
                 displayChantierFini(listJoueurs.get(j), DeckBatiment);
                 if(listJoueurs.get(j).getPoints() > 5){
-                    System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+(listJoueurs.get(j).getId()+1)
+                    System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(listJoueurs.get(j).getId() +1)
                             +" a gagné ! Il a "+listJoueurs.get(j).getPoints()+ " points."+ANSI_RESET);
                     break whileTour;
                 }
