@@ -204,7 +204,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
             // Condition de victoire en fonction du nombre de point (+ de 5)
             for(int j = 0; j<nombreDeJoueurActifs; j++){
                 displayPoint(listJoueurs.get(j));
-                displayBourse(listJoueurs.get(j),bourse);
+                displayBourse(listJoueurs.get(j));
                 displayChantierFini(listJoueurs.get(j), DeckBatiment);
                 if(listJoueurs.get(j).getPoints() > 5){
                     System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+listJoueurs.get(j).getId()

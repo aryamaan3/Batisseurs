@@ -32,7 +32,7 @@ public class Bourse {
      * @return le nombre d'écus que le joueur possède.
      */
     public int getEcus() {
-        return this.ecus;
+        return ecus;
     }
 
     /**
@@ -53,5 +53,6 @@ public class Bourse {
     public void addEcus(int somme) {
         this.ecus += somme;
         System.out.println(ANSI_RED + "Le joueur " +(idJoueur+1) +" gagne "+ somme + " écus"+ANSI_RESET);
+        System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
     }
 }

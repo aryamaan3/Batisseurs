@@ -104,8 +104,8 @@ public class Display {
         System.out.println("Il reste "+c.nb+" action(s)");
     }
 
-    public static void displayBourse(Joueurs joueurs,ArrayList<Bourse>bourses){
-            System.out.println("Le joueur "+ (joueurs.getId()+1) + " possede "+bourses.get(joueurs.getId()).getEcus()+" ecus");
+    public static void displayBourse(Joueurs joueurs){
+            System.out.println("Le joueur "+ (joueurs.getId()+1) + " possede "+joueurs.getBourseJoueur().getEcus()+" ecus");
 
     }
 }
