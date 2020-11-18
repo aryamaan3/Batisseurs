@@ -16,7 +16,8 @@ public class TestIA {
     ArrayList<CarteBatiments> deckBat = new DeckBatiments().getDeck();
     ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
     Joueurs j1 = new Joueurs(0);
-    IA test = new IA(j1, deckOuv, deckBat) ;
+    Compteur c = new Compteur(0);
+    IA test = new IA(j1, deckOuv, deckBat, c) ;
     Bourse b1 = new Bourse(0);
 
     @Test
@@ -39,7 +40,7 @@ public class TestIA {
     public void TestAttribution(){
         test.iaChoisitChantier(1);
         test.iaChoisitOuvrier(1);
-        test.iaAttributOuvrierAChantier(b1);
+        test.iaAttributOuvrierAChantier();
 
         ArrayList<Integer> nbO;
         nbO = cartes.ouvrier.CarteOuvriers.obtenirDeckJoueur(0, deckOuv);

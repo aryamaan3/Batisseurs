@@ -27,12 +27,14 @@ public class IA {
     ArrayList<CarteOuvriers> deckOuvrier;
     ArrayList<CarteBatiments> deckBatiment;
     Joueurs j;
+    Compteur c;
     int compteurChantierTerminé = 0;
 
-    public IA(Joueurs j, ArrayList<CarteOuvriers> deckOuvrier, ArrayList<CarteBatiments> deckBatiment){
+    public IA(Joueurs j, ArrayList<CarteOuvriers> deckOuvrier, ArrayList<CarteBatiments> deckBatiment, Compteur c){
         this.deckBatiment = deckBatiment;
         this.deckOuvrier = deckOuvrier;
         this.j = j;
+        this.c = c;
     }
 
     /**
@@ -47,6 +49,7 @@ public class IA {
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois
              puisse que CartesDisponibles est censé se MAJ en focntion de l'assign */
         }
+        c.actionsFait(nbChoix);
     }
 
     /**
@@ -64,17 +67,15 @@ public class IA {
             /* A verifier si on peut lui donner CartesDisponibles[0] à chaque fois
              puisse que CartesDisponibles est censé se MAJ en focntion de l'assign */
             }
-        } else {
-            // Reattribuer les actions qui non pas été utilisées
         }
+        c.actionsFait(nbChoix);
     }
 
     /**
      * Permet l'attribution d'un ouvrier à un chantier (que le joueur possède)
      * en fonction du choix de l'IA
-     * @param bourse la bourse du joueur
      */
-    public void iaAttributOuvrierAChantier(Bourse bourse){
+    public void iaAttributOuvrierAChantier(){
         // On veut les id des  cartes qui appartiennent au joueur
         ArrayList<Integer> idCarteOuvrierDuJoueur = obtenirDeckJoueur(j.getId(), deckOuvrier);
         ArrayList<Integer> idCarteBatimentDuJoueur = obtenirDeckJoueur(j.getId(), deckBatiment);
@@ -86,28 +87,47 @@ public class IA {
             if(getCarteBatById(idCarteBatimentDuJoueur.get(compteurChantierTerminé), deckBatiment).isBuiltShort()){
                 compteurChantierTerminé ++;
             }
-            if((bourse.actionAutorisee(j.id,deckOuvrier,i) == true) && getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier).getAssign() == -1){
+            if((j.bourseJoueur.actionAutorisee(j.id,deckOuvrier,i) == true) && getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier).getAssign() == -1){
                 placerOuvrierSurChantier( getCarteBatById(idCarteBatimentDuJoueur.get(compteurChantierTerminé), deckBatiment) ,getCarteOuvById(idCarteOuvrierDuJoueur.get(i), deckOuvrier));}
         }
+        c.actionsFait(1);
     }
 
-    public void passeTour(){
+    /**
+     * verifie si le joueur possede assez de tours pour passer et ajoute les ecus
+     * @param n nb de tours à passer
+     */
+    public void passeTour(int n){
+       if (c.nb >= n) {
+           for (int i = 1; i < n + 1; i++) {
+               j.bourseJoueur.addEcus(i);
+           }
+           c.sellActions(n);
+       }
+    }
 
+    /**
+     * verifie si le joueur a les moyens d'acheter des tours
+     * @param n nb de tours à ajouter
+     */
+    public void ajouteTour(int n){
+        if (j.bourseJoueur.ecus >= n * 5 + 5){
+            c.buyActions(n);
+            j.bourseJoueur.subEcus(n*5);
+        }
     }
 
     /**
      * Permet d'executer l'ensemble des méthodes de cette class en un appel de méthode
-     * @param bourse
      */
-    public void  ActionsIA(Compteur c, Bourse bourse){
-        iaChoisitOuvrier(c.nb - 1);
-        c.actionsFait(2);
-        iaChoisitChantier(c.nb);
-        c.actionsFait(1);
-        iaAttributOuvrierAChantier(bourse);
-        c.buyActions(3);
-        c.actionsFait(1);
-        c.sellActions(2);
+    public void ActionsIA(){
+        //System.out.println(bourse.getEcus());
+        c.buyActions(2);
+        iaChoisitOuvrier(2);
+        iaChoisitChantier(1);
+        ajouteTour(1);
+        iaAttributOuvrierAChantier();
+        passeTour(1);
     }
 
 }

@@ -107,13 +107,13 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         System.out.println("Il y a "+nombreDeJoueurActifs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
-        // On créer un objet IA
-        IA IAduJoueur1 = new IA(j1, DeckOuvrier, DeckBatiment);
-        IA IAduJoueur2 = new IA(j2, DeckOuvrier, DeckBatiment);
 
         // On crée les objets compteurs pour chaque joueur
         Compteur c1 = new Compteur(j1.getId());
         Compteur c2 = new Compteur(j2.getId());
+        // On créer un objet IA
+        IA IAduJoueur1 = new IA(j1, DeckOuvrier, DeckBatiment, c1);
+        IA IAduJoueur2 = new IA(j2, DeckOuvrier, DeckBatiment, c2);
 
         whileTour:
         while (true){ //loop pour chaque tour
@@ -124,7 +124,10 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 if (i == 0) { //actions du joueur 1
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     displayActions(c1);
-                    IAduJoueur1.ActionsIA(c1,bourse.get(0));
+                    IAduJoueur1.ActionsIA();
+                    if ( c1.nb > 0){
+                        IAduJoueur1.passeTour(c1.nb);
+                    }
                     displayActions(c1);
                     /* A supprimer si display marche bien
                     System.out.println("Le joueur " + (i +1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(3).getName() + " et un chantier " + CarteBatimentsSurTable.get(1).getName());
@@ -154,7 +157,10 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 if (i == 1) { //actions du joueur 2
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
                     displayActions(c2);
-                    IAduJoueur2.ActionsIA(c2, bourse.get(1));
+                    IAduJoueur2.ActionsIA();
+                    if ( c2.nb > 0){
+                        IAduJoueur2.passeTour(c2.nb);
+                    }
                     displayActions(c2);
                     /*System.out.println("Le joueur " + (i + 1) + " a selectionné un ouvrier " + CarteOuvriersSurTable.get(4).getName() + " et un chantier " + CarteBatimentsSurTable.get(4).getName());
                     System.out.println("Sur le chantier " + CarteBatimentsSurTable.get(4).getName() + " on a l'ouvrier " + CarteBatimentsSurTable.get(4).getIdOuvrier().get(0));
@@ -174,6 +180,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                                     +", il gagne donc "+ANSI_GREEN+chantiersEnCours.get(j).getPoint()+" point(s)"+ANSI_RESET);
                         }
                     }
+
 
                     displayEtatChantiersDuJoueur(i,chantiersEnCours);
                     c2.reset();

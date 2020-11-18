@@ -14,7 +14,7 @@ import static display.Couleur.*;
  */
 
 public class Bourse {
-    private int pieceArgent, pieceOr, ecus, idJoueur;
+    public int pieceArgent, pieceOr, ecus, idJoueur;
 
     /**
      * Constructeur de la Bourse, on récupère les pièces d'argent et d'or pour créer le nombre d'écus.
@@ -53,6 +53,12 @@ public class Bourse {
     public void addEcus(int somme) {
         this.ecus += somme;
         System.out.println(ANSI_RED + "Le joueur " +(idJoueur+1) +" gagne "+ somme + " écus"+ANSI_RESET);
+        System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
+    }
+
+    public void subEcus(int somme){
+        this.ecus -= somme;
+        System.out.println(ANSI_RED + "Le joueur " +(idJoueur+1) +" utilise "+ somme + " écus"+ANSI_RESET);
         System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
     }
 }
