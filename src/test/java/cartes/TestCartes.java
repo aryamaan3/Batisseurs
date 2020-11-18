@@ -5,7 +5,6 @@ import cartes.ouvrier.CarteOuvriers;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.DeckOuvriers;
 import joueurs.Joueurs;
-import moteurdejeu.MoteurDeJeu;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -46,61 +45,15 @@ class TestCartes { //test le constructeur de cartes
     }
 
     @Test
-    public void TestCartesBatiments(){ //verifie création des Cartes Batiments
-        int cond = 0;
-        CarteBatiments b1 = new CarteBatiments(8,"foo",0,0,0,0,0,0);
-
-        if (b1.getId() == 8){
-            cond ++;
-        }
-
-        if (b1.getName().equals("foo")){
-            cond++;
-        }
-        assertEquals(2, cond);
+    public void testGetBois_Pierre_Savoir_Tuile_IdCarte_Nom_(){
+        Cartes test = new Cartes(1,"test",1,2,3,4 );
+        assertEquals(test.getBois(),1);
+        assertEquals(test.getIdCarte(),1);
+        assertEquals(test.getNom(),"test");
+        assertEquals(test.getPierre(),4);
+        assertEquals(test.getTuile(), 2);
+        assertEquals(test.getSavoir(), 3);
     }
 
-    @Test
-    public void TestCarteOuvrier(){
-        int cond = 0;
-        CarteOuvriers c1 = new CarteOuvriers(3,"toto",2,1,3,4,1,0,-1);
 
-        if (c1.getId() == 3){
-            cond++;
-        }
-
-        if (c1.getName().equals("toto")){
-            cond++;
-        }
-
-        assertEquals(2, cond);
-    }
-
-    @Test
-    public void TestIsBuilt(){
-        MoteurDeJeu test= new MoteurDeJeu();
-        test.creationDesJoueurs(1);
-        CarteOuvriers c1 = new CarteOuvriers(3,"toto",2,1,3,4,1,0,-1);
-        CarteBatiments b1 = new CarteBatiments(8,"foo",0,0,0,0,0,0);
-        placerOuvrierSurChantier(b1,c1);
-        assertEquals(true, b1.isBuilt());
-    }
-
-    @Test
-    public void testGetCarteBatiment(){
-        ArrayList<CarteBatiments> deck = new DeckBatiments().getDeck();
-        assertEquals(5,CarteBatiments.getCarteBatById(5,deck).getIdCarte());
-    }
-    @Test
-
-    public void testGetCarteOuvrier(){
-        ArrayList<CarteOuvriers> deck = new DeckOuvriers().getDeck();
-        assertEquals(7,CarteOuvriers.getCarteOuvById(7,deck).getIdCarte());
-    }
-
-    @Test
-    public void testCarteSurTable(){
-        ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();
-        ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();
-    }
 }

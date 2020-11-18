@@ -1,6 +1,5 @@
 package joueurs;
 
-import cartes.Cartes;
 import cartes.batiments.CarteBatiments;
 import cartes.batiments.DeckBatiments;
 import cartes.ouvrier.CarteOuvriers;

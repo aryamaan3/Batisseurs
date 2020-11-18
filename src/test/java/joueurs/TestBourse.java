@@ -18,20 +18,20 @@ public class TestBourse {
     int idCarte = 0;
 
     @Test
-    public void TestGetEcus(){
+    public void testGetEcus(){
         int bourse = BourseTest.getEcus();
         assertEquals(10,bourse);
     }
 
     @Test
-    public void TestActionAutorisee(){
+    public void testActionAutorisee(){
         deck.add(new CarteOuvriers(0, "maitre", 5, 0, 0, 2, 3, -1, 0));
         ArrayList<Integer> idCarteOuvrierDuJoueur = obtenirDeckJoueur(idJoueur, deck);
         assertTrue(getCarteOuvById(idCarteOuvrierDuJoueur.get(idCarte),deck).getCout() <= BourseTest.getEcus());
     }
 
     @Test
-    public void TestAddEcus(){
+    public void testAddEcus(){
         BourseTest.addEcus(5);
         assertEquals(15,BourseTest.getEcus());
     }
