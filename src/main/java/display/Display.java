@@ -5,6 +5,7 @@ import cartes.batiments.CarteBatiments;
 import cartes.ouvrier.CarteOuvriers;
 import joueurs.Joueurs;
 import joueurs.Compteur;
+import joueurs.Bourse;
 
 import java.util.ArrayList;
 
@@ -101,5 +102,12 @@ public class Display {
     }
     public static void displayActions(Compteur c){
         System.out.println("Il reste "+c.nb+" action(s)");
+    }
+
+    public static void displayBourse(ArrayList<Bourse>bourses){
+        for(int i = 0; i < bourses.size(); i++){
+            System.out.println("Le joueur "+ (i+1) + " possede "+bourses.get(i).getEcus(i)+" ecus");
+        }
+        System.out.println(); // Retour à la ligne
     }
 }
