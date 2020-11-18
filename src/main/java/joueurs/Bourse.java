@@ -48,7 +48,7 @@ public class Bourse {
     }
 
     /**
-     * @param somme somme d'écus a ajouter à la bourse
+     * @param somme somme d'écus à ajouter à la bourse
      */
     public void addEcus(int somme) {
         this.ecus += somme;
