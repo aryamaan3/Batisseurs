@@ -9,6 +9,7 @@ import joueurs.IA;
 import joueurs.Joueurs;
 import joueurs.Bourse;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import static cartes.batiments.CarteBatiments.*;
 import static cartes.ouvrier.CarteOuvriers.getCarteOuvById;
@@ -44,7 +45,6 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
     // Contient donc les cartes ouvrier de TOUS les joueurs
     private  ArrayList<CarteOuvriers> DeckOuvrier = new DeckOuvriers().getDeck();  //Contiendra des objects "cartes" que possède les joueur
     private  ArrayList<CarteBatiments> DeckBatiment = new DeckBatiments().getDeck();    // [2] Car on n'a pas plus de carte à donner pour l'instant
-
 
     /**
      * Choix de l'ouvrier par le joueur
@@ -100,7 +100,8 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
         }
         ArrayList<CarteBatiments> CarteBatimentsSurTable = CarteBatiments.carteSurTable(DeckBatiment);
         ArrayList<CarteOuvriers> CarteOuvriersSurTable = CarteOuvriers.carteSurTable(DeckOuvrier);
-
+        Collections.shuffle(DeckOuvrier);
+        Collections.shuffle(DeckBatiment);
 
 
         System.out.println("Il y a "+nombreDeJoueurActifs+" joueur(s)");
@@ -207,7 +208,7 @@ public class MoteurDeJeu{ //Controle le deroulement du jeu
                 displayBourse(listJoueurs.get(j));
                 displayChantierFini(listJoueurs.get(j), DeckBatiment);
                 if(listJoueurs.get(j).getPoints() > 5){
-                    System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+listJoueurs.get(j).getId()
+                    System.out.println(ANSI_GREEN_BACKGROUND+"Le Joueur "+(listJoueurs.get(j).getId()+1)
                             +" a gagné ! Il a "+listJoueurs.get(j).getPoints()+ " points."+ANSI_RESET);
                     break whileTour;
                 }
