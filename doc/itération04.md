@@ -18,4 +18,4 @@ Fonctionnalités livrées et issues réalisées :
 - Organisation du code :
     -Nous avons refactorer le code afin de transformer tout les tableaux en arraylist comme demander par le client
     - L'affichage est maintenant plus clair pour le client
-    - Npus avons créer des nouvelles méthodes et trois packages : ia, assetsjoueur et commun.display
+    - Npus avons créer des nouvelles méthodes et trois packages : ia, assetsjoueur et display
