@@ -6,7 +6,15 @@
 
     <groupId>bat20-B</groupId>
     <artifactId>Batisseurs</artifactId>
+
     <version>1.0</version>
+    <modules>
+        <module>commun</module>
+        <module>client</module>
+        <module>serveur</module>
+    </modules>
+
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- éventuellement à changer : encodage de vos fichiers -->
@@ -47,11 +55,11 @@
                         </goals>
                         <phase>site</phase>
                         <configuration>
-                            <overview>${basedir}/src/main/java/moteurdejeu/overview.html</overview>
+                            <overview>serveur/moteurdejeu/overview.html</overview>
                             <!-- endroit où seront les fichiers html générés ! attention au .gitignore ! -->
                             <!-- ici, c'est dans src/main/apidocs -->
-                            <outputDirectory>${basedir}/src/main/java/moteurdejeu</outputDirectory>
-                            <reportOutputDirectory>${basedir}/src/main/java/moteurdejeu</reportOutputDirectory>
+                            <outputDirectory>serveur/moteurdejeu</outputDirectory>
+                            <reportOutputDirectory>serveur/moteurdejeu</reportOutputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -88,21 +96,7 @@
             </plugin>
 
             <!-- Définition de la main class à exécuter -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version> <!-- à ne pas changer : c'est la version du plugin (et pas de java) -->
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
-                </configuration>
-            </plugin>
+
         </plugins>
 
     </build>

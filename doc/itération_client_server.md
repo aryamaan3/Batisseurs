@@ -26,7 +26,7 @@ ITERATION 8
 
 - Vraie condition de fin de partie + les conditions supplémentaires en cas d'égalité
 - Création du classement en fonction des conditions de fin de partie
-- Mise en place de 4 joueurs
+- Mise en place de 4 joueur
 - Proposer de rejoueur quand la partie est terminée
 
 ITERATION 9

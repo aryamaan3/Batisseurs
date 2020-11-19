@@ -14,7 +14,7 @@ Fonctionnalités livrées et issues réalisées :
     - Attribution des apprentis
     - Construction des chantiers, Methode IsBuilt
     - Placer plusiers ouvriers sur un chantier
-    - Creation (presque) toutes les cartes
+    - Creation (presque) toutes les commun
 
 - Tests :
     - Test shuffle
@@ -24,7 +24,7 @@ Fonctionnalités livrées et issues réalisées :
 
 - Organisation du code :
     - nous avons ajouté une nouvelle classe findInDeck qui permet de trouver un ouvrier dans le deck grace a son id
-    - nous avons ajouté une classe shufffle qui permet de distibuer 5 cartes aléatoires 
+    - nous avons ajouté une classe shufffle qui permet de distibuer 5 commun aléatoires 
     - nous avons modifié le moteur de jeux en créant une nouvelle methode de jeux : déroulementJeux afin d'alléger le main
-    - nous utilisons maintenant les classes DeckBatiments et DeckOuvriers afin de d'attribuer des crates aux joueurs
+    - nous utilisons maintenant les classes DeckBatiments et DeckOuvriers afin de d'attribuer des crates aux joueur
     

@@ -16,7 +16,7 @@ ITERATION 2
 - Fin du jeu quand on a placé un ouvrier sur un batiment
 
 ITERATION 3
-- Attribution des propriétés des cartes batiments et ouvrier (numéro unique : a débatre)
+- Attribution des propriétés des commun batiments et ouvrier (numéro unique : a débatre)
 - Distinction types de carte
 - Attribution automatique d'un apprentis en début de partie
 - L'action "placer un ouvrier" bloque l'ouvrier en question
@@ -25,7 +25,7 @@ ITERATION 3
 
 ITERATION 4
 - Génération des statistiques de fin de parties
-- Génération de l'étalage des (5) cartes batiments et ouvrier, remplacer les cartes piochées
+- Génération de l'étalage des (5) commun batiments et ouvrier, remplacer les commun piochées
 - Génération du portefeuille/bourse + attribution des 100 premiers écus (pour ne pas bloquer l'IA qui est encore basique)
 - Vérification du portefeuille/bourse pour savoir si l'action est autorisée
 - Gestion de la fin d'un batiment => Libération de l'ouvrier, on déplace la carte et donne les points et/ou des écus
@@ -51,7 +51,7 @@ ITERATION 7
 ITERATION 8
 - Vraie condition de fin de partie + les conditions supplémentaires en cas d'égalité
 - Création du classement en fonction des conditions de fin de partie
-- Mise en place de 4 joueurs
+- Mise en place de 4 joueur
 
 ITERATION 9
 - Amélioration de l'IA

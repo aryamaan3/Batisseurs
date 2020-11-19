@@ -9,8 +9,8 @@ Fonctionnalités livrées et issues réalisées :
 
 - Issue réalisée :
     - Création Choisir Ouvrier
-    - Création squelette pour tous les cartes
-    - Creation affectation d'un joueur aux cartes
+    - Création squelette pour tous les commun
+    - Creation affectation d'un joueur aux commun
     - Creation de placerOuvrierSurChantier
 
 - Tests :

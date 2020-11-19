@@ -10,7 +10,7 @@ Fonctionnalités livrées et issues réalisées :
 
 - Issue réalisée :
     - Création d'un objet compteur
-    - Modification display
+    - Modification commun.display
     - Implemenatation de bourse dans joueur 
     - IA qui peut placer un ouvrier seulement si elle a les moyens
     - Manipulation de la bourse (ajout et suppression d'écus)

@@ -19,4 +19,4 @@ Tests :
 
 
 Organisation du code :
-Nous avons créé trois classes : Cartes, joueurs, MoteurDeJeu.
+Nous avons créé trois classes : Cartes, joueur, MoteurDeJeu.
