@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestJoueur {
     Joueur joueur = new Joueur(0);
     CarteBatiments carteBat = new CarteBatiments(0,"batiment1",2,3,5,4,6,8);
-    CarteOuvriers carteOuv = new CarteOuvriers(0,"ouvrier",20,3,6,5,8);
+    CarteOuvriers carteOuv = new CarteOuvriers(0,"ouvrier",1,3,6,5,8);
 
     @Test
     public void testAjouteBatiment(){
