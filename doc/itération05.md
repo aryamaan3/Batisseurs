@@ -15,6 +15,7 @@ Fonctionnalités livrées et issues réalisées :
     - IA qui peut placer un ouvrier seulement si elle a les moyens
     - Manipulation de la bourse (ajout et suppression d'écus)
     - Mis en place d'un compteur de points
+    - Refactoring du code afin de faciliter l'implementation client serveur
 
 - Tests :
     - Test IA
@@ -22,9 +23,11 @@ Fonctionnalités livrées et issues réalisées :
     - Test bourse
     - Réorganisation des tests
     - ajout des tests manquants
-    - Test de la classe Assets
+   
 
 - Organisation du code :
     - Amélioration de l'affichage(plus de details de la partie afficher)
     - Ajout de nouvelles méthodes dans la classe bourse, Ia et joueur
+    - refactoring du code(conception plus simple avec utilisation directe des objets et des listes d'objets)
+    - mise en place du multimodule pour pouvoir installer la relation client-serveur pour la prochaine itération.
     
