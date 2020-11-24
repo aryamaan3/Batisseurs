@@ -36,6 +36,12 @@
             <version>1.0</version>
         </dependency>
 
+        <!-- Dépendence pour le client-->
+        <dependency> <groupId>io.socket</groupId>
+            <artifactId>socket.io-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 
