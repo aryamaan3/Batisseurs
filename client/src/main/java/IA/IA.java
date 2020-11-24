@@ -1,6 +1,7 @@
 package IA;
 
 import commun.batiments.CarteBatiments;
+import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
 import commun.display.Display;
 import commun.joueur.Compteur;
@@ -42,7 +43,7 @@ public class IA {
      * @param cartesBatSurTable les cartes dans lesquelles l'IA doit piocher
      */
 
-    public void choisitBatiment(int nbChoix, ArrayList<Object> cartesBatSurTable){
+    public void choisitBatiment(int nbChoix, ArrayList<CarteChantier> cartesBatSurTable){
 
         if(joueur.getMainBat().size()==0){
             joueur.ajouteBatiment((CarteBatiments) cartesBatSurTable.get(0));
@@ -79,7 +80,7 @@ public class IA {
      * @param carteOuvSurTable les cartes ouvriers disponibles sur le plateau
      * @param carteBatSurTable les cartes batiments disponibles sur le plateau
      */
-    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<Object> carteBatSurTable){
+    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         compteur.buyActions(2);
         choisitBatiment(1,carteBatSurTable);
         carteBatSurTable.remove(getJoueur().getMainBat().get(0));

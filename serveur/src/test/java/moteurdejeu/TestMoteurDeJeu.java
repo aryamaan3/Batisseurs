@@ -2,6 +2,7 @@ package moteurdejeu;
 
 import IA.IA;
 import commun.batiments.CarteBatiments;
+import commun.batiments.CarteChantier;
 import commun.batiments.DeckBatiments;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
@@ -28,8 +29,8 @@ public class TestMoteurDeJeu {
     }
     @Test
     public void testCarteBatimentsSurTable(){
-        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
-        ArrayList<Object> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
+        ArrayList<CarteChantier> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckBat.size());
     }
@@ -45,8 +46,8 @@ public class TestMoteurDeJeu {
     }
     @Test
     public void testFillCartesBatiments(){
-        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
-        ArrayList<Object> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
+        ArrayList<CarteChantier> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         cartesSurTable.remove(0);
         assertEquals(4,cartesSurTable.size());
         m1.fillCartesBatiments(deckBat,cartesSurTable);

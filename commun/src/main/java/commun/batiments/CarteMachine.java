@@ -4,7 +4,7 @@ package commun.batiments;
  * Classe fille de CarteBatiment :
  *  Une machine est un batiment avec quelques paramètres en plus (des ressources qui seront apportées à un chantier)
  */
-public class CarteMachine extends CarteBatiments {
+public class CarteMachine extends CarteBatiments implements CarteChantier{
     // Ressources que la machine apportera à un chantier lorsqu'elle sera utilisée comme un ouvrier
     protected int apportPierre, apportBois, apportSavoir, apportTuile;
 

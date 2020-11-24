@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *  Classe qui regroupe les informations et les méthodes des cartes batiments
  */
 
-public class CarteBatiments extends Cartes {
+public class CarteBatiments extends Cartes implements CarteChantier{
     protected boolean isConstruit;
     protected ArrayList<CarteOuvriers> ouvriers = new ArrayList<>();
     protected int ecu;

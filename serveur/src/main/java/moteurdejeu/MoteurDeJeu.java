@@ -1,9 +1,8 @@
 package moteurdejeu;
 
-import commun.batiments.CarteBatiments;
 import IA.IA;
 
-import commun.batiments.CarteMachine;
+import commun.batiments.CarteChantier;
 import commun.batiments.DeckBatiments;
 import commun.ouvriers.CarteOuvriers;
 import commun.ouvriers.DeckOuvriers;
@@ -25,7 +24,7 @@ public class MoteurDeJeu {
      */
 
     public void partie(int nbJoueurs){
-        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         ArrayList<Joueur> joueurs = new ArrayList<>();
         int compteTour =1;
@@ -40,7 +39,7 @@ public class MoteurDeJeu {
         Collections.shuffle(deckBat);
         Collections.shuffle(deckOuv);
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
-        ArrayList<Object> carteBatSurTable = carteBatimentsSurTable(deckBat);
+        ArrayList<CarteChantier> carteBatSurTable = carteBatimentsSurTable(deckBat);
         System.out.println("Il y a "+nbJoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
@@ -143,8 +142,8 @@ public class MoteurDeJeu {
      *  Méthode qui sélectionne les 5 premières cartes du deck batiment pour les poser sur le plateau
      * @param deck le deck batiment principal
      */
-    public ArrayList<Object> carteBatimentsSurTable(ArrayList<Object> deck) {
-        ArrayList<Object> cartes = new ArrayList<>();
+    public ArrayList<CarteChantier> carteBatimentsSurTable(ArrayList<CarteChantier> deck) {
+        ArrayList<CarteChantier> cartes = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             cartes.add(deck.get(i));
             deck.remove(deck.get(i));
@@ -173,7 +172,7 @@ public class MoteurDeJeu {
      * @param deck le deck batiment principal
      * @param carteSurTable les cartes batiment sur le plateau
      */
-    public void fillCartesBatiments(ArrayList<Object> deck,ArrayList<Object> carteSurTable){
+    public void fillCartesBatiments(ArrayList<CarteChantier> deck, ArrayList<CarteChantier> carteSurTable){
         int nbCartes;
         if(carteSurTable.size()<5){
             nbCartes = 5 - carteSurTable.size();

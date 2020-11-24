@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class DeckBatiments {
 
-    private final ArrayList<Object> deck = new ArrayList<>();
+    private final ArrayList<CarteChantier> deck = new ArrayList<>();
 
     public DeckBatiments(){
         deck.add(new CarteBatiments(0,"la cabane", 0, 1, 1, 0, 8, 0));
@@ -61,7 +61,7 @@ public class DeckBatiments {
      *
      * @return Le deck batiment
      */
-    public ArrayList<Object> getDeck(){
+    public ArrayList<CarteChantier> getDeck(){
         return deck;
     }
 }

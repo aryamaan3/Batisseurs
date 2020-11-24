@@ -3,6 +3,7 @@ package IA;
 import java.util.ArrayList;
 
 import commun.batiments.CarteBatiments;
+import commun.batiments.CarteChantier;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 import commun.ouvriers.CarteOuvriers;
@@ -16,7 +17,7 @@ public class TestIA {
 
     @Test
     public void TestChoisitBatiment(){
-        ArrayList<Object> cartes = new ArrayList<>();
+        ArrayList<CarteChantier> cartes = new ArrayList<>();
         cartes.add(new CarteBatiments(0,"test1",1,5,4,4,3,9));
         cartes.add(new CarteBatiments(0,"test2",3,1,5,1,3,9));
         cartes.add(new CarteBatiments(0,"test3",5,3,1,3,3,9));
