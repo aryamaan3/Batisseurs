@@ -113,7 +113,7 @@ public class MoteurDeJeu {
                 Display.displayPoint(joueurs.get(j));
                 Display.displayBourse(joueurs.get(j));
                 Display.displayChantierFini(joueurs.get(j));
-                if(joueurs.get(j).getPoints() > 4){
+                if(joueurs.get(j).getPoints() > 10){
                     System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(joueurs.get(j).getId())
                             +" a gagné ! Il a "+joueurs.get(j).getPoints()+ " points."+ANSI_RESET);
                     break whileTour;
@@ -199,12 +199,16 @@ public class MoteurDeJeu {
                 ia.getJoueur().addPoints(ia.getJoueur().getMainBat().get(i).getPoints());
                 ia.getJoueur().getBourse().addEcus(ia.getJoueur().getMainBat().get(i).getEcu());
 
-                // On vérifie si le batiment qu'on vient de finir n'est pas une machine
+                // On vérifie si le chantier qu'on vient de finir est une machine
                 if (ia.getJoueur().getMainBat().get(i).isMachine()){
                     // Pour simplifier le code, on place la carte dans carteMachine
-                    // CarteMachine carteMachine = ia.getJoueur().getMainBat().get(i);
+                    // Je transforme ma CarteChantier en CarteMachine
+                    CarteMachine carteMachine = (CarteMachine) ia.getJoueur().getMainBat().get(i);
                     // Il faut transformer ce chantier en ouvrier
-                    //CarteOuvriers newMachineAsOuvrier = CarteOuvriers(0,carteMachine.getNom(),)
+                    CarteOuvriers newMachineAsOuvrier = carteMachine.transformationEnOuvrier();
+
+                    //Il faut ajouter cet ouvrier au deckOuvrier du joueur
+                    ia.getJoueur().ajouteOuvrier(newMachineAsOuvrier);
                 }
             }
         }

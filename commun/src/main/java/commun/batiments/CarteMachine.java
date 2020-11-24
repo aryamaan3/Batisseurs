@@ -1,5 +1,7 @@
 package commun.batiments;
 
+import commun.ouvriers.CarteOuvriers;
+
 /**
  * Classe fille de CarteBatiment :
  *  Une machine est un batiment avec quelques paramètres en plus (des ressources qui seront apportées à un chantier)
@@ -48,5 +50,24 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
      */
     public int getApportTuile() {
         return apportTuile;
+    }
+
+    /**
+     * Permet de transformer une carteBatiment (CarteChantier) en ouvrier
+     * @return Retourne une carte ouvrier que l'on pourra ajouter au deckOuvrier du joueur
+     */
+    public CarteOuvriers transformationEnOuvrier(){
+
+
+        // L'id de ce nouvel ouvrier est fixé à son id de chantier +100 pour ne pas entrer en conflit avec un id ouvrier déjà existant
+        // Le 0 dans le constucteur est expliqué par le fait qu'une machine ne coute rien à utiliser
+        CarteOuvriers newMachineAsOuvrier = new CarteOuvriers(id+100, nom,0,
+                apportPierre, apportBois, apportSavoir, apportTuile);
+
+        /* A supprimer si tout marche bien
+        CarteOuvriers newMachineAsOuvrier = new CarteOuvriers(carteMachine.getIdCarte()+100, carteMachine.getNom(),0,
+                carteMachine.getApportPierre(), carteMachine.getApportBois(), carteMachine.getApportSavoir(),carteMachine.getApportTuile());*/
+
+        return newMachineAsOuvrier;
     }
 }
