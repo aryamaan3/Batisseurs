@@ -11,13 +11,13 @@ import java.util.ArrayList;
  */
 
 public class CarteBatiments extends Cartes {
-    private boolean isConstruit;
-    private ArrayList<CarteOuvriers> ouvriers = new ArrayList<>();
-    private int ecu;
-    private int points;
+    protected boolean isConstruit;
+    protected ArrayList<CarteOuvriers> ouvriers = new ArrayList<>();
+    protected int ecu;
+    protected int points;
 
     public CarteBatiments(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points) {
-        super(id, nom, bois, tuile, savoir, pierre);
+        super(id, nom, pierre, bois, savoir, tuile);
         this.ecu = ecu;
         this.points = points;
         this.isConstruit = false; // 0 si pas encore construit et 1 si construit
@@ -141,3 +141,4 @@ public class CarteBatiments extends Cartes {
         return false;
     }
 }
+

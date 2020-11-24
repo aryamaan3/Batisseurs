@@ -3,6 +3,7 @@ package moteurdejeu;
 import commun.batiments.CarteBatiments;
 import IA.IA;
 
+import commun.batiments.CarteMachine;
 import commun.batiments.DeckBatiments;
 import commun.ouvriers.CarteOuvriers;
 import commun.ouvriers.DeckOuvriers;
@@ -200,7 +201,10 @@ public class MoteurDeJeu {
 
                 // On vérifie si le batiment qu'on vient de finir n'est pas une machine
                 if (ia.getJoueur().getMainBat().get(i).isMachine()){
+                    // Pour simplifier le code, on place la carte dans carteMachine
+                    // CarteMachine carteMachine = ia.getJoueur().getMainBat().get(i);
                     // Il faut transformer ce chantier en ouvrier
+                    //CarteOuvriers newMachineAsOuvrier = CarteOuvriers(0,carteMachine.getNom(),)
                 }
             }
         }

@@ -45,15 +45,17 @@ public class DeckBatiments {
         deck.add(new CarteBatiments(31,"l'aqueduc",5,2,5,0,20,6));
         deck.add(new CarteBatiments(32,"le château-fort",5,3,5,3,20,7));
         deck.add(new CarteBatiments(33,"la cathédrale",5,4,4,4,20,8));
-        deck.add(new CarteBatiments(34,"un instrument de mesure",1,0,0,2,0,2));
-        deck.add(new CarteBatiments(35,"un four à tuiles",2,1,0,0,0,2));
-        deck.add(new CarteBatiments(36,"une grue",0,2,1,0,0,2));
-        deck.add(new CarteBatiments(37,"une scie circulaire",0,0,2,1,0,2));
-        deck.add(new CarteBatiments(38,"un instrument de mesure",1,1,0,0,0,1));
-        deck.add(new CarteBatiments(39,"un four à tuiles",0,1,1,0,0,1));
-        deck.add(new CarteBatiments(40,"une grue",0,1,0,1,0,1));
-        deck.add(new CarteBatiments(41,"une scie circulaire",1,0,0,1,0,1));
+        deck.add(new CarteMachine(34,"un instrument de mesure",1,0,0,2,0,2, 0, 0, 3, 0));
+        deck.add(new CarteMachine(35,"un four à tuiles",2,1,0,0,0,2, 0,0,0,3));
+        deck.add(new CarteMachine(36,"une grue",0,2,1,0,0,2,3,0,0,0));
+        deck.add(new CarteMachine(37,"une scie circulaire",0,0,2,1,0,2,0,3,0,0));
+        deck.add(new CarteMachine(38,"un instrument de mesure",1,1,0,0,0,1,0,0,2,0));
+        deck.add(new CarteMachine(39,"un four à tuiles",0,1,1,0,0,1,0,0,0,2));
+        deck.add(new CarteMachine(40,"une grue",0,1,0,1,0,1,2,0,0,0));
+        deck.add(new CarteMachine(41,"une scie circulaire",1,0,0,1,0,1,0,2,0,0));
     }
+
+
 
     /**
      *
