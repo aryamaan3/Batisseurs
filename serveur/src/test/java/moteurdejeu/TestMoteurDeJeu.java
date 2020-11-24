@@ -28,8 +28,8 @@ public class TestMoteurDeJeu {
     }
     @Test
     public void testCarteBatimentsSurTable(){
-        ArrayList<CarteBatiments> deckBat = new DeckBatiments().getDeck();
-        ArrayList<CarteBatiments> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
+        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
+        ArrayList<Object> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckBat.size());
     }
@@ -45,8 +45,8 @@ public class TestMoteurDeJeu {
     }
     @Test
     public void testFillCartesBatiments(){
-        ArrayList<CarteBatiments> deckBat = new DeckBatiments().getDeck();
-        ArrayList<CarteBatiments> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
+        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
+        ArrayList<Object> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         cartesSurTable.remove(0);
         assertEquals(4,cartesSurTable.size());
         m1.fillCartesBatiments(deckBat,cartesSurTable);

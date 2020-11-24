@@ -16,7 +16,7 @@ public class TestIA {
 
     @Test
     public void TestChoisitBatiment(){
-        ArrayList<CarteBatiments> cartes = new ArrayList<>();
+        ArrayList<Object> cartes = new ArrayList<>();
         cartes.add(new CarteBatiments(0,"test1",1,5,4,4,3,9));
         cartes.add(new CarteBatiments(0,"test2",3,1,5,1,3,9));
         cartes.add(new CarteBatiments(0,"test3",5,3,1,3,3,9));

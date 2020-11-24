@@ -42,10 +42,10 @@ public class IA {
      * @param cartesBatSurTable les cartes dans lesquelles l'IA doit piocher
      */
 
-    public void choisitBatiment(int nbChoix,ArrayList<CarteBatiments> cartesBatSurTable){
+    public void choisitBatiment(int nbChoix, ArrayList<Object> cartesBatSurTable){
 
         if(joueur.getMainBat().size()==0){
-            joueur.ajouteBatiment(cartesBatSurTable.get(0));
+            joueur.ajouteBatiment((CarteBatiments) cartesBatSurTable.get(0));
             compteur.actionsFait(nbChoix);
         }
     }
@@ -76,10 +76,10 @@ public class IA {
     }
     /**
      *  Méthode qui appel une suite de méthodes de l'IA pour qu'elle soit plus "intelligente"
-     * @param carteBatSurTable les cartes batiments disponibles sur le plateau
      * @param carteOuvSurTable les cartes ouvriers disponibles sur le plateau
+     * @param carteBatSurTable les cartes batiments disponibles sur le plateau
      */
-    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable,ArrayList<CarteBatiments> carteBatSurTable){
+    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<Object> carteBatSurTable){
         compteur.buyActions(2);
         choisitBatiment(1,carteBatSurTable);
         carteBatSurTable.remove(getJoueur().getMainBat().get(0));

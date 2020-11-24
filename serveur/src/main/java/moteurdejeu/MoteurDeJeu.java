@@ -25,7 +25,7 @@ public class MoteurDeJeu {
      */
 
     public void partie(int nbJoueurs){
-        ArrayList<CarteBatiments> deckBat = new DeckBatiments().getDeck();
+        ArrayList<Object> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         ArrayList<Joueur> joueurs = new ArrayList<>();
         int compteTour =1;
@@ -40,7 +40,7 @@ public class MoteurDeJeu {
         Collections.shuffle(deckBat);
         Collections.shuffle(deckOuv);
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
-        ArrayList<CarteBatiments> carteBatSurTable = carteBatimentsSurTable(deckBat);
+        ArrayList<Object> carteBatSurTable = carteBatimentsSurTable(deckBat);
         System.out.println("Il y a "+nbJoueurs+" joueur(s)");
         System.out.println("Debut du jeu...");
 
@@ -143,8 +143,8 @@ public class MoteurDeJeu {
      *  Méthode qui sélectionne les 5 premières cartes du deck batiment pour les poser sur le plateau
      * @param deck le deck batiment principal
      */
-    public ArrayList<CarteBatiments> carteBatimentsSurTable(ArrayList<CarteBatiments> deck) {
-        ArrayList<CarteBatiments> cartes = new ArrayList<>();
+    public ArrayList<Object> carteBatimentsSurTable(ArrayList<Object> deck) {
+        ArrayList<Object> cartes = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             cartes.add(deck.get(i));
             deck.remove(deck.get(i));
@@ -173,7 +173,7 @@ public class MoteurDeJeu {
      * @param deck le deck batiment principal
      * @param carteSurTable les cartes batiment sur le plateau
      */
-    public void fillCartesBatiments(ArrayList<CarteBatiments> deck,ArrayList<CarteBatiments> carteSurTable){
+    public void fillCartesBatiments(ArrayList<Object> deck,ArrayList<Object> carteSurTable){
         int nbCartes;
         if(carteSurTable.size()<5){
             nbCartes = 5 - carteSurTable.size();

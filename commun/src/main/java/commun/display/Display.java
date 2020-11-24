@@ -67,14 +67,14 @@ public class Display {
      * @param carteOuvSurTable Ouvriers Disponibles
      * @param carteBatSurTable  Chantiers disponibles
      */
-    public static void displayCarteDispo(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteBatiments> carteBatSurTable){
+    public static void displayCarteDispo(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<Object> carteBatSurTable){
         System.out.print(ANSI_GREEN + "Cartes ouvriers disponibles :"+ ANSI_RESET);
         for (CarteOuvriers carteOuvriers : carteOuvSurTable) {
             System.out.print(" " + carteOuvriers.getNom() + "(id=" + carteOuvriers.getIdCarte() + ")");
         }
         System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :"+ ANSI_RESET);
-        for (CarteBatiments carteBatiments : carteBatSurTable) {
-            System.out.print(" " + carteBatiments.getNom());
+        for (Object carteBatiments : carteBatSurTable) {
+            System.out.print(" " + ((CarteBatiments) carteBatiments).getNom());
         }
         System.out.println(); // Juste pour un retour à la ligne
     }
