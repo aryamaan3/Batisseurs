@@ -48,4 +48,12 @@ public class TestCarteBatiments {
         carteBat.attribuerOuvrier(carteOuv2);
         assertEquals(3,carteBat.getSumSavoirOuv());
     }
+
+    @Test
+    public void testIsMachine(){
+        CarteBatiments carteTestMachine = new CarteBatiments(0, "testMachine", 1,1,1,1,0,1);
+        CarteBatiments carteTestNotMachine = new CarteBatiments(1, "test", 1,1,1,1,1,1);
+        assertEquals(true,carteTestMachine.isMachine());
+        assertEquals(false,carteTestNotMachine.isMachine());
+    }
 }

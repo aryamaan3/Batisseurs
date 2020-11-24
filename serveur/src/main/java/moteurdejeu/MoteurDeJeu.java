@@ -197,6 +197,11 @@ public class MoteurDeJeu {
                 ia.getJoueur().getMainBat().get(i).setConstruit(true);
                 ia.getJoueur().addPoints(ia.getJoueur().getMainBat().get(i).getPoints());
                 ia.getJoueur().getBourse().addEcus(ia.getJoueur().getMainBat().get(i).getEcu());
+
+                // On vérifie si le batiment qu'on vient de finir n'est pas une machine
+                if (ia.getJoueur().getMainBat().get(i).isMachine()){
+                    // Il faut transformer ce chantier en ouvrier
+                }
             }
         }
         return isBuild;
