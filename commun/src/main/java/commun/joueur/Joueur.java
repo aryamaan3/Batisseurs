@@ -1,6 +1,8 @@
 package commun.joueur;
 
+import commun.Cartes;
 import commun.batiments.CarteBatiments;
+import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
 
 /**
@@ -13,8 +15,8 @@ import java.util.ArrayList;
 public class Joueur {
     private int id;
     private int points;
-    private ArrayList<CarteBatiments> MainBat = new ArrayList<>();
-    private ArrayList<CarteBatiments> BuiltBat = new ArrayList<>();
+    private ArrayList<CarteChantier> MainBat = new ArrayList<>();
+    private ArrayList<CarteChantier> BuiltBat = new ArrayList<>();
     private ArrayList<CarteOuvriers> MainOuv = new ArrayList<>();
     private Bourse bourse;
 
@@ -36,7 +38,7 @@ public class Joueur {
     /**
      *  Méthode qui renvoit la main de cartes batiment du joueur
      */
-    public ArrayList<CarteBatiments> getMainBat(){return MainBat;}
+    public ArrayList<CarteChantier> getMainBat(){return MainBat;}
     /**
      *  Méthode qui renvoit la main de cartes ouvrier du joueur
      */
@@ -59,7 +61,7 @@ public class Joueur {
      *  @param ouvrier la carte ouvrier attribué au batiment
      *  @param batiment la carte batiment
      */
-    public void attribuerOuvrierAChantier(CarteOuvriers ouvrier, CarteBatiments batiment){
+    public void attribuerOuvrierAChantier(CarteOuvriers ouvrier, CarteChantier batiment){
         if(actionAutorisee(ouvrier)){
         batiment.attribuerOuvrier(ouvrier);
         MainOuv.remove(ouvrier);
@@ -84,7 +86,7 @@ public class Joueur {
             }
         }
     }
-    public ArrayList<CarteBatiments> getBuiltBat(){
+    public ArrayList<CarteChantier> getBuiltBat(){
         return BuiltBat;
     }
     /**

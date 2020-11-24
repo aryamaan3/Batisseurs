@@ -3,6 +3,7 @@ package moteurdejeu;
 import IA.IA;
 
 import commun.batiments.CarteChantier;
+import commun.batiments.CarteMachine;
 import commun.batiments.DeckBatiments;
 import commun.ouvriers.CarteOuvriers;
 import commun.ouvriers.DeckOuvriers;
