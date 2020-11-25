@@ -98,7 +98,7 @@ public class IA {
      * @param n nb de tours à passer
      */
     public void passeTour(int n){
-        if (compteur.getNb() >= n) {
+        if (compteur.getNombreAction() >= n) {
             for (int i = 1; i < n + 1; i++) {
                 joueur.getBourse().addEcus(i);
             }

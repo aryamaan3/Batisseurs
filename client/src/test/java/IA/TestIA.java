@@ -53,7 +53,7 @@ public class TestIA {
     public void TestAjouteTour(){
         iatest.ajouteTour(1);
         assertEquals(5,j1.getBourse().getEcus());
-        assertEquals(4,iatest.getCompteur().getNb());
+        assertEquals(4,iatest.getCompteur().getNombreAction());
     }
 
 }

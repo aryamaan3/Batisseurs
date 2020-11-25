@@ -88,7 +88,7 @@ public class Display {
                 + ANSI_GREEN + joueur.getPoints() + " point(s)" +ANSI_RESET);
     }
     public static void displayActions(Compteur c){
-        System.out.println("Il reste "+c.getNb()+" action(s)");
+        System.out.println("Il reste "+c.getNombreAction()+" action(s)");
     }
 
     public static void displayBourse(Joueur joueur){

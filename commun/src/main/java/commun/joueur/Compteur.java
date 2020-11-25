@@ -17,7 +17,7 @@ public class Compteur {
         this.nb = nb - n;
     }
 
-    public int getNb(){
+    public int getNombreAction(){
         return nb;
     }
 

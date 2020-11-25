@@ -29,14 +29,28 @@ public class MoteurDeJeu {
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         ArrayList<Joueur> joueurs = new ArrayList<>();
         int compteTour =1;
-        Joueur j1 = new Joueur(1);
-        Joueur j2 = new Joueur(2);
+        Joueur j1,j2,j3,j4;
+        j1 = new Joueur(1);
+        j2 = new Joueur(2);
+        j3 = new Joueur(3);
+        j4 = new Joueur(4);
         joueurs.add(j1);
         joueurs.add(j2);
+        joueurs.add(j3);
+        joueurs.add(j4);
         Compteur c1 = new Compteur(j1.getId());
         Compteur c2 = new Compteur(j2.getId());
+        Compteur c3 = new Compteur(j3.getId());
+        Compteur c4 = new Compteur(j4.getId());
         IA ia1 = new IA(j1,c1);
         IA ia2 = new IA(j2,c2);
+        IA ia3 = new IA(j3,c3);
+        IA ia4 = new IA(j4,c4);
+        ArrayList<IA> ia = new ArrayList<>();
+        ia.add(ia1);
+        ia.add(ia2);
+        ia.add(ia3);
+        ia.add(ia4);
         Collections.shuffle(deckBat);
         Collections.shuffle(deckOuv);
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
@@ -51,27 +65,27 @@ public class MoteurDeJeu {
                 if(i==0){
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
-                    Display.displayActions(c1);
-                    ia1.actionIA(carteOuvSurTable,carteBatSurTable);
-                    if ( c1.getNb() > 0){
-                        ia1.passeTour(c1.getNb());
+                    Display.displayActions(ia.get(i).getCompteur());
+                    ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable);
+                    if ( ia.get(i).getCompteur().getNombreAction() > 0){
+                        ia.get(i).passeTour(ia.get(i).getCompteur().getNombreAction());
                     }
-                    Display.displayActions(c1);
-                    Display.displayOuvriersDuJoueur(j1);
-                    Display.displayChantierDuJoueur(j1);
-                    if(isBuild(ia1)){
-                        for(int j=0;j<j1.getMainBat().size();j++){
-                            if(j1.getMainBat().get(j).isBuilt()){
+                    Display.displayActions(ia.get(i).getCompteur());
+                    Display.displayOuvriersDuJoueur(joueurs.get(i));
+                    Display.displayChantierDuJoueur(joueurs.get(i));
+                    if(isBuild(ia.get(i))){
+                        for(int j=0 ; j < joueurs.get(i).getMainBat().size() ; j++){
+                            if(joueurs.get(i).getMainBat().get(j).isBuilt()){
                                 System.out.println("Le joueur "+ (i+1)
-                                        +" a fini le batiment "+j1.getMainBat().get(j).getNom()
-                                        +", il gagne donc "+ANSI_GREEN+j1.getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
+                                        +" a fini le batiment "+joueurs.get(i).getMainBat().get(j).getNom()
+                                        +", il gagne donc "+ANSI_GREEN+joueurs.get(i).getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
                             }
                         }
                     }
-                    Display.displayEtatChantiersDuJoueur(j1);
-                    Display.displayChantierFini(j1);
-                    c1.reset();
-                    j1.trierBuiltBat();
+                    Display.displayEtatChantiersDuJoueur(joueurs.get(i));
+                    Display.displayChantierFini(joueurs.get(i));
+                    ia.get(i).getCompteur().reset();
+                    joueurs.get(i).trierBuiltBat();
                     fillCartesBatiments(deckBat,carteBatSurTable);
                     fillCartesOuvriers(deckOuv,carteOuvSurTable);
 
@@ -80,14 +94,14 @@ public class MoteurDeJeu {
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
                     Display.displayActions(c2);
-                    ia2.actionIA(carteOuvSurTable,carteBatSurTable);
-                    if ( c2.getNb() > 0){
-                        ia2.passeTour(c2.getNb());
+                    ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable);
+                    if ( c2.getNombreAction() > 0){
+                        ia.get(i).passeTour(c2.getNombreAction());
                     }
                     Display.displayActions(c2);
                     Display.displayOuvriersDuJoueur(j2);
                     Display.displayChantierDuJoueur(j2);
-                    if(isBuild(ia2)){
+                    if(isBuild(ia.get(i))){
                         for(int j=0;j<j2.getMainBat().size();j++){
                             if(j2.getMainBat().get(j).isBuilt()){
                                 System.out.println("Le joueur "+ (i+1)
@@ -217,7 +231,8 @@ public class MoteurDeJeu {
 
     public static void main(String[] args){
         MoteurDeJeu m1 = new MoteurDeJeu();
-        m1.partie(2);
+        int nbJoueurs = 2;
+        m1.partie(nbJoueurs);
     }
 
 
