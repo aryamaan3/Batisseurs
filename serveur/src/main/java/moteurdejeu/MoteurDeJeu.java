@@ -251,6 +251,6 @@ public class MoteurDeJeu {
             int nbJoueurs = 2;
             m1.partie(nbJoueurs);
         }
-        System.out.println("\nIl y a "+nbPartie+" partie qui ont/a été joué(es)");
+        System.out.println("\nIl y a "+nbPartie+" partie(s) qui ont/a été jouée(s)");
     }
 }
