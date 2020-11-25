@@ -153,10 +153,19 @@ public class MoteurDeJeu {
         int nbCartes;
         if(carteSurTable.size()<5){
             nbCartes = 5 - carteSurTable.size();
-            for(int i=0;i<nbCartes;i++){
-                carteSurTable.add(deck.get(i));
-                deck.remove(deck.get(i));
+            if (deck.size() >= nbCartes) {
+                for (int i = 0; i < nbCartes; i++) {
+                    carteSurTable.add(deck.get(i));
+                    deck.remove(deck.get(i));
+                }
             }
+            else {
+                for (int i = 0; i < deck.size(); i++){
+                    carteSurTable.add(deck.get(i));
+                    deck.remove(deck.get(i));
+                }
+            }
+
         }
     }
     /**
