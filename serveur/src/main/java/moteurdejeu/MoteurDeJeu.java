@@ -44,16 +44,22 @@ public class MoteurDeJeu {
         IA ia3 = new IA(joueurs.get(2),c3);
         IA ia4 = new IA(joueurs.get(3),c4);
 
-        // Selection du premier joueur en fonction du totem
-        Random rand = new Random(); //instance of random class
-        int totem = rand.nextInt(nbJoueurs);
-        totem ++;
-
         ArrayList<IA> ia = new ArrayList<>();
         ia.add(ia1);
         ia.add(ia2);
         ia.add(ia3);
         ia.add(ia4);
+        // Selection du premier joueur en fonction du totem : l'orde est défini par la position dans l'arrayList ia
+        Random rand = new Random(); //instance of random class
+        int totem = rand.nextInt(nbJoueurs);
+        totem ++;
+        System.out.println(ANSI_CYAN+"C'est le joueur "+ totem + " qui commence."+ANSI_RESET);
+        Collections.swap(ia, 0, totem-1);
+        System.out.println(ANSI_CYAN+"Ordre de jeu :"+ANSI_RESET);
+        for(int i = 0; i < nbJoueurs ; i ++){
+            System.out.println(ANSI_CYAN+ (i+1)+" : " + "joueur " + ia.get(i).getJoueur().getId()+ANSI_RESET);
+        }
+
         Collections.shuffle(deckBat);
         Collections.shuffle(deckOuv);
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
@@ -65,7 +71,7 @@ public class MoteurDeJeu {
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
-                    System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
+                    System.out.println("------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
                     Display.displayActions(ia.get(i).getCompteur());
                     ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable);
@@ -73,22 +79,22 @@ public class MoteurDeJeu {
                         ia.get(i).passeTour(ia.get(i).getCompteur().getNombreAction());
                     }
                     Display.displayActions(ia.get(i).getCompteur());
-                    Display.displayOuvriersDuJoueur(joueurs.get(i));
-                    Display.displayChantierDuJoueur(joueurs.get(i));
+                    Display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
+                    Display.displayChantierDuJoueur(ia.get(i).getJoueur());
                     if(isBuild(ia.get(i))){
-                        for(int j=0 ; j < joueurs.get(i).getMainBat().size() ; j++){
-                            if(joueurs.get(i).getMainBat().get(j).isBuilt()){
+                        for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){
+                            if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
                                 System.out.println("Le joueur "+ (i+1)
-                                        +" a fini le batiment "+joueurs.get(i).getMainBat().get(j).getNom()
-                                        +", il gagne donc "+ANSI_GREEN+joueurs.get(i).getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
+                                        +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
+                                        +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
                             }
                         }
                     }
-                    joueurs.get(i).getBourse().addEcus(2);
-                    Display.displayEtatChantiersDuJoueur(joueurs.get(i));
-                    Display.displayChantierFini(joueurs.get(i));
+                    ia.get(i).getJoueur().getBourse().addEcus(2);
+                    Display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
+                    Display.displayChantierFini(ia.get(i).getJoueur());
                     ia.get(i).getCompteur().reset();
-                    joueurs.get(i).trierBuiltBat();
+                    ia.get(i).getJoueur().trierBuiltBat();
                     fillCartesBatiments(deckBat,carteBatSurTable);
                     fillCartesOuvriers(deckOuv,carteOuvSurTable);
 

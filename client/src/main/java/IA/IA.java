@@ -79,8 +79,6 @@ public class IA {
             for(int j = 0; j<joueur.getMainBat().size(); j++) {
                 if (!joueur.getMainBat().get(j).isContruit()) {
                     meilleurCarteOuvID = idealOuvToChantier();
-                    System.out.println(meilleurCarteOuvID);
-                    System.out.println(joueur.getMainOuv().get(meilleurCarteOuvID).toString());
                     joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
                     compteur.actionsFait(1);
                     break;
