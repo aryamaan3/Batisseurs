@@ -82,6 +82,7 @@ public class MoteurDeJeu {
                             }
                         }
                     }
+                    joueurs.get(i).getBourse().addEcus(2);
                     Display.displayEtatChantiersDuJoueur(joueurs.get(i));
                     Display.displayChantierFini(joueurs.get(i));
                     ia.get(i).getCompteur().reset();
@@ -111,6 +112,7 @@ public class MoteurDeJeu {
                         }
                     }
                     j2.trierBuiltBat();
+                    joueurs.get(i).getBourse().addEcus(2);
                     Display.displayEtatChantiersDuJoueur(j2);
                     Display.displayChantierFini(j2);
                     c2.reset();
@@ -127,13 +129,13 @@ public class MoteurDeJeu {
                 Display.displayPoint(joueurs.get(j));
                 Display.displayBourse(joueurs.get(j));
                 Display.displayChantierFini(joueurs.get(j));
-                if(joueurs.get(j).getPoints() > 10){
+                if(joueurs.get(j).getPoints() > 7){
                     System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(joueurs.get(j).getId())
                             +" a gagné ! Il a "+joueurs.get(j).getPoints()+ " points."+ANSI_RESET);
                     break whileTour;
                 }
             }
-            if (compteTour > 20){
+            if (compteTour > 25){
                 break;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
 
