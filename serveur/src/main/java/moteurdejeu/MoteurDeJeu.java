@@ -65,7 +65,6 @@ public class MoteurDeJeu {
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
-                if(i==0){
                     System.out.println("------------------ Joueur n°" + (i + 1) + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
                     Display.displayActions(ia.get(i).getCompteur());
@@ -93,37 +92,8 @@ public class MoteurDeJeu {
                     fillCartesBatiments(deckBat,carteBatSurTable);
                     fillCartesOuvriers(deckOuv,carteOuvSurTable);
 
-                }
-                /*
-                if(i==1){
-                    System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
-                    Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
-                    Display.displayActions(c2);
-                    ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable);
-                    if ( c2.getNombreAction() > 0){
-                        ia.get(i).passeTour(c2.getNombreAction());
-                    }
-                    Display.displayActions(c2);
-                    Display.displayOuvriersDuJoueur(j2);
-                    Display.displayChantierDuJoueur(j2);
-                    if(isBuild(ia.get(i))){
-                        for(int j=0;j<j2.getMainBat().size();j++){
-                            if(j2.getMainBat().get(j).isBuilt()){
-                                System.out.println("Le joueur "+ (i+1)
-                                        +" a fini le batiment "+j2.getMainBat().get(j).getNom()
-                                        +", il gagne donc "+ANSI_GREEN+j2.getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
-                            }
-                        }
-                    }
-                    j2.trierBuiltBat();
-                    joueurs.get(i).getBourse().addEcus(2);
-                    Display.displayEtatChantiersDuJoueur(j2);
-                    Display.displayChantierFini(j2);
-                    c2.reset();
-                    fillCartesBatiments(deckBat,carteBatSurTable);
-                    fillCartesOuvriers(deckOuv,carteOuvSurTable);
 
-                }*/
+
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
@@ -261,7 +231,13 @@ public class MoteurDeJeu {
             joueurs.add(j3);
             joueurs.add(j4);
             m1.partie(joueurs);
+
         }
-        System.out.println("\nIl y a "+nbPartie+" partie(s) qui ont/a été jouée(s)");
+        if(nbPartie == 1){
+        System.out.println("\nIl y a "+nbPartie+" partie qui a été jouée");}
+        else{
+            System.out.println("\nIl y a "+nbPartie+" partie qui ont été jouées");
+        }
+
     }
 }
