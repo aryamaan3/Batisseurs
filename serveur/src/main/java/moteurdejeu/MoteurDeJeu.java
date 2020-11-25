@@ -12,6 +12,8 @@ import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
+
 import static commun.display.Couleur.*;
 
 /**
@@ -232,12 +234,23 @@ public class MoteurDeJeu {
         }
         return isBuild;
     }
-
-    public static void main(String[] args){
-        MoteurDeJeu m1 = new MoteurDeJeu();
-        int nbJoueurs = 2;
-        m1.partie(nbJoueurs);
+    /**
+     * Méthode qui permet de rentrer le nombre de parties que l'utilisateur veut lancer
+     * @return un entier qui représente le nombre de parties
+     */
+    public static int nbPartie(){
+        System.out.println("combien de partie voulez vous jouer ? : ");
+        Scanner nbPartie = new Scanner(System.in);
+        return nbPartie.nextInt();
     }
 
-
+    public static void main(String[] args){
+        int nbPartie = nbPartie();
+        for (int i = 0; i < nbPartie; i++) {
+            MoteurDeJeu m1 = new MoteurDeJeu();
+            int nbJoueurs = 2;
+            m1.partie(nbJoueurs);
+        }
+        System.out.println("\nIl y a "+nbPartie+" partie qui ont/a été joué(es)");
+    }
 }
