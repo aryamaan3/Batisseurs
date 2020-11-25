@@ -69,6 +69,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode qui additionne le bois des ouvriers assignés au batiment
+     * @return la somme de bois que les ouvriers apportent sur le batiment
      */
     public int getSumBoisOuv(){
         int sumBois =0;
@@ -79,6 +80,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode qui additionne la pierre des ouvriers assignés au batiment
+     * @return la somme de pierre que les ouvriers apportent sur le batiment
      */
     public int getSumPierreOuv(){
         int sumPierre =0;
@@ -89,6 +91,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode qui additionne le savoir des ouvriers assignés au batiment
+     * @return la somme de savoir que les ouvriers apportent sur le batiment
      */
     public int getSumSavoirOuv(){
         int sumSavoir =0;
@@ -99,6 +102,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode qui additionne la tuile des ouvriers assignés au batiment
+     * @return la somme de tuile que les ouvriers apportent sur le batiment
      */
     public int getSumTuileOuv(){
         int sumTuile =0;
@@ -109,6 +113,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode pour organiser l'affichage d'une carte batiment
+     * @return l'affichage de la carte batiment avec le joueur associé et les ressources que ses ouvriers apportent
      */
     public String toString(Joueur joueur){
         return "\nCarte Batiment "+nom+", appartient au joueur "+(joueur.getId())+", ressources présentes : "
@@ -119,6 +124,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     }
     /**
      *  Méthode qui vérifie si la somme des matériaux des ouvriers est suffisant pour construire le batiment
+     * @return true si les ouvriers apportent suffisamment de ressources pour construire le batiment, sinon false
      */
     public boolean isBuilt(){
         if(this.bois <= getSumBoisOuv()

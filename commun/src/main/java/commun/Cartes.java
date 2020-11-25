@@ -1,10 +1,23 @@
 package commun;
 
+/**
+ * Classe contenant les méthodes communes aux cartes Batiment et Ouvrier
+ */
+
 public class Cartes {
 
     protected int id,bois,tuile,savoir,pierre;
     protected String nom;
 
+    /**
+     * Constructeur commun pour les cartes
+     * @param id numéro de la carte
+     * @param nom nom de la carte
+     * @param bois attribut bois de la carte
+     * @param tuile attribut tuile de la carte
+     * @param savoir attribut savoir de la carte
+     * @param pierre attribut pierre de la carte
+     */
 
     public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
         this.id = id;

@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import static commun.display.Couleur.ANSI_GREEN;
 import static commun.display.Couleur.ANSI_RESET;
 
+/**
+ * Classe permettant la gestion de l'affichage dans le jeu
+ */
 public class Display {
 
     /**
@@ -81,16 +84,26 @@ public class Display {
     }
 
     /**
-     *
+     * Méthode permettant l'affichage des points d'un joueur
+     * @param joueur l'Objet joueur
      */
     public static void displayPoint(Joueur joueur){
         System.out.println("Le joueur n°" + (joueur.getId()) + " a "
                 + ANSI_GREEN + joueur.getPoints() + " point(s)" +ANSI_RESET);
     }
+
+    /**
+     * Méthode permettant l'affichage du compteur d'action d'un joueur
+     * @param c le compteur d'action
+     */
     public static void displayActions(Compteur c){
         System.out.println("Il reste "+c.getNombreAction()+" action(s)");
     }
 
+    /**
+     * Méthode permettant l'affichage de la bourse d'un joueur
+     * @param joueur l'Objet joueur
+     */
     public static void displayBourse(Joueur joueur){
         System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ joueur.getBourse().getEcus()+" écu(s)");
 

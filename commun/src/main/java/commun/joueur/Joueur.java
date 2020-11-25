@@ -5,13 +5,13 @@ import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
 
-/**
- * Classe qui regroupe toutes les informations et les méthodes liées au joueur
- */
+
 
 
 import java.util.ArrayList;
-
+/**
+ * Classe qui regroupe toutes les informations et les méthodes liées au joueur
+ */
 public class Joueur {
     private int id;
     private int points;
@@ -27,20 +27,53 @@ public class Joueur {
 
     }
 
+    /**
+     * @return la bourse du joueur
+     */
     public Bourse getBourse() { return bourse;}
+
+    /**
+     * Méthode permettant l'assignation de la bourse à un joueur
+     * @param bourse l'Objet bourse
+     */
     public void setBourse(Bourse bourse){ this.bourse = bourse;}
+
+    /**
+     * @return le numéro du joueur
+     */
     public int getId(){ return id;}
+
+    /**
+     * Méthode permettant l'assignation d'un numéro à un joueur
+     * @param id le numéro du joueur
+     */
     public void setId(int id){ this.id=id;}
+
+    /**
+     * @return le nombre de points du joueur
+     */
     public int getPoints(){ return points;}
+
+    /**
+     * Méthode permettant l'assignation de points à un joueur
+     * @param points le nombre de points
+     */
     public void setPoints(int points){this.points = points;}
+
+    /**
+     * Méthode permettant l'ajout de point à un joueur
+     * @param points le nombre de points à ajouter
+     */
     public void addPoints(int points){this.points += points; }
 
     /**
      *  Méthode qui renvoit la main de cartes batiment du joueur
+     * @return une ArrayList contenant les cartes batiment dans la main du joueur
      */
     public ArrayList<CarteChantier> getMainBat(){return MainBat;}
     /**
      *  Méthode qui renvoit la main de cartes ouvrier du joueur
+     * @return une ArrayList contenant les cartes ouvrier dans la main du joueur
      */
     public ArrayList<CarteOuvriers> getMainOuv(){return MainOuv;}
     /**
@@ -92,6 +125,7 @@ public class Joueur {
     /**
      *  Méthode qui vérifie que le joueur a assez d'écus pour payer un ouvrier
      * @param carteOuvriers la carte ouvrier que l'on veut payer avec les écus
+     * @return true si le joueur a assez d'écus pour réaliser son action, false sinon
      */
     public boolean actionAutorisee(CarteOuvriers carteOuvriers){
         return carteOuvriers.getCout() <= bourse.getEcus();

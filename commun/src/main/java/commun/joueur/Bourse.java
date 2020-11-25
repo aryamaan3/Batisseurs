@@ -5,6 +5,9 @@ import commun.ouvriers.CarteOuvriers;
 import static commun.display.Couleur.ANSI_RED;
 import static commun.display.Couleur.ANSI_RESET;
 
+/**
+ * Classe regroupant les informations et les méthodes associées aux bourses
+ */
 public class Bourse {
     private int pieceArgent, pieceOr, ecus, idJoueur;
 
@@ -36,6 +39,7 @@ public class Bourse {
         return carte.getCout() <= getEcus();
     }
     /**
+     * Ajoute des écus à un joueur
      * @param somme somme d'écus à ajouter à la bourse
      */
     public void addEcus(int somme) {
@@ -44,6 +48,10 @@ public class Bourse {
         System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
     }
 
+    /**
+     * Soustrait des écus à un joueur
+     * @param somme somme d'écus à ajouter à la bourse
+     */
     public void subEcus(int somme){
         this.ecus -= somme;
         System.out.println(ANSI_RED + "Le joueur " +(idJoueur) +" utilise "+ somme + " écu(s)"+ANSI_RESET);

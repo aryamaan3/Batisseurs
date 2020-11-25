@@ -143,6 +143,7 @@ public class MoteurDeJeu {
     /**
      *  Méthode qui sélectionne les 5 premières cartes du deck ouvrier pour les poser sur le plateau
      * @param deck le deck ouvrier principal
+     * @return une ArrayList contenant 5 cartes ouvrier
      */
     public ArrayList<CarteOuvriers> carteOuvriersSurTable(ArrayList<CarteOuvriers> deck){
         ArrayList<CarteOuvriers> cartes = new ArrayList<>();
@@ -156,6 +157,7 @@ public class MoteurDeJeu {
     /**
      *  Méthode qui sélectionne les 5 premières cartes du deck batiment pour les poser sur le plateau
      * @param deck le deck batiment principal
+     * @return une ArrayList contenant 5 cartes batiment
      */
     public ArrayList<CarteChantier> carteBatimentsSurTable(ArrayList<CarteChantier> deck) {
         ArrayList<CarteChantier> cartes = new ArrayList<>();
@@ -202,7 +204,7 @@ public class MoteurDeJeu {
      *  Méthode qui parcourt les cartes batiments dans la main de l'IA pour vérifier si l'une de ses cartes est construite
      *  Si on trouve un batiment construit, on ajoute les points et les écus à l'IA en question
      * @param ia l'IA dont on veut vérifier la main
-
+     * @return true si la carte batiment est terminée, false sinon
      */
     public boolean isBuild(IA ia){
         boolean isBuild = false;

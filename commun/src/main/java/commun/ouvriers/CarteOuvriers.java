@@ -2,6 +2,9 @@ package commun.ouvriers;
 
 import commun.Cartes;
 
+/**
+ * Classe qui regroupe les informations et les méthodes des cartes ouvriers
+ */
 public class CarteOuvriers extends Cartes {
     private int cout;
     private boolean isBusy;
@@ -13,14 +16,31 @@ public class CarteOuvriers extends Cartes {
 
     }
 
+    /**
+     * @return le coût de l'ouvrier
+     */
     public int getCout() {
         return cout;
     }
+
+    /**
+     * Assigne le coût d'un ouvrier
+     * @param cout le coût de l'ouvrier
+     */
     public void setCout(int cout) {
         this.cout = cout;
     }
+
+    /**
+     * @return true si l'ouvrier est assigné à un batiment, false sinon
+     */
     public boolean isBusy() { return isBusy;
     }
+
+    /**
+     * Méthode permettant de changer le statut de l'ouvrier (si il est occupé ou pas)
+     * @param isBusy true ou false
+     */
     public void setAssign(boolean isBusy) {
         this.isBusy = isBusy;
     }

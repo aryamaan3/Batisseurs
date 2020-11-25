@@ -13,10 +13,17 @@ public class Compteur {
         this.nb = 3;
     }
 
+    /**
+     * Méthode permettant le calcul des actions réalisées
+     * @param n le nombre d'actions réalisées
+     */
     public void actionsFait (int n){
         this.nb = nb - n;
     }
 
+    /**
+     * @return le nombre d'actions restantes
+     */
     public int getNombreAction(){
         return nb;
     }
@@ -49,6 +56,9 @@ public class Compteur {
         }
     }
 
+    /**
+     * Remet à 3 (l'état originel) le compteur d'action
+     */
     public void reset (){
         this.nb = 3;
     }

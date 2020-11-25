@@ -55,11 +55,11 @@
                         </goals>
                         <phase>site</phase>
                         <configuration>
-                            <overview>serveur/moteurdejeu/overview.html</overview>
+                            <overview>documentation/overview.html</overview>
                             <!-- endroit où seront les fichiers html générés ! attention au .gitignore ! -->
                             <!-- ici, c'est dans src/main/apidocs -->
-                            <outputDirectory>serveur/moteurdejeu</outputDirectory>
-                            <reportOutputDirectory>serveur/moteurdejeu</reportOutputDirectory>
+                            <outputDirectory>src/main/apidocs</outputDirectory>
+                            <reportOutputDirectory>src/main/apidocs</reportOutputDirectory>
                         </configuration>
                     </execution>
                     <execution>
