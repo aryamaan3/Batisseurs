@@ -12,6 +12,8 @@ import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
+
 import java.util.Scanner;
 
 import static commun.display.Couleur.*;
@@ -23,31 +25,30 @@ public class MoteurDeJeu {
 
     /**
      *  Méthode qui fait appel à toutes les méthodes nécessaires du projet pour créer et afficher une partie
-     * @param nbJoueurs le nombre de joueur dans la partie
+     * @param joueurs le liste des joueurs
      */
 
-    public void partie(int nbJoueurs){
+    public void partie(ArrayList<Joueur> joueurs){
         ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
-        ArrayList<Joueur> joueurs = new ArrayList<>();
         int compteTour =1;
-        Joueur j1,j2,j3,j4;
-        j1 = new Joueur(1);
-        j2 = new Joueur(2);
-        j3 = new Joueur(3);
-        j4 = new Joueur(4);
-        joueurs.add(j1);
-        joueurs.add(j2);
-        joueurs.add(j3);
-        joueurs.add(j4);
-        Compteur c1 = new Compteur(j1.getId());
-        Compteur c2 = new Compteur(j2.getId());
-        Compteur c3 = new Compteur(j3.getId());
-        Compteur c4 = new Compteur(j4.getId());
-        IA ia1 = new IA(j1,c1);
-        IA ia2 = new IA(j2,c2);
-        IA ia3 = new IA(j3,c3);
-        IA ia4 = new IA(j4,c4);
+
+        int nbJoueurs = joueurs.size();
+
+        Compteur c1 = new Compteur(joueurs.get(0).getId());
+        Compteur c2 = new Compteur(joueurs.get(1).getId());
+        Compteur c3 = new Compteur(joueurs.get(2).getId());
+        Compteur c4 = new Compteur(joueurs.get(3).getId());
+        IA ia1 = new IA(joueurs.get(0),c1);
+        IA ia2 = new IA(joueurs.get(1),c2);
+        IA ia3 = new IA(joueurs.get(2),c3);
+        IA ia4 = new IA(joueurs.get(3),c4);
+
+        // Selection du premier joueur en fonction du totem
+        Random rand = new Random(); //instance of random class
+        int totem = rand.nextInt(nbJoueurs);
+        totem ++;
+
         ArrayList<IA> ia = new ArrayList<>();
         ia.add(ia1);
         ia.add(ia2);
@@ -57,7 +58,7 @@ public class MoteurDeJeu {
         Collections.shuffle(deckOuv);
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
         ArrayList<CarteChantier> carteBatSurTable = carteBatimentsSurTable(deckBat);
-        System.out.println("Il y a "+nbJoueurs+" joueur(s)");
+        System.out.println("Il y a " + nbJoueurs + " joueur(s)");
         System.out.println("Debut du jeu...");
 
         whileTour:
@@ -93,6 +94,7 @@ public class MoteurDeJeu {
                     fillCartesOuvriers(deckOuv,carteOuvSurTable);
 
                 }
+                /*
                 if(i==1){
                     System.out.println("------------------ Joueur n°" + (i +1) + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
@@ -121,7 +123,7 @@ public class MoteurDeJeu {
                     fillCartesBatiments(deckBat,carteBatSurTable);
                     fillCartesOuvriers(deckOuv,carteOuvSurTable);
 
-                }
+                }*/
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
@@ -248,8 +250,17 @@ public class MoteurDeJeu {
         int nbPartie = nbPartie();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
-            int nbJoueurs = 2;
-            m1.partie(nbJoueurs);
+            Joueur j1,j2,j3,j4;
+            j1 = new Joueur(1);
+            j2 = new Joueur(2);
+            j3 = new Joueur(3);
+            j4 = new Joueur(4);
+            ArrayList<Joueur> joueurs = new ArrayList<>();
+            joueurs.add(j1);
+            joueurs.add(j2);
+            joueurs.add(j3);
+            joueurs.add(j4);
+            m1.partie(joueurs);
         }
         System.out.println("\nIl y a "+nbPartie+" partie(s) qui ont/a été jouée(s)");
     }
