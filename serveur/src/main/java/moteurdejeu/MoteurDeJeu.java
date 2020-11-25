@@ -209,6 +209,7 @@ public class MoteurDeJeu {
                 ia.getJoueur().getMainBat().get(i).setConstruit(true);
                 ia.getJoueur().addPoints(ia.getJoueur().getMainBat().get(i).getPoints());
                 ia.getJoueur().getBourse().addEcus(ia.getJoueur().getMainBat().get(i).getEcu());
+                ia.getJoueur().getStats().addRevenusBat(ia.getJoueur().getMainBat().get(i).getEcu());
 
                 // On vérifie si le chantier qu'on vient de finir est une machine
                 if (ia.getJoueur().getMainBat().get(i).isMachine()){
