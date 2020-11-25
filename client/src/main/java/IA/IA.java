@@ -57,11 +57,15 @@ public class IA {
      * @param cartesOuvSurTable les cartes dans lesquelles l'IA doit piocher
      */
     public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
-        for(int i=0;i<nbChoix;i++){
-            joueur.ajouteOuvrier(cartesOuvSurTable.get(i));
-            cartesOuvSurTable.remove(getJoueur().getMainOuv().get(0));
+        if (joueur.getMainOuv().size() < 4){
+            for(int i=0;i<nbChoix;i++){
+                joueur.ajouteOuvrier(cartesOuvSurTable.get(i));
+                cartesOuvSurTable.remove(getJoueur().getMainOuv().get(0));
+            }
+            compteur.actionsFait(nbChoix);
         }
-        compteur.actionsFait(nbChoix);
+        else { passeTour(1);}
+
 
     }
     /**
