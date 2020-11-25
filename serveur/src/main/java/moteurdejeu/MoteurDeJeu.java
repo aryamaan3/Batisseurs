@@ -112,7 +112,9 @@ public class MoteurDeJeu {
                 if(joueurs.get(j).getPoints() > 7){
                     System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(joueurs.get(j).getId())
                             +" a gagné ! Il a "+joueurs.get(j).getPoints()+ " points."+ANSI_RESET);
-                    System.out.println("done");
+                    for(int s=0;s<nbJoueurs;s++){
+                        Display.displayStats(joueurs.get(s));
+                    }
                     break whileTour;
                 }
             }

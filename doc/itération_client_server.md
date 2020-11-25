@@ -6,7 +6,7 @@ ITERATION 6
 - Création de l'action "Prendre de l'argent"/Skiper
 - Création du compteur "Point de Victoire"
 - Fin de partie : atteindre un certain nombre point
-- Mise en place du serveur
+- Mise en place du connexionserveur
 - Mise en place du client
 - Création du Deck Antiquité
 

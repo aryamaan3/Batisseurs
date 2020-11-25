@@ -19,11 +19,13 @@ public class Joueur {
     private ArrayList<CarteChantier> BuiltBat = new ArrayList<>();
     private ArrayList<CarteOuvriers> MainOuv = new ArrayList<>();
     private Bourse bourse;
+    private Statistiques stats;
 
     public Joueur(int id){
         this.id=id;
         this.points=0;
         bourse = new Bourse(id);
+        stats = new Statistiques(id);
 
     }
 
@@ -31,6 +33,13 @@ public class Joueur {
      * @return la bourse du joueur
      */
     public Bourse getBourse() { return bourse;}
+
+    /**
+     * @return les statistiques du joueur
+     */
+    public Statistiques getStats(){
+        return stats;
+    }
 
     /**
      * Méthode permettant l'assignation de la bourse à un joueur
@@ -80,7 +89,9 @@ public class Joueur {
      *  Méthode qui prend une carte ouvrier sur le plateau pour la mettre dans la main du joueur
      *  @param carte la carte que le joueur souhaite piocher
      */
-    public void ajouteOuvrier(CarteOuvriers carte){MainOuv.add(carte);}
+    public void ajouteOuvrier(CarteOuvriers carte){
+        MainOuv.add(carte);
+        stats.addActionsRecrutement(1);}
     /**
      *  Méthode qui prend une carte batiment sur le plateau pour la mettre dans la main du joueur
      *  @param carte la carte que le joueur souhaite piocher
@@ -99,6 +110,8 @@ public class Joueur {
         batiment.attribuerOuvrier(ouvrier);
         MainOuv.remove(ouvrier);
         bourse.subEcus(ouvrier.getCout());
+        stats.addEcusDépensésOuv(ouvrier.getCout());
+        stats.addActionsTravailler(1);
         }else{
             System.out.println("le joueur n'a pas assez d'écus pour payer l'ouvrier");
         }
@@ -130,5 +143,7 @@ public class Joueur {
     public boolean actionAutorisee(CarteOuvriers carteOuvriers){
         return carteOuvriers.getCout() <= bourse.getEcus();
     }
+
+
 
 }

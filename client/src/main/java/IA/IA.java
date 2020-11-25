@@ -75,15 +75,19 @@ public class IA {
      */
     public void poserOuvrierSurChantier(){
         int meilleurCarteOuvID;
-        for(int i = 0; i<1; i++){   //On peut poser qu'un ouvrier par tour pour l'instant
-            for(int j = 0; j<joueur.getMainBat().size(); j++) {
-                if (!joueur.getMainBat().get(j).isContruit()) {
-                    meilleurCarteOuvID = idealOuvToChantier();
-                    joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
-                    compteur.actionsFait(1);
-                    break;
+        if(joueur.getMainOuv().size()>0) {
+            for (int i = 0; i < 1; i++) {   //On peut poser qu'un ouvrier par tour pour l'instant
+                for (int j = 0; j < joueur.getMainBat().size(); j++) {
+                    if (!joueur.getMainBat().get(j).isContruit()) {
+                        meilleurCarteOuvID = idealOuvToChantier();
+                        joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
+                        compteur.actionsFait(1);
+                        break;
+                    }
                 }
             }
+        } else{
+              passeTour(1);
         }
     }
 

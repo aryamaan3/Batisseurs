@@ -9,6 +9,7 @@ import commun.joueur.Joueur;
 import java.util.ArrayList;
 import static commun.display.Couleur.ANSI_GREEN;
 import static commun.display.Couleur.ANSI_RESET;
+import static commun.display.Couleur.ANSI_BLUE;
 
 /**
  * Classe permettant la gestion de l'affichage dans le jeu
@@ -107,5 +108,15 @@ public class Display {
     public static void displayBourse(Joueur joueur){
         System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ joueur.getBourse().getEcus()+" écu(s)");
 
+    }
+
+    public static void displayStats(Joueur joueur){
+        System.out.println(ANSI_BLUE +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
+        System.out.println("Points : "+joueur.getPoints());
+        System.out.println("Ecus : "+joueur.getBourse().getEcus());
+        System.out.println("Actions travailler (ouvriers attribués) : "+joueur.getStats().getNbActionsTravailler());
+        System.out.println("Actions recrutement (ouvriers recrutés) :"+joueur.getStats().getNbActionsRecrutement());
+        System.out.println("Ecus dépensés pour les ouvriers :"+joueur.getStats().getNbEcusDépensésOuv());
+        System.out.println("Revenus des Bâtiments :"+joueur.getStats().getNbRevenusBat());
     }
 }
