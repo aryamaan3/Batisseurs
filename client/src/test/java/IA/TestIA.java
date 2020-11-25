@@ -56,4 +56,22 @@ public class TestIA {
         assertEquals(4,iatest.getCompteur().getNombreAction());
     }
 
+    @Test
+    public void TestOuvrierIdeal(){
+        ArrayList<CarteChantier> cartesBat = new ArrayList<>();
+        cartesBat.add(new CarteBatiments(0,"test1",2,5,4,4,3,9));
+        ArrayList<CarteOuvriers> cartesOuv = new ArrayList<>();
+        cartesOuv.add(new CarteOuvriers(0,"ouv1",0,1,3,6,5));
+        cartesOuv.add(new CarteOuvriers(1,"ouv2",0,1,2,3,5));
+        cartesOuv.add(new CarteOuvriers(2,"ouv3",0,0,3,6,5));
+        cartesOuv.add(new CarteOuvriers(3,"ouv4",0,2,5,4,5));
+        Joueur j = new Joueur(0);
+        Compteur c = new Compteur(0);
+        IA ia = new IA(j, c);
+        ia.choisitOuvrier(3, cartesOuv);
+        ia.choisitBatiment(1, cartesBat);
+        int id = ia.idealOuvToChantier();
+        assertEquals(3, j.getMainOuv().get(id).getIdCarte());
+    }
+
 }
