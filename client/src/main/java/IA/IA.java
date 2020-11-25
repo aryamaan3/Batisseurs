@@ -43,13 +43,15 @@ public class IA {
      * @param carteBatSurTable les cartes dans lesquelles l'IA doit piocher
      */
 
-    public void choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable){
+    public int choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable){
 
         if(joueur.getMainBat().size()==0){
             joueur.ajouteBatiment((CarteBatiments) carteBatSurTable.get(0));
             compteur.actionsFait(nbChoix);
+            carteBatSurTable.remove(getJoueur().getMainBat().get(0));
+            return 1;
         }
-        carteBatSurTable.remove(getJoueur().getMainBat().get(0));
+        return 0;
     }
     /**
      *  Méthode qui permet à l'IA de choisir elle même un ouvrier
@@ -57,7 +59,7 @@ public class IA {
      * @param cartesOuvSurTable les cartes dans lesquelles l'IA doit piocher
      */
     public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
-        if (joueur.getMainOuv().size() < 4 && cartesOuvSurTable.size() > 0){
+        if (joueur.getMainOuv().size() < 5 && cartesOuvSurTable.size() > 0){
             for(int i=0;i<nbChoix;i++){
                 joueur.ajouteOuvrier(cartesOuvSurTable.get(i));
                 cartesOuvSurTable.remove(getJoueur().getMainOuv().get(0));
@@ -77,6 +79,8 @@ public class IA {
             for(int j = 0; j<joueur.getMainBat().size(); j++) {
                 if (!joueur.getMainBat().get(j).isContruit()) {
                     meilleurCarteOuvID = idealOuvToChantier();
+                    System.out.println(meilleurCarteOuvID);
+                    System.out.println(joueur.getMainOuv().get(meilleurCarteOuvID).toString());
                     joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
                     compteur.actionsFait(1);
                     break;
@@ -85,6 +89,10 @@ public class IA {
         }
     }
 
+    /**
+     * trouve le meilleur ouvrier à placer sur un batiment
+     * @return l'indice du meilleur ouvrier à placer sur le batiment
+     */
     public int idealOuvToChantier(){
         int bois, pierre, tuile, savoir, bestID = 0;
         int res[] = new int[joueur.getMainOuv().size()];
@@ -122,15 +130,24 @@ public class IA {
      */
     public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
-        choisitBatiment(1,carteBatSurTable);
-        System.out.println(compteur.getNombreAction());
-        choisitOuvrier(1,carteOuvSurTable);
-        System.out.println(compteur.getNombreAction());
+        if (joueur.getMainOuv().size() < 2) {
+            if (choisitBatiment(1, carteBatSurTable) == 1){
+                choisitOuvrier(2, carteOuvSurTable);
+            }
+            else {
+                choisitOuvrier(3, carteOuvSurTable);
+            }
+        }
+        else {
+            choisitBatiment(1, carteBatSurTable);
+            choisitOuvrier(1, carteOuvSurTable);
+            poserOuvrierSurChantier();
+        }
         Display.displayOuvriersDuJoueur(getJoueur());
         for(int i=0;i<getJoueur().getMainOuv().size();i++){
             carteOuvSurTable.remove(getJoueur().getMainOuv().get(i));
         }
-        poserOuvrierSurChantier();
+
         /*System.out.println(compteur.getNb());
         ajouteTour(1);
         System.out.println(compteur.getNb());

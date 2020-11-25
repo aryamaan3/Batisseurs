@@ -34,7 +34,7 @@ public class TestIA {
         cartes.add(new CarteOuvriers(1,"ouv2",1,2,3,6,5));
         cartes.add(new CarteOuvriers(2,"ouv3",1,2,3,6,5));
         iatest.choisitOuvrier(2,cartes);
-        assertEquals("ouv2",j1.getMainOuv().get(1).getNom());
+        assertEquals("ouv3",j1.getMainOuv().get(1).getNom());
         assertEquals(2,j1.getMainOuv().size());
     }
     @Test

@@ -106,10 +106,12 @@ public class MoteurDeJeu {
                 if(joueurs.get(j).getPoints() > 7){
                     System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(joueurs.get(j).getId())
                             +" a gagné ! Il a "+joueurs.get(j).getPoints()+ " points."+ANSI_RESET);
+                    System.out.println("done");
                     break whileTour;
                 }
             }
             if (compteTour > 25){
+                System.out.println("done");
                 break;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
 
