@@ -123,9 +123,7 @@ public class IA {
     public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
         choisitBatiment(1,carteBatSurTable);
-        System.out.println(compteur.getNombreAction());
         choisitOuvrier(1,carteOuvSurTable);
-        System.out.println(compteur.getNombreAction());
         Display.displayOuvriersDuJoueur(getJoueur());
         for(int i=0;i<getJoueur().getMainOuv().size();i++){
             carteOuvSurTable.remove(getJoueur().getMainOuv().get(i));
