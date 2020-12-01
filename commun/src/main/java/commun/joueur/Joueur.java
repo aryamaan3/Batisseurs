@@ -109,6 +109,7 @@ public class Joueur {
         if(actionAutorisee(ouvrier)){
         batiment.attribuerOuvrier(ouvrier);
         MainOuv.remove(ouvrier);
+        System.out.println("Le joueur pose l'ouvrier "+ ouvrier.getNom()+"(id="+ouvrier.getIdCarte()+")" + " sur le batiment "+ batiment.getNom()+" cela lui coûte "+ ouvrier.getCout()+" écus");
         bourse.subEcus(ouvrier.getCout());
         stats.addEcusDépensésOuv(ouvrier.getCout());
         stats.addActionsTravailler(1);
