@@ -54,8 +54,13 @@ public class Bourse {
      */
     public void subEcus(int somme){
         this.ecus -= somme;
-        System.out.println(ANSI_RED + "Le joueur " +(idJoueur) +" utilise "+ somme + " écu(s)"+ANSI_RESET);
-        System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
+        if(somme > 1){
+        System.out.println(ANSI_RED + "Le joueur " +(idJoueur) +" utilise "+ somme + " écus"+ANSI_RESET);
+        System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);}
+        else{
+            System.out.println(ANSI_RED + "Le joueur " +(idJoueur) +" utilise "+ somme + " écu"+ANSI_RESET);
+            System.out.println(ANSI_RED + "Nouveau solde : " +ecus +ANSI_RESET);
+        }
     }
 
 

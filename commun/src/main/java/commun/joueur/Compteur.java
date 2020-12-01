@@ -48,8 +48,13 @@ public class Compteur {
 
     public void sellActions (int n){
         if (n <= 3) {
-            System.out.println("Le joueur a vendu ses " + nb + " action(s) restant");
-            this.nb = nb - n;
+            if(n == 1){
+            System.out.println("Le joueur a vendu sa seule action restante");
+            this.nb = nb - n;}
+            else{
+                System.out.println("Le joueur a vendu ses "+ nb + "actions restantes");
+                this.nb = nb - n;
+            }
         }
         else{
             System.out.println("on ne peut vendre seulement 3 actions");

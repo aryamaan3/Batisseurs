@@ -75,11 +75,11 @@ public class Display {
     public static void displayCarteDispo(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         System.out.print(ANSI_GREEN + "Cartes ouvriers disponibles :"+ ANSI_RESET);
         for (CarteOuvriers carteOuvriers : carteOuvSurTable) {
-            System.out.print(" " + carteOuvriers.getNom() + "(id=" + carteOuvriers.getIdCarte() + ")");
+            System.out.print(" " + carteOuvriers.getNom() + "(id=" + carteOuvriers.getIdCarte() + ")" + " |");
         }
         System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :"+ ANSI_RESET);
         for (CarteChantier carteBatiments : carteBatSurTable) {
-            System.out.print(" " + ((CarteBatiments) carteBatiments).getNom());
+            System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
         }
         System.out.println(); // Juste pour un retour à la ligne
     }
@@ -98,7 +98,11 @@ public class Display {
      * @param c le compteur d'action
      */
     public static void displayActions(Compteur c){
-        System.out.println("Il reste "+c.getNombreAction()+" action(s)");
+        if(c.getNombreAction() < 2)
+        System.out.println("Il reste "+c.getNombreAction()+" action");
+        else{
+            System.out.println("Il reste "+c.getNombreAction()+" actions");
+        }
     }
 
     /**

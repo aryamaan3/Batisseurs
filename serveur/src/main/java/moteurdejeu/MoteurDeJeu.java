@@ -85,7 +85,7 @@ public class MoteurDeJeu {
                             if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
                                 System.out.println("Le joueur "+ (i+1)
                                         +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
-                                        +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET);
+                                        +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+" et "+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
                             }
                         }
                     }
