@@ -10,7 +10,7 @@ public class CarteOuvriers extends Cartes {
     private boolean isBusy;
 
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile){
-        super(id, nom , bois, tuile, savoir, pierre);
+        super(id, nom , pierre, bois, savoir, tuile);
         this.cout = cout;
         this.isBusy = false;
 

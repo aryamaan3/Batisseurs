@@ -19,7 +19,7 @@ public class Cartes {
      * @param pierre attribut pierre de la carte
      */
 
-    public Cartes(int id, String nom, int bois,int tuile,int savoir,int pierre){
+    public Cartes(int id, String nom, int pierre,int bois,int savoir,int tuile){
         this.id = id;
         this.bois = bois;
         this.tuile = tuile;

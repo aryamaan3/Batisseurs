@@ -89,7 +89,7 @@ public class MoteurDeJeu {
                             }
                         }
                     }
-                    ia.get(i).getJoueur().getBourse().addEcus(2);
+                    //ia.get(i).getJoueur().getBourse().addEcus(2);
                     Display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
                     Display.displayChantierFini(ia.get(i).getJoueur());
                     ia.get(i).getCompteur().reset();

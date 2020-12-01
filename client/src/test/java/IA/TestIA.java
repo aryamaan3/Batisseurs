@@ -36,7 +36,6 @@ public class TestIA {
         iatest.choisitOuvrier(2,cartes);
         assertEquals("ouv2",j1.getMainOuv().get(1).getNom());
         assertEquals(2,j1.getMainOuv().size());
-
     }
     @Test
     public void TestPoserOuvrierSurChantier(){
@@ -69,9 +68,39 @@ public class TestIA {
         Joueur j = new Joueur(0);
         Compteur c = new Compteur(0);
         IA ia = new IA(j, c);
-        ia.choisitOuvrier(3, cartesOuv);
+        ia.choisitOuvrier(4, cartesOuv);
+        //System.out.println("mainOuv");
+        /*for (int i = 0; i < j.getMainOuv().size(); i++){
+            System.out.println(j.getMainOuv().get(i).getIdCarte());
+        }*/
         ia.choisitBatiment(1, cartesBat);
+
         int id = ia.idealOuvToChantier();
         assertEquals(3, j.getMainOuv().get(id).getIdCarte());
     }
+
+    @Test
+    public void TestPlusieursOuvrierIdeal(){
+        ArrayList<CarteChantier> cartesBat = new ArrayList<>();
+        cartesBat.add(new CarteBatiments(0,"test1",6,5,4,4,3,9));
+        ArrayList<CarteOuvriers> cartesOuv = new ArrayList<>();
+        cartesOuv.add(new CarteOuvriers(1,"ouv1",0,3,3,6,5));
+        cartesOuv.add(new CarteOuvriers(2,"ouv2",0,1,2,3,5));
+        cartesOuv.add(new CarteOuvriers(3,"ouv3",0,0,3,6,5));
+        cartesOuv.add(new CarteOuvriers(4,"ouv4",0,3,5,4,5));
+        Joueur j = new Joueur(0);
+        Compteur c = new Compteur(0);
+        IA ia = new IA(j, c);
+        ia.choisitOuvrier(4, cartesOuv);
+        ia.choisitBatiment(1, cartesBat);
+        //on pose deux ouvriers sur le chantier
+        ia.poserOuvrierSurChantier();
+
+        //ia.poserOuvrierSurChantier();
+        //System.out.println(j.getMainBat().get(0).getOuvriers());
+
+        int id = ia.idealOuvToChantier();
+        assertEquals(1, j.getMainOuv().get(id).getIdCarte());
+    }
+
 }

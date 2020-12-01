@@ -59,7 +59,7 @@ public class IA {
             carteBatSurTable.remove(carteMini);
             return 1;
         }
-        return 0;
+        return 0; //si on déjà une carte batiment pas encore construit
     }
     /**
      *  Méthode qui permet à l'IA de choisir elle même un ouvrier
@@ -111,26 +111,59 @@ public class IA {
         tuile = joueur.getMainBat().get(0).getTuile();
         savoir = joueur.getMainBat().get(0).getSavoir();
         for (int i = 0; i < joueur.getMainOuv().size(); i++){
+            //System.out.println("\ncarte id = "+ joueur.getMainOuv().get(i).getIdCarte());
+
             CarteOuvriers c = joueur.getMainOuv().get(i);
-            if ((c.getBois() + joueur.getMainBat().get(0).getSumBoisOuv()) >= bois){
+
+            /*System.out.print(" bois ");
+            System.out.print(c.getBois() + joueur.getMainBat().get(0).getSumBoisOuv());
+            System.out.print(" sur ");
+            System.out.print(bois+"\n");*/
+            //on verifie si les ressources de la carte sont superieur au ressources requis
+            if ((c.getBois() + joueur.getMainBat().get(0).getSumBoisOuv()) >= bois && joueur.getMainBat().get(0).getSumBoisOuv() < bois){
+                // et on ne rentre pas dans le if si les ressources sont déjà remplis avec les cartes déjà posées
+                //System.out.println("yesBois");
                 res[i] += 1;
             }
-            if ((c.getPierre() + joueur.getMainBat().get(0).getSumPierreOuv()) >= pierre){
+
+            /*System.out.print(" pierre ");
+            System.out.print(c.getPierre() + joueur.getMainBat().get(0).getSumPierreOuv());
+            System.out.print(" sur ");
+            System.out.print(pierre+"\n");*/
+            if ((c.getPierre() + joueur.getMainBat().get(0).getSumPierreOuv()) >= pierre && joueur.getMainBat().get(0).getSumPierreOuv() < pierre){
                 res[i] += 1;
+                //System.out.println("yes Pierre");
             }
-            if ((c.getTuile() + joueur.getMainBat().get(0).getSumTuileOuv()) >= tuile){
+
+            /*System.out.print(" tuile ");
+            System.out.print(c.getTuile() + joueur.getMainBat().get(0).getSumTuileOuv());
+            System.out.print(" sur ");
+            System.out.print(tuile+"\n");*/
+            if ((c.getTuile() + joueur.getMainBat().get(0).getSumTuileOuv()) >= tuile && joueur.getMainBat().get(0).getSumTuileOuv() < tuile){
                 res[i] += 1;
+                //System.out.println("yes Tuile");
             }
-            if ((c.getSavoir() + joueur.getMainBat().get(0).getSumSavoirOuv()) >= savoir){
+
+            /*System.out.print(" savoir ");
+            System.out.print(c.getSavoir() + joueur.getMainBat().get(0).getSumSavoirOuv());
+            System.out.print(" sur ");
+            System.out.print(savoir+"\n");*/
+            if ((c.getSavoir() + joueur.getMainBat().get(0).getSumSavoirOuv()) >= savoir && joueur.getMainBat().get(0).getSumSavoirOuv() < savoir){
                 res[i] += 1;
+                //System.out.println("yes Savoir");
             }
         }
-        for (int i = 1; i < res.length; i++){
-            if (res[i] >= res[i - 1]){
+
+        int max = 0; //swap
+        for (int i = 0; i < res.length; i++){ //on itere sur le nb de cartes
+
+            //System.out.println("le res du id "+i+" = "+res[i] + " le bestID = "+bestID + " max = "+max);
+            if (res[i] >= max){
+                max = res[i]; //max prends la valeur de res(i) si c'est le plus grand
                 bestID = i;
             }
         }
-        return bestID;
+        return bestID; //on retourne l'id
     }
 
     /**
@@ -141,21 +174,21 @@ public class IA {
     public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
         if (joueur.getMainOuv().size() < 2) {
-            if (choisitBatiment(1, carteBatSurTable) == 1){
-                choisitOuvrier(2, carteOuvSurTable);
+            if (choisitBatiment(1, carteBatSurTable) == 1){ //verifie que le joueur ne possedaient pas de carte batiment et en choisi un
+                choisitOuvrier(2, carteOuvSurTable); //on choisit donc deux carte ouvriers
             }
             else {
                 choisitOuvrier(3, carteOuvSurTable);
             }
         }
         else {
-            choisitBatiment(1, carteBatSurTable);
+            choisitBatiment(1, carteBatSurTable); // si le joueur possede plus de 2 cartes ouv
             choisitOuvrier(1, carteOuvSurTable);
             poserOuvrierSurChantier();
         }
         Display.displayOuvriersDuJoueur(getJoueur());
         for(int i=0;i<getJoueur().getMainOuv().size();i++){
-            carteOuvSurTable.remove(getJoueur().getMainOuv().get(i));
+            carteOuvSurTable.remove(getJoueur().getMainOuv().get(i)); //on enleve toutes les cartes selectionn"
         }
 
         /*System.out.println(compteur.getNb());
