@@ -64,7 +64,7 @@ public class Display {
         for(int i = 0; i < joueur.getBuiltBat().size(); i ++){
             System.out.print(joueur.getBuiltBat().get(i).getNom()+" ");
         }
-        System.out.println(); // juste pour le retour à la ligne
+        System.out.println("\n"); // juste pour le retour à la ligne
     }
 
     /**

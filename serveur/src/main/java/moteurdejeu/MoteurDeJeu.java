@@ -79,7 +79,6 @@ public class MoteurDeJeu {
                         ia.get(i).passeTour(ia.get(i).getCompteur().getNombreAction());
                     }
                     Display.displayActions(ia.get(i).getCompteur());
-                    Display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
                     Display.displayChantierDuJoueur(ia.get(i).getJoueur());
                     if(isBuild(ia.get(i))){
                         for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){
