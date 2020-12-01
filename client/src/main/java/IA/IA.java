@@ -41,6 +41,7 @@ public class IA {
      *  Méthode qui permet à l'IA de choisir elle même un batiment
      * @param nbChoix le nombre de batiments que l'IA doit piocher
      * @param carteBatSurTable les cartes dans lesquelles l'IA doit piocher
+     * @return 1 si l'IA pioche un batiment, 0 sinon
      */
 
     public int choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable){
