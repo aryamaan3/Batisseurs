@@ -48,12 +48,12 @@ public class DeckOuvriers {
                 deck.add(new CarteOuvriers(33, "manœuvre", 3, 2, 0, 0, 1));
                 deck.add(new CarteOuvriers(34, "manœuvre", 3, 2, 0, 1, 1));
                 deck.add(new CarteOuvriers(35, "manœuvre", 3, 2, 1, 0, 0));
-                deck.add(new CarteOuvriers(36, "manœuvre", 2, 0, 0, 1, 1));
-                deck.add(new CarteOuvriers(37, "manœuvre", 2, 0, 1, 1, 0));
-                deck.add(new CarteOuvriers(38, "manœuvre", 2, 0, 1, 0, 1));
-                deck.add(new CarteOuvriers(39, "manœuvre", 2, 1, 0, 1, 0));
-                deck.add(new CarteOuvriers(40, "manœuvre", 2, 1, 1, 0, 0));
-                deck.add(new CarteOuvriers(41, "manœuvre", 2, 1, 0, 0, 1));
+                deck.add(new CarteOuvriers(36, "apprenti", 2, 0, 0, 1, 1));
+                deck.add(new CarteOuvriers(37, "apprenti", 2, 0, 1, 1, 0));
+                deck.add(new CarteOuvriers(38, "apprenti", 2, 0, 1, 0, 1));
+                deck.add(new CarteOuvriers(39, "apprenti", 2, 1, 0, 1, 0));
+                deck.add(new CarteOuvriers(40, "apprenti", 2, 1, 1, 0, 0));
+                deck.add(new CarteOuvriers(41, "apprenti", 2, 1, 0, 0, 1));
         }
 
 
