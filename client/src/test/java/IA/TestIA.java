@@ -74,15 +74,4 @@ public class TestIA {
         int id = ia.idealOuvToChantier();
         assertEquals(3, j.getMainOuv().get(id).getIdCarte());
     }
-
-    @Test
-    public void test(){
-        ArrayList<Integer> test = new ArrayList<>();
-        test.add(5);
-        test.add(4);
-        test.add(3);
-        for(int i =0;i<test.size();i++){
-            System.out.println(test.get(i));
-        }
-    }
 }
