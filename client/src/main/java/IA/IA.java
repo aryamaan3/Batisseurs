@@ -48,13 +48,13 @@ public class IA {
         int Sum = carteBatSurTable.get(0).getSumRessources();
         CarteChantier carteMini = carteBatSurTable.get(0);
         if(joueur.getMainBat().size()==0){
-            for(int i=1;i<carteBatSurTable.size();i++){
+            for(int i=1;i<carteBatSurTable.size();i++){  // l'ia sélectionne la carte batiment qui nécessite le moins de ressources
                 if(Sum > carteBatSurTable.get(i).getSumRessources()){
                     Sum = carteBatSurTable.get(i).getSumRessources();
                     carteMini = carteBatSurTable.get(i);
                 }
             }
-            joueur.ajouteBatiment((CarteBatiments) carteMini);
+            joueur.ajouteBatiment((CarteBatiments) carteMini); // on ajoute cette carte à la main de l'ia , puis on l'a supprime des cartes sur table
             compteur.actionsFait(nbChoix);
             carteBatSurTable.remove(carteMini);
             return 1;
@@ -68,9 +68,9 @@ public class IA {
      */
     public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
         if (joueur.getMainOuv().size() < 5 && cartesOuvSurTable.size() > 0){
-            for(int i=0;i<nbChoix;i++){
-                joueur.ajouteOuvrier(cartesOuvSurTable.get(0));
-                cartesOuvSurTable.remove(0);
+            for(int i=0;i<nbChoix;i++){ // on utilise la méthode idealOuvToChantier pour choisir la carte ouvrier la plus adapté selon les batiments que l'on possède
+                joueur.ajouteOuvrier(cartesOuvSurTable.get(idealOuvToChantier(cartesOuvSurTable)));
+                cartesOuvSurTable.remove(idealOuvToChantier(cartesOuvSurTable)); // on enlève ensuite la carte choisie des cartes ouvriers sur table
             }
             compteur.actionsFait(nbChoix);
         }
@@ -87,7 +87,7 @@ public class IA {
             for (int i = 0; i < 1; i++) {   //On peut poser qu'un ouvrier par tour pour l'instant
                 for (int j = 0; j < joueur.getMainBat().size(); j++) {
                     if (!joueur.getMainBat().get(j).isContruit()) {
-                        meilleurCarteOuvID = idealOuvToChantier();
+                        meilleurCarteOuvID = idealOuvToChantier(joueur.getMainOuv());
                         joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
                         compteur.actionsFait(1);
                         break;
@@ -103,60 +103,32 @@ public class IA {
      * trouve le meilleur ouvrier à placer sur un batiment
      * @return l'indice du meilleur ouvrier à placer sur le batiment
      */
-    public int idealOuvToChantier(){
+    public int idealOuvToChantier(ArrayList<CarteOuvriers> ListeOuv){
         int bois, pierre, tuile, savoir, bestID = 0;
-        int res[] = new int[joueur.getMainOuv().size()];
+        int res[] = new int[ListeOuv.size()];
         bois = joueur.getMainBat().get(0).getBois();
         pierre = joueur.getMainBat().get(0).getPierre();
         tuile = joueur.getMainBat().get(0).getTuile();
         savoir = joueur.getMainBat().get(0).getSavoir();
-        for (int i = 0; i < joueur.getMainOuv().size(); i++){
-            //System.out.println("\ncarte id = "+ joueur.getMainOuv().get(i).getIdCarte());
-
-            CarteOuvriers c = joueur.getMainOuv().get(i);
-
-            /*System.out.print(" bois ");
-            System.out.print(c.getBois() + joueur.getMainBat().get(0).getSumBoisOuv());
-            System.out.print(" sur ");
-            System.out.print(bois+"\n");*/
+        for (int i = 0; i < ListeOuv.size(); i++){
+            CarteOuvriers c = ListeOuv.get(i);
             //on verifie si les ressources de la carte sont superieur au ressources requis
             if ((c.getBois() + joueur.getMainBat().get(0).getSumBoisOuv()) >= bois && joueur.getMainBat().get(0).getSumBoisOuv() < bois){
                 // et on ne rentre pas dans le if si les ressources sont déjà remplis avec les cartes déjà posées
-                //System.out.println("yesBois");
                 res[i] += 1;
             }
-
-            /*System.out.print(" pierre ");
-            System.out.print(c.getPierre() + joueur.getMainBat().get(0).getSumPierreOuv());
-            System.out.print(" sur ");
-            System.out.print(pierre+"\n");*/
             if ((c.getPierre() + joueur.getMainBat().get(0).getSumPierreOuv()) >= pierre && joueur.getMainBat().get(0).getSumPierreOuv() < pierre){
                 res[i] += 1;
-                //System.out.println("yes Pierre");
             }
-
-            /*System.out.print(" tuile ");
-            System.out.print(c.getTuile() + joueur.getMainBat().get(0).getSumTuileOuv());
-            System.out.print(" sur ");
-            System.out.print(tuile+"\n");*/
             if ((c.getTuile() + joueur.getMainBat().get(0).getSumTuileOuv()) >= tuile && joueur.getMainBat().get(0).getSumTuileOuv() < tuile){
                 res[i] += 1;
-                //System.out.println("yes Tuile");
             }
-
-            /*System.out.print(" savoir ");
-            System.out.print(c.getSavoir() + joueur.getMainBat().get(0).getSumSavoirOuv());
-            System.out.print(" sur ");
-            System.out.print(savoir+"\n");*/
             if ((c.getSavoir() + joueur.getMainBat().get(0).getSumSavoirOuv()) >= savoir && joueur.getMainBat().get(0).getSumSavoirOuv() < savoir){
                 res[i] += 1;
-                //System.out.println("yes Savoir");
             }
         }
-
         int max = 0; //swap
         for (int i = 0; i < res.length; i++){ //on itere sur le nb de cartes
-
             //System.out.println("le res du id "+i+" = "+res[i] + " le bestID = "+bestID + " max = "+max);
             if (res[i] >= max){
                 max = res[i]; //max prends la valeur de res(i) si c'est le plus grand

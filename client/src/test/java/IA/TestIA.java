@@ -30,11 +30,13 @@ public class TestIA {
     @Test
     public void TestChoisitOuvrier(){
         ArrayList<CarteOuvriers> cartes = new ArrayList<>();
-        cartes.add(new CarteOuvriers(0,"ouv1",1,2,3,6,5));
-        cartes.add(new CarteOuvriers(1,"ouv2",1,2,3,6,5));
-        cartes.add(new CarteOuvriers(2,"ouv3",1,2,3,6,5));
+        CarteBatiments carteBat = new CarteBatiments(0,"test2",3,1,5,1,3,9);
+        cartes.add(new CarteOuvriers(0,"ouv1",1,2,0,3,1));
+        cartes.add(new CarteOuvriers(1,"ouv2",1,1,1,6,5));
+        cartes.add(new CarteOuvriers(2,"ouv3",1,1,1,2,0));
+        iatest.getJoueur().ajouteBatiment(carteBat);
         iatest.choisitOuvrier(2,cartes);
-        assertEquals("ouv2",j1.getMainOuv().get(1).getNom());
+        assertEquals("ouv3",j1.getMainOuv().get(1).getNom());
         assertEquals(2,j1.getMainOuv().size());
     }
     @Test
@@ -68,14 +70,14 @@ public class TestIA {
         Joueur j = new Joueur(0);
         Compteur c = new Compteur(0);
         IA ia = new IA(j, c);
-        ia.choisitOuvrier(4, cartesOuv);
         //System.out.println("mainOuv");
         /*for (int i = 0; i < j.getMainOuv().size(); i++){
             System.out.println(j.getMainOuv().get(i).getIdCarte());
         }*/
         ia.choisitBatiment(1, cartesBat);
+        ia.choisitOuvrier(4, cartesOuv);
 
-        int id = ia.idealOuvToChantier();
+        int id = ia.idealOuvToChantier(j.getMainOuv());
         assertEquals(3, j.getMainOuv().get(id).getIdCarte());
     }
 
@@ -91,15 +93,15 @@ public class TestIA {
         Joueur j = new Joueur(0);
         Compteur c = new Compteur(0);
         IA ia = new IA(j, c);
-        ia.choisitOuvrier(4, cartesOuv);
         ia.choisitBatiment(1, cartesBat);
+        ia.choisitOuvrier(4, cartesOuv);
         //on pose deux ouvriers sur le chantier
         ia.poserOuvrierSurChantier();
 
         //ia.poserOuvrierSurChantier();
         //System.out.println(j.getMainBat().get(0).getOuvriers());
 
-        int id = ia.idealOuvToChantier();
+        int id = ia.idealOuvToChantier(j.getMainOuv());
         assertEquals(1, j.getMainOuv().get(id).getIdCarte());
     }
 

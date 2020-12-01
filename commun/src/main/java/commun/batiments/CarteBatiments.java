@@ -45,7 +45,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     public ArrayList<CarteOuvriers> getOuvriers(){
         return ouvriers;
     }
-    public int getSumRessources(){
+    public int getSumRessources(){ // on additionne toutes les ressources pour donner une valeur globale
         return getBois() + getPierre() + getSavoir() + getTuile();
     }
 
