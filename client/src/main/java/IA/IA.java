@@ -45,11 +45,18 @@ public class IA {
      */
 
     public int choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable){
-
+        int Sum = carteBatSurTable.get(0).getSumRessources();
+        CarteChantier carteMini = carteBatSurTable.get(0);
         if(joueur.getMainBat().size()==0){
-            joueur.ajouteBatiment((CarteBatiments) carteBatSurTable.get(0));
+            for(int i=1;i<carteBatSurTable.size();i++){
+                if(Sum > carteBatSurTable.get(i).getSumRessources()){
+                    Sum = carteBatSurTable.get(i).getSumRessources();
+                    carteMini = carteBatSurTable.get(i);
+                }
+            }
+            joueur.ajouteBatiment((CarteBatiments) carteMini);
             compteur.actionsFait(nbChoix);
-            carteBatSurTable.remove(getJoueur().getMainBat().get(0));
+            carteBatSurTable.remove(carteMini);
             return 1;
         }
         return 0;
@@ -62,8 +69,8 @@ public class IA {
     public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
         if (joueur.getMainOuv().size() < 5 && cartesOuvSurTable.size() > 0){
             for(int i=0;i<nbChoix;i++){
-                joueur.ajouteOuvrier(cartesOuvSurTable.get(i));
-                cartesOuvSurTable.remove(getJoueur().getMainOuv().get(0));
+                joueur.ajouteOuvrier(cartesOuvSurTable.get(0));
+                cartesOuvSurTable.remove(0);
             }
             compteur.actionsFait(nbChoix);
         }

@@ -20,11 +20,11 @@ public class TestIA {
         ArrayList<CarteChantier> cartes = new ArrayList<>();
         cartes.add(new CarteBatiments(0,"test1",1,5,4,4,3,9));
         cartes.add(new CarteBatiments(0,"test2",3,1,5,1,3,9));
-        cartes.add(new CarteBatiments(0,"test3",5,3,1,3,3,9));
+        cartes.add(new CarteBatiments(0,"test3",1,1,1,1,3,9));
         cartes.add(new CarteBatiments(0,"test4",4,2,3,5,3,9));
-        cartes.add(new CarteBatiments(0,"test5",1,4,2,2,3,9));
+        cartes.add(new CarteBatiments(0,"test5",7,4,2,2,3,9));
         iatest.choisitBatiment(1,cartes);
-        assertEquals("test1",j1.getMainBat().get(0).getNom());
+        assertEquals("test3",j1.getMainBat().get(0).getNom());
         assertEquals(1,j1.getMainBat().size());
     }
     @Test
@@ -34,8 +34,9 @@ public class TestIA {
         cartes.add(new CarteOuvriers(1,"ouv2",1,2,3,6,5));
         cartes.add(new CarteOuvriers(2,"ouv3",1,2,3,6,5));
         iatest.choisitOuvrier(2,cartes);
-        assertEquals("ouv3",j1.getMainOuv().get(1).getNom());
+        assertEquals("ouv2",j1.getMainOuv().get(1).getNom());
         assertEquals(2,j1.getMainOuv().size());
+
     }
     @Test
     public void TestPoserOuvrierSurChantier(){
@@ -74,4 +75,14 @@ public class TestIA {
         assertEquals(3, j.getMainOuv().get(id).getIdCarte());
     }
 
+    @Test
+    public void test(){
+        ArrayList<Integer> test = new ArrayList<>();
+        test.add(5);
+        test.add(4);
+        test.add(3);
+        for(int i =0;i<test.size();i++){
+            System.out.println(test.get(i));
+        }
+    }
 }

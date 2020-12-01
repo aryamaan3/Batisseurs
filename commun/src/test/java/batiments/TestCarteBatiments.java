@@ -15,6 +15,10 @@ public class TestCarteBatiments {
         carteBat.attribuerOuvrier(carteOuv1);
         assertEquals("ouvrier1",carteBat.getOuvriers().get(0).getNom());
     }
+    @Test
+    public void testGetSumRessources(){
+        assertEquals(16,carteBat.getSumRessources());
+    }
 
     @Test
     public void testlibererOuvrier(){

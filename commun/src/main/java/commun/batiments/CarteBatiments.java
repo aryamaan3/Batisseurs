@@ -45,6 +45,9 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     public ArrayList<CarteOuvriers> getOuvriers(){
         return ouvriers;
     }
+    public int getSumRessources(){
+        return getBois() + getPierre() + getSavoir() + getTuile();
+    }
 
     /**
      *  Méthode qui attribue un ouvrier à un batiment

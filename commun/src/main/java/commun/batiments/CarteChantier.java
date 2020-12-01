@@ -18,6 +18,7 @@ public interface CarteChantier {
     ArrayList<CarteOuvriers> getOuvriers();
     void attribuerOuvrier(CarteOuvriers carte);
     void libererOuvrier();
+    int getSumRessources();
     int getSumBoisOuv();
     int getSumPierreOuv();
     int getSumSavoirOuv();
