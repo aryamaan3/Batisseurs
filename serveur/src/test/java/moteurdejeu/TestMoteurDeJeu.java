@@ -11,6 +11,7 @@ import commun.ouvriers.DeckOuvriers;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -61,5 +62,6 @@ public class TestMoteurDeJeu {
         j1.getMainBat().add(carteBat);
         assertEquals(true,m1.isBuild(iaTest));
     }
+    
 
 }

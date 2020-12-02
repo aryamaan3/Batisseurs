@@ -257,6 +257,5 @@ public class MoteurDeJeu {
         else{
             System.out.println("\nIl y a "+nbPartie+" partie qui ont été jouées");
         }
-
     }
 }
