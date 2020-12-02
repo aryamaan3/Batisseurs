@@ -156,6 +156,7 @@ public class Joueur {
         // on enlève 10 * le nombre de point qu'on a rajouté
         // puisque 1 point = 10 écus
         bourse.subEcus(pointSupp * 10);
+        System.out.println("Le joueur "+getId()+ " utilise "+(pointSupp*10)+" écus pour gagner "+pointSupp+" points. Il passe de "+(points-pointSupp)+" à "+ points+" points.");
     }
 
 }

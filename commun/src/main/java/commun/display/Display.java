@@ -125,7 +125,7 @@ public class Display {
 
     /**
      * print le nb d'actions fait et le nb d'actions vendu ou achetée s'ils ont eu lieu
-     * @param nb
+     * @param nb le nombre d'action
      */
     public static void displayActionsFini(int nb){
         if (nb > 3){
@@ -139,8 +139,8 @@ public class Display {
 
     /**
      * print les ouvriers posées sur un chantier par le joueur
-     * @param check
-     * @param joueur
+     * @param check pour savoir si il est posé
+     * @param joueur le joueur auquel appartient les ouvriers
      */
     public static void displayOuvPoseeSurChantier(int check, Joueur joueur){
         if (joueur.getMainBat().size() > 0) {
