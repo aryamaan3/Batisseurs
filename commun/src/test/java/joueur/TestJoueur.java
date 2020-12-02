@@ -1,10 +1,15 @@
 package joueur;
 
 import commun.batiments.CarteBatiments;
+import commun.batiments.CarteChantier;
 import commun.joueur.Bourse;
 import commun.joueur.Joueur;
+import commun.joueur.Statistiques;
 import commun.ouvriers.CarteOuvriers;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestJoueur {
@@ -72,5 +77,62 @@ public class TestJoueur {
         joueur.conversionEcuPoint();
         assertEquals(1, joueur.getBourse().getEcus());
         assertEquals(2, joueur.getPoints());
+    }
+    @Test
+    public void getStatsTest(){
+        boolean type;
+        if (joueur.getStats() instanceof Statistiques){
+            type = true;
+        }
+        else { type = false; }
+        assertEquals(true, type);
+    }
+    @Test
+    public void setBourseTest(){
+        joueur.setBourse(new Bourse(0));
+        boolean type;
+        if (joueur.getBourse() instanceof Bourse){
+            type = true;
+        }
+        else { type = false; }
+        assertEquals(true, type);
+    }
+    @Test
+    public void getIdTest(){
+        assertEquals(0, joueur.getId());
+    }
+    @Test
+    public void setIdTest(){
+        joueur.setId(3);
+        assertEquals(3, joueur.getId());
+    }
+    @Test
+    public void getPointsTest(){
+        assertEquals(0, joueur.getPoints());
+        joueur.addPoints(2);
+        assertEquals(2, joueur.getPoints());
+    }
+    @Test
+    public void setPointsTest(){
+        assertEquals(0, joueur.getPoints());
+        joueur.addPoints(2);
+        assertEquals(2, joueur.getPoints());
+        joueur.setPoints(0);
+        assertEquals(0, joueur.getPoints());
+    }
+    @Test
+    public void getMainBat() {
+        ArrayList<CarteChantier> deckChantier = joueur.getMainBat();
+        assertEquals(true, deckChantier instanceof ArrayList);
+    }
+    @Test
+    public void getMainOuv() {
+        ArrayList<CarteOuvriers> deckOuvrier = joueur.getMainOuv();
+        assertEquals(true, deckOuvrier instanceof ArrayList);
+    }
+    @Test
+    public void getBuildBat() {
+        ArrayList<CarteChantier> deckChantier = joueur.getBuiltBat();
+        assertEquals(true, deckChantier instanceof ArrayList);
     }
 }
