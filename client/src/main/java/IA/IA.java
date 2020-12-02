@@ -161,10 +161,10 @@ public class IA {
                 countActions += 3;
             }
         }
-        else { // si le joueur a plus de 2 cartes ouv
+        else { // si le joueur a plus de 1 cartes ouv
 
             if (choisitBatiment(1, carteBatSurTable)==1) { // en choisi un seulement s'il en a pas un
-                // cette condition "if" ^ fait la verificatioin et l'attribution sur la même ligne
+                // cette condition "if" ^^ fait la verificatioin et l'attribution sur la même ligne
                 choisitOuvrier(1, carteOuvSurTable);
                 poserOuvrierSurChantier();
                 countActions += 3;
@@ -206,8 +206,8 @@ public class IA {
      * @param n nb de tours à passer
      */
     public void passeTour(int n){
-        if (compteur.getNombreAction() >= n) {
-            for (int i = 1; i < n + 1; i++) {
+        if (compteur.getNombreAction() >= n) { // verifie si le joueur possede le nombre d'actions requis pour les vendre
+            for (int i = 1; i < n + 1; i++) { // on boucle sur le nb d'actions à vendre
                 joueur.getBourse().addEcus(i);
             }
             compteur.sellActions(n);
@@ -219,7 +219,7 @@ public class IA {
      * @param n nb de tours à ajouter
      */
     public void ajouteTour(int n){
-        if (joueur.getBourse().getEcus() >= n * 5 + 5){
+        if (joueur.getBourse().getEcus() >= n * 5 + 5){ // verifie si le joueur possede assez d'ecus pour acheter des actions
             compteur.buyActions(n);
             joueur.getBourse().subEcus(n*5);
         }
