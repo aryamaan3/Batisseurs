@@ -128,13 +128,13 @@ public class MoteurDeJeu {
 
             }
             for(int k = 0; k < nbJoueurs; k++){
-                if(joueurs.get(k).getPoints() > 7 && joueurs.get(k).getPoints() > ptsGagnant){
+                if(joueurs.get(k).getPoints() > 16 && joueurs.get(k).getPoints() > ptsGagnant){
                     ptsGagnant = joueurs.get(k).getPoints();
                     joueurGagnant = joueurs.get(k).getId();
                 }
             }
 
-            if(ptsGagnant > 7){
+            if(ptsGagnant > 16){
                 System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
                         +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
                 for(int s=0;s<nbJoueurs;s++){
