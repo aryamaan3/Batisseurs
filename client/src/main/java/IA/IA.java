@@ -104,6 +104,7 @@ public class IA {
     /**
      * trouve le meilleur ouvrier à placer sur un batiment
      * @return l'indice du meilleur ouvrier à placer sur le batiment
+     * @param ListeOuv ArrayList des cartes ouvriers
      */
     public int idealOuvToChantier(ArrayList<CarteOuvriers> ListeOuv){
         int bois, pierre, tuile, savoir, bestID = 0;
@@ -277,7 +278,7 @@ public class IA {
     /**
      * verifie si le joueur possede assez de tours pour passer et ajoute les ecus
      * @param n nb de tours à passer
-     * @retrun le nb d'ecus à ajouter
+     * @return le nb d'ecus à ajouter
      */
     public int passeTour(int n){
         int ecus = 0;
@@ -294,7 +295,7 @@ public class IA {
     /**
      * verifie si le joueur a les moyens d'acheter des tours et en achete
      * @param n nb de tours à ajouter
-     * @retrun le nb d'ecus à supp
+     * @return le nb d'ecus à supp
      */
     public int ajouteTour(int n){
         if (joueur.getBourse().getEcus() >= n * 5 + 5){ // verifie si le joueur possede assez d'ecus pour acheter des actions

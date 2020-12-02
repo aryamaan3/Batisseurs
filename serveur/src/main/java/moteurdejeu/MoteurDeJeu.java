@@ -31,7 +31,9 @@ public class MoteurDeJeu {
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         int compteTour =1;
         int ptsGagnant = -1;
+        boolean egalite = false;
         int joueurGagnant = -1;
+        boolean victoire = false;
         int nbJoueurs = joueurs.size();
 
         Compteur c1 = new Compteur(joueurs.get(0).getId());
@@ -123,13 +125,24 @@ public class MoteurDeJeu {
             compteTour++;//On incrémente compteTour
 
             // Condition de victoire en fonction du nombre de point (+ de 5)
+            for(int h = 0; h < nbJoueurs; h++){
+                if(joueurs.get(h).getPoints() > 16){
+                    victoire = true;
+                }
+            }
+
             for(int j = 0; j<nbJoueurs; j++){
+                // maintenant qu'on sait que la partie est finie, on convertit les écus en points.
+                if(victoire && joueurs.get(j).getBourse().getEcus() >= 10){
+                    joueurs.get(j).conversionEcuPoint();
+                }
                 Display.displayPoint(joueurs.get(j));
                 Display.displayBourse(joueurs.get(j));
                 Display.displayChantierFini(joueurs.get(j));
-
             }
+
             for(int k = 0; k < nbJoueurs; k++){
+                //on stocke l'id du joueur ayant le plus de points.
                 if(joueurs.get(k).getPoints() > 16 && joueurs.get(k).getPoints() > ptsGagnant){
                     ptsGagnant = joueurs.get(k).getPoints();
                     joueurGagnant = joueurs.get(k).getId();
