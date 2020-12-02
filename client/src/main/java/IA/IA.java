@@ -147,9 +147,10 @@ public class IA {
      */
     public int[] actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
-        int countActions = 0, nbOuvPosee = 0;
+        int countActions = 0, nbOuvPosee = 0, nbEcus = 0;
         if (joueur.getBourse().getEcus() < 5){ // si le joueur ne possede pas assez d'ecus ppour effectuer des actions
             passeTour(3);
+            nbEcus += 3;
         }
         else if (joueur.getMainOuv().size() < 2) { //si le joueur possede moins de 2 cartes ouv
 
@@ -184,6 +185,7 @@ public class IA {
         if (joueur.getBourse().getEcus() > 10){ // achete des actions s'il possede beaucoup d'ecus
             int nbAchetee = (joueur.getBourse().getEcus() / 10) % 2;
             ajouteTour(nbAchetee); // n'ajoute pas plus de deux actions à la fois
+            nbEcus -= nbAchetee;
             countActions += nbAchetee;
             for (int i = 0; i < nbAchetee; i++){ // boucle sur le nb d'actions achetée
                 if (choisitBatiment(1, carteBatSurTable)==1){}
@@ -206,30 +208,37 @@ public class IA {
         ajouteTour(1);
         System.out.println(compteur.getNb());
         passeTour(1);*/
-        return new int[]{countActions, nbOuvPosee}; //return le nb d'actions fait et le nb d'ouvrier posée (pour faciliter les tests)
+        return new int[]{countActions, nbOuvPosee, nbEcus}; //return le nb d'actions fait et le nb d'ouvrier posée (pour faciliter les tests)
     }
     /**
      * verifie si le joueur possede assez de tours pour passer et ajoute les ecus
      * @param n nb de tours à passer
+     * @retrun le nb d'ecus à ajouter
      */
-    public void passeTour(int n){
+    public int passeTour(int n){
+        int ecus = 0;
         if (compteur.getNombreAction() >= n) { // verifie si le joueur possede le nombre d'actions requis pour les vendre
             for (int i = 1; i < n + 1; i++) { // on boucle sur le nb d'actions à vendre
                 joueur.getBourse().addEcus(i);
+                ecus += i;
             }
             compteur.sellActions(n);
         }
+        return ecus;
     }
 
     /**
      * verifie si le joueur a les moyens d'acheter des tours et en achete
      * @param n nb de tours à ajouter
+     * @retrun le nb d'ecus à supp
      */
-    public void ajouteTour(int n){
+    public int ajouteTour(int n){
         if (joueur.getBourse().getEcus() >= n * 5 + 5){ // verifie si le joueur possede assez d'ecus pour acheter des actions
             compteur.buyActions(n);
             joueur.getBourse().subEcus(n*5);
+            return n*5;
         }
+        return 0;
     }
 }
 

@@ -98,6 +98,7 @@ public class MoteurDeJeu {
 
                 Display.displayOuvPoseeSurChantier(displayInt[1], ia.get(i).getJoueur());
                 Display.displayActionsFini(displayInt[0]);
+                Display.displayEcus(displayInt[2], ia.get(i).getJoueur());
 
                 Display.displayChantierDuJoueur(ia.get(i).getJoueur());
                 Display.displayOuvriersDuJoueur(ia.get(i).getJoueur());

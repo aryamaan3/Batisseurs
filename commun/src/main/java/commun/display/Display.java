@@ -7,9 +7,8 @@ import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 
 import java.util.ArrayList;
-import static commun.display.Couleur.ANSI_GREEN;
-import static commun.display.Couleur.ANSI_RESET;
-import static commun.display.Couleur.ANSI_BLUE;
+
+import static commun.display.Couleur.*;
 
 /**
  * Classe permettant la gestion de l'affichage dans le jeu
@@ -155,6 +154,16 @@ public class Display {
                 }
             }
         }
+    }
 
+    public static void displayEcus(int ecus, Joueur joueur){
+        if (ecus > 0){
+            System.out.println("Le joueur a gagné "+ ecus + " écu(s)");
+            System.out.println(ANSI_RED+"Il possede desormais "+joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);
+        }
+        if (ecus < 0){
+            System.out.println("Le joueur a utilisé "+ Math.abs(ecus) + " écu(s)");
+            System.out.println(ANSI_RED+"Il possede desormais "+joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);
+        }
     }
 }
