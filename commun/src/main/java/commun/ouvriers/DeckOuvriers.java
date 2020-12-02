@@ -64,4 +64,22 @@ public class DeckOuvriers {
         public ArrayList<CarteOuvriers> getDeck() {
                 return deck;
         }
+
+        /**
+         *
+         * @return Retourne une liste des indices des apprentis dans le deck qui a été shuffle
+         */
+        /*static public int[] getIdApprentis(){
+                // 6 apprentis dans le decks
+                int[] idApprentis = new int[6];
+                int count = 0;
+                // On boucle sur les indices du deck (qui a été shuffle)
+                for(int i = 0; i < deck.size() ; i++){
+                        if(deck.get(i).getNom() == "apprenti"){
+                                idApprentis[count] = i;
+                                count ++;
+                        }
+                }
+                return idApprentis;
+        }*/
 }

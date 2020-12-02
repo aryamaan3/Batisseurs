@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Interface nous permettant d'utiliser les méthodes de CartesBatiment et CarteChantier
+ * sans etre obligé de connaitre le type spécifique dans le moteur de jeu.
  */
 public interface CarteChantier {
     int getEcu();
