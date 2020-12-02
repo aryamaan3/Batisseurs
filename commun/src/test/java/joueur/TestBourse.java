@@ -18,4 +18,9 @@ public class TestBourse {
         bourse.subEcus(5);
         assertEquals(5,bourse.getEcus());
     }
+
+    @Test
+    public void getEcusTest(){
+        assertEquals(10,bourse.getEcus());
+    }
 }

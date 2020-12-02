@@ -24,4 +24,22 @@ public class TestCompteur {
         compteur.sellActions(1);
         assertEquals(2,compteur.getNombreAction());
     }
+
+    @Test
+    public void getNombreActionTest(){
+        assertEquals(3,compteur.getNombreAction());
+        compteur.sellActions(3);
+        assertEquals(0,compteur.getNombreAction());
+    }
+
+    @Test
+    public void resetTest(){
+        compteur.sellActions(3);
+        assertEquals(0,compteur.getNombreAction());
+        compteur.reset();
+        // On a de nouveau 3 actions normalement
+        assertEquals(3,compteur.getNombreAction());
+
+    }
+
 }
