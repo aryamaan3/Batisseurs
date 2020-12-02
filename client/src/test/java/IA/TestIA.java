@@ -121,14 +121,15 @@ public class TestIA {
         cartesOuv.add(new CarteOuvriers(6,"ouv6",1,3,5,4,5));
         cartesOuv.add(new CarteOuvriers(7,"ouv7",1,3,5,4,5));
 
-        assertEquals(3,iatest.actionIA(cartesOuv, cartesBat)); // effectue 3 actions
+        assertEquals(3,iatest.actionIA(cartesOuv, cartesBat)[0]); // effectue 3 actions
         /* Les actions effectué sont : */
         assertEquals(1,j1.getMainBat().size()); // le joueur selectionne 1 carte bat
         assertEquals(2, j1.getMainOuv().size()); // le joueur selectionne 2 carte ouv
         /*––––––---–-––––*/
         c1.reset(); // on reste le compteur apres un tour
 
-        assertEquals(3,iatest.actionIA(cartesOuv, cartesBat)); // effectue 3 actions
+        assertEquals(2,iatest.actionIA(cartesOuv, cartesBat)[1]);
+        // effectue 3 actions et on verifie si il y a bien 2 ouvriers posées
         /* Les actions effectué sont : */
         assertEquals(2, j1.getMainBat().get(0).getOuvriers().size()); // place 2 ouvriers sur le bat
         assertEquals(1, j1.getMainOuv().size()); // selctionne 1 carte ouv
@@ -138,7 +139,7 @@ public class TestIA {
         assertEquals(8, j1.getBourse().getEcus());
         j1.getBourse().addEcus(22);
 
-        assertEquals(4,iatest.actionIA(cartesOuv, cartesBat));
+        assertEquals(4,iatest.actionIA(cartesOuv, cartesBat)[0]);
         //car le joueur a maintenant assez pour acheter des actions il en effectue 4
         c1.reset(); // on reste le compteur apres un tour
 
@@ -146,7 +147,7 @@ public class TestIA {
         j1.getBourse().subEcus(20);
         // le joueur possede desormais seulement 4 ecus
 
-        assertEquals(0,iatest.actionIA(cartesOuv, cartesBat));
+        assertEquals(0,iatest.actionIA(cartesOuv, cartesBat)[0]);
         //il n'effectue pas d'actions car il n'a pas assez d'ecus, il les vends donc
         assertEquals(10, j1.getBourse().getEcus());
         // car le joueur achete 3 actions ce qui lui rapport 6 ecus

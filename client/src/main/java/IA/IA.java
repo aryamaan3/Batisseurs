@@ -1,5 +1,6 @@
 package IA;
 
+import commun.Cartes;
 import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
@@ -142,10 +143,11 @@ public class IA {
      *  Méthode qui appel une suite de méthodes de l'IA pour qu'elle soit plus "intelligente"
      * @param carteOuvSurTable les cartes ouvriers disponibles sur le plateau
      * @param carteBatSurTable les cartes batiments disponibles sur le plateau
+     * @return tableau avec le nb d'actions effectué et le nb d'ouvrier posée sur un chantier en construction
      */
-    public int actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
+    public int[] actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
-        int countActions = 0;
+        int countActions = 0, nbOuvPosee = 0;
         if (joueur.getBourse().getEcus() < 5){ // si le joueur ne possede pas assez d'ecus ppour effectuer des actions
             passeTour(3);
         }
@@ -168,11 +170,13 @@ public class IA {
                 choisitOuvrier(1, carteOuvSurTable);
                 poserOuvrierSurChantier();
                 countActions += 3;
+                nbOuvPosee += 1;
             }
             else{ // si chantier en cours
                 choisitOuvrier(1, carteOuvSurTable);
                 poserOuvrierSurChantier(); //pose deux ouvriers sur le chantier afin d'avancer
                 poserOuvrierSurChantier();
+                nbOuvPosee += 2;
                 countActions += 3;
             }
         }
@@ -187,7 +191,10 @@ public class IA {
                 else if (joueur.getMainOuv().size() < 2){ // si le joueur possede moins de deux cartes ouv
                     choisitOuvrier(1, carteOuvSurTable);
                 }
-                else { poserOuvrierSurChantier();}
+                else {
+                    poserOuvrierSurChantier();
+                    nbOuvPosee += 1;
+                }
             }
         }
         //Display.displayOuvriersDuJoueur(getJoueur());
@@ -199,7 +206,7 @@ public class IA {
         ajouteTour(1);
         System.out.println(compteur.getNb());
         passeTour(1);*/
-        return countActions; //return le nb d'actions fait (pour faciliter les tests)
+        return new int[]{countActions, nbOuvPosee}; //return le nb d'actions fait et le nb d'ouvrier posée (pour faciliter les tests)
     }
     /**
      * verifie si le joueur possede assez de tours pour passer et ajoute les ecus
@@ -224,6 +231,5 @@ public class IA {
             joueur.getBourse().subEcus(n*5);
         }
     }
-
 }
 

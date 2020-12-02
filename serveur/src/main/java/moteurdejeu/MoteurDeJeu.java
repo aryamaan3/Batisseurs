@@ -91,31 +91,32 @@ public class MoteurDeJeu {
         while (true){ //loop pour chaque tour
             System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
-                    System.out.println("------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------");
-                    Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
-                    Display.displayActions(ia.get(i).getCompteur());
-                    Display.displayActionsFini(ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable)); // effectue les actions et l'affichage
+                System.out.println("------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------");
+                Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
+                Display.displayActions(ia.get(i).getCompteur());
+                int displayInt[] = ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable); // effectue les actions et l'affichage
 
-                    Display.displayChantierDuJoueur(ia.get(i).getJoueur());
-                    if(isBuild(ia.get(i))){
-                        for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){
-                            if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
-                                System.out.println("Le joueur "+ (i+1)
-                                        +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
-                                        +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+" et "+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
-                            }
+                Display.displayOuvPoseeSurChantier(displayInt[1], ia.get(i).getJoueur());
+                Display.displayActionsFini(displayInt[0]);
+
+                Display.displayChantierDuJoueur(ia.get(i).getJoueur());
+                Display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
+                if(isBuild(ia.get(i))){
+                    for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){
+                        if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
+                            System.out.println("Le joueur "+ (i+1)
+                                    +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
+                                    +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+" et "+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
                         }
                     }
-                    //ia.get(i).getJoueur().getBourse().addEcus(2);
-                    Display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
-                    Display.displayChantierFini(ia.get(i).getJoueur());
-                    ia.get(i).getCompteur().reset();
-                    ia.get(i).getJoueur().trierBuiltBat();
-                    fillCartesBatiments(deckBat,carteBatSurTable);
-                    fillCartesOuvriers(deckOuv,carteOuvSurTable);
-
-
-
+                }
+                //ia.get(i).getJoueur().getBourse().addEcus(2);
+                Display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
+                Display.displayChantierFini(ia.get(i).getJoueur());
+                ia.get(i).getCompteur().reset();
+                ia.get(i).getJoueur().trierBuiltBat();
+                fillCartesBatiments(deckBat,carteBatSurTable);
+                fillCartesOuvriers(deckOuv,carteOuvSurTable);
             }
             System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
