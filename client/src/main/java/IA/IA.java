@@ -146,7 +146,10 @@ public class IA {
     public int actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
         int countActions = 0;
-        if (joueur.getMainOuv().size() < 2) { //si le joueur possede moins de 2 cartes ouv
+        if (joueur.getBourse().getEcus() < 5){ // si le joueur ne possede pas assez d'ecus ppour effectuer des actions
+            passeTour(3);
+        }
+        else if (joueur.getMainOuv().size() < 2) { //si le joueur possede moins de 2 cartes ouv
 
             if (choisitBatiment(1, carteBatSurTable) == 1){ //verifie que le joueur ne possede pas de carte batiment et en choisi un
                 // cette condition "if" ^^ fait la verificatioin et l'attribution sur la même ligne
@@ -173,7 +176,21 @@ public class IA {
                 countActions += 3;
             }
         }
-        Display.displayOuvriersDuJoueur(getJoueur());
+
+        if (joueur.getBourse().getEcus() > 10){ // achete des actions s'il possede beaucoup d'ecus
+            int nbAchetee = (joueur.getBourse().getEcus() / 10) % 2;
+            ajouteTour(nbAchetee); // n'ajoute pas plus de deux actions à la fois
+            countActions += nbAchetee;
+            for (int i = 0; i < nbAchetee; i++){ // boucle sur le nb d'actions achetée
+                if (choisitBatiment(1, carteBatSurTable)==1){}
+                // choisi une carte batiment si le joueur en possede pas
+                else if (joueur.getMainOuv().size() < 2){ // si le joueur possede moins de deux cartes ouv
+                    choisitOuvrier(1, carteOuvSurTable);
+                }
+                else { poserOuvrierSurChantier();}
+            }
+        }
+        //Display.displayOuvriersDuJoueur(getJoueur());
         for(int i=0;i<getJoueur().getMainOuv().size();i++){
             carteOuvSurTable.remove(getJoueur().getMainOuv().get(i)); //on enleve toutes les cartes selectionné
         }
