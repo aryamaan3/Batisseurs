@@ -3,12 +3,16 @@ package batiments;
 import commun.batiments.CarteBatiments;
 import commun.ouvriers.CarteOuvriers;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCarteBatiments {
     CarteBatiments carteBat = new CarteBatiments(0,"batiment",2,3,6,5,9,5);
     CarteOuvriers carteOuv1 = new CarteOuvriers(0,"ouvrier1",4,3,2,1,5);
     CarteOuvriers carteOuv2 = new CarteOuvriers(1,"ouvrier2",5,6,4,2,4);
+    CarteOuvriers carteOuv3 = new CarteOuvriers(2,"ouvrier3",5,3,4,7,6);
 
     @Test
     public void testAttribuerOuvrier(){
@@ -59,5 +63,53 @@ public class TestCarteBatiments {
         CarteBatiments carteTestNotMachine = new CarteBatiments(1, "test", 1,1,1,1,1,1);
         assertEquals(true,carteTestMachine.isMachine());
         assertEquals(false,carteTestNotMachine.isMachine());
+    }
+
+    @Test
+    public void getEcu(){
+        assertEquals(9, carteBat.getEcu());
+    }
+
+    @Test
+    public void setEcu(){
+        carteBat.setEcu(2);
+        assertEquals(2, carteBat.getEcu());
+    }
+
+    @Test
+    public void getPoints(){
+
+        assertEquals(5, carteBat.getPoints());
+    }
+
+    @Test
+    public void setPoints(){
+        carteBat.setPoints(3);
+        assertEquals(3, carteBat.getPoints());
+    }
+
+    @Test
+    public void isConstruit(){
+        assertEquals(false, carteBat.isContruit());
+        carteBat.setConstruit(true);
+        assertEquals(true, carteBat.isContruit());
+    }
+    @Test
+    public void setConstruit(){
+        carteBat.setConstruit(true);
+        assertEquals(true, carteBat.isContruit());
+        carteBat.setConstruit(false);
+        assertEquals(false, carteBat.isContruit());
+    }
+
+    @Test
+    public void getOuvrier(){
+        assertEquals(true, carteBat.getOuvriers() instanceof ArrayList);
+    }
+
+    @Test
+    public void isBuilt(){
+        carteBat.attribuerOuvrier(carteOuv3);
+        assertEquals(true, carteBat.isBuilt());
     }
 }
