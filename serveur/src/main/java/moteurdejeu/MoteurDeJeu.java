@@ -30,7 +30,8 @@ public class MoteurDeJeu {
         ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         int compteTour =1;
-
+        int ptsGagnant = -1;
+        int joueurGagnant = -1;
         int nbJoueurs = joueurs.size();
 
         Compteur c1 = new Compteur(joueurs.get(0).getId());
@@ -124,14 +125,22 @@ public class MoteurDeJeu {
                 Display.displayPoint(joueurs.get(j));
                 Display.displayBourse(joueurs.get(j));
                 Display.displayChantierFini(joueurs.get(j));
-                if(joueurs.get(j).getPoints() > 7){
-                    System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+(joueurs.get(j).getId())
-                            +" a gagné ! Il a "+joueurs.get(j).getPoints()+ " points."+ANSI_RESET);
-                    for(int s=0;s<nbJoueurs;s++){
-                        Display.displayStats(joueurs.get(s));
-                    }
-                    break whileTour;
+
+            }
+            for(int k = 0; k < nbJoueurs; k++){
+                if(joueurs.get(k).getPoints() > 7 && joueurs.get(k).getPoints() > ptsGagnant){
+                    ptsGagnant = joueurs.get(k).getPoints();
+                    joueurGagnant = joueurs.get(k).getId();
                 }
+            }
+
+            if(ptsGagnant > 7){
+                System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
+                        +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
+                for(int s=0;s<nbJoueurs;s++){
+                    Display.displayStats(joueurs.get(s));
+                }
+                break whileTour;
             }
             if (compteTour > 25){
                 System.out.println("done");
