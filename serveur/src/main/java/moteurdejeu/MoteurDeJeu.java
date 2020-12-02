@@ -74,11 +74,8 @@ public class MoteurDeJeu {
                     System.out.println("------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------");
                     Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
                     Display.displayActions(ia.get(i).getCompteur());
-                    ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable);
-                    if ( ia.get(i).getCompteur().getNombreAction() > 0){
-                        ia.get(i).passeTour(ia.get(i).getCompteur().getNombreAction());
-                    }
-                    Display.displayActions(ia.get(i).getCompteur());
+                    Display.displayActionsFini(ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable)); // effectue les actions et l'affichage
+
                     Display.displayChantierDuJoueur(ia.get(i).getJoueur());
                     if(isBuild(ia.get(i))){
                         for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){

@@ -143,30 +143,46 @@ public class IA {
      * @param carteOuvSurTable les cartes ouvriers disponibles sur le plateau
      * @param carteBatSurTable les cartes batiments disponibles sur le plateau
      */
-    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
+    public int actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
-        if (joueur.getMainOuv().size() < 2) {
-            if (choisitBatiment(1, carteBatSurTable) == 1){ //verifie que le joueur ne possedaient pas de carte batiment et en choisi un
+        int countActions = 0;
+        if (joueur.getMainOuv().size() < 2) { //si le joueur possede moins de 2 cartes ouv
+
+            if (choisitBatiment(1, carteBatSurTable) == 1){ //verifie que le joueur ne possede pas de carte batiment et en choisi un
+                // cette condition "if" ^^ fait la verificatioin et l'attribution sur la même ligne
                 choisitOuvrier(2, carteOuvSurTable); //on choisit donc deux carte ouvriers
+                countActions += 3;
             }
-            else {
-                choisitOuvrier(3, carteOuvSurTable);
+            else { // si le joueur possede deja un chantier en cours
+                choisitOuvrier(3, carteOuvSurTable); // on choisi 3 ouvriers à la place
+                countActions += 3;
             }
         }
-        else {
-            choisitBatiment(1, carteBatSurTable); // si le joueur possede plus de 2 cartes ouv
-            choisitOuvrier(1, carteOuvSurTable);
-            poserOuvrierSurChantier();
+        else { // si le joueur a plus de 2 cartes ouv
+
+            if (choisitBatiment(1, carteBatSurTable)==1) { // en choisi un seulement s'il en a pas un
+                // cette condition "if" ^ fait la verificatioin et l'attribution sur la même ligne
+                choisitOuvrier(1, carteOuvSurTable);
+                poserOuvrierSurChantier();
+                countActions += 3;
+            }
+            else{ // si chantier en cours
+                choisitOuvrier(1, carteOuvSurTable);
+                poserOuvrierSurChantier(); //pose deux ouvriers sur le chantier afin d'avancer
+                poserOuvrierSurChantier();
+                countActions += 3;
+            }
         }
         Display.displayOuvriersDuJoueur(getJoueur());
         for(int i=0;i<getJoueur().getMainOuv().size();i++){
-            carteOuvSurTable.remove(getJoueur().getMainOuv().get(i)); //on enleve toutes les cartes selectionn"
+            carteOuvSurTable.remove(getJoueur().getMainOuv().get(i)); //on enleve toutes les cartes selectionné
         }
 
         /*System.out.println(compteur.getNb());
         ajouteTour(1);
         System.out.println(compteur.getNb());
         passeTour(1);*/
+        return countActions; //return le nb d'actions fait (pour faciliter les tests)
     }
     /**
      * verifie si le joueur possede assez de tours pour passer et ajoute les ecus
@@ -182,7 +198,7 @@ public class IA {
     }
 
     /**
-     * verifie si le joueur a les moyens d'acheter des tours
+     * verifie si le joueur a les moyens d'acheter des tours et en achete
      * @param n nb de tours à ajouter
      */
     public void ajouteTour(int n){

@@ -123,4 +123,14 @@ public class Display {
         System.out.println("Ecus dépensés pour les ouvriers :"+joueur.getStats().getNbEcusDépensésOuv());
         System.out.println("Revenus des Bâtiments :"+joueur.getStats().getNbRevenusBat());
     }
+
+    public static void displayActionsFini(int nb){
+        if (nb > 3){
+            System.out.println("le joueur a du acheter "+ (nb - 3) + " actions");
+        }
+        else if (nb < 3){
+            System.out.println("le joueur a vendu " + (3 - nb) + "action(s)");
+        }
+        System.out.println("le joueur a effectué "+nb+" actions au total");
+    }
 }
