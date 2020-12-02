@@ -142,10 +142,11 @@ public class MoteurDeJeu {
                 for(int s=0;s<nbJoueurs;s++){
                     Display.displayStats(joueurs.get(s));
                 }
+                System.out.println("terminé");
                 break whileTour;
             }
             if (compteTour > 25){
-                System.out.println("done");
+                System.out.println("not done");
                 break;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
 
@@ -189,7 +190,7 @@ public class MoteurDeJeu {
         int nbCartes;
         if(carteSurTable.size()<5){
             nbCartes = 5 - carteSurTable.size();
-            if (deck.size() >= nbCartes) {
+            if (deck.size() > nbCartes + 1) {
                 for (int i = 0; i < nbCartes; i++) {
                     carteSurTable.add(deck.get(i));
                     deck.remove(deck.get(i));

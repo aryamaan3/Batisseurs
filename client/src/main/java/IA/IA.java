@@ -66,38 +66,39 @@ public class IA {
      *  Méthode qui permet à l'IA de choisir elle même un ouvrier
      * @param nbChoix le nombre d'ouvriers que l'IA doit piocher
      * @param cartesOuvSurTable les cartes dans lesquelles l'IA doit piocher
+     * @return 1 si l'ia a pu piocher un ouvrier, 0 sinon
      */
-    public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
-        if (joueur.getMainOuv().size() < 5 && cartesOuvSurTable.size() > 0){
+    public int choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable){
+        if (joueur.getMainOuv().size() < 5 && cartesOuvSurTable.size() >= nbChoix){
             for(int i=0;i<nbChoix;i++){ // on utilise la méthode idealOuvToChantier pour choisir la carte ouvrier la plus adapté selon les batiments que l'on possède
                 joueur.ajouteOuvrier(cartesOuvSurTable.get(idealOuvToChantier(cartesOuvSurTable)));
                 cartesOuvSurTable.remove(idealOuvToChantier(cartesOuvSurTable)); // on enlève ensuite la carte choisie des cartes ouvriers sur table
             }
             compteur.actionsFait(nbChoix);
+            return 1;
         }
-        else { passeTour(1);}
+        else {
+            return 0;
+        }
 
 
     }
     /**
      *  Méthode qui permet à l'IA de poser elle même un ouvrier sur un batiment
      */
-    public void poserOuvrierSurChantier(){
+    public boolean poserOuvrierSurChantier(){
         int meilleurCarteOuvID;
         if(joueur.getMainOuv().size()>0) {
-            for (int i = 0; i < 1; i++) {   //On peut poser qu'un ouvrier par tour pour l'instant
-                for (int j = 0; j < joueur.getMainBat().size(); j++) {
-                    if (!joueur.getMainBat().get(j).isContruit()) {
-                        meilleurCarteOuvID = idealOuvToChantier(joueur.getMainOuv());
-                        joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
-                        compteur.actionsFait(1);
-                        break;
-                    }
+            for (int j = 0; j < joueur.getMainBat().size(); j++) {
+                if (!joueur.getMainBat().get(j).isContruit()) {
+                    meilleurCarteOuvID = idealOuvToChantier(joueur.getMainOuv());
+                    joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
+                    compteur.actionsFait(1);
+                    return true;
                 }
             }
-        } else{
-              passeTour(1);
         }
+        return false;
     }
 
     /**
@@ -147,42 +148,105 @@ public class IA {
      */
     public int[] actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable){
         //compteur.buyActions(1);
-        int countActions = 0, nbOuvPosee = 0, nbEcus = 0;
+        int countActions = 0, nbOuvPosee = 0, nbEcus = 0, check;
         if (joueur.getBourse().getEcus() < 5){ // si le joueur ne possede pas assez d'ecus ppour effectuer des actions
-            passeTour(3);
-            nbEcus += 3;
+            nbEcus += passeTour(3);
         }
         else if (joueur.getMainOuv().size() < 2) { //si le joueur possede moins de 2 cartes ouv
 
             if (choisitBatiment(1, carteBatSurTable) == 1){ //verifie que le joueur ne possede pas de carte batiment et en choisi un
                 // cette condition "if" ^^ fait la verificatioin et l'attribution sur la même ligne
-                choisitOuvrier(2, carteOuvSurTable); //on choisit donc deux carte ouvriers
-                countActions += 3;
+                countActions += 1;
+                if (choisitOuvrier(2, carteOuvSurTable) == 1) { //on choisit donc deux carte ouvriers
+                    countActions += 2;
+                }
+                else { // si on peut pas piocher carte ouv
+                    if (poserOuvrierSurChantier()) {
+                        nbEcus += passeTour(1); // on vend le tour restant
+                        countActions += 1;
+                        nbOuvPosee += 2;
+                    }
+                    else{
+                        nbEcus += passeTour(2);
+                    }
+                }
             }
             else { // si le joueur possede deja un chantier en cours
-                choisitOuvrier(3, carteOuvSurTable); // on choisi 3 ouvriers à la place
-                countActions += 3;
+                if (choisitOuvrier(3, carteOuvSurTable) == 1) {// on choisi 3 ouvriers à la place
+                    countActions += 3;
+                }
+                else if (choisitOuvrier(2, carteOuvSurTable) == 1){ // on essaye de piocher 2 ouvrier
+                    countActions += 2;
+                    if (poserOuvrierSurChantier()){} // on essaye de poser un ouv sur un chantier
+                    else{ nbEcus+= passeTour(1);} // sinon on vend l'actions restant
+                }
+                else if (choisitOuvrier(1, carteOuvSurTable) == 1){ // on essaye d'en piocher 1
+                    countActions += 1;
+                    if (poserOuvrierSurChantier()) { //on essaye de place un ouv sur un chantier
+                        countActions += 1;
+                        nbEcus += passeTour(1); // on vend le tour restant
+                    }
+                    else{nbEcus += passeTour(2);} // on vends les tour restants
+                }
+
             }
         }
         else { // si le joueur a plus de 1 cartes ouv
 
             if (choisitBatiment(1, carteBatSurTable)==1) { // en choisi un seulement s'il en a pas un
                 // cette condition "if" ^^ fait la verificatioin et l'attribution sur la même ligne
-                choisitOuvrier(1, carteOuvSurTable);
-                poserOuvrierSurChantier();
-                countActions += 3;
-                nbOuvPosee += 1;
+                countActions += 1;
+                if (choisitOuvrier(1, carteOuvSurTable) == 1) { //on essaye de piocher un ouvrier
+                    countActions += 1;
+                    if (poserOuvrierSurChantier()) {
+                        countActions += 1;
+                        nbOuvPosee += 1;
+                    }
+                    else {nbEcus += passeTour(1);}
+                }
+                else { // si on peut pas piocher d'ouvrier
+                    if (poserOuvrierSurChantier()){//on place un ouvrier sur un chantier
+                        countActions += 1;
+                        nbOuvPosee += 1;
+                        if (poserOuvrierSurChantier()){ // on essaye de placer le deuxieme
+                            countActions += 1;
+                            nbOuvPosee += 1;
+                        }
+                        else {nbEcus += passeTour(1);} // sinon on vend l'action
+                    }
+
+                    else {nbEcus += passeTour(2);} // sinon on vends les actions
+
+                }
             }
             else{ // si chantier en cours
-                choisitOuvrier(1, carteOuvSurTable);
-                poserOuvrierSurChantier(); //pose deux ouvriers sur le chantier afin d'avancer
-                poserOuvrierSurChantier();
-                nbOuvPosee += 2;
-                countActions += 3;
+                if (choisitOuvrier(1, carteOuvSurTable) == 1) { // on essaye de piocher un ouvrier
+                    countActions += 1;
+                    if (poserOuvrierSurChantier()){//on place un ouvrier sur un chantier
+                        countActions += 1;
+                        nbOuvPosee += 1;
+                        if (poserOuvrierSurChantier()){ // on essaye de placer le deuxieme
+                            countActions += 1;
+                            nbOuvPosee += 1;
+                        }
+                        else {nbEcus += passeTour(1);} // sinon on vend l'action
+                    }
+
+                    else {nbEcus += passeTour(2);} // sinon on vends les actions
+                }
+                else{
+                    if (poserOuvrierSurChantier()) { //on pose l'ouvrier sur le chantier
+                        nbEcus += passeTour(2); // on vend les tours restants
+                        countActions += 1;
+                        nbOuvPosee += 1;
+                    }
+                    else{nbEcus += passeTour(3);} // on vends les tours restants
+                }
             }
         }
 
-        if (joueur.getBourse().getEcus() > 10){ // achete des actions s'il possede beaucoup d'ecus
+        if (joueur.getBourse().getEcus() > 10 && carteOuvSurTable.size() > 0){
+            // achete des actions s'il possede beaucoup d'ecus et il y des cartes ouv à piocher
             int nbAchetee = (joueur.getBourse().getEcus() / 10) % 2;
             ajouteTour(nbAchetee); // n'ajoute pas plus de deux actions à la fois
             nbEcus -= nbAchetee;

@@ -132,7 +132,7 @@ public class Display {
             System.out.println("le joueur a du acheter "+ (nb - 3) + " actions");
         }
         else if (nb < 3){
-            System.out.println("le joueur a vendu " + (3 - nb) + "action(s)");
+            System.out.println("le joueur a vendu " + (3 - nb) + " action(s)");
         }
         System.out.println("le joueur a effectué "+nb+" actions au total");
     }
@@ -145,7 +145,7 @@ public class Display {
     public static void displayOuvPoseeSurChantier(int check, Joueur joueur){
         if (joueur.getMainBat().size() > 0) {
             int nbOuvrierSurChantier = joueur.getMainBat().get(0).getOuvriers().size();
-            if (check != 0){
+            if (check != 0 && nbOuvrierSurChantier > 0 && nbOuvrierSurChantier - check > 0){
                 for (int i = nbOuvrierSurChantier - check; i < nbOuvrierSurChantier; i++){
                     System.out.println("le joueur "+ joueur.getId() + " pose l'ouvrier "+
                             joueur.getMainBat().get(0).getOuvriers().get(i).getIdCarte() + " sur le batiment " +

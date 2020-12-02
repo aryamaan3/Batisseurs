@@ -104,16 +104,18 @@ public class Joueur {
      *  de la bourse du joueur si c'est le cas
      *  @param ouvrier la carte ouvrier attribué au batiment
      *  @param batiment la carte batiment
+     * @return 1 si fait, 0 si impossible
      */
-    public void attribuerOuvrierAChantier(CarteOuvriers ouvrier, CarteChantier batiment){
+    public int attribuerOuvrierAChantier(CarteOuvriers ouvrier, CarteChantier batiment){
         if(actionAutorisee(ouvrier)){
-        batiment.attribuerOuvrier(ouvrier);
-        MainOuv.remove(ouvrier);
-        bourse.subEcus(ouvrier.getCout());
-        stats.addEcusDépensésOuv(ouvrier.getCout());
-        stats.addActionsTravailler(1);
+            batiment.attribuerOuvrier(ouvrier);
+            MainOuv.remove(ouvrier);
+            bourse.subEcus(ouvrier.getCout());
+            stats.addEcusDépensésOuv(ouvrier.getCout());
+            stats.addActionsTravailler(1);
+            return 1;
         }else{
-            System.out.println("le joueur n'a pas assez d'écus pour payer l'ouvrier");
+            return 0;
         }
     }
     /**
