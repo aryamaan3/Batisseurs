@@ -10,11 +10,9 @@ import commun.ouvriers.DeckOuvriers;
 import commun.display.Display;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
 
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 import static commun.display.Couleur.*;
 
@@ -62,6 +60,27 @@ public class MoteurDeJeu {
 
         Collections.shuffle(deckBat);
         Collections.shuffle(deckOuv);
+
+        // On attribut automatiquement un apprenti par joueur
+        // 6 apprentis dans le decks
+        int[] indiceApprentis = new int[6];
+        int count = 0;
+        // On boucle sur les indices du deck (qui a été shuffle)
+        for(int i = 0; i < deckOuv.size() ; i++){
+            if(deckOuv.get(i).getNom() == "apprenti"){
+                indiceApprentis[count] = i;
+                count ++;
+            }
+        }
+        for(int i = 0; i < nbJoueurs ; i ++){
+            // On prend à chaque fois le premier apprenti de la lite qui a été shuffle
+            // Puis le deuxième joueur prendra le deuxième ...
+            ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis[i]) );
+        }
+        // On remove tous les apprentis qu'on a selectionné (les 4 premiers)
+        deckOuv.remove( Arrays.copyOfRange(indiceApprentis, 0, 4) );
+
+
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
         ArrayList<CarteChantier> carteBatSurTable = carteBatimentsSurTable(deckBat);
         System.out.println("Il y a " + nbJoueurs + " joueur(s)");

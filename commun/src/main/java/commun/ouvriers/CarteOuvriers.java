@@ -53,5 +53,4 @@ public class CarteOuvriers extends Cartes {
                 "                \n - savoir : " + this.savoir +"" );
     }
 
-
 }
