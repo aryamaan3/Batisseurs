@@ -48,4 +48,29 @@ public class TestJoueur {
         assertEquals(true,joueur.actionAutorisee(carteOuv));
 
     }
+    @Test
+    public void addPointsTest(){
+        // aucun point
+        assertEquals(0, joueur.getPoints());
+        // ajout de point
+        joueur.addPoints(19);
+        assertEquals(19, joueur.getPoints());
+    }
+    @Test
+    public void getBourseTest(){
+        // A 10 ecus de base
+        assertEquals(10, joueur.getBourse().getEcus());
+    }
+    @Test
+    public void conversionEcuPointTest(){
+        joueur.setPoints(0);
+        assertEquals(10, joueur.getBourse().getEcus());
+        joueur.getBourse().addEcus(11);
+        assertEquals(21, joueur.getBourse().getEcus());
+        // Le joueur a 0 point et 21 écus
+        // Après cette fonction, on doit avoir +2 point et 1 écu
+        joueur.conversionEcuPoint();
+        assertEquals(1, joueur.getBourse().getEcus());
+        assertEquals(2, joueur.getPoints());
+    }
 }

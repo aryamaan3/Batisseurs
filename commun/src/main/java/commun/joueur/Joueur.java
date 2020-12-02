@@ -145,6 +145,18 @@ public class Joueur {
         return carteOuvriers.getCout() <= bourse.getEcus();
     }
 
-
+    /**
+     * En fin de partie, on converti tous les écus en points : 10 écus = 1 points
+     */
+    public void conversionEcuPoint(){
+        // On récupère les écus
+        int ecu = bourse.getEcus();
+        int pointSupp = ecu / 10;
+        int reste = ecu % 10;
+        points += pointSupp;
+        // on enlève 10 * le nombre de point qu'on a rajouté
+        // puisque 1 point = 10 écus
+        bourse.subEcus(pointSupp * 10);
+    }
 
 }
