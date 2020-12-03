@@ -91,7 +91,7 @@ public class IADumb implements IA {
                 poserOuvrierSurChantier();
                 passeTour(2);
         } else if(joueur.getMainOuv().size()==0 && carteOuvSurTable.size()>1) {
-                choisitOuvrier(1,carteOuvSurTable);
+                choisitOuvrier(2,carteOuvSurTable);
                 passeTour(1);
 
         } else {
@@ -103,9 +103,10 @@ public class IADumb implements IA {
 
     @Override
     public void poserOuvrierSurChantier() {
-        if(joueur.getMainBat().size()>0){
+        if(joueur.getMainBat().size()>0 && joueur.getMainOuv().size()>0){
             display.displayOuvPoseeSurChantier(joueur.getMainOuv().get(0),joueur.getMainBat().get(0),joueur.getId());
             joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(0),joueur.getMainBat().get(0));
+            compteur.actionsFait(1);
 
         }
 
@@ -119,17 +120,20 @@ public class IADumb implements IA {
                 display.displayBatimentChoisi(joueur.getId(),carteBatSurTable.get(0));
                 carteBatSurTable.remove(0);
             }
+            compteur.actionsFait(nbChoix);
         }
     }
 
     @Override
     public void choisitOuvrier(int nbChoix, ArrayList<CarteOuvriers> cartesOuvSurTable) {
         if(cartesOuvSurTable.size()>0){
+            display.displayString("Le joueur "+joueur.getId()+" a pioché :");
             for (int i = 0;i<nbChoix;i++){
                 joueur.ajouteOuvrier(cartesOuvSurTable.get(0));
                 display.displayOuvrierChoisi(cartesOuvSurTable.get(0));
                 cartesOuvSurTable.remove(0);
             }
+            compteur.actionsFait(nbChoix);
         }
     }
 

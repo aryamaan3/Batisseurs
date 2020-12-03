@@ -92,9 +92,9 @@ public class MoteurDeJeu {
         while (true){ //loop pour chaque tour
             display.displayString("\n######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
-                display.displayString(ANSI_BLUE+"------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------\n"+ANSI_RESET);
+                display.displayString(ANSI_CYAN+"------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------\n"+ANSI_RESET);
                 display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
-                Display.displayActions(ia.get(i).getCompteur());
+                display.displayActions(ia.get(i).getCompteur());
                 ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable); // effectue les actions et l'affichage
 
 
@@ -155,11 +155,11 @@ public class MoteurDeJeu {
 
             if(ptsGagnant > 16){
                 display.displayString(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
-                        +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
+                        +" a gagné ! Il a "+joueurs.get(joueurGagnant).getPoints()+ " points."+ANSI_RESET);
                 for(int s=0;s<nbJoueurs;s++){
-                    Display.displayStats(joueurs.get(s));
+                    display.displayStats(joueurs.get(s));
                 }
-                display.displayString("terminé");
+                display.displayGagnant(joueurGagnant);
                 break whileTour;
             }
             if (compteTour > 25){
@@ -287,7 +287,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        int nbPartie = nbPartie();
+        int nbPartie =Integer.parseInt(args[0]);
+
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
             Joueur j1,j2,j3,j4;
@@ -300,13 +301,8 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            m1.partie(joueurs,true);
+            m1.partie(joueurs,Boolean.parseBoolean(args[1]));
 
-        }
-       if(nbPartie == 1){
-        System.out.println("\nIl y a "+nbPartie+" partie qui a été jouée");}
-        else{
-            System.out.println("\nIl y a "+nbPartie+" partie qui ont été jouées");
         }
     }
 }

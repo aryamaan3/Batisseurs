@@ -40,6 +40,23 @@
                         </goals>
                         <configuration>
                             <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
+                            <arguments>
+                                <argument>1</argument>
+                                <argument>true</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>normal100</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
+                            <arguments>
+                                <argument>500</argument>
+                                <argument>true</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                     <execution>
@@ -49,6 +66,10 @@
                         </goals>
                         <configuration>
                             <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
+                            <arguments>
+                                <argument>1</argument>
+                                <argument>false</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                 </executions>

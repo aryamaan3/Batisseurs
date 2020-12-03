@@ -42,7 +42,7 @@ public class Display {
     }
     public void displayOuvrierChoisi(CarteOuvriers ouvrier){
         if(afficher){
-            System.out.println(ouvrier.getNom()+" ("+ouvrier.getIdCarte()+")");
+            System.out.println("l'ouvrier "+ouvrier.getNom()+" ("+ouvrier.getIdCarte()+")");
         }
     }
 
@@ -142,45 +142,35 @@ public class Display {
      * Méthode permettant l'affichage du compteur d'action d'un joueur
      * @param c le compteur d'action
      */
-    public static void displayActions(Compteur c){
-        if(c.getNombreAction() < 2)
-        System.out.println("Il reste "+c.getNombreAction()+" action");
-        else{
-            System.out.println("Il reste "+c.getNombreAction()+" actions");
+    public void displayActions(Compteur c){
+        if(afficher) {
+            if (c.getNombreAction() < 2) {
+                System.out.println("Il reste " + c.getNombreAction() + " action");
+            }
+            else {
+                System.out.println("Il reste " + c.getNombreAction() + " actions");
+            }
         }
-    }
+        }
+
 
     /**
      * Méthode permettant l'affichage de la bourse d'un joueur
      * @param joueur l'Objet joueur
      */
-    public static void displayBourse(Joueur joueur){
-        System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ joueur.getBourse().getEcus()+" écu(s)");
+    public void displayBourse(Joueur joueur){
+        if(afficher) {System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ joueur.getBourse().getEcus()+" écu(s)");}
 
     }
 
-    public static void displayStats(Joueur joueur){
-        System.out.println(ANSI_BLUE +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
+    public void displayStats(Joueur joueur){
+        System.out.println(ANSI_CYAN +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
         System.out.println("Points : "+joueur.getPoints());
         System.out.println("Ecus : "+joueur.getBourse().getEcus());
         System.out.println("Actions travailler (ouvriers attribués) : "+joueur.getStats().getNbActionsTravailler());
         System.out.println("Actions recrutement (ouvriers recrutés) :"+joueur.getStats().getNbActionsRecrutement());
         System.out.println("Ecus dépensés pour les ouvriers :"+joueur.getStats().getNbEcusDépensésOuv());
         System.out.println("Revenus des Bâtiments :"+joueur.getStats().getNbRevenusBat());
-    }
-
-    /**
-     * print le nb d'actions fait et le nb d'actions vendu ou achetée s'ils ont eu lieu
-     * @param nb le nombre d'action
-     */
-    public static void displayActionsFini(int nb){
-        if (nb > 3){
-            System.out.println("le joueur a du acheter "+ (nb - 3) + " actions");
-        }
-        else if (nb < 3){
-            System.out.println("le joueur a vendu " + (3 - nb) + " action(s)");
-        }
-        System.out.println("le joueur a effectué "+nb+" actions au total");
     }
 
     /**
@@ -201,7 +191,17 @@ public class Display {
         if(afficher){System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "+nbActions+ " action(s) restante(s) pour "+nbEcus+" écu(s)");}
     }
 
+    public void displayAjouteTour(int idJoueur,int nbActions, int nbEcus){
+        if(afficher) {
+            System.out.println("Le joueur " + idJoueur + " achète " + nbActions + " action(s) pour " + nbEcus + " écu(s)");
+        }
+    }
 
+    public void displayGagnant(int idJoueur){
+        if(!afficher) {
+            System.out.println(ANSI_RED+"\nLe joueur "+idJoueur+ " a gagné la partie !"+ANSI_RESET);
+        }
+    }
 
 
     public void displayEcus(int idJoueur,int nbEcus){

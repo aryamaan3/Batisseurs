@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestIASmart {
     Joueur j1 = new Joueur(0);
     Compteur c1 = new Compteur(j1.getId());
-    IASmart iatest = new IASmart(j1,c1);
+    IA iatest = new IASmart(j1,c1);
 
 
     @Test
@@ -145,15 +145,15 @@ public class TestIASmart {
         //car le joueur a maintenant assez pour acheter des actions il en effectue 4
 
         iatest.actionIA(cartesOuv,cartesBat);
-        assertEquals(24, j1.getBourse().getEcus());
+        assertEquals(23, j1.getBourse().getEcus());
         j1.getBourse().subEcus(20);
-        // le joueur possede desormais seulement 4 ecus
+
 
         //assertEquals(0,iatest.actionIA(cartesOuv, cartesBat)[0]);
         //il n'effectue pas d'actions car il n'a pas assez d'ecus, il les vends donc
         c1.reset();
         iatest.actionIA(cartesOuv,cartesBat);
-        assertEquals(10, j1.getBourse().getEcus());
+        assertEquals(9, j1.getBourse().getEcus());
         // car le joueur achete 3 actions ce qui lui rapport 6 ecus
     }
 

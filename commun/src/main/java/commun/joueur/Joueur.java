@@ -91,7 +91,8 @@ public class Joueur {
      */
     public void ajouteOuvrier(CarteOuvriers carte){
         MainOuv.add(carte);
-        stats.addActionsRecrutement(1);}
+        //stats.addActionsRecrutement(1);
+        }
     /**
      *  Méthode qui prend une carte batiment sur le plateau pour la mettre dans la main du joueur
      *  @param carte la carte que le joueur souhaite piocher
@@ -111,8 +112,8 @@ public class Joueur {
             batiment.attribuerOuvrier(ouvrier);
             MainOuv.remove(ouvrier);
             bourse.subEcus(ouvrier.getCout());
-            stats.addEcusDépensésOuv(ouvrier.getCout());
-            stats.addActionsTravailler(1);
+            //stats.addEcusDépensésOuv(ouvrier.getCout());
+            //stats.addActionsTravailler(1);
             return 1;
         }else{
             return 0;
@@ -160,7 +161,6 @@ public class Joueur {
         // on enlève 10 * le nombre de point qu'on a rajouté
         // puisque 1 point = 10 écus
         bourse.subEcus(pointSupp * 10);
-        System.out.println("Le joueur "+getId()+ " utilise "+(pointSupp*10)+" écus pour gagner "+pointSupp+" points. Il passe de "+(points-pointSupp)+" à "+ points+" points.");
     }
 
 }

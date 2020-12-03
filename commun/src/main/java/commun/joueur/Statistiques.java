@@ -6,11 +6,7 @@ public class Statistiques {
     public Statistiques(int idJoueur){
         this.idJoueur = idJoueur;
         nbPoints = 0;
-        nbEcus = 0;
-        nbActionsRecrutement = 0;
-        nbEcusDépensésOuv = 0;
-        nbRevenusBat = 0;
-        nbActionsTravailler = 0;
+
     }
 
     public int getNbPoints(){

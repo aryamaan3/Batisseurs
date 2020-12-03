@@ -255,7 +255,8 @@ public class IASmart implements IA {
             // achete des actions s'il possede beaucoup d'ecus et il y des cartes ouv à piocher
             int nbAchetee = (joueur.getBourse().getEcus() / 10) % 2;
             ajouteTour(nbAchetee); // n'ajoute pas plus de deux actions à la fois
-            for (int i = 0; i < nbAchetee; i++){ // boucle sur le nb d'actions achetée
+            display.displayAjouteTour(joueur.getId(),nbAchetee,nbAchetee*5);
+            for (int i = 0; i < nbAchetee+1; i++){ // boucle sur le nb d'actions achetée
                 if (joueur.getMainBat().size()==0){
                     choisitBatiment(1, carteBatSurTable);
                 }
