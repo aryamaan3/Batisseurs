@@ -16,8 +16,12 @@ Fonctionnalités livrées et issues réalisées :
   - Amélioration de différentes méthodes afin de réduire le temps de jeu
   - Conversion des écus en point à la fin de la partie
   - Ajout d'un boolean afin d'aaficher ou non les détails de la partie
+  - Possibilité de choisir un mode normal avec 1 ou 100 parties ou un mode qui affiche que les stats avec 1 partie(à améliorer à la prochaine itération)
+    Les commandes nécessaires pour lancer les différents modes sont présentes dans le readMe du Git.
+  
   
 - Tests :
+  -ajout des tests pour la nouvelle IA plus "bête"
   - ajout des test des méthodes get set
   - Amélioration des tests existants afin de prendre en compte les différents états d'une méthode
   
