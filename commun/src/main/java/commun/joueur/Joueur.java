@@ -117,7 +117,9 @@ public class Joueur {
         }else{
             return 0;
         }
+
     }
+
     /**
      *  Méthode qui trie la main de carte batiment du joueur pour "ranger" les cartes batiments "construites" dans la liste "BuiltBat"
      */

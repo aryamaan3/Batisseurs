@@ -1,6 +1,8 @@
 package moteurdejeu;
 
 import IA.IA;
+import IA.IADumb;
+import IA.IASmart;
 
 import commun.batiments.CarteChantier;
 import commun.batiments.CarteMachine;
@@ -11,7 +13,6 @@ import commun.display.Display;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 import static commun.display.Couleur.*;
@@ -26,9 +27,11 @@ public class MoteurDeJeu {
      * @param joueurs le liste des joueurs
      */
 
-    public void partie(ArrayList<Joueur> joueurs){
+    public void partie(ArrayList<Joueur> joueurs,boolean isDisplay){
+
         ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
+        Display display = new Display(isDisplay);
         int compteTour =1;
         int ptsGagnant = -1;
         boolean egalite = false;
@@ -40,25 +43,21 @@ public class MoteurDeJeu {
         Compteur c2 = new Compteur(joueurs.get(1).getId());
         Compteur c3 = new Compteur(joueurs.get(2).getId());
         Compteur c4 = new Compteur(joueurs.get(3).getId());
-        IA ia1 = new IA(joueurs.get(0),c1);
-        IA ia2 = new IA(joueurs.get(1),c2);
-        IA ia3 = new IA(joueurs.get(2),c3);
-        IA ia4 = new IA(joueurs.get(3),c4);
-
         ArrayList<IA> ia = new ArrayList<>();
-        ia.add(ia1);
-        ia.add(ia2);
-        ia.add(ia3);
-        ia.add(ia4);
+        ia.add(new IASmart(joueurs.get(0),c1));
+        ia.add(new IASmart(joueurs.get(1),c2));
+        ia.add(new IADumb(joueurs.get(2),c3));
+        ia.add(new IADumb(joueurs.get(3),c4));
+        setDisplayIA(isDisplay,ia);
         // Selection du premier joueur en fonction du totem : l'orde est défini par la position dans l'arrayList ia
         Random rand = new Random(); //instance of random class
         int totem = rand.nextInt(nbJoueurs);
         totem ++;
-        System.out.println(ANSI_CYAN+"C'est le joueur "+ totem + " qui commence."+ANSI_RESET);
+        display.displayString(ANSI_CYAN+"C'est le joueur "+ totem + " qui commence."+ANSI_RESET);
         Collections.swap(ia, 0, totem-1);
-        System.out.println(ANSI_CYAN+"Ordre de jeu :"+ANSI_RESET);
+        display.displayString(ANSI_CYAN+"Ordre de jeu :"+ANSI_RESET);
         for(int i = 0; i < nbJoueurs ; i ++){
-            System.out.println(ANSI_CYAN+ (i+1)+" : " + "joueur " + ia.get(i).getJoueur().getId()+ANSI_RESET);
+            display.displayString(ANSI_CYAN+ (i+1)+" : " + "joueur " + ia.get(i).getJoueur().getId()+ANSI_RESET);
         }
 
         Collections.shuffle(deckBat);
@@ -86,42 +85,44 @@ public class MoteurDeJeu {
 
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
         ArrayList<CarteChantier> carteBatSurTable = carteBatimentsSurTable(deckBat);
-        System.out.println("Il y a " + nbJoueurs + " joueur(s)");
-        System.out.println("Debut du jeu...");
+        display.displayString("Il y a " + nbJoueurs + " joueur(s)");
+        display.displayString("Debut du jeu...");
 
         whileTour:
         while (true){ //loop pour chaque tour
-            System.out.println("######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
+            display.displayString("\n######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
-                System.out.println("------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------");
-                Display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
+                display.displayString(ANSI_BLUE+"------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------\n"+ANSI_RESET);
+                display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
                 Display.displayActions(ia.get(i).getCompteur());
-                int displayInt[] = ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable); // effectue les actions et l'affichage
+                ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable); // effectue les actions et l'affichage
 
-                Display.displayOuvPoseeSurChantier(displayInt[1], ia.get(i).getJoueur());
-                Display.displayActionsFini(displayInt[0]);
-                Display.displayEcus(displayInt[2], ia.get(i).getJoueur());
 
-                Display.displayChantierDuJoueur(ia.get(i).getJoueur());
-                Display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
+
+
+
+                display.displayChantierDuJoueur(ia.get(i).getJoueur());
+                display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
+                display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
                 if(isBuild(ia.get(i))){
                     for(int j=0 ; j < ia.get(i).getJoueur().getMainBat().size() ; j++){
                         if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
-                            System.out.println("Le joueur "+ (i+1)
+                            display.displayString("Le joueur "+ ia.get(i).getJoueur().getId()
                                     +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
                                     +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+" et "+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
                         }
                     }
                 }
                 //ia.get(i).getJoueur().getBourse().addEcus(2);
-                Display.displayEtatChantiersDuJoueur(ia.get(i).getJoueur());
-                Display.displayChantierFini(ia.get(i).getJoueur());
-                ia.get(i).getCompteur().reset();
                 ia.get(i).getJoueur().trierBuiltBat();
+                display.displayChantierFini(ia.get(i).getJoueur());
+                ia.get(i).getCompteur().reset();
+
+                display.displayEcus(ia.get(i).getJoueur().getId(),ia.get(i).getJoueur().getBourse().getEcus());
                 fillCartesBatiments(deckBat,carteBatSurTable);
                 fillCartesOuvriers(deckOuv,carteOuvSurTable);
             }
-            System.out.println("Fin du tour : "+compteTour+"");//On affiche le numéro du tour à la fin de ce dernier
+            display.displayString("Fin du tour : "+compteTour+"\n");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
 
             // Condition de victoire en fonction du nombre de point (+ de 5)
@@ -134,11 +135,14 @@ public class MoteurDeJeu {
             for(int j = 0; j<nbJoueurs; j++){
                 // maintenant qu'on sait que la partie est finie, on convertit les écus en points.
                 if(victoire && joueurs.get(j).getBourse().getEcus() >= 10){
+                    int ancienneBourse = joueurs.get(j).getBourse().getEcus();
                     joueurs.get(j).conversionEcuPoint();
+                    int pointsgagnés = ancienneBourse - joueurs.get(j).getBourse().getEcus();
+                    display.displayString("Le joueur "+joueurs.get(j).getId()+" utilise "+(pointsgagnés)+" écus pour gagner "+(pointsgagnés/10)+" points");
                 }
-                Display.displayPoint(joueurs.get(j));
-                Display.displayBourse(joueurs.get(j));
-                Display.displayChantierFini(joueurs.get(j));
+                display.displayPoint(joueurs.get(j));
+                display.displayBourse(joueurs.get(j));
+                display.displayChantierFini(joueurs.get(j));
             }
 
             for(int k = 0; k < nbJoueurs; k++){
@@ -150,16 +154,16 @@ public class MoteurDeJeu {
             }
 
             if(ptsGagnant > 16){
-                System.out.println(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
+                display.displayString(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
                         +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
                 for(int s=0;s<nbJoueurs;s++){
                     Display.displayStats(joueurs.get(s));
                 }
-                System.out.println("terminé");
+                display.displayString("terminé");
                 break whileTour;
             }
             if (compteTour > 25){
-                System.out.println("not done");
+                display.displayString("not done");
                 break;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
 
@@ -266,6 +270,12 @@ public class MoteurDeJeu {
         }
         return isBuild;
     }
+
+    public void setDisplayIA(boolean display, ArrayList<IA> iaList){
+        for(int i=0;i< iaList.size();i++){
+            iaList.get(i).setDisplay(display);
+        }
+    }
     /**
      * Méthode qui permet de rentrer le nombre de parties que l'utilisateur veut lancer
      * @return un entier qui représente le nombre de parties
@@ -290,10 +300,10 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            m1.partie(joueurs);
+            m1.partie(joueurs,true);
 
         }
-        if(nbPartie == 1){
+       if(nbPartie == 1){
         System.out.println("\nIl y a "+nbPartie+" partie qui a été jouée");}
         else{
             System.out.println("\nIl y a "+nbPartie+" partie qui ont été jouées");

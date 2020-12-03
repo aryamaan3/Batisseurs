@@ -1,6 +1,6 @@
 package moteurdejeu;
 
-import IA.IA;
+import IA.IASmart;
 import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
 import commun.batiments.DeckBatiments;
@@ -11,7 +11,6 @@ import commun.ouvriers.DeckOuvriers;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,7 +18,7 @@ public class TestMoteurDeJeu {
     MoteurDeJeu m1 = new MoteurDeJeu();
     Joueur j1 = new Joueur(1);
     Compteur c1 = new Compteur(1);
-    IA iaTest = new IA(j1,c1);
+    IASmart iaTest = new IASmart(j1,c1);
 
     @Test
     public void testCarteOuvriersSurTable(){
