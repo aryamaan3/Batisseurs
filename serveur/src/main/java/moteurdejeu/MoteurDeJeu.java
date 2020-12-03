@@ -155,7 +155,7 @@ public class MoteurDeJeu {
 
             if(ptsGagnant > 16){
                 display.displayString(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
-                        +" a gagné ! Il a "+joueurs.get(joueurGagnant).getPoints()+ " points."+ANSI_RESET);
+                        +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
                 for(int s=0;s<nbJoueurs;s++){
                     display.displayStats(joueurs.get(s));
                 }
