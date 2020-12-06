@@ -49,13 +49,12 @@ ITERATION 7
 - Fin de partie : on fait 2-3 tour, celui qui a le plus de point gagne (égalité non gérée)
 
 ITERATION 8
-- Mise en place du client/serveur
 - Création du classement en fonction des conditions de fin de partie
 - Gérer les égalités
 - Passer du mode normal au mode statistique
 
 ITERATION 9
-- Amélioration de l'IA
+- Essais de mise en place client/server
 - Ajout du deck Antiquité
 
 

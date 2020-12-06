@@ -159,7 +159,7 @@ public class MoteurDeJeu {
                 display.displayClassement(joueurs);
                 return joueurs.get((joueurGagnant - 1));
             }
-            if (compteTour > 25){
+            if (compteTour > 30){
                 display.displayString("not done");
                 return null;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
