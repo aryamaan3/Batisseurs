@@ -222,6 +222,10 @@ public class Display {
         if(!afficher) {
             System.out.println(ANSI_RED+"\nLe joueur "+idJoueur+ " a gagné la partie !"+ANSI_RESET);
         }
+        else {
+            System.out.println(ANSI_WHITE_BACKGROUND+ANSI_BLACK+"Le Joueur "+idJoueur
+                    +" a gagné !"+ANSI_RESET);
+        }
     }
 
 
@@ -241,10 +245,18 @@ public class Display {
     public void displayClassement (ArrayList<Joueur> joueurs){
         if (afficher){
             Collections.sort(joueurs);
-            System.out.println("\n"+ANSI_BLACK_BACKGROUND+ANSI_YELLOW+"Voici le classement :"+ANSI_RESET);
+            System.out.println("\n"+ANSI_YELLOW+"Voici le classement :"+ANSI_RESET + "\n");
             for (int i = 0; i < joueurs.size(); i++){
-                System.out.println(ANSI_WHITE_BACKGROUND +ANSI_BLACK+ (i+1)+". Joueur " + joueurs.get(i).getId()+
-                        " avec "+ joueurs.get(i).getPoints() + " points." + ANSI_RESET);
+                System.out.println(ANSI_WHITE_BACKGROUND +ANSI_BLACK+ (i+1)+". Joueur " +
+                    ANSI_RESET+ANSI_WHITE_BACKGROUND+ANSI_YELLOW+joueurs.get(i).getId()+ANSI_RESET+
+                        ANSI_WHITE_BACKGROUND+ANSI_BLACK+ " avec "+ joueurs.get(i).getPoints() +
+                        " points." + ANSI_RESET);
+                if (joueurs.get(i).getId() < 3){
+                    System.out.println("Possedant comme IA, l'IA intelligent\n");
+                }
+                else {
+                    System.out.println("Possedant comme IA, l'IA bête\n");
+                }
             }
         }
     }
