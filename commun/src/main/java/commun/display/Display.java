@@ -7,6 +7,7 @@ import commun.joueur.Compteur;
 import commun.joueur.Joueur;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import static commun.display.Couleur.*;
 
@@ -163,6 +164,10 @@ public class Display {
 
     }
 
+    /**
+     * Affichage des stats
+     * @param joueur Objet Joueur
+     */
     public void displayStats(Joueur joueur){
         System.out.println(ANSI_CYAN +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
         System.out.println("Points : "+joueur.getPoints());
@@ -187,16 +192,32 @@ public class Display {
         }
     }
 
+    /**
+     * Affiche un message quand un joueur passe son tour
+     * @param idJoueur id du joueur
+     * @param nbActions nb d'actions à passer
+     * @param nbEcus nb d'écus gagné en vendant les actions
+     */
     public void displayPasseTour(int idJoueur,int nbActions,int nbEcus){
         if(afficher){System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "+nbActions+ " action(s) restante(s) pour "+nbEcus+" écu(s)");}
     }
 
+    /**
+     * affiche un message quand un joueur achete un tour supplémentaire
+     * @param idJoueur id du joueur
+     * @param nbActions nb d'actions acheté par le joueur
+     * @param nbEcus nb d'écus utilisé
+     */
     public void displayAjouteTour(int idJoueur,int nbActions, int nbEcus){
         if(afficher) {
             System.out.println("Le joueur " + idJoueur + " achète " + nbActions + " action(s) pour " + nbEcus + " écu(s)");
         }
     }
 
+    /**
+     * affiche le joueur gagnant
+     * @param idJoueur id du joueur
+     */
     public void displayGagnant(int idJoueur){
         if(!afficher) {
             System.out.println(ANSI_RED+"\nLe joueur "+idJoueur+ " a gagné la partie !"+ANSI_RESET);
@@ -204,7 +225,27 @@ public class Display {
     }
 
 
+    /**
+     * affiche le nb d'ecus du joueur
+     * @param idJoueur id dujoueur
+     * @param nbEcus les écus du joueur
+     */
     public void displayEcus(int idJoueur,int nbEcus){
         if(afficher){System.out.println(ANSI_RED+"la bourse actuelle du joueur "+idJoueur+ " est de "+nbEcus+ " écu(s)\n"+ANSI_RESET);}
+    }
+
+    /**
+     * affiche le classement de fin de partie
+     * @param joueurs liste de tous les joueurs
+     */
+    public void displayClassement (ArrayList<Joueur> joueurs){
+        if (afficher){
+            Collections.sort(joueurs);
+            System.out.println("\n"+ANSI_BLACK_BACKGROUND+ANSI_YELLOW+"Voici le classement :"+ANSI_RESET);
+            for (int i = 0; i < joueurs.size(); i++){
+                System.out.println(ANSI_WHITE_BACKGROUND +ANSI_BLACK+ (i+1)+". Joueur " + joueurs.get(i).getId()+
+                        " avec "+ joueurs.get(i).getPoints() + " points." + ANSI_RESET);
+            }
+        }
     }
 }

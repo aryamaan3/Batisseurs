@@ -156,10 +156,8 @@ public class MoteurDeJeu {
             if(ptsGagnant > 16){
                 display.displayString(ANSI_CYAN_BACKGROUND+"Le Joueur "+joueurGagnant
                         +" a gagné ! Il a "+joueurs.get(joueurGagnant-1).getPoints()+ " points."+ANSI_RESET);
-                for(int s=0;s<nbJoueurs;s++){
-                    display.displayStats(joueurs.get(s));
-                }
                 display.displayGagnant(joueurGagnant);
+                display.displayClassement(joueurs);
                 break whileTour;
             }
             if (compteTour > 25){
@@ -287,7 +285,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        int nbPartie =Integer.parseInt(args[0]);
+        //int nbPartie =Integer.parseInt(args[0]);
+        int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
 
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -301,7 +300,9 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            m1.partie(joueurs,Boolean.parseBoolean(args[1]));
+            //m1.partie(joueurs,Boolean.parseBoolean(args[1]));
+            m1.partie(joueurs, true); // à enlever pour lancer avec maven
+            //false pour mode sans display
 
         }
     }

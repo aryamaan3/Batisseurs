@@ -9,10 +9,12 @@ import commun.ouvriers.CarteOuvriers;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Classe qui regroupe toutes les informations et les méthodes liées au joueur
  */
-public class Joueur {
+public class Joueur implements Comparable{
     private int id;
     private int points;
     private ArrayList<CarteChantier> MainBat = new ArrayList<>();
@@ -163,4 +165,15 @@ public class Joueur {
         bourse.subEcus(pointSupp * 10);
     }
 
+
+    /**
+     * methode permettant de modifer le comparateur utilisé dans collections.sort
+     * @param o objet dans ce cas Joueur
+     * @return le plus grand
+     */
+    @Override
+    public int compareTo(Object o) {
+        int pointsCompare = ((Joueur)o).getPoints();
+        return pointsCompare - this.points;
+    }
 }
