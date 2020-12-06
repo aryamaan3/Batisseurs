@@ -144,10 +144,8 @@ public class CarteBatiments extends Cartes implements CarteChantier{
      * @return Retourne true si c'est une machine, false sinon
      */
     public boolean isMachine(){
-        if(ecu == 0){ // Les machines ont pour seule difference avec les batiments qu'elles ne rapportent pas d'écus
-            return true;
-        }
-        return false;
+        // Les machines ont pour seule difference avec les batiments qu'elles ne rapportent pas d'écus
+        return ecu == 0;
     }
 }
 

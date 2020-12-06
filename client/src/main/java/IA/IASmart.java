@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class IASmart implements IA {
     private Joueur joueur;
     private Compteur compteur;
-    private Display display = new Display(false);
+    private final Display display = new Display(false);
 
     public IASmart(Joueur joueur, Compteur compteur){
         this.joueur = joueur;

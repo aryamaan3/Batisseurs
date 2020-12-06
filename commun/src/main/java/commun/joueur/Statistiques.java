@@ -1,7 +1,7 @@
 package commun.joueur;
 
 public class Statistiques {
-    int nbPoints,nbEcus,nbActionsRecrutement,nbEcusDépensésOuv,nbActionsTravailler,nbRevenusBat,idJoueur;
+    int nbPoints,nbEcus,nbActionsRecrutement, nbEcusDepensesOuv,nbActionsTravailler,nbRevenusBat,idJoueur;
 
     public Statistiques(int idJoueur){
         this.idJoueur = idJoueur;
@@ -33,16 +33,16 @@ public class Statistiques {
         nbEcus =+ ecus;
     }
 
-    public int getNbEcusDépensésOuv() {
-        return nbEcusDépensésOuv;
+    public int getNbEcusDepensesOuv() {
+        return nbEcusDepensesOuv;
     }
 
-    public void setNbEcusDépensésOuv(int nbEcusDépensésOuv) {
-        this.nbEcusDépensésOuv = nbEcusDépensésOuv;
+    public void setNbEcusDepensesOuv(int nbEcusDepensesOuv) {
+        this.nbEcusDepensesOuv = nbEcusDepensesOuv;
     }
 
-    public void addEcusDépensésOuv(int ecusDépensésOuv){
-        nbEcusDépensésOuv += ecusDépensésOuv;
+    public void addEcusDepensesOuv(int ecusDepensesOuv){
+        nbEcusDepensesOuv += ecusDepensesOuv;
     }
 
     public int getNbActionsRecrutement() {

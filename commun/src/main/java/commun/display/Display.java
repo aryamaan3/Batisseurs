@@ -19,7 +19,7 @@ public class Display {
 
 
     public Display(boolean afficher){
-        this.afficher = afficher;
+        Display.afficher = afficher;
     }
 
 
@@ -27,7 +27,7 @@ public class Display {
         return afficher;
     }
     public void setAfficher(boolean afficher){
-        this.afficher = afficher;
+        Display.afficher = afficher;
     }
 
 
@@ -164,10 +164,12 @@ public class Display {
 
     }
 
+    /*
     /**
      * Affichage des stats
      * @param joueur Objet Joueur
      */
+    /* pas utilisé pour l'instant
     public void displayStats(Joueur joueur){
         System.out.println(ANSI_CYAN +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
         System.out.println("Points : "+joueur.getPoints());
@@ -176,7 +178,7 @@ public class Display {
         System.out.println("Actions recrutement (ouvriers recrutés) :"+joueur.getStats().getNbActionsRecrutement());
         System.out.println("Ecus dépensés pour les ouvriers :"+joueur.getStats().getNbEcusDépensésOuv());
         System.out.println("Revenus des Bâtiments :"+joueur.getStats().getNbRevenusBat());
-    }
+    }*/
 
     /**
      * print les ouvriers posées sur un chantier par le joueur
@@ -241,7 +243,7 @@ public class Display {
      */
     public void displayClassement (ArrayList<Joueur> joueurs){
         if (afficher){
-            Collections.sort(joueurs);
+            Collections.sort(joueurs); //on tri les joueurs par les points
             System.out.println("\n"+ANSI_YELLOW+"Voici le classement :"+ANSI_RESET + "\n");
             for (int i = 0; i < joueurs.size(); i++){
                 System.out.println(ANSI_WHITE_BACKGROUND +ANSI_BLACK+ (i+1)+". Joueur " +
@@ -265,12 +267,12 @@ public class Display {
     public static void plusieursParties(ArrayList<Joueur> joueursGagnants){
         if (!afficher) {
             ArrayList<Integer> gagnants = new ArrayList<>();
-            for (int i = 0; i < joueursGagnants.size(); i++) {
-                if (joueursGagnants.get(i) != null) {
-                    gagnants.add(joueursGagnants.get(i).getId());
-                } else {
+            for (Joueur joueursGagnant : joueursGagnants) { //itere sur la taille de joueursGagnants
+                if (joueursGagnant != null) { // si il y a bine un gagnant
+                    gagnants.add(joueursGagnant.getId());
+                } else { // car parfois on a pas de gagnant, à resoudre
                     gagnants.add(0);
-                } // car parfois on a pas de gagnant, à resoudre
+                }
             }
             System.out.println("Voici le recapitulatif de(s) " + gagnants.size() + " parties lancés :\n");
             System.out.println("Le Joueur 1 avec l'IA intelligent a gagné : " + Collections.frequency(gagnants, 1)

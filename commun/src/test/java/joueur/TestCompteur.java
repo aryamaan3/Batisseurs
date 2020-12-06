@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCompteur {
-    Compteur compteur = new Compteur(0);
+    Compteur compteur = new Compteur();
 
     @Test
     public void testActionsFait(){

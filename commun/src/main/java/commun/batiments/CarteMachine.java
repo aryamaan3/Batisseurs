@@ -58,16 +58,9 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
      */
     public CarteOuvriers transformationEnOuvrier(){
 
-
         // L'id de ce nouvel ouvrier est fixé à son id de chantier +100 pour ne pas entrer en conflit avec un id ouvrier déjà existant
         // Le 0 dans le constucteur est expliqué par le fait qu'une machine ne coute rien à utiliser
-        CarteOuvriers newMachineAsOuvrier = new CarteOuvriers(id+100, nom,0,
+        return new CarteOuvriers(id+100, nom,0,
                 apportPierre, apportBois, apportSavoir, apportTuile);
-
-        /* A supprimer si tout marche bien
-        CarteOuvriers newMachineAsOuvrier = new CarteOuvriers(carteMachine.getIdCarte()+100, carteMachine.getNom(),0,
-                carteMachine.getApportPierre(), carteMachine.getApportBois(), carteMachine.getApportSavoir(),carteMachine.getApportTuile());*/
-
-        return newMachineAsOuvrier;
     }
 }

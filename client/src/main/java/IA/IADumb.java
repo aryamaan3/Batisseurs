@@ -13,7 +13,7 @@ public class IADumb implements IA {
 
     private Joueur joueur;
     private Compteur compteur;
-    private Display display = new Display(false);
+    private final Display display = new Display(false);
 
     public IADumb(Joueur joueur, Compteur compteur){
         this.joueur = joueur;

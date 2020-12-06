@@ -25,7 +25,7 @@ public class MoteurDeJeu {
     /**
      *  Méthode qui fait appel à toutes les méthodes nécessaires du projet pour créer et afficher une partie
      * @param joueurs le liste des joueurs
-     * @return
+     * @return le joueur gagnant
      */
 
     public Joueur partie(ArrayList<Joueur> joueurs, boolean isDisplay){
@@ -35,15 +35,15 @@ public class MoteurDeJeu {
         Display display = new Display(isDisplay);
         int compteTour =1;
         int ptsGagnant = -1;
-        boolean egalite = false;
+        //boolean egalite = false;
         int joueurGagnant = -1;
         boolean victoire = false;
         int nbJoueurs = joueurs.size();
 
-        Compteur c1 = new Compteur(joueurs.get(0).getId());
-        Compteur c2 = new Compteur(joueurs.get(1).getId());
-        Compteur c3 = new Compteur(joueurs.get(2).getId());
-        Compteur c4 = new Compteur(joueurs.get(3).getId());
+        Compteur c1 = new Compteur();
+        Compteur c2 = new Compteur();
+        Compteur c3 = new Compteur();
+        Compteur c4 = new Compteur();
         ArrayList<IA> ia = new ArrayList<>();
         ia.add(new IASmart(joueurs.get(0),c1));
         ia.add(new IASmart(joueurs.get(1),c2));
@@ -66,22 +66,20 @@ public class MoteurDeJeu {
 
         // On attribut automatiquement un apprenti par joueur
         // 6 apprentis dans le decks
-        int[] indiceApprentis = new int[6];
-        int count = 0;
+        ArrayList<Integer> indiceApprentis = new ArrayList<>();
         // On boucle sur les indices du deck (qui a été shuffle)
         for(int i = 0; i < deckOuv.size() ; i++){
-            if(deckOuv.get(i).getNom() == "apprenti"){
-                indiceApprentis[count] = i;
-                count ++;
+            if(deckOuv.get(i).getNom().equals("apprenti")){
+                indiceApprentis.add(i);
             }
         }
         for(int i = 0; i < nbJoueurs ; i ++){
             // On prend à chaque fois le premier apprenti de la lite qui a été shuffle
             // Puis le deuxième joueur prendra le deuxième ...
-            ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis[i]) );
+            ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis.get(i)) );
         }
         // On remove tous les apprentis qu'on a selectionné (les 4 premiers)
-        deckOuv.remove( Arrays.copyOfRange(indiceApprentis, 0, 4) );
+        deckOuv.remove( indiceApprentis.subList( 0, 4) );
 
 
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
@@ -89,7 +87,7 @@ public class MoteurDeJeu {
         display.displayString("Il y a " + nbJoueurs + " joueur(s)");
         display.displayString("Debut du jeu...");
 
-        whileTour:
+        //whileTour:
         while (true){ //loop pour chaque tour
             display.displayString("\n######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
@@ -127,30 +125,31 @@ public class MoteurDeJeu {
             compteTour++;//On incrémente compteTour
 
             // Condition de victoire en fonction du nombre de point (+ de 5)
-            for(int h = 0; h < nbJoueurs; h++){
-                if(joueurs.get(h).getPoints() > 16){
+            for (Joueur joueur : joueurs) { //itere sur le nb de joueur
+                if (joueur.getPoints() > 16) {
                     victoire = true;
+                    break;
                 }
             }
 
-            for(int j = 0; j<nbJoueurs; j++){
+            for (Joueur joueur : joueurs) { //itere sur le nb de joueurs
                 // maintenant qu'on sait que la partie est finie, on convertit les écus en points.
-                if(victoire && joueurs.get(j).getBourse().getEcus() >= 10){
-                    int ancienneBourse = joueurs.get(j).getBourse().getEcus();
-                    joueurs.get(j).conversionEcuPoint();
-                    int pointsgagnés = ancienneBourse - joueurs.get(j).getBourse().getEcus();
-                    display.displayString("Le joueur "+joueurs.get(j).getId()+" utilise "+(pointsgagnés)+" écus pour gagner "+(pointsgagnés/10)+" points");
+                if (victoire && joueur.getBourse().getEcus() >= 10) {
+                    int ancienneBourse = joueur.getBourse().getEcus();
+                    joueur.conversionEcuPoint();
+                    int pointsgagnes = ancienneBourse - joueur.getBourse().getEcus();
+                    display.displayString("Le joueur " + joueur.getId() + " utilise " + (pointsgagnes) + " écus pour gagner " + (pointsgagnes / 10) + " points");
                 }
-                display.displayPoint(joueurs.get(j));
-                display.displayBourse(joueurs.get(j));
-                display.displayChantierFini(joueurs.get(j));
+                display.displayPoint(joueur);
+                display.displayBourse(joueur);
+                display.displayChantierFini(joueur);
             }
 
-            for(int k = 0; k < nbJoueurs; k++){
+            for (Joueur joueur : joueurs) { //itere sur le nb de joueur
                 //on stocke l'id du joueur ayant le plus de points.
-                if(joueurs.get(k).getPoints() > 16 && joueurs.get(k).getPoints() > ptsGagnant){
-                    ptsGagnant = joueurs.get(k).getPoints();
-                    joueurGagnant = joueurs.get(k).getId();
+                if (joueur.getPoints() > 16 && joueur.getPoints() > ptsGagnant) {
+                    ptsGagnant = joueur.getPoints();
+                    joueurGagnant = joueur.getId();
                 }
             }
 
@@ -267,8 +266,8 @@ public class MoteurDeJeu {
     }
 
     public void setDisplayIA(boolean display, ArrayList<IA> iaList){
-        for(int i=0;i< iaList.size();i++){
-            iaList.get(i).setDisplay(display);
+        for (IA ia : iaList) { //itere sur le size de iaList
+            ia.setDisplay(display);
         }
     }
     /**

@@ -13,11 +13,12 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestMoteurDeJeu {
     MoteurDeJeu m1 = new MoteurDeJeu();
     Joueur j1 = new Joueur(1);
-    Compteur c1 = new Compteur(1);
+    Compteur c1 = new Compteur();
     IASmart iaTest = new IASmart(j1,c1);
 
     @Test
@@ -59,7 +60,7 @@ public class TestMoteurDeJeu {
         CarteBatiments carteBat = new CarteBatiments(0,"carteTest",1,2,5,4,6,9);
         carteBat.setConstruit(true);
         j1.getMainBat().add(carteBat);
-        assertEquals(true,m1.isBuild(iaTest));
+        assertTrue(m1.isBuild(iaTest));
     }
     
 

@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestIASmart {
     Joueur j1 = new Joueur(0);
-    Compteur c1 = new Compteur(j1.getId());
+    Compteur c1 = new Compteur();
     IA iatest = new IASmart(j1,c1);
 
 
@@ -70,7 +70,7 @@ public class TestIASmart {
         cartesOuv.add(new CarteOuvriers(2,"ouv3",0,0,3,6,5));
         cartesOuv.add(new CarteOuvriers(3,"ouv4",0,2,5,4,5));
         Joueur j = new Joueur(0);
-        Compteur c = new Compteur(0);
+        Compteur c = new Compteur();
         IASmart ia = new IASmart(j, c);
         //System.out.println("mainOuv");
         /*for (int i = 0; i < j.getMainOuv().size(); i++){
@@ -93,7 +93,7 @@ public class TestIASmart {
         cartesOuv.add(new CarteOuvriers(3,"ouv3",0,0,3,6,5));
         cartesOuv.add(new CarteOuvriers(4,"ouv4",0,3,5,4,5));
         Joueur j = new Joueur(0);
-        Compteur c = new Compteur(0);
+        Compteur c = new Compteur();
         IASmart ia = new IASmart(j, c);
         ia.choisitBatiment(1, cartesBat);
         ia.choisitOuvrier(4, cartesOuv);

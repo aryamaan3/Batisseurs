@@ -13,16 +13,16 @@ import java.util.ArrayList;
  */
 
 public interface IA {
-    public void setDisplay(boolean display);
-    public boolean getDisplay();
-    public Compteur getCompteur();
-    public void ajouteTour(int n);
-    public void passeTour(int n);
-    public void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable);
-    public void poserOuvrierSurChantier();
-    public void choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable);
-    public void choisitOuvrier(int nbChoix,ArrayList<CarteOuvriers> cartesOuvSurTable);
-    public Joueur getJoueur();
-    public void setJoueur(Joueur joueur);
-    public void setCompteur(Compteur c);
+    void setDisplay(boolean display);
+    boolean getDisplay();
+    Compteur getCompteur();
+    void ajouteTour(int n);
+    void passeTour(int n);
+    void actionIA(ArrayList<CarteOuvriers> carteOuvSurTable, ArrayList<CarteChantier> carteBatSurTable);
+    void poserOuvrierSurChantier();
+    void choisitBatiment(int nbChoix, ArrayList<CarteChantier> carteBatSurTable);
+    void choisitOuvrier(int nbChoix, ArrayList<CarteOuvriers> cartesOuvSurTable);
+    Joueur getJoueur();
+    void setJoueur(Joueur joueur);
+    void setCompteur(Compteur c);
 }

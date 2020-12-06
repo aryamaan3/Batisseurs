@@ -1,15 +1,10 @@
 package commun.joueur;
 
-import commun.Cartes;
 import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
 
-
-
-
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Classe qui regroupe toutes les informations et les méthodes liées au joueur

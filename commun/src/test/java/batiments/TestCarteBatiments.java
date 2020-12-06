@@ -4,9 +4,7 @@ import commun.batiments.CarteBatiments;
 import commun.ouvriers.CarteOuvriers;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCarteBatiments {
     CarteBatiments carteBat = new CarteBatiments(0,"batiment",2,3,6,5,9,5);
@@ -28,6 +26,7 @@ public class TestCarteBatiments {
     public void testlibererOuvrier(){
         carteBat.attribuerOuvrier(carteOuv1);
         carteBat.libererOuvrier();
+        System.out.println(carteBat.getOuvriers().size());
         assertEquals(0,carteBat.getOuvriers().size());
 
     }
@@ -61,8 +60,8 @@ public class TestCarteBatiments {
     public void testIsMachine(){
         CarteBatiments carteTestMachine = new CarteBatiments(0, "testMachine", 1,1,1,1,0,1);
         CarteBatiments carteTestNotMachine = new CarteBatiments(1, "test", 1,1,1,1,1,1);
-        assertEquals(true,carteTestMachine.isMachine());
-        assertEquals(false,carteTestNotMachine.isMachine());
+        assertTrue(carteTestMachine.isMachine());
+        assertFalse(carteTestNotMachine.isMachine());
     }
 
     @Test
@@ -90,26 +89,26 @@ public class TestCarteBatiments {
 
     @Test
     public void isConstruit(){
-        assertEquals(false, carteBat.isContruit());
+        assertFalse(carteBat.isContruit());
         carteBat.setConstruit(true);
-        assertEquals(true, carteBat.isContruit());
+        assertTrue(carteBat.isContruit());
     }
     @Test
     public void setConstruit(){
         carteBat.setConstruit(true);
-        assertEquals(true, carteBat.isContruit());
+        assertTrue(carteBat.isContruit());
         carteBat.setConstruit(false);
-        assertEquals(false, carteBat.isContruit());
+        assertFalse(carteBat.isContruit());
     }
 
     @Test
     public void getOuvrier(){
-        assertEquals(true, carteBat.getOuvriers() instanceof ArrayList);
+        assertNotNull(carteBat.getOuvriers());
     }
 
     @Test
     public void isBuilt(){
         carteBat.attribuerOuvrier(carteOuv3);
-        assertEquals(true, carteBat.isBuilt());
+        assertTrue(carteBat.isBuilt());
     }
 }

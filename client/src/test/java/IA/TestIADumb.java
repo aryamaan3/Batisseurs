@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestIADumb {
     Joueur j1 = new Joueur(0);
-    Compteur c1 = new Compteur(j1.getId());
+    Compteur c1 = new Compteur();
     IA ia = new IADumb(j1,c1);
 
     @Test

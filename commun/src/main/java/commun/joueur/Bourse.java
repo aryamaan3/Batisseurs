@@ -2,14 +2,12 @@ package commun.joueur;
 
 import commun.ouvriers.CarteOuvriers;
 
-import static commun.display.Couleur.ANSI_RED;
-import static commun.display.Couleur.ANSI_RESET;
-
 /**
  * Classe regroupant les informations et les méthodes associées aux bourses
  */
 public class Bourse {
-    private int pieceArgent, pieceOr, ecus, idJoueur;
+    private int ecus;
+    private final int idJoueur;
 
     /**
      * Constructeur de la Bourse, on récupère les pièces d'argent et d'or pour créer le nombre d'écus.
@@ -17,8 +15,8 @@ public class Bourse {
      */
 
     public Bourse(int idJoueur) {
-        this.pieceArgent = 5;
-        this.pieceOr = 1;
+        int pieceArgent = 5;
+        int pieceOr = 1;
         this.idJoueur = idJoueur;
         this.ecus = pieceArgent + 5 * pieceOr;
     }

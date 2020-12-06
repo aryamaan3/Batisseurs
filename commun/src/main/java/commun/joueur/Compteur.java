@@ -5,11 +5,9 @@ package commun.joueur;
  */
 
 public class Compteur {
-    private int id;
     private int nb;
 
-    public Compteur(int id){
-        this.id = id;
+    public Compteur(){
         this.nb = 3;
     }
 
@@ -46,11 +44,7 @@ public class Compteur {
 
     public void sellActions (int n){
         if (n <= 3) {
-            if(n == 1){
-            this.nb = nb - n;}
-            else{
-                this.nb = nb - n;
-            }
+            this.nb = nb - n;
         }
     }
 

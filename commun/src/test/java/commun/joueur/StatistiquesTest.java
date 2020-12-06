@@ -51,25 +51,25 @@ class StatistiquesTest {
     }
 
     @Test
-    void getNbEcusDépensésOuv() {
-        assertEquals(0, stats.getNbEcusDépensésOuv());
-        stats.addEcusDépensésOuv(5);
-        assertEquals(5, stats.getNbEcusDépensésOuv());
+    void getNbEcusDepensesOuv() {
+        assertEquals(0, stats.getNbEcusDepensesOuv());
+        stats.addEcusDepensesOuv(5);
+        assertEquals(5, stats.getNbEcusDepensesOuv());
     }
 
     @Test
-    void setNbEcusDépensésOuv() {
-        stats.addEcusDépensésOuv(5);
-        assertEquals(5, stats.getNbEcusDépensésOuv());
-        stats.setNbEcusDépensésOuv(0);
-        assertEquals(0, stats.getNbEcusDépensésOuv());
+    void setNbEcusDepensesOuv() {
+        stats.addEcusDepensesOuv(5);
+        assertEquals(5, stats.getNbEcusDepensesOuv());
+        stats.setNbEcusDepensesOuv(0);
+        assertEquals(0, stats.getNbEcusDepensesOuv());
     }
 
     @Test
-    void addEcusDépensésOuv() {
-        assertEquals(0, stats.getNbEcusDépensésOuv());
-        stats.addEcusDépensésOuv(5);
-        assertEquals(5, stats.getNbEcusDépensésOuv());
+    void addEcusDepensesOuv() {
+        assertEquals(0, stats.getNbEcusDepensesOuv());
+        stats.addEcusDepensesOuv(5);
+        assertEquals(5, stats.getNbEcusDepensesOuv());
     }
 
     @Test
