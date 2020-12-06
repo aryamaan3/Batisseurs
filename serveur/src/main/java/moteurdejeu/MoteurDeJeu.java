@@ -28,10 +28,10 @@ public class MoteurDeJeu {
      * @return le joueur gagnant
      */
 
-    public Joueur partie(ArrayList<Joueur> joueurs, boolean isDisplay){
+    public Joueur partie(ArrayList<Joueur> joueurs, boolean isDisplay, int choixDeck){
 
-        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
-        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck(choixDeck);
+        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck(choixDeck);
         Display display = new Display(isDisplay);
         int compteTour =1;
         int ptsGagnant = -1;
@@ -280,9 +280,30 @@ public class MoteurDeJeu {
         return nbPartie.nextInt();
     }
 
+    /**
+     * demande le choix de l'utilisateur concernant le deck
+     * @return 1 pour deck moyen age, 2 pour Antiquités
+     */
+    public static int whichDeck(){
+        do {
+            System.out.println("Vous voulez jouer quel jeu ?");
+            System.out.println("Tapez 1 pour Les Batisseurs : Moyen Age");
+            System.out.println("Tapez 2 pour Les Batisseurs : Antiquités");
+            Scanner deck = new Scanner(System.in);
+            int val = deck.nextInt();
+            if (val == 1 || val == 2) {
+                return val;
+            }
+            else {
+                System.out.println("\nOn n'a seulement deux jeux à vous proposer pour l'instant\n");
+            }
+        }while(true);
+    }
+
     public static void main(String[] args){
         //int nbPartie =Integer.parseInt(args[0]);
         int nbPartie = 500; //afin de lancer avec main à enlever pour lancer avec maven
+        int whichDeck = whichDeck(); //l'utilisateur choisi le deck
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -297,7 +318,7 @@ public class MoteurDeJeu {
             joueurs.add(j3);
             joueurs.add(j4);
             //m1.partie(joueurs,Boolean.parseBoolean(args[1]));
-            joueursGagnants.add(m1.partie(joueurs, false)); // à enlever pour lancer avec maven
+            joueursGagnants.add(m1.partie(joueurs, false, whichDeck)); // à enlever pour lancer avec maven
             //true pour mode display
             //false pour mode sans display
         }
