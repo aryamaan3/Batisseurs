@@ -25,9 +25,10 @@ public class MoteurDeJeu {
     /**
      *  Méthode qui fait appel à toutes les méthodes nécessaires du projet pour créer et afficher une partie
      * @param joueurs le liste des joueurs
+     * @return
      */
 
-    public void partie(ArrayList<Joueur> joueurs,boolean isDisplay){
+    public Joueur partie(ArrayList<Joueur> joueurs, boolean isDisplay){
 
         ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
@@ -156,14 +157,12 @@ public class MoteurDeJeu {
             if(ptsGagnant > 16){
                 display.displayGagnant(joueurGagnant);
                 display.displayClassement(joueurs);
-                break whileTour;
+                return joueurs.get((joueurGagnant - 1));
             }
             if (compteTour > 25){
                 display.displayString("not done");
-                break;} //Pour eviter des millions de tours ... a retirer à l'avenir
+                return null;} //Pour eviter des millions de tours ... a retirer à l'avenir
         }
-
-
     }
 
     /**
@@ -284,8 +283,8 @@ public class MoteurDeJeu {
 
     public static void main(String[] args){
         //int nbPartie =Integer.parseInt(args[0]);
-        int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
-
+        int nbPartie = 500; //afin de lancer avec main à enlever pour lancer avec maven
+        ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
             Joueur j1,j2,j3,j4;
@@ -299,9 +298,12 @@ public class MoteurDeJeu {
             joueurs.add(j3);
             joueurs.add(j4);
             //m1.partie(joueurs,Boolean.parseBoolean(args[1]));
-            m1.partie(joueurs, true); // à enlever pour lancer avec maven
+            joueursGagnants.add(m1.partie(joueurs, false)); // à enlever pour lancer avec maven
+            //true pour mode display
             //false pour mode sans display
-
+        }
+        if (!Display.afficher){
+            Display.plusieursParties(joueursGagnants);
         }
     }
 }

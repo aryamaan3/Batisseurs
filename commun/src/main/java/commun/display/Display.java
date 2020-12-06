@@ -15,7 +15,7 @@ import static commun.display.Couleur.*;
  * Classe permettant la gestion de l'affichage dans le jeu
  */
 public class Display {
-    boolean afficher;
+    public static boolean afficher;
 
 
     public Display(boolean afficher){
@@ -219,10 +219,7 @@ public class Display {
      * @param idJoueur id du joueur
      */
     public void displayGagnant(int idJoueur){
-        if(!afficher) {
-            System.out.println(ANSI_RED+"\nLe joueur "+idJoueur+ " a gagné la partie !"+ANSI_RESET);
-        }
-        else {
+        if (afficher){
             System.out.println(ANSI_WHITE_BACKGROUND+ANSI_BLACK+"Le Joueur "+idJoueur
                     +" a gagné !"+ANSI_RESET);
         }
@@ -258,6 +255,39 @@ public class Display {
                     System.out.println("Possedant comme IA, l'IA bête\n");
                 }
             }
+        }
+    }
+
+    /**
+     * affiche le recapitulatif des parties lancés en mode stat
+     * @param joueursGagnants liste des joueurs gagnants de chaque partie
+     */
+    public static void plusieursParties(ArrayList<Joueur> joueursGagnants){
+        if (!afficher) {
+            ArrayList<Integer> gagnants = new ArrayList<>();
+            for (int i = 0; i < joueursGagnants.size(); i++) {
+                if (joueursGagnants.get(i) != null) {
+                    gagnants.add(joueursGagnants.get(i).getId());
+                } else {
+                    gagnants.add(0);
+                } // car parfois on a pas de gagnant, à resoudre
+            }
+            System.out.println("Voici le recapitulatif de(s) " + gagnants.size() + " parties lancés :\n");
+            System.out.println("Le Joueur 1 avec l'IA intelligent a gagné : " + Collections.frequency(gagnants, 1)
+                    + " fois");
+            System.out.println("Le Joueur 2 avec l'IA intelligent a gagné : " + Collections.frequency(gagnants, 2)
+                    + " fois");
+            System.out.println("Le Joueur 3 avec l'IA bête a gagné        : " + Collections.frequency(gagnants, 3)
+                    + " fois");
+            System.out.println("Le Joueur 4 avec l'IA bête a gagné        : " + Collections.frequency(gagnants, 4)
+                    + " fois");
+
+            System.out.println("\nIl y a eu " + Collections.frequency(gagnants, 0) + " parties interminés");
+
+            System.out.println("\nUn joueur avec un IA intelligent a gagné " +
+                    (Collections.frequency(gagnants, 1) + Collections.frequency(gagnants, 2)) + " fois");
+            System.out.println("Un joueur avec un IA bête a gagné " +
+                    (Collections.frequency(gagnants, 3) + Collections.frequency(gagnants, 4)) + " fois");
         }
     }
 }
