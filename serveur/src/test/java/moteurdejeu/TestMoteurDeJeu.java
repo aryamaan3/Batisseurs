@@ -99,6 +99,51 @@ public class TestMoteurDeJeu {
         assertEquals(3,ia.get(0).getJoueur().getMainBat().get(0).getOuvriers().size());
 
     }
-    
 
+    @Test
+    public void partieTest(){
+        ArrayList<Joueur> joueur = new ArrayList<Joueur>();
+        Joueur j2 = new Joueur(2);
+        Joueur j3 = new Joueur(3);
+        Joueur j4 = new Joueur(4);
+        joueur.add(j1);
+        joueur.add(j2);
+        joueur.add(j3);
+        joueur.add(j4);
+        Joueur gagnant = m1.partie(joueur,false);
+        assertEquals(true, gagnant instanceof Joueur);
+
+        int idGagnant = gagnant.getId();
+        boolean bonResultat = false;
+        if (idGagnant == 1
+                || idGagnant == 2
+                || idGagnant == 3
+                || idGagnant == 4){
+            bonResultat = true;
+        }
+        assertEquals(true, bonResultat);
+
+        // Un joueur doit au minimum avoir 17 points pour gagner
+        int pointGagnant = gagnant.getPoints();
+        boolean point = false;
+        if(pointGagnant >= 17){
+            point = true;
+        }
+        assertEquals(true, point);
+    }
+
+    @Test
+    public void setDiplayIA(){
+        ArrayList<IA> iaList = new ArrayList<IA>();
+        iaList.add(iaTest);
+        boolean displayBol;
+
+        m1.setDisplayIA(false, iaList);
+        displayBol = iaTest.getDisplay();
+        assertEquals(false, displayBol);
+
+        m1.setDisplayIA(true, iaList);
+        displayBol = iaTest.getDisplay();
+        assertEquals(true, displayBol);
+    }
 }
