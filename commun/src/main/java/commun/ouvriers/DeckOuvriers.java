@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class DeckOuvriers {
         private ArrayList<CarteOuvriers> deckMoyenAge = new ArrayList<>();
-        private ArrayList<CarteOuvriers> deckAntiquites = new ArrayList<>();
         // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
         // sinon l'id du batiment auquel il est assigné
 

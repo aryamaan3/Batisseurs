@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class DeckBatiments {
 
     private final ArrayList<CarteChantier> deckMoyenAge = new ArrayList<>();
-    private final ArrayList<CarteChantier> deckAntiquite = new ArrayList<>();
 
     public DeckBatiments(){
         deckMoyenAge.add(new CarteBatiments(0,"la cabane", 0, 1, 1, 0, 8, 0));

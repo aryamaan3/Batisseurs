@@ -1,5 +1,6 @@
 package moteurdejeu;
 
+import IA.IA;
 import IA.IASmart;
 import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
@@ -61,6 +62,42 @@ public class TestMoteurDeJeu {
         carteBat.setConstruit(true);
         j1.getMainBat().add(carteBat);
         assertTrue(m1.isBuild(iaTest));
+    }
+
+    @Test
+    public void Testapprenti(){
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
+        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
+        Joueur j1 = new Joueur(1);
+        Joueur j2 = new Joueur(2);
+        Compteur c1 = new Compteur();
+        Compteur c2 = new Compteur();
+        ArrayList<IA> ia = new ArrayList<>();
+        ia.add(new IASmart(j1,c1));
+        ia.add(new IASmart(j2,c2));
+        // On attribut automatiquement un apprenti par joueur
+        // 6 apprentis dans le decks
+        ArrayList<Integer> indiceApprentis = new ArrayList<>();
+        // On boucle sur les indices du deck (qui a été shuffle)
+        for(int i = 0; i < deckOuv.size() ; i++){
+            if(deckOuv.get(i).getNom().equals("apprenti")){
+                indiceApprentis.add(i);
+            }
+        }
+        for(int i = 0; i < 2 ; i ++){
+            // On prend à chaque fois le premier apprenti de la lite qui a été shuffle
+            // Puis le deuxième joueur prendra le deuxième ...
+            ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis.get(i)) );
+        }
+        // On remove tous les apprentis qu'on a selectionné (les 4 premiers)
+        deckOuv.remove( indiceApprentis.subList( 0, 4) );
+        ia.get(0).choisitBatiment(1, deckBat);
+        ia.get(0).choisitOuvrier(2, deckOuv);
+        ia.get(0).poserOuvrierSurChantier();
+        ia.get(0).poserOuvrierSurChantier();
+        ia.get(0).poserOuvrierSurChantier();
+        assertEquals(3,ia.get(0).getJoueur().getMainBat().get(0).getOuvriers().size());
+
     }
     
 

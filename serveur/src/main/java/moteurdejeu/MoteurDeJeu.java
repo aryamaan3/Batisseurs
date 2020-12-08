@@ -271,16 +271,6 @@ public class MoteurDeJeu {
             ia.setDisplay(display);
         }
     }
-    /**
-     * Méthode qui permet de rentrer le nombre de parties que l'utilisateur veut lancer
-     * @return un entier qui représente le nombre de parties
-     */
-    public static int nbPartie(){
-        System.out.println("combien de partie voulez vous jouer ? : ");
-        Scanner nbPartie = new Scanner(System.in);
-        return nbPartie.nextInt();
-    }
-
 
     public static void main(String[] args){
         int nbPartie =Integer.parseInt(args[0]);
