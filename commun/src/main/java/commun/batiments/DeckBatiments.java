@@ -65,4 +65,12 @@ public class DeckBatiments {
     public ArrayList<CarteChantier> getDeck(){
         return deckMoyenAge;
     }
+
+    /**
+     * La méthode .size() sur cet objet n'est pas utilisable
+     * @return size du deck en question
+     */
+    public int getSize(){
+        return deckMoyenAge.size();
+    }
 }

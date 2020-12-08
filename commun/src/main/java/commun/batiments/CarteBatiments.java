@@ -56,6 +56,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
 
     public void attribuerOuvrier(CarteOuvriers carte){
         ouvriers.add(carte);
+        carte.setAssign(true);
     }
 
     /**
@@ -64,7 +65,8 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     public void libererOuvrier(){
         if(ouvriers.size()!=0){
             for(int i=0;i< ouvriers.size()+1;i++){
-                ouvriers.remove(0);
+                ouvriers.get(i).setAssign(false);
+                ouvriers.remove(i);
             }
         }else{
             System.out.println("\nIl n'y aucun ouvrier assigné à ce chantier\n");
