@@ -122,10 +122,10 @@ public class CarteBatiments extends Cartes implements CarteChantier{
      */
     public String toString(Joueur joueur){
         return "\nCarte Batiment "+nom+", appartient au joueur "+(joueur.getId())+", ressources présentes : "
-                + "\n - bois : " + getSumBoisOuv() + "  (besoin : "+ this.bois +")"
-                + "\n - pierre : " + getSumPierreOuv() + "  (besoin : "+ this.pierre +")"
-                + "\n - tuile : " + getSumTuileOuv() + "    (besoin : "+ this.tuile +")"
-                + "\n - savoir : " + getSumSavoirOuv() + "  (besoin : "+ this.savoir +")";
+                + "\nbois : " + getSumBoisOuv() + "  (besoin : "+ this.bois +") ; "
+                + "pierre : " + getSumPierreOuv() + "  (besoin : "+ this.pierre +") ; "
+                + "tuile : " + getSumTuileOuv() + "    (besoin : "+ this.tuile +") ; "
+                + "savoir : " + getSumSavoirOuv() + "  (besoin : "+ this.savoir +")";
     }
     /**
      *  Méthode qui vérifie si la somme des matériaux des ouvriers est suffisant pour construire le batiment
