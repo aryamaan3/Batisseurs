@@ -54,12 +54,13 @@ public class Display {
     public void displayOuvriersDuJoueur(Joueur joueur){
         if(afficher && joueur.getMainOuv().size()>0){// On itère sur le DeckOuvrier du moteur de jeu
         // si on trouve un ouvrier qui à un assign == idJoueur donné en paramètre : on l'imprime
-            System.out.println("\nLe joueur " + (joueur.getId())+ " possède ce(s) ouvrier(s) :");
+            System.out.print("\nLe joueur " + (joueur.getId())+ " possède ce(s) ouvrier(s) :");
             for(int i = 0; i < joueur.getMainOuv().size(); i ++){
-            System.out.println(" - " + joueur.getMainOuv().get(i).getNom()
+            System.out.print(" " + joueur.getMainOuv().get(i).getNom()
                     + " (id = " + joueur.getMainOuv().get(i).getIdCarte() + ")");
 
             }
+            System.out.println();
         }
     }
 
@@ -71,11 +72,12 @@ public class Display {
         // On itère sur le DeckBatiment du moteur de jeu
         // si on trouve un batiment qui à un assign == idJoueur donné en paramètre : on l'imprime
         if(afficher && joueur.getMainBat().size()>0) {
-            System.out.println("\nLe joueur " + (joueur.getId()) + " construit ce(s) chantier(s) :");
+            System.out.print("\nLe joueur " + (joueur.getId()) + " construit ce(s) chantier(s) :");
             for (int i = 0; i < joueur.getMainBat().size(); i++) {
-                System.out.println(" - " + joueur.getMainBat().get(i).getNom()
+                System.out.print(" " + joueur.getMainBat().get(i).getNom()
                         + " (id = " + joueur.getMainBat().get(i).getIdCarte() + ")");
             }
+            System.out.println();
         }
     }
 
@@ -115,14 +117,15 @@ public class Display {
             if(carteOuvSurTable.size()>0) {
                 System.out.print(ANSI_GREEN + "Cartes ouvriers disponibles :" + ANSI_RESET);
                 for (CarteOuvriers carteOuvriers : carteOuvSurTable) {
-                    System.out.print(" " + carteOuvriers.getNom() + "(id=" + carteOuvriers.getIdCarte() + ")" + " |");
+                    System.out.println(" - " + carteOuvriers.toString());
                 }
             } else {
                 System.out.println(ANSI_GREEN +"Il n'y a plus de cartes ouvriers disponibles dans le deck "+ ANSI_RESET);
             }
-            System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :" + ANSI_RESET);
+            System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :\n" + ANSI_RESET);
             for (CarteChantier carteBatiments : carteBatSurTable) {
-                System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
+                //System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
+                System.out.println(" - " + ((CarteBatiments) carteBatiments).toString());
             }
             System.out.println("\n"); // Juste pour un retour à la ligne
         }

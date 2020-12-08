@@ -46,11 +46,11 @@ public class CarteOuvriers extends Cartes {
     }
 
     public String toString(){
-        return ("\nCarte Ouvrier "+nom+", ressources présentes : \n" +
-                "                \n - bois : "+ this.bois +"\n" +
-                "                \n - pierre : " + this.pierre +"\n" +
-                "                \n - tuile : " + this.tuile +"\n" +
-                "                \n - savoir : " + this.savoir +"" );
+        return ("Ouvrier "+nom+
+                " (bois : "+ this.bois +" ;" +
+                " pierre : " + this.pierre +" ;" +
+                " tuile : " + this.tuile +" ;" +
+                " savoir : " + this.savoir +")");
     }
 
 }
