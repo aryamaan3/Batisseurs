@@ -72,6 +72,14 @@ public class DeckOuvriers {
                 }
         }
 
+        /**
+         * La méthode .size() sur cet objet n'est pas utilisable
+         * @return size du deck en question
+         */
+        public int getSize(){
+                return deckMoyenAge.size();
+        }
+
         /*/**
          *
          * @return Retourne une liste des indices des apprentis dans le deck qui a été shuffle
