@@ -36,6 +36,12 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     public void setPoints(int points){
         this.points = points;
     }
+
+    /**
+     * Permet de vérifier l'état d'un chantier SANS recalculer les sommes comme
+     * dans isBuilt()
+     * @return
+     */
     public boolean isContruit(){
         return isConstruit;
     }

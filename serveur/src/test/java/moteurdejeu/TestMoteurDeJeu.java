@@ -13,8 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestMoteurDeJeu {
     MoteurDeJeu m1 = new MoteurDeJeu();
@@ -28,6 +27,10 @@ public class TestMoteurDeJeu {
         ArrayList<CarteOuvriers> cartesSurTable = m1.carteOuvriersSurTable(deckOuv);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckOuv.size());
+        assertNotEquals(cartesSurTable.size(), 0);
+
+        assertNotNull(cartesSurTable.get(0));
+        assertFalse(cartesSurTable.get(0) instanceof CarteChantier);
     }
     @Test
     public void testCarteBatimentsSurTable(){
@@ -35,6 +38,10 @@ public class TestMoteurDeJeu {
         ArrayList<CarteChantier> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckBat.size());
+        assertNotEquals(cartesSurTable.size(), 0);
+
+        assertTrue(cartesSurTable.get(0) instanceof CarteChantier);
+        assertFalse(cartesSurTable.get(0) instanceof CarteOuvriers);
     }
     @Test
     public void testFillCartesOuvriers(){
@@ -44,7 +51,9 @@ public class TestMoteurDeJeu {
         assertEquals(4,cartesSurTable.size());
         m1.fillCartesOuvriers(deckOuv,cartesSurTable);
         assertEquals(5,cartesSurTable.size());
+        assertFalse(cartesSurTable.size() == 0);
 
+        assertTrue(cartesSurTable.get(0) instanceof CarteOuvriers);
     }
     @Test
     public void testFillCartesBatiments(){
@@ -54,7 +63,9 @@ public class TestMoteurDeJeu {
         assertEquals(4,cartesSurTable.size());
         m1.fillCartesBatiments(deckBat,cartesSurTable);
         assertEquals(5,cartesSurTable.size());
+        assertFalse(cartesSurTable.size() == 0);
 
+        assertTrue(cartesSurTable.get(0) instanceof CarteChantier);
     }
     @Test
     public void testIsBuild(){
@@ -62,6 +73,9 @@ public class TestMoteurDeJeu {
         carteBat.setConstruit(true);
         j1.getMainBat().add(carteBat);
         assertTrue(m1.isBuild(iaTest));
+
+        carteBat.setConstruit(false);
+        assertFalse(m1.isBuild(iaTest));
     }
 
     @Test
@@ -111,7 +125,8 @@ public class TestMoteurDeJeu {
         joueur.add(j3);
         joueur.add(j4);
         Joueur gagnant = m1.partie(joueur,false);
-        assertEquals(true, gagnant instanceof Joueur);
+        assertNotNull(gagnant);
+        assertTrue(gagnant instanceof Joueur);
 
         int idGagnant = gagnant.getId();
         boolean bonResultat = false;
@@ -121,7 +136,7 @@ public class TestMoteurDeJeu {
                 || idGagnant == 4){
             bonResultat = true;
         }
-        assertEquals(true, bonResultat);
+        assertTrue(bonResultat);
 
         // Un joueur doit au minimum avoir 17 points pour gagner
         int pointGagnant = gagnant.getPoints();
@@ -129,7 +144,7 @@ public class TestMoteurDeJeu {
         if(pointGagnant >= 17){
             point = true;
         }
-        assertEquals(true, point);
+        assertTrue(point);
     }
 
     @Test
@@ -140,10 +155,10 @@ public class TestMoteurDeJeu {
 
         m1.setDisplayIA(false, iaList);
         displayBol = iaTest.getDisplay();
-        assertEquals(false, displayBol);
+        assertFalse(displayBol);
 
         m1.setDisplayIA(true, iaList);
         displayBol = iaTest.getDisplay();
-        assertEquals(true, displayBol);
+        assertTrue(displayBol);
     }
 }

@@ -14,6 +14,12 @@ public interface CarteChantier {
     int getPoints();
     void setEcu(int ecu);
     void setPoints(int points);
+
+    /**
+     * Permet de vérifier l'état d'un chantier SANS recalculer les sommes comme
+     * dans isBuilt()
+     * @return
+     */
     boolean isContruit();
     void setConstruit(boolean bool);
     ArrayList<CarteOuvriers> getOuvriers();
