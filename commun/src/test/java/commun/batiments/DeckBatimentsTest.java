@@ -19,6 +19,6 @@ class DeckBatimentsTest {
     }
     @Test
     void getDeck() {
-        assertEquals(true, deck.getDeck(1) instanceof ArrayList);
+        assertEquals(true, deck.getDeck() instanceof ArrayList);
     }
 }
