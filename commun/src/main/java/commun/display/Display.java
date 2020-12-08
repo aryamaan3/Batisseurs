@@ -117,14 +117,15 @@ public class Display {
             if(carteOuvSurTable.size()>0) {
                 System.out.print(ANSI_GREEN + "Cartes ouvriers disponibles :" + ANSI_RESET);
                 for (CarteOuvriers carteOuvriers : carteOuvSurTable) {
-                    System.out.print(" " + carteOuvriers.getNom() + "(id=" + carteOuvriers.getIdCarte() + ")" + " |");
+                    System.out.println(" - " + carteOuvriers.toString());
                 }
             } else {
                 System.out.println(ANSI_GREEN +"Il n'y a plus de cartes ouvriers disponibles dans le deck "+ ANSI_RESET);
             }
-            System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :" + ANSI_RESET);
+            System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :\n" + ANSI_RESET);
             for (CarteChantier carteBatiments : carteBatSurTable) {
-                System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
+                //System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
+                System.out.println(" - " + ((CarteBatiments) carteBatiments).toString());
             }
             System.out.println("\n"); // Juste pour un retour à la ligne
         }

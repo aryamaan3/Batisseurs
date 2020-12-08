@@ -82,7 +82,10 @@ public class Cartes {
      */
     @Override
     public String toString() {      //méthode pour visualiser
-        return "Carte : "
-                +nom+"";
+        return nom
+                +" (bois : " + bois +" ; "
+                +"pierre : " + pierre +" ; "
+                +"tuile : " + tuile +" ; "
+                +"savoir : " + savoir +")";
     }
 }
