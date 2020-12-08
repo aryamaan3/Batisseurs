@@ -36,6 +36,7 @@ public class MoteurDeJeu {
         Display display = new Display(isDisplay);
         int compteTour =1;
         int ptsGagnant = -1;
+        int[] ancienneBourse = new int[4];
         //boolean egalite = false;
         int joueurGagnant = -1;
         boolean victoire = false;
@@ -136,9 +137,10 @@ public class MoteurDeJeu {
             for (Joueur joueur : joueurs) { //itere sur le nb de joueurs
                 // maintenant qu'on sait que la partie est finie, on convertit les écus en points.
                 if (victoire && joueur.getBourse().getEcus() >= 10) {
-                    int ancienneBourse = joueur.getBourse().getEcus();
+                    // on stocke les anciennes bourses pour pouvoir départager les joueurs en cas d'égalité. getId()-1 car l'id des joueurs commence à 1.
+                    ancienneBourse[joueur.getId()-1] = joueur.getBourse().getEcus();
                     joueur.conversionEcuPoint();
-                    int pointsgagnes = ancienneBourse - joueur.getBourse().getEcus();
+                    int pointsgagnes = ancienneBourse[joueur.getId()-1] - joueur.getBourse().getEcus();
                     display.displayString("Le joueur " + joueur.getId() + " utilise " + (pointsgagnes) + " écus pour gagner " + (pointsgagnes / 10) + " points");
                 }
                 display.displayPoint(joueur);
@@ -151,6 +153,18 @@ public class MoteurDeJeu {
                 if (joueur.getPoints() > 16 && joueur.getPoints() > ptsGagnant) {
                     ptsGagnant = joueur.getPoints();
                     joueurGagnant = joueur.getId();
+                }
+            }
+
+            for(int i = 0; i < 3; i++){
+                if(joueurs.get(i).getPoints() == joueurs.get(i+1).getPoints() && joueurs.get(i).getPoints() > 16){
+                    if(ancienneBourse[i] > ancienneBourse[i+1]){
+                        // car le joueur i a moins de points de batiment que le joueur i+1
+                        joueurGagnant = joueurs.get(i+1).getId();
+                    }
+                    else{
+                        joueurGagnant = joueurs.get(i).getId();
+                    }
                 }
             }
 
