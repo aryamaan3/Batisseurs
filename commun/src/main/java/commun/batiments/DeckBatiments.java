@@ -62,11 +62,7 @@ public class DeckBatiments {
      *
      * @return Le deck batiment
      */
-    public ArrayList<CarteChantier> getDeck(int whichDeck){
-
-        if (whichDeck == 1){
-            return deckMoyenAge;
-        }
-        else return deckAntiquite;
+    public ArrayList<CarteChantier> getDeck(){
+        return deckMoyenAge;
     }
 }

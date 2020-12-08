@@ -23,21 +23,21 @@ public class TestMoteurDeJeu {
 
     @Test
     public void testCarteOuvriersSurTable(){
-        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck(1);
+        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         ArrayList<CarteOuvriers> cartesSurTable = m1.carteOuvriersSurTable(deckOuv);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckOuv.size());
     }
     @Test
     public void testCarteBatimentsSurTable(){
-        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck(1);
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteChantier> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         assertEquals(5,cartesSurTable.size());
         assertEquals(42-5,deckBat.size());
     }
     @Test
     public void testFillCartesOuvriers(){
-        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck(1);
+        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
         ArrayList<CarteOuvriers> cartesSurTable = m1.carteOuvriersSurTable(deckOuv);
         cartesSurTable.remove(0);
         assertEquals(4,cartesSurTable.size());
@@ -47,7 +47,7 @@ public class TestMoteurDeJeu {
     }
     @Test
     public void testFillCartesBatiments(){
-        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck(1);
+        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
         ArrayList<CarteChantier> cartesSurTable = m1.carteBatimentsSurTable(deckBat);
         cartesSurTable.remove(0);
         assertEquals(4,cartesSurTable.size());

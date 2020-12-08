@@ -63,13 +63,8 @@ public class DeckOuvriers {
         /**
          * @return Le deck ouvrier
          */
-        public ArrayList<CarteOuvriers> getDeck(int whichDeck) {
-                if (whichDeck == 1) {
-                        return deckMoyenAge;
-                }
-                else {
-                        return deckAntiquites;
-                }
+        public ArrayList<CarteOuvriers> getDeck() {
+                return deckMoyenAge;
         }
 
         /*/**

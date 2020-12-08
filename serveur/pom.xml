@@ -47,7 +47,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>normal100</id>
+                        <id>stats500</id>
                         <goals>
                             <goal>java</goal>
                         </goals>
@@ -55,7 +55,7 @@
                             <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
                             <arguments>
                                 <argument>500</argument>
-                                <argument>true</argument>
+                                <argument>false</argument>
                             </arguments>
                         </configuration>
                     </execution>
