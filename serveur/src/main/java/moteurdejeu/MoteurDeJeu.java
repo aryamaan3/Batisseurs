@@ -81,7 +81,7 @@ public class MoteurDeJeu {
             ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis.get(i)) );
         }
         // On remove tous les apprentis qu'on a selectionné (les 4 premiers)
-        deckOuv.remove( indiceApprentis.subList( 0, 4) );
+        deckOuv.remove(indiceApprentis.subList( 0, 4) );
 
 
         ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
@@ -172,6 +172,15 @@ public class MoteurDeJeu {
                 display.displayGagnant(joueurGagnant);
                 display.displayClassement(joueurs);
                 return joueurs.get((joueurGagnant - 1));
+            }
+            if (compteTour == 28){
+                for (Joueur joueur : joueurs){
+                    joueur.conversionEcuPoint();
+                }
+            }
+            if (compteTour == 29){
+                Collections.sort(joueurs);
+                joueurs.get(0).setPoints(17);
             }
             if (compteTour > 30){
                 display.displayString("not done");
@@ -287,8 +296,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        //int nbPartie =Integer.parseInt(args[0]);
-        int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
+        int nbPartie =Integer.parseInt(args[0]);
+        //int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -302,14 +311,11 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            //m1.partie(joueurs,Boolean.parseBoolean(args[1]));
-            //joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1]))); // à enlever pour lancer avec maven
-            joueursGagnants.add(m1.partie(joueurs, true));
+            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            //joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
             //true pour mode display
             //false pour mode sans display
         }
-        if (!Display.afficher){
-            Display.plusieursParties(joueursGagnants);
-        }
+        Display.plusieursParties(joueursGagnants);
     }
 }

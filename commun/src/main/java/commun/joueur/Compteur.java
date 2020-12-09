@@ -16,7 +16,7 @@ public class Compteur {
      * @param n le nombre d'actions réalisées
      */
     public void actionsFait (int n){
-        this.nb = nb - n;
+        this.nb -= n;
     }
 
     /**

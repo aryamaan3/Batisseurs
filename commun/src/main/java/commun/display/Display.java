@@ -15,7 +15,7 @@ import static commun.display.Couleur.*;
  * Classe permettant la gestion de l'affichage dans le jeu
  */
 public class Display {
-    public static boolean afficher;
+    private static boolean afficher;
 
 
     public Display(boolean afficher){
