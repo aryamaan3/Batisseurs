@@ -38,7 +38,7 @@ public class Display {
 
     public void displayBatimentChoisi(int idJoueur, CarteChantier batiment){
         if(afficher){
-            System.out.println("Le joueur "+ idJoueur+" a pioché la carte bâtiment "+batiment.getNom());
+            System.out.println("Le "+ANSI_CYAN+"joueur "+ idJoueur+ANSI_RESET+" a pioché la carte bâtiment "+batiment.getNom());
         }
     }
     public void displayOuvrierChoisi(CarteOuvriers ouvrier){
@@ -54,7 +54,7 @@ public class Display {
     public void displayOuvriersDuJoueur(Joueur joueur){
         if(afficher && joueur.getMainOuv().size()>0){// On itère sur le DeckOuvrier du moteur de jeu
         // si on trouve un ouvrier qui à un assign == idJoueur donné en paramètre : on l'imprime
-            System.out.print("\nLe joueur " + (joueur.getId())+ " possède ce(s) ouvrier(s) :");
+            System.out.print("\nLe "+ANSI_CYAN+"joueur " + (joueur.getId())+ANSI_RESET +" possède ce(s) ouvrier(s) :");
             for(int i = 0; i < joueur.getMainOuv().size(); i ++){
             System.out.print(" " + joueur.getMainOuv().get(i).getNom()
                     + " (id = " + joueur.getMainOuv().get(i).getIdCarte() + ")");
@@ -72,7 +72,7 @@ public class Display {
         // On itère sur le DeckBatiment du moteur de jeu
         // si on trouve un batiment qui à un assign == idJoueur donné en paramètre : on l'imprime
         if(afficher && joueur.getMainBat().size()>0) {
-            System.out.print("\nLe joueur " + (joueur.getId()) + " construit ce(s) "+ANSI_PURPLE+"chantier(s)"+ANSI_RESET+" :");
+            System.out.print("\nLe "+ANSI_CYAN+"joueur " + (joueur.getId()) + ANSI_RESET+" construit ce(s) "+ANSI_PURPLE+"chantier(s)"+ANSI_RESET+" :");
             for (int i = 0; i < joueur.getMainBat().size(); i++) {
                 System.out.print(" " + ANSI_PURPLE +joueur.getMainBat().get(i).getNom()
                         + ANSI_RESET+" (id = " + joueur.getMainBat().get(i).getIdCarte() + ")");
@@ -99,7 +99,7 @@ public class Display {
      */
     public void displayChantierFini(Joueur joueur){
         if(afficher && joueur.getBuiltBat().size()>0) {
-            System.out.print("Joueur " + (joueur.getId()) + " a ce(s) bâtiment(s) de construit(s): "+ANSI_GREEN);
+            System.out.print(ANSI_CYAN+"Joueur " + (joueur.getId()) +ANSI_RESET+ " a ce(s) bâtiment(s) de construit(s): "+ANSI_GREEN);
             for (int i = 0; i < joueur.getBuiltBat().size(); i++) {
                 System.out.print(joueur.getBuiltBat().get(i).getNom() + ", ");
             }
@@ -137,7 +137,7 @@ public class Display {
      */
     public void displayPoint(Joueur joueur){
         if(afficher) {
-            System.out.println("Le joueur n°" + (joueur.getId()) + " a "
+            System.out.println("Le "+ANSI_CYAN+"joueur n°" + (joueur.getId()) + ANSI_RESET+" a "
                     + ANSI_GREEN + joueur.getPoints() + " point(s)" + ANSI_RESET);
         }
     }
@@ -163,7 +163,7 @@ public class Display {
      * @param joueur l'Objet joueur
      */
     public void displayBourse(Joueur joueur){
-        if(afficher) {System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ANSI_YELLOW +joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);}
+        if(afficher) {System.out.println("Le "+ANSI_CYAN+"joueur "+ (joueur.getId()) + ANSI_RESET+" possede "+ANSI_YELLOW +joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);}
 
     }
 
@@ -190,9 +190,9 @@ public class Display {
      * @param idJoueur l'id du joueur auquel appartient les ouvriers
      */
     public void displayOuvPoseeSurChantier(CarteOuvriers ouvrier,CarteChantier batiment, int idJoueur){
-        if(afficher){ System.out.println("le joueur "+ idJoueur + " pose l'ouvrier "
-                            + ouvrier.getNom() + " ( "+ouvrier.getIdCarte()+" ) sur le batiment "
-                            + batiment.getNom() + " cela lui coûte "
+        if(afficher){ System.out.println("le "+ANSI_CYAN+"joueur "+ idJoueur + ANSI_RESET+" pose l'ouvrier "
+                            + ouvrier.getNom() + " ("+ouvrier.getIdCarte()+") sur le batiment "
+                            + ANSI_PURPLE+batiment.getNom() + ANSI_RESET+" cela lui coûte "
                             + ANSI_YELLOW + ouvrier.getCout() + " écus"+ANSI_RESET);
         }
     }
@@ -205,12 +205,12 @@ public class Display {
      */
     public void displayPasseTour(int idJoueur,int nbActions,int nbEcus){
         if(afficher && nbActions >1){
-            System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "
+            System.out.println("Le "+ANSI_CYAN+"joueur "+ idJoueur+ ANSI_RESET+" passe son tour et vend "
                     +ANSI_RED+nbActions+ " actions "+ANSI_RESET+"restantes pour "
                     +ANSI_YELLOW+nbEcus+" écus"+ANSI_RESET);
         }
         else if(afficher){
-            System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "
+            System.out.println("Le "+ANSI_CYAN+"joueur "+ idJoueur+ ANSI_RESET+" passe son tour et vend "
                     +ANSI_RED+ " une action "+ANSI_RESET+"restante pour "
                     +ANSI_YELLOW+nbEcus+" écus"+ANSI_RESET);
         }
@@ -224,10 +224,14 @@ public class Display {
      */
     public void displayAjouteTour(int idJoueur,int nbActions, int nbEcus){
         if(afficher) {
-            System.out.println("Le joueur " + idJoueur + " achète " + nbActions + " action(s) pour " + ANSI_YELLOW +nbEcus + " écu(s)"+ANSI_RESET);
+            System.out.println("Le "+ANSI_CYAN+"joueur " + idJoueur + ANSI_RESET+" achète " + nbActions + " action(s) pour " + ANSI_YELLOW +nbEcus + " écu(s)"+ANSI_RESET);
         }
     }
 
+    /**
+     * Affiche le nombre d'action que le joueur a utilisé
+     * @param nbAction nombre d'action utilisé par le joueur
+     */
     public void displayUtiliseAction(int nbAction){
         if (nbAction > 1 && afficher) {
             System.out.println("=> "+ANSI_RED + nbAction + " actions ont été utilisées"+ ANSI_RESET);
@@ -235,6 +239,17 @@ public class Display {
         else if (afficher){
             System.out.println("=> "+ANSI_RED + nbAction + " action a été utilisée"+ ANSI_RESET);
         }
+    }
+
+    /**
+     * Affiche la conversion d'écus en points
+     * @param joueurID id du joueur
+     * @param ecus ecus qui ont été convertis
+     */
+    public void displayConversionEcuPoint(int joueurID, int ecus){
+        System.out.println("Le "+ANSI_CYAN+"joueur " + joueurID + ANSI_RESET+" utilise "
+                + ANSI_YELLOW+(ecus) + " écus"+ ANSI_RESET
+                +" pour gagner " + ANSI_GREEN+(ecus / 10) + " points"+ANSI_RESET);
     }
 
     /**
@@ -255,7 +270,8 @@ public class Display {
      * @param nbEcus les écus du joueur
      */
     public void displayEcus(int idJoueur,int nbEcus){
-        if(afficher){System.out.println(ANSI_YELLOW+"la bourse actuelle du joueur "+idJoueur+ " est de "+nbEcus+ " écu(s)\n"+ANSI_RESET);}
+        if(afficher){System.out.println(ANSI_YELLOW+"la bourse actuelle du "+ANSI_CYAN+"joueur "+idJoueur+ANSI_YELLOW
+                + " est de "+nbEcus+ " écu(s)\n"+ANSI_RESET);}
     }
 
     /**
