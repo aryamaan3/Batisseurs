@@ -26,7 +26,6 @@ public class TestCarteBatiments {
     public void testlibererOuvrier(){
         carteBat.attribuerOuvrier(carteOuv1);
         carteBat.libererOuvrier();
-        System.out.println(carteBat.getOuvriers().size());
         assertEquals(0,carteBat.getOuvriers().size());
 
     }

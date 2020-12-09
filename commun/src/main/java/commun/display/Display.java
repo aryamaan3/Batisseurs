@@ -220,10 +220,10 @@ public class Display {
     }
 
     public void displayUtiliseAction(int nbAction){
-        if (nbAction > 1) {
+        if (nbAction > 1 && afficher) {
             System.out.println(ANSI_RED + nbAction + " actions ont été utilisées"+ ANSI_RESET);
         }
-        else{
+        else if (afficher){
             System.out.println(ANSI_RED + nbAction + " action a été utilisée"+ ANSI_RESET);
         }
     }
