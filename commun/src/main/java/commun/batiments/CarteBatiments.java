@@ -6,6 +6,9 @@ import commun.joueur.Joueur;
 
 import java.util.ArrayList;
 
+import static commun.display.Couleur.ANSI_PURPLE;
+import static commun.display.Couleur.ANSI_RESET;
+
 /**
  *  Classe qui regroupe les informations et les méthodes des cartes batiments
  */
@@ -127,7 +130,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
      * @return l'affichage de la carte batiment avec le joueur associé et les ressources que ses ouvriers apportent
      */
     public String toString(Joueur joueur){
-        return "\nCarte Batiment "+nom+", appartient au joueur "+(joueur.getId())+", ressources présentes : "
+        return "\nCarte Batiment "+ANSI_PURPLE + nom+ ANSI_RESET+", appartient au joueur "+(joueur.getId())+", ressources présentes : "
                 + "\nbois : " + getSumBoisOuv() + "  (besoin : "+ this.bois +") ; "
                 + "pierre : " + getSumPierreOuv() + "  (besoin : "+ this.pierre +") ; "
                 + "tuile : " + getSumTuileOuv() + "    (besoin : "+ this.tuile +") ; "

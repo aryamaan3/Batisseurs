@@ -66,7 +66,7 @@ public class IASmart implements IA {
             display.displayBatimentChoisi(joueur.getId(),carteMini);
             joueur.ajouteBatiment((CarteBatiments) carteMini); // on ajoute cette carte à la main de l'ia , puis on l'a supprime des cartes sur table
             compteur.actionsFait(nbChoix);
-            display.displayString(ANSI_RED + nbChoix + " action(s) a/ont été utilisée(s)"+ ANSI_RESET);
+            display.displayUtiliseAction(nbChoix);
             carteBatSurTable.remove(carteMini);
         }
 

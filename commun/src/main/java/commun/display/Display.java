@@ -72,10 +72,10 @@ public class Display {
         // On itère sur le DeckBatiment du moteur de jeu
         // si on trouve un batiment qui à un assign == idJoueur donné en paramètre : on l'imprime
         if(afficher && joueur.getMainBat().size()>0) {
-            System.out.print("\nLe joueur " + (joueur.getId()) + " construit ce(s) chantier(s) :");
+            System.out.print("\nLe joueur " + (joueur.getId()) + " construit ce(s) "+ANSI_PURPLE+"chantier(s)"+ANSI_RESET+" :");
             for (int i = 0; i < joueur.getMainBat().size(); i++) {
-                System.out.print(" " + joueur.getMainBat().get(i).getNom()
-                        + " (id = " + joueur.getMainBat().get(i).getIdCarte() + ")");
+                System.out.print(" " + ANSI_PURPLE +joueur.getMainBat().get(i).getNom()
+                        + ANSI_RESET+" (id = " + joueur.getMainBat().get(i).getIdCarte() + ")");
             }
             System.out.println();
         }
@@ -99,11 +99,11 @@ public class Display {
      */
     public void displayChantierFini(Joueur joueur){
         if(afficher && joueur.getBuiltBat().size()>0) {
-            System.out.print("Joueur " + (joueur.getId()) + " a ce(s) bâtiment(s) de construit(s): ");
+            System.out.print("Joueur " + (joueur.getId()) + " a ce(s) bâtiment(s) de construit(s): "+ANSI_GREEN);
             for (int i = 0; i < joueur.getBuiltBat().size(); i++) {
                 System.out.print(joueur.getBuiltBat().get(i).getNom() + ", ");
             }
-            System.out.println("\n"); // juste pour le retour à la ligne
+            System.out.println(ANSI_RESET+"\n"); // juste pour le retour à la ligne
         }
     }
 
@@ -149,10 +149,10 @@ public class Display {
     public void displayActions(Compteur c){
         if(afficher) {
             if (c.getNombreAction() < 2) {
-                System.out.println("Il reste " + c.getNombreAction() + " action");
+                System.out.println("Il reste " + ANSI_RED+ c.getNombreAction() + " action"+ ANSI_RESET);
             }
             else {
-                System.out.println("Il reste " + c.getNombreAction() + " actions");
+                System.out.println("Il reste " + ANSI_RED+ c.getNombreAction() + " actions"+ANSI_RESET);
             }
         }
         }
@@ -193,7 +193,7 @@ public class Display {
         if(afficher){ System.out.println("le joueur "+ idJoueur + " pose l'ouvrier "
                             + ouvrier.getNom() + " ( "+ouvrier.getIdCarte()+" ) sur le batiment "
                             + batiment.getNom() + " cela lui coûte "
-                            + ouvrier.getCout() + " écus");
+                            + ANSI_YELLOW + ouvrier.getCout() + " écus"+ANSI_RESET);
         }
     }
 
@@ -204,7 +204,16 @@ public class Display {
      * @param nbEcus nb d'écus gagné en vendant les actions
      */
     public void displayPasseTour(int idJoueur,int nbActions,int nbEcus){
-        if(afficher){System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "+nbActions+ " action(s) restante(s) pour "+ANSI_YELLOW+nbEcus+" écu(s)"+ANSI_RESET);}
+        if(afficher && nbActions >1){
+            System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "
+                    +ANSI_RED+nbActions+ " actions "+ANSI_RESET+"restantes pour "
+                    +ANSI_YELLOW+nbEcus+" écus"+ANSI_RESET);
+        }
+        else if(afficher){
+            System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "
+                    +ANSI_RED+ " une action "+ANSI_RESET+"restante pour "
+                    +ANSI_YELLOW+nbEcus+" écus"+ANSI_RESET);
+        }
     }
 
     /**
@@ -221,10 +230,10 @@ public class Display {
 
     public void displayUtiliseAction(int nbAction){
         if (nbAction > 1 && afficher) {
-            System.out.println(ANSI_RED + nbAction + " actions ont été utilisées"+ ANSI_RESET);
+            System.out.println("=> "+ANSI_RED + nbAction + " actions ont été utilisées"+ ANSI_RESET);
         }
         else if (afficher){
-            System.out.println(ANSI_RED + nbAction + " action a été utilisée"+ ANSI_RESET);
+            System.out.println("=> "+ANSI_RED + nbAction + " action a été utilisée"+ ANSI_RESET);
         }
     }
 

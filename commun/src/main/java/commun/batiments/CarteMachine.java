@@ -1,6 +1,10 @@
 package commun.batiments;
 
+import commun.joueur.Joueur;
 import commun.ouvriers.CarteOuvriers;
+
+import static commun.display.Couleur.ANSI_PURPLE;
+import static commun.display.Couleur.ANSI_RESET;
 
 /**
  * Classe fille de CarteBatiment :
@@ -62,5 +66,16 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
         // Le 0 dans le constucteur est expliqué par le fait qu'une machine ne coute rien à utiliser
         return new CarteOuvriers(id+100, nom,0,
                 apportPierre, apportBois, apportSavoir, apportTuile);
+    }
+    /**
+     *  Méthode pour organiser l'affichage d'une carte batiment
+     * @return l'affichage de la carte batiment avec le joueur associé et les ressources que ses ouvriers apportent
+     */
+    public String toString(Joueur joueur){
+        return "\nCarte Machine "+ANSI_PURPLE + nom+ ANSI_RESET+", appartient au joueur "+(joueur.getId())+", ressources présentes : "
+                + "\nbois : " + getSumBoisOuv() + "  (besoin : "+ this.bois +") ; "
+                + "pierre : " + getSumPierreOuv() + "  (besoin : "+ this.pierre +") ; "
+                + "tuile : " + getSumTuileOuv() + "    (besoin : "+ this.tuile +") ; "
+                + "savoir : " + getSumSavoirOuv() + "  (besoin : "+ this.savoir +")";
     }
 }

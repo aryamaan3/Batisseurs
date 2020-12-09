@@ -141,7 +141,7 @@ public class MoteurDeJeu {
                     ancienneBourse[joueur.getId()-1] = joueur.getBourse().getEcus();
                     joueur.conversionEcuPoint();
                     int pointsgagnes = ancienneBourse[joueur.getId()-1] - joueur.getBourse().getEcus();
-                    display.displayString("Le joueur " + joueur.getId() + " utilise " + (pointsgagnes) + " écus pour gagner " + (pointsgagnes / 10) + " points");
+                    display.displayString("Le joueur " + joueur.getId() + " utilise " + ANSI_YELLOW+(pointsgagnes) + " écus"+ ANSI_RESET +" pour gagner " + (pointsgagnes / 10) + " points");
                 }
                 display.displayPoint(joueur);
                 display.displayBourse(joueur);
