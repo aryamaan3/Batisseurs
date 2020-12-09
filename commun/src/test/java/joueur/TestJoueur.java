@@ -36,8 +36,11 @@ public class TestJoueur {
         joueur.attribuerOuvrierAChantier(carteOuv, joueur.getMainBat().get(0));
         assertEquals("ouvrier", joueur.getMainBat().get(0).getOuvriers().get(0).getNom());
         assertEquals(2, joueur.getMainBat().get(0).getOuvriers().size());
-
+        joueur.getBourse().subEcus(8);
+        int test = joueur.attribuerOuvrierAChantier(carteOuv, joueur.getMainBat().get(0));
+        assertEquals(0,test);
     }
+
     @Test
     public void testTrierBuiltBat(){
         carteBat.setConstruit(true);
