@@ -110,7 +110,7 @@ public class MoteurDeJeu {
                         if(ia.get(i).getJoueur().getMainBat().get(j).isBuilt()){
                             display.displayString("Le joueur "+ ia.get(i).getJoueur().getId()
                                     +" a fini le batiment "+ia.get(i).getJoueur().getMainBat().get(j).getNom()
-                                    +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+" et "+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
+                                    +", il gagne donc "+ANSI_GREEN+ia.get(i).getJoueur().getMainBat().get(j).getPoints()+" point(s)"+ANSI_RESET+" et "+ANSI_YELLOW+ia.get(i).getJoueur().getMainBat().get(j).getEcu()+" écu(s)."+ANSI_RESET);
                         }
                     }
                 }
@@ -296,8 +296,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        int nbPartie =Integer.parseInt(args[0]);
-        //int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
+        //int nbPartie =Integer.parseInt(args[0]);
+        int nbPartie = 1; //afin de lancer avec main à enlever pour lancer avec maven
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -311,7 +311,7 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            joueursGagnants.add(m1.partie(joueurs, true));
             //joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
             //true pour mode display
             //false pour mode sans display

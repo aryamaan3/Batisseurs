@@ -10,6 +10,8 @@ import commun.joueur.Joueur;
 
 import java.util.ArrayList;
 
+import static commun.display.Couleur.*;
+
 /**
  *  Classe qui regroupe les informations et les méthodes de l'IA
  */
@@ -64,6 +66,7 @@ public class IASmart implements IA {
             display.displayBatimentChoisi(joueur.getId(),carteMini);
             joueur.ajouteBatiment((CarteBatiments) carteMini); // on ajoute cette carte à la main de l'ia , puis on l'a supprime des cartes sur table
             compteur.actionsFait(nbChoix);
+            display.displayString(ANSI_RED + nbChoix + " action(s) a/ont été utilisée(s)"+ ANSI_RESET);
             carteBatSurTable.remove(carteMini);
         }
 
@@ -83,6 +86,7 @@ public class IASmart implements IA {
                 cartesOuvSurTable.remove(idealOuvToChantier(cartesOuvSurTable)); // on enlève ensuite la carte choisie des cartes ouvriers sur table
             }
             compteur.actionsFait(nbChoix);
+            display.displayUtiliseAction(nbChoix);
         }
 
 
@@ -102,7 +106,7 @@ public class IASmart implements IA {
                     display.displayOuvPoseeSurChantier(joueur.getMainOuv().get(meilleurCarteOuvID),joueur.getMainBat().get(j),joueur.getId());
                     joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
                     compteur.actionsFait(1);
-
+                    display.displayUtiliseAction(1);
                 }
             }
         }
@@ -302,6 +306,7 @@ public class IASmart implements IA {
         }
             display.displayPasseTour(joueur.getId(),n,nbEcus);
             compteur.sellActions(n);
+            display.displayUtiliseAction(n);
         }
 
 

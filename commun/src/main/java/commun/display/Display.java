@@ -163,7 +163,7 @@ public class Display {
      * @param joueur l'Objet joueur
      */
     public void displayBourse(Joueur joueur){
-        if(afficher) {System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ joueur.getBourse().getEcus()+" écu(s)");}
+        if(afficher) {System.out.println("Le joueur "+ (joueur.getId()) + " possede "+ANSI_YELLOW +joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);}
 
     }
 
@@ -204,7 +204,7 @@ public class Display {
      * @param nbEcus nb d'écus gagné en vendant les actions
      */
     public void displayPasseTour(int idJoueur,int nbActions,int nbEcus){
-        if(afficher){System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "+nbActions+ " action(s) restante(s) pour "+nbEcus+" écu(s)");}
+        if(afficher){System.out.println("Le joueur "+ idJoueur+ " passe son tour et vend "+nbActions+ " action(s) restante(s) pour "+ANSI_YELLOW+nbEcus+" écu(s)"+ANSI_RESET);}
     }
 
     /**
@@ -215,7 +215,16 @@ public class Display {
      */
     public void displayAjouteTour(int idJoueur,int nbActions, int nbEcus){
         if(afficher) {
-            System.out.println("Le joueur " + idJoueur + " achète " + nbActions + " action(s) pour " + nbEcus + " écu(s)");
+            System.out.println("Le joueur " + idJoueur + " achète " + nbActions + " action(s) pour " + ANSI_YELLOW +nbEcus + " écu(s)"+ANSI_RESET);
+        }
+    }
+
+    public void displayUtiliseAction(int nbAction){
+        if (nbAction > 1) {
+            System.out.println(ANSI_RED + nbAction + " actions ont été utilisées"+ ANSI_RESET);
+        }
+        else{
+            System.out.println(ANSI_RED + nbAction + " action a été utilisée"+ ANSI_RESET);
         }
     }
 
@@ -237,7 +246,7 @@ public class Display {
      * @param nbEcus les écus du joueur
      */
     public void displayEcus(int idJoueur,int nbEcus){
-        if(afficher){System.out.println(ANSI_RED+"la bourse actuelle du joueur "+idJoueur+ " est de "+nbEcus+ " écu(s)\n"+ANSI_RESET);}
+        if(afficher){System.out.println(ANSI_YELLOW+"la bourse actuelle du joueur "+idJoueur+ " est de "+nbEcus+ " écu(s)\n"+ANSI_RESET);}
     }
 
     /**

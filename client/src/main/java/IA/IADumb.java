@@ -9,6 +9,9 @@ import commun.ouvriers.CarteOuvriers;
 
 import java.util.ArrayList;
 
+import static commun.display.Couleur.ANSI_RED;
+import static commun.display.Couleur.ANSI_RESET;
+
 public class IADumb implements IA {
 
     private Joueur joueur;
@@ -75,6 +78,7 @@ public class IADumb implements IA {
         }
         display.displayPasseTour(joueur.getId(),n,nbEcus);
         compteur.sellActions(n);
+        display.displayUtiliseAction(n);
 
     }
 
@@ -107,6 +111,7 @@ public class IADumb implements IA {
             display.displayOuvPoseeSurChantier(joueur.getMainOuv().get(0),joueur.getMainBat().get(0),joueur.getId());
             joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(0),joueur.getMainBat().get(0));
             compteur.actionsFait(1);
+            display.displayUtiliseAction(1);
 
         }
 
@@ -121,6 +126,7 @@ public class IADumb implements IA {
                 carteBatSurTable.remove(0);
             }
             compteur.actionsFait(nbChoix);
+            display.displayUtiliseAction(nbChoix);
         }
     }
 
@@ -134,6 +140,7 @@ public class IADumb implements IA {
                 cartesOuvSurTable.remove(0);
             }
             compteur.actionsFait(nbChoix);
+            display.displayUtiliseAction(nbChoix);
         }
     }
 
