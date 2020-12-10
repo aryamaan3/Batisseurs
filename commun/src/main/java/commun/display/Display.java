@@ -247,9 +247,11 @@ public class Display {
      * @param ecus ecus qui ont été convertis
      */
     public void displayConversionEcuPoint(int joueurID, int ecus){
-        System.out.println("Le "+ANSI_CYAN+"joueur " + joueurID + ANSI_RESET+" utilise "
-                + ANSI_YELLOW+(ecus) + " écus"+ ANSI_RESET
-                +" pour gagner " + ANSI_GREEN+(ecus / 10) + " points"+ANSI_RESET);
+        if (afficher) {
+            System.out.println("Le " + ANSI_CYAN + "joueur " + joueurID + ANSI_RESET + " utilise "
+                    + ANSI_YELLOW + (ecus) + " écus" + ANSI_RESET
+                    + " pour gagner " + ANSI_GREEN + (ecus / 10) + " points" + ANSI_RESET);
+        }
     }
 
     /**
@@ -321,7 +323,7 @@ public class Display {
             System.out.println("Le Joueur 4 avec l'IA bête a gagné        : " + Collections.frequency(gagnants, 4)
                     + " fois");
 
-            System.out.println("\nIl y a eu " + Collections.frequency(gagnants, 0) + " parties interminés");
+            //System.out.println("\nIl y a eu " + Collections.frequency(gagnants, 0) + " parties interminés");
 
             System.out.println("\nUn joueur avec un IA intelligent a gagné " +
                     (Collections.frequency(gagnants, 1) + Collections.frequency(gagnants, 2)) + " fois");
