@@ -147,6 +147,9 @@ public class IASmart implements IA {
         }
         int max = 0; //swap
         for (int i = 0; i < res.length; i++){ //on itere sur le nb de cartes
+            if ((ListeOuv.get(i).getCout() + 2) > joueur.getBourse().getEcus() && res[i] > 0){
+                res[i] -= 1; // si le joueur ne possede pas assez d'ecus pour utiliser la carte on enleve un point
+            }
             if (res[i] >= max){
                 max = res[i]; //max prends la valeur de res(i) si c'est le plus grand
                 bestID = i;

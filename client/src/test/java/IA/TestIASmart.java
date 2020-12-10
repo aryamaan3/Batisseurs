@@ -84,6 +84,33 @@ public class TestIASmart {
     }
 
     @Test
+    public void TestOuvrierIdealAvecCout(){
+
+        ArrayList<CarteChantier> cartesBat = new ArrayList<>();
+        cartesBat.add(new CarteBatiments(0,"test1",2,5,4,4,3,9));
+
+        ArrayList<CarteOuvriers> cartesOuv = new ArrayList<>();
+        cartesOuv.add(new CarteOuvriers(0,"ouv1",4,2,3,6,5));
+        cartesOuv.add(new CarteOuvriers(1,"ouv2",9,1,2,3,5));
+        cartesOuv.add(new CarteOuvriers(2,"ouv3",7,0,3,6,5));
+        cartesOuv.add(new CarteOuvriers(3,"ouv4",8,2,5,4,5));
+
+        Joueur j = new Joueur(0);
+        Compteur c = new Compteur();
+        IASmart ia = new IASmart(j, c);
+
+        ia.getJoueur().getBourse().subEcus(3);
+        assertEquals(7, ia.getJoueur().getBourse().getEcus());
+
+        ia.choisitBatiment(1, cartesBat);
+        ia.choisitOuvrier(4, cartesOuv);
+
+        int id = ia.idealOuvToChantier(j.getMainOuv());
+        assertEquals(0, j.getMainOuv().get(id).getIdCarte());
+        //on verifie s'il choisie bien l'ouvrier 0 car c'est le plus rentable en termes d'utilité et de coût
+    }
+
+    @Test
     public void TestPlusieursOuvrierIdeal(){
         ArrayList<CarteChantier> cartesBat = new ArrayList<>();
         cartesBat.add(new CarteBatiments(0,"test1",6,5,4,4,3,9));
