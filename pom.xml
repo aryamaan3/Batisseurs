@@ -40,7 +40,8 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <javadocExecutable>C:\Program Files\Java\jdk-14.0.2\bin\javadoc</javadocExecutable>
+                    <!--pour windows <javadocExecutable>C:\Program Files\Java\jdk-14.0.2\bin\javadoc</javadocExecutable>-->
+                    <!--pour mac--><javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                     <show>package</show>
                     <nohelp>true</nohelp>
                     <encoding>utf-8</encoding> <!-- éventuellement à changer : encodage de vos fichiers -->
