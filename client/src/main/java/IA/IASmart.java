@@ -88,9 +88,6 @@ public class IASmart implements IA {
             compteur.actionsFait(nbChoix);
             display.displayUtiliseAction(nbChoix);
         }
-
-
-
     }
     /**
      *  Méthode qui permet à l'IA de poser elle même un ouvrier sur un batiment

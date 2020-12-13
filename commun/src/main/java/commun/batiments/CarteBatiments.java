@@ -77,8 +77,6 @@ public class CarteBatiments extends Cartes implements CarteChantier{
                 ouvriers.get(i).setAssign(false);
                 ouvriers.remove(i);
             }
-        }else{
-            System.out.println("\nIl n'y aucun ouvrier assigné à ce chantier\n");
         }
     }
     /**

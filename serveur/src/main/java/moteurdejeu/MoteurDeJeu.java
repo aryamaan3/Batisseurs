@@ -296,8 +296,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        //int nbPartie =Integer.parseInt(args[0]);
-        int nbPartie = 1; //à enlever pour lancer avec maven
+        int nbPartie =Integer.parseInt(args[0]);
+        //int nbPartie = 1; //à enlever pour lancer avec maven
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -311,8 +311,8 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
-            //joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            //joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
+            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
             //true pour mode display
             //false pour mode sans display
         }

@@ -18,8 +18,10 @@ public class TestIADumb {
 
     @Test
     public void TestChoisitBatiment(){
-
         ArrayList<CarteChantier> cartes = new ArrayList<>();
+        //On vérifie que rien ne se passe si il n'y a pas de cartes Batiment sur la table
+        ia.choisitBatiment(1,cartes);
+        assertEquals(0,j1.getMainBat().size());
         cartes.add(new CarteBatiments(0,"test1",1,5,4,4,3,9));
         cartes.add(new CarteBatiments(0,"test2",3,1,5,1,3,9));
         cartes.add(new CarteBatiments(0,"test3",1,1,1,1,3,9));
@@ -32,6 +34,7 @@ public class TestIADumb {
     @Test
     public void TestChoisitOuvrier(){
         ArrayList<CarteOuvriers> cartes = new ArrayList<>();
+        //On vérifie que rien ne se passe si il n'y a pas de cartes Ouvrier sur la table
         ia.choisitOuvrier(2,cartes);
         assertEquals(0,j1.getMainOuv().size());
         cartes.add(new CarteOuvriers(0,"ouv1",1,2,0,3,1));
@@ -57,7 +60,14 @@ public class TestIADumb {
     }
     @Test
     public void TestAjouteTour(){
+        j1.getBourse().subEcus(10);
         ia.ajouteTour(1);
+        //On vérifie que si le joueur n'a pas les écus rien ne se passe
+        assertEquals(0,j1.getBourse().getEcus());
+        assertEquals(3,ia.getCompteur().getNombreAction());
+        j1.getBourse().addEcus(10);
+        ia.ajouteTour(1);
+        //On vérifie que si le joueur a les écus les tours sont bien crédités et les écus débités
         assertEquals(5,j1.getBourse().getEcus());
         assertEquals(4,ia.getCompteur().getNombreAction());
     }

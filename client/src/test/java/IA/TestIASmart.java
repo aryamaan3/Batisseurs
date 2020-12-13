@@ -15,10 +15,8 @@ public class TestIASmart {
     Compteur c1 = new Compteur();
     IA iatest = new IASmart(j1,c1);
 
-
     @Test
     public void TestChoisitBatiment(){
-
         ArrayList<CarteChantier> cartes = new ArrayList<>();
         cartes.add(new CarteBatiments(0,"test1",1,5,4,4,3,9));
         cartes.add(new CarteBatiments(0,"test2",3,1,5,1,3,9));
@@ -28,7 +26,12 @@ public class TestIASmart {
         iatest.choisitBatiment(1,cartes);
         assertEquals("test3",j1.getMainBat().get(0).getNom());
         assertEquals(1,j1.getMainBat().size());
+        //On vérifie que rien ne passe si le joueur à déjà une carte batiment dans sa main
+        iatest.choisitBatiment(1,cartes);
+        assertEquals(1,j1.getMainBat().size());
+        assertEquals("test3",j1.getMainBat().get(0).getNom());
     }
+
     @Test
     public void TestChoisitOuvrier(){
         ArrayList<CarteOuvriers> cartes = new ArrayList<>();
@@ -41,21 +44,52 @@ public class TestIASmart {
         assertEquals("ouv3",j1.getMainOuv().get(1).getNom());
         assertEquals(2,j1.getMainOuv().size());
     }
+
+    @Test
+    public void TestChoisitOuvrierAlternatif(){
+        //On vérifie que rien ne se passe si le joueur a déjà 5 cartes en main et que son nombre de choix est > aux cartes sur la table
+        ArrayList<CarteOuvriers> cartes = new ArrayList<>();
+        cartes.add(new CarteOuvriers(0,"ouv1",1,2,0,3,1));
+        cartes.add(new CarteOuvriers(1,"ouv2",1,1,1,6,5));
+        cartes.add(new CarteOuvriers(2,"ouv3",2,1,1,2,0));
+        cartes.add(new CarteOuvriers(3,"ouv4",1,2,0,3,1));
+        cartes.add(new CarteOuvriers(4,"ouv5",5,1,1,6,5));
+        CarteBatiments carteBat = new CarteBatiments(0,"test2",3,1,5,1,3,9);
+        for (int i = 0; i < 5; i++) {
+            j1.ajouteOuvrier(cartes.get(i));
+        }
+        iatest.getJoueur().ajouteBatiment(carteBat);
+        iatest.choisitOuvrier(6,cartes);
+        assertEquals(5,j1.getMainOuv().size());
+        assertEquals("ouv2",j1.getMainOuv().get(1).getNom());
+    }
+
     @Test
     public void TestPoserOuvrierSurChantier(){
+        iatest.poserOuvrierSurChantier();
         j1.getMainOuv().add(new CarteOuvriers(1,"ouv2",1,1,1,1,1));
         j1.getMainBat().add(new CarteBatiments(0,"test1",10,10,10,10,10,9));
+        assertEquals(0,j1.getMainBat().get(0).getOuvriers().size());
         iatest.poserOuvrierSurChantier();
         assertEquals(1,j1.getMainBat().get(0).getOuvriers().size());
     }
+
     @Test
     public void TestPasseTour(){
         iatest.passeTour(1);
         assertEquals(11,j1.getBourse().getEcus());
     }
+
     @Test
     public void TestAjouteTour(){
+        j1.getBourse().subEcus(10);
         iatest.ajouteTour(1);
+        //On vérifie que si le joueur n'a pas les écus rien ne se passe
+        assertEquals(0,j1.getBourse().getEcus());
+        assertEquals(3,iatest.getCompteur().getNombreAction());
+        j1.getBourse().addEcus(10);
+        iatest.ajouteTour(1);
+        //On vérifie que si le joueur a les écus les tours sont bien crédités et les écus débités
         assertEquals(5,j1.getBourse().getEcus());
         assertEquals(4,iatest.getCompteur().getNombreAction());
     }
