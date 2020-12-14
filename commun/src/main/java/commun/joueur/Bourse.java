@@ -30,14 +30,6 @@ public class Bourse {
     }
 
     /**
-     * actionAutorisee permet d'autoriser ou non une action à l'IA en fonction de l'argent qu'elle dispose
-     * @param carte la carte ouvrier
-     * @return true ou false
-     */
-    public boolean isActionOuvAutorisee(CarteOuvriers carte){
-        return carte.getCout() <= getEcus();
-    }
-    /**
      * Ajoute des écus à un joueur
      * @param somme somme d'écus à ajouter à la bourse
      */

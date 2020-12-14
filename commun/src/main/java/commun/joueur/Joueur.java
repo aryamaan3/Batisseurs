@@ -88,7 +88,6 @@ public class Joueur implements Comparable{
      */
     public void ajouteOuvrier(CarteOuvriers carte){
         MainOuv.add(carte);
-        //stats.addActionsRecrutement(1);
         }
     /**
      *  Méthode qui prend une carte batiment sur le plateau pour la mettre dans la main du joueur
@@ -109,8 +108,6 @@ public class Joueur implements Comparable{
             batiment.attribuerOuvrier(ouvrier);
             MainOuv.remove(ouvrier);
             bourse.subEcus(ouvrier.getCout());
-            //stats.addEcusDépensésOuv(ouvrier.getCout());
-            //stats.addActionsTravailler(1);
             return 1;
         }else{
             return 0;

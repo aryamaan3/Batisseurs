@@ -148,7 +148,6 @@ public class Display {
             }
             System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :\n" + ANSI_RESET);
             for (CarteChantier carteBatiments : carteBatSurTable) {
-                //System.out.print(" " + ((CarteBatiments) carteBatiments).getNom() + " |");
                 System.out.println(" - " + ((CarteBatiments) carteBatiments).toString());
             }
             System.out.println("\n"); // Juste pour un retour à la ligne
@@ -190,22 +189,6 @@ public class Display {
         if(afficher) {System.out.println("Le "+ANSI_CYAN+"joueur "+ (joueur.getId()) + ANSI_RESET+" possede "+ANSI_YELLOW +joueur.getBourse().getEcus()+" écu(s)"+ANSI_RESET);}
 
     }
-
-    /*
-    /**
-     * Affichage des stats
-     * @param joueur Objet Joueur
-     */
-    /* pas utilisé pour l'instant
-    public void displayStats(Joueur joueur){
-        System.out.println(ANSI_CYAN +"\nJoueur"+ (joueur.getId()) +ANSI_RESET);
-        System.out.println("Points : "+joueur.getPoints());
-        System.out.println("Ecus : "+joueur.getBourse().getEcus());
-        System.out.println("Actions travailler (ouvriers attribués) : "+joueur.getStats().getNbActionsTravailler());
-        System.out.println("Actions recrutement (ouvriers recrutés) :"+joueur.getStats().getNbActionsRecrutement());
-        System.out.println("Ecus dépensés pour les ouvriers :"+joueur.getStats().getNbEcusDépensésOuv());
-        System.out.println("Revenus des Bâtiments :"+joueur.getStats().getNbRevenusBat());
-    }*/
 
     /**
      * print les ouvriers posées sur un chantier par le joueur

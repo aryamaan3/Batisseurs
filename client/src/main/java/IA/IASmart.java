@@ -104,7 +104,6 @@ public class IASmart implements IA {
             for (int j = 0; j < joueur.getMainBat().size(); j++) {
                 if (!joueur.getMainBat().get(j).isContruit()) {
                     meilleurCarteOuvID = idealOuvToChantier(joueur.getMainOuv());
-                    //System.out.println(meilleurCarteOuvID);
                     display.displayOuvPoseeSurChantier(joueur.getMainOuv().get(meilleurCarteOuvID),joueur.getMainBat().get(j),joueur.getId());
                     joueur.attribuerOuvrierAChantier(joueur.getMainOuv().get(meilleurCarteOuvID), joueur.getMainBat().get(j));
                     compteur.actionsFait(1);
@@ -157,7 +156,6 @@ public class IASmart implements IA {
                 bestID = i;
             }
         }
-        //System.out.println(bestID);
         return bestID; //on retourne l'id
     }
 

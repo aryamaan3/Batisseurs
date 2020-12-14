@@ -106,10 +106,7 @@ public class TestIASmart {
         Joueur j = new Joueur(0);
         Compteur c = new Compteur();
         IASmart ia = new IASmart(j, c);
-        //System.out.println("mainOuv");
-        /*for (int i = 0; i < j.getMainOuv().size(); i++){
-            System.out.println(j.getMainOuv().get(i).getIdCarte());
-        }*/
+
         ia.choisitBatiment(1, cartesBat);
         ia.choisitOuvrier(4, cartesOuv);
 
@@ -161,8 +158,6 @@ public class TestIASmart {
         //on pose deux ouvriers sur le chantier
         ia.poserOuvrierSurChantier();
 
-        //ia.poserOuvrierSurChantier();
-        //System.out.println(j.getMainBat().get(0).getOuvriers());
 
         int id = ia.idealOuvToChantier(j.getMainOuv());
         assertEquals(1, j.getMainOuv().get(id).getIdCarte());
@@ -201,8 +196,7 @@ public class TestIASmart {
 
         assertEquals(8, j1.getBourse().getEcus());
         j1.getBourse().addEcus(22);
-        /*iatest.actionIA(cartesOuv,cartesBat);
-        assertEquals(4,iatest.getCompteur().getNombreAction());*/
+
         //car le joueur a maintenant assez pour acheter des actions il en effectue 4
 
         iatest.actionIA(cartesOuv,cartesBat);
@@ -210,7 +204,6 @@ public class TestIASmart {
         j1.getBourse().subEcus(20);
 
 
-        //assertEquals(0,iatest.actionIA(cartesOuv, cartesBat)[0]);
         //il n'effectue pas d'actions car il n'a pas assez d'ecus, il les vends donc
         c1.reset();
         iatest.actionIA(cartesOuv,cartesBat);

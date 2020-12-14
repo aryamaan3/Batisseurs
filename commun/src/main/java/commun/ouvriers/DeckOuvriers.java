@@ -59,9 +59,6 @@ public class DeckOuvriers {
                 deckMoyenAge.add(new CarteOuvriers(41, "apprenti", 2, 1, 0, 0, 1));
 
         }
-
-
-
         /**
          * Méthode retournant le deck ouvrier
          * @return Le deck ouvrier
@@ -78,21 +75,4 @@ public class DeckOuvriers {
                 return deckMoyenAge.size();
         }
 
-        /*/**
-         *
-         * @return Retourne une liste des indices des apprentis dans le deck qui a été shuffle
-         */
-        /*static public int[] getIdApprentis(){
-                // 6 apprentis dans le decks
-                int[] idApprentis = new int[6];
-                int count = 0;
-                // On boucle sur les indices du deck (qui a été shuffle)
-                for(int i = 0; i < deck.size() ; i++){
-                        if(deck.get(i).getNom() == "apprenti"){
-                                idApprentis[count] = i;
-                                count ++;
-                        }
-                }
-                return idApprentis;
-        }*/
 }
