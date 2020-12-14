@@ -1,4 +1,4 @@
-#bat20-B
+#Bat20-B
 Fonctionnalités livrées et issues réalisées : 
 - Fonctionnalités livrées :
   - Il est à présent possible de gérer les égalités en fin de partie
