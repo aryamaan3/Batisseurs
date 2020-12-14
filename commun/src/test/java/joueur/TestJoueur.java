@@ -80,12 +80,7 @@ public class TestJoueur {
         assertEquals(1, joueur.getBourse().getEcus());
         assertEquals(2, joueur.getPoints());
     }
-    @Test
-    public void getStatsTest(){
-        boolean type;
-        type = joueur.getStats() != null;
-        assertTrue(type);
-    }
+
     @Test
     public void setBourseTest(){
         joueur.setBourse(new Bourse(0));

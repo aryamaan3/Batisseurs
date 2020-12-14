@@ -16,13 +16,13 @@ public class Joueur implements Comparable{
     private ArrayList<CarteChantier> BuiltBat = new ArrayList<>();
     private ArrayList<CarteOuvriers> MainOuv = new ArrayList<>();
     private Bourse bourse;
-    private Statistiques stats;
+
 
     public Joueur(int id){
         this.id=id;
         this.points=0;
         bourse = new Bourse(id);
-        stats = new Statistiques(id);
+
 
     }
 
@@ -31,12 +31,7 @@ public class Joueur implements Comparable{
      */
     public Bourse getBourse() { return bourse;}
 
-    /**
-     * @return les statistiques du joueur
-     */
-    public Statistiques getStats(){
-        return stats;
-    }
+
 
     /**
      * Méthode permettant l'assignation de la bourse à un joueur

@@ -197,7 +197,6 @@ public class MoteurDeJeu {
                 ia.getJoueur().getMainBat().get(i).setConstruit(true);
                 ia.getJoueur().addPoints(ia.getJoueur().getMainBat().get(i).getPoints());
                 ia.getJoueur().getBourse().addEcus(ia.getJoueur().getMainBat().get(i).getEcu());
-                ia.getJoueur().getStats().addRevenusBat(ia.getJoueur().getMainBat().get(i).getEcu());
 
                 // On vérifie si le chantier qu'on vient de finir est une machine
                 if (ia.getJoueur().getMainBat().get(i).isMachine()){
@@ -222,8 +221,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        //int nbPartie =Integer.parseInt(args[0]);
-        int nbPartie = 1; //à enlever pour lancer avec maven
+        int nbPartie =Integer.parseInt(args[0]);
+        //int nbPartie = 1; //à enlever pour lancer avec maven
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -238,7 +237,7 @@ public class MoteurDeJeu {
             joueurs.add(j3);
             joueurs.add(j4);
             //joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
-            joueursGagnants.add(m1.partie(joueurs, true));
+            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
             //true pour mode display
             //false pour mode sans display
         }
