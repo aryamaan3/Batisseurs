@@ -3,12 +3,8 @@ package moteurdejeu;
 import IA.IA;
 import IA.IADumb;
 import IA.IASmart;
-
-import commun.batiments.CarteChantier;
 import commun.batiments.CarteMachine;
-import commun.batiments.DeckBatiments;
 import commun.ouvriers.CarteOuvriers;
-import commun.ouvriers.DeckOuvriers;
 import commun.display.Display;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;

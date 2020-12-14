@@ -9,8 +9,6 @@ import commun.ouvriers.CarteOuvriers;
 
 import java.util.ArrayList;
 
-import static commun.display.Couleur.ANSI_RED;
-import static commun.display.Couleur.ANSI_RESET;
 
 /**
  * Classe contenant les méthodes qui permettent d'avoir une IA simplette

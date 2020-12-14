@@ -1,6 +1,6 @@
 package commun.joueur;
 
-import commun.ouvriers.CarteOuvriers;
+
 
 /**
  * Classe regroupant les informations et les méthodes associées aux bourses

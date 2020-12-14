@@ -10,7 +10,6 @@ import commun.joueur.Joueur;
 
 import java.util.ArrayList;
 
-import static commun.display.Couleur.*;
 
 /**
  *  Classe qui regroupe les informations et les méthodes de l'IA

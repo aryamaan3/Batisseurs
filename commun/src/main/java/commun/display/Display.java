@@ -1,6 +1,5 @@
 package commun.display;
 
-import commun.batiments.CarteBatiments;
 import commun.batiments.CarteChantier;
 import commun.ouvriers.CarteOuvriers;
 import commun.joueur.Compteur;
@@ -148,7 +147,7 @@ public class Display {
             }
             System.out.print(ANSI_GREEN + "\nCartes chantiers disponibles :\n" + ANSI_RESET);
             for (CarteChantier carteBatiments : carteBatSurTable) {
-                System.out.println(" - " + ((CarteBatiments) carteBatiments).toString());
+                System.out.println(" - " + carteBatiments.toString());
             }
             System.out.println("\n"); // Juste pour un retour à la ligne
         }
