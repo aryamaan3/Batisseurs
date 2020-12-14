@@ -19,6 +19,17 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     protected int ecu;
     protected int points;
 
+    /**
+     * Constructeur pour la classe CarteBâtiments, on crée les cartes en y associant leurs caractéristiques
+     * @param id le numéro de la carte
+     * @param nom le nom de la carte
+     * @param pierre le nombre de pierre que la carte bâtiment a besoin pour sa construction
+     * @param bois le nombre de bois que la carte bâtiment a besoin pour sa construction
+     * @param savoir le nombre de savoir que la carte bâtiment a besoin pour sa construction
+     * @param tuile le nombre de tuile que la carte bâtiment a besoin pour sa construction
+     * @param ecu le nombre d'écus que le bâtiment rapporte une fois fini
+     * @param points le nombre de points que le bâtiment rapporte une fois fini
+     */
     public CarteBatiments(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points) {
         super(id, nom, pierre, bois, savoir, tuile);
         this.ecu = ecu;
@@ -27,15 +38,34 @@ public class CarteBatiments extends Cartes implements CarteChantier{
 
     }
 
+    /**
+     * Méthode retournant le nombre d'écus que le bâtiment rapporte au joueur une fois fini
+     * @return le nombre d'écus que le bâtiment rapporte
+     */
     public int getEcu() {
         return ecu;
     }
+
+    /**
+     * Méthode retournant le nombre de points que le bâtiment rapporte au joueur une fois fini
+     * @return le nombre de points que le bâtiment rapporte
+     */
     public int getPoints() {
         return points;
     }
+
+    /**
+     * Méthode permettant de choisir le nombre d'écus qu'un bâtiment peut rapporter une fois fini
+     * @param ecu le nombre d'écus désiré
+     */
     public void setEcu(int ecu) {
         this.ecu = ecu;
     }
+
+    /**
+     * Méthode permettant de choisir le nombre de points qu'un bâtiment peut rapporter une fois fini
+     * @param points le nombre de points désiré
+     */
     public void setPoints(int points){
         this.points = points;
     }
@@ -43,24 +73,39 @@ public class CarteBatiments extends Cartes implements CarteChantier{
     /**
      * Permet de vérifier l'état d'un chantier SANS recalculer les sommes comme
      * dans isBuilt()
-     * @return
+     * @return true si le bâtiment a été construit, false sinon
      */
     public boolean isContruit(){
         return isConstruit;
     }
+
+    /**
+     * Méthode permettant de choisir si le bâtiment est construit ou non
+     * @param bool true si le bâtiment est construit, false sinon
+     */
     public void setConstruit(boolean bool){
         this.isConstruit = bool;
     }
+
+    /**
+     * Méthode retournant les ouvriers travaillant sur le bâtiment
+     * @return une ArrayList contenant les ouvriers sur le bâtiment
+     */
     public ArrayList<CarteOuvriers> getOuvriers(){
         return ouvriers;
     }
+
+    /**
+     * Méthode retournant la somme des ressources que les ouvriers ont apporté sur le bâtiment
+     * @return la somme des ressources que les ouvriers ont apporté
+     */
     public int getSumRessources(){ // on additionne toutes les ressources pour donner une valeur globale
         return getBois() + getPierre() + getSavoir() + getTuile();
     }
 
     /**
-     *  Méthode qui attribue un ouvrier à un batiment
-     * @param carte la carte ouvrier attribué au batiment
+     * Méthode qui attribue un ouvrier à un batiment
+     * @param carte la carte ouvrier attribuée au batiment
      */
 
     public void attribuerOuvrier(CarteOuvriers carte){
@@ -113,7 +158,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
         return sumSavoir;
     }
     /**
-     *  Méthode qui additionne la tuile des ouvriers assignés au batiment
+     * Méthode qui additionne la tuile des ouvriers assignés au batiment
      * @return la somme de tuile que les ouvriers apportent sur le batiment
      */
     public int getSumTuileOuv(){
@@ -124,7 +169,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
         return sumTuile;
     }
     /**
-     *  Méthode pour organiser l'affichage d'une carte batiment
+     * Méthode pour organiser l'affichage d'une carte batiment
      * @return l'affichage de la carte batiment avec le joueur associé et les ressources que ses ouvriers apportent
      */
     public String toString(Joueur joueur){

@@ -11,6 +11,9 @@ public class DeckOuvriers {
         // l'avant dernier indice indique si l'ouvrier est assigné ou pas à un batiment => -1 pas assigné,
         // sinon l'id du batiment auquel il est assigné
 
+        /**
+         * Constructeur de la classe DeckOuvriers, on crée le deck ouvrier en ajoutant toutes les cartes du jeu
+         */
         public DeckOuvriers() {
                 deckMoyenAge.add(new CarteOuvriers(0, "maitre", 5, 0, 0, 2, 3));
                 deckMoyenAge.add(new CarteOuvriers(1, "maitre", 5, 2, 0, 0, 3));
@@ -60,6 +63,7 @@ public class DeckOuvriers {
 
 
         /**
+         * Méthode retournant le deck ouvrier
          * @return Le deck ouvrier
          */
         public ArrayList<CarteOuvriers> getDeck() {

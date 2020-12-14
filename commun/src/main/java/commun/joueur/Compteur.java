@@ -7,6 +7,9 @@ package commun.joueur;
 public class Compteur {
     private int nb;
 
+    /**
+     * Constructeur de la classe Compteur, initialise le compteur d'actions à 3
+     */
     public Compteur(){
         this.nb = 3;
     }
@@ -20,6 +23,7 @@ public class Compteur {
     }
 
     /**
+     * Méthode retournant le nombre d'actions restantes
      * @return le nombre d'actions restantes
      */
     public int getNombreAction(){

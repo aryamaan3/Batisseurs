@@ -14,6 +14,21 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
     // Ressources que la machine apportera à un chantier lorsqu'elle sera utilisée comme un ouvrier
     protected int apportPierre, apportBois, apportSavoir, apportTuile;
 
+    /**
+     * Constructeur pour la classe CarteMachine, on crée les cartes en y associant leurs caractéristiques
+     * @param id le numéro de la carte
+     * @param nom le nom de la carte
+     * @param pierre le nombre de pierre que la carte bâtiment a besoin pour sa construction
+     * @param bois le nombre de bois que la carte bâtiment a besoin pour sa construction
+     * @param savoir le nombre de savoir que la carte bâtiment a besoin pour sa construction
+     * @param tuile le nombre de tuile que la carte bâtiment a besoin pour sa construction
+     * @param ecu le nombre d'écus que le bâtiment rapporte une fois fini
+     * @param points le nombre de points que le bâtiment rapporte une fois fini
+     * @param apportPierre le nombre de pierre que le bâtiment peut apporter une fois transformé en machine
+     * @param apportBois le nombre de bois que le bâtiment peut apporter une fois transformé en machine
+     * @param apportSavoir le nombre de savoir que le bâtiment peut apporter une fois transformé en machine
+     * @param apportTuile le nombre de tuile que le bâtiment peut apporter une fois transformé en machine
+     */
     public CarteMachine(int id, String nom, int pierre, int bois, int savoir, int tuile, int ecu, int points, int apportPierre, int apportBois, int apportSavoir, int apportTuile) {
         super(id, nom, pierre, bois, savoir, tuile, ecu, points);
         this.apportBois = apportBois;
@@ -25,7 +40,7 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
     }
 
     /**
-     *
+     * Méthode retournant le nombre de bois que la machine va apporter une fois finie
      * @return apportBois
      */
     public int getApportBois() {
@@ -33,7 +48,7 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
     }
 
     /**
-     *
+     * Méthode retournant le nombre de pierre que la machine va apporter une fois finie
      * @return apportPierre
      */
     public int getApportPierre(){
@@ -41,7 +56,7 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
     }
 
     /**
-     *
+     * Méthode retournant le nombre de savoir que la machine va apporter une fois finie
      * @return apportSavoir
      */
     public int getApportSavoir() {
@@ -49,7 +64,7 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
     }
 
     /**
-     *
+     * Méthode retournant le nombre de tuile que la machine va apporter une fois finie
      * @return apportTuile
      */
     public int getApportTuile() {
@@ -68,7 +83,7 @@ public class CarteMachine extends CarteBatiments implements CarteChantier{
                 apportPierre, apportBois, apportSavoir, apportTuile);
     }
     /**
-     *  Méthode pour organiser l'affichage d'une carte batiment
+     * Méthode pour organiser l'affichage d'une carte batiment
      * @return l'affichage de la carte batiment avec le joueur associé et les ressources que ses ouvriers apportent
      */
     public String toString(Joueur joueur){

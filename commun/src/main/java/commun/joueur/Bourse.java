@@ -22,6 +22,7 @@ public class Bourse {
     }
 
     /**
+     * Méthode retournant le nombre d'écus que le joueur possède
      * @return le nombre d'écus que le joueur possède.
      */
     public int getEcus() {

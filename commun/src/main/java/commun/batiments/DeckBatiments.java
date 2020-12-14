@@ -10,6 +10,9 @@ public class DeckBatiments {
 
     private final ArrayList<CarteChantier> deckMoyenAge = new ArrayList<>();
 
+    /**
+     * Constructeur de la classe DeckBâtiments, on crée les cartes en y associant leurs caractéristiques
+     */
     public DeckBatiments(){
         deckMoyenAge.add(new CarteBatiments(0,"la cabane", 0, 1, 1, 0, 8, 0));
         deckMoyenAge.add(new CarteBatiments(1,"la tonnelle", 1, 0, 0, 1, 8, 0));
@@ -58,7 +61,7 @@ public class DeckBatiments {
 
 
     /**
-     *
+     * Méthode retournant le deck des cartes bâtiments
      * @return Le deck batiment
      */
     public ArrayList<CarteChantier> getDeck(){

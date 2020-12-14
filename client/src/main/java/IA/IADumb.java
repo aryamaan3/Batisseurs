@@ -12,12 +12,20 @@ import java.util.ArrayList;
 import static commun.display.Couleur.ANSI_RED;
 import static commun.display.Couleur.ANSI_RESET;
 
+/**
+ * Classe contenant les méthodes qui permettent d'avoir une IA simplette
+ */
 public class IADumb implements IA {
 
     private Joueur joueur;
     private Compteur compteur;
     private final Display display = new Display(false);
 
+    /**
+     * Constructeur pour l'IA simplette
+     * @param joueur le joueur auquel on veut associer l'IA simplette
+     * @param compteur le compteur d'actions du joueur
+     */
     public IADumb(Joueur joueur, Compteur compteur){
         this.joueur = joueur;
         this.compteur = compteur;

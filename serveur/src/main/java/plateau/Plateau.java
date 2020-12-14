@@ -18,39 +18,74 @@ public class Plateau {
     private ArrayList<CarteChantier> cartesBatSurTable = new ArrayList<>();
     private ArrayList<CarteOuvriers> cartesOuvSurTable = new ArrayList<>();
 
+    /**
+     * Constructeur de la classe Plateau
+     */
     public Plateau(){
         Collections.shuffle(deckBatiment);
         Collections.shuffle(deckOuvrier);
     }
 
+    /**
+     * Méthode retournant le deck ouvrier
+     * @return une ArrayList contenant toutes les cartes ouvriers
+     */
     public ArrayList<CarteOuvriers> getDeckOuvrier() {
         return deckOuvrier;
     }
 
+    /**
+     * Méthode retournant les cartes bâtiments sur le plateau
+     * @return une ArrayList contenant les cartes bâtiments sur le plateau
+     */
     public ArrayList<CarteChantier> getCartesBatSurTable() {
         return cartesBatSurTable;
     }
 
+    /**
+     * Méthode retournant le deck bâtiment
+     * @return une ArrayList contenant toutes les cartes bâtiments
+     */
     public ArrayList<CarteChantier> getDeckBatiment() {
         return deckBatiment;
     }
 
+    /**
+     * Méthode retournant les cartes ouvriers sur le plateau
+     * @return une ArrayList contenant les cartes ouvriers sur le plateau
+     */
     public ArrayList<CarteOuvriers> getCartesOuvSurTable() {
         return cartesOuvSurTable;
     }
 
+    /**
+     * Méthode setter pour créer un deck ouvrier
+     * @param deckOuvrier une ArrayList contenant des cartes ouvriers
+     */
     public void setDeckOuvrier(ArrayList<CarteOuvriers> deckOuvrier) {
         this.deckOuvrier = deckOuvrier;
     }
 
+    /**
+     * Méthode setter pour définir les cartes bâtiments présentes sur le plateau
+     * @param cartesBatSurTable une ArrayList contenant les cartes bâtiments que l'on veut mettre sur le plateau
+     */
     public void setCartesBatSurTable(ArrayList<CarteChantier> cartesBatSurTable) {
         this.cartesBatSurTable = cartesBatSurTable;
     }
 
+    /**
+     * Méthode setter pour définir les cartes ouvriers présentes sur le plateau
+     * @param cartesOuvSurTable une ArrayList contenant les cartes ouvriers que l'on veut mettre sur le plateau
+     */
     public void setCartesOuvSurTable(ArrayList<CarteOuvriers> cartesOuvSurTable) {
         this.cartesOuvSurTable = cartesOuvSurTable;
     }
 
+    /**
+     * Méthode setter pour créer un deck bâtiment
+     * @param deckBatiment une ArrayList contenant des cartes bâtiments
+     */
     public void setDeckBatiment(ArrayList<CarteChantier> deckBatiment) {
         this.deckBatiment = deckBatiment;
     }

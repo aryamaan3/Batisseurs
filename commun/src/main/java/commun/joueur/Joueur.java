@@ -18,6 +18,10 @@ public class Joueur implements Comparable{
     private Bourse bourse;
 
 
+    /**
+     * Constructeur de la classe Joueur, on crée un joueur avec son numéro et on lui assigne ses points, sa bourse et ses statistiques
+     * @param id le numéro du joueur
+     */
     public Joueur(int id){
         this.id=id;
         this.points=0;
@@ -27,11 +31,10 @@ public class Joueur implements Comparable{
     }
 
     /**
+     * Méthode retournant la bourse du joueur
      * @return la bourse du joueur
      */
     public Bourse getBourse() { return bourse;}
-
-
 
     /**
      * Méthode permettant l'assignation de la bourse à un joueur
@@ -40,6 +43,7 @@ public class Joueur implements Comparable{
     public void setBourse(Bourse bourse){ this.bourse = bourse;}
 
     /**
+     * Méthode retournant le numéro du joueur
      * @return le numéro du joueur
      */
     public int getId(){ return id;}
@@ -51,6 +55,7 @@ public class Joueur implements Comparable{
     public void setId(int id){ this.id=id;}
 
     /**
+     * Méthode retournant le nombre de points du joueur
      * @return le nombre de points du joueur
      */
     public int getPoints(){ return points;}
@@ -129,6 +134,11 @@ public class Joueur implements Comparable{
             }
         }
     }
+
+    /**
+     * Méthode permettant de savoir les bâtiments construits par le joueur
+     * @return ArrayList contenant les bâtiments construits par le joueur
+     */
     public ArrayList<CarteChantier> getBuiltBat(){
         return BuiltBat;
     }

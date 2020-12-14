@@ -214,12 +214,21 @@ public class MoteurDeJeu {
         return isBuild;
     }
 
+    /**
+     * Méthode permettant de choisir ou non d'afficher les actions des IA
+     * @param display true si on veut afficher les actions, false sinon
+     * @param iaList ArrayList contenant les différents joueurs
+     */
     public void setDisplayIA(boolean display, ArrayList<IA> iaList){
         for (IA ia : iaList) { //itere sur le size de iaList
             ia.setDisplay(display);
         }
     }
 
+    /**
+     * Cette méthode permet de lancer le jeu avec des arguments tels que le nombre de partie ou ou l'affichage ou non des actions des joueurs
+     * @param args les arguments que prend la méthode
+     */
     public static void main(String[] args){
         int nbPartie =Integer.parseInt(args[0]);
         //int nbPartie = 1; //à enlever pour lancer avec maven

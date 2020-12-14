@@ -9,6 +9,16 @@ public class CarteOuvriers extends Cartes {
     private int cout;
     private boolean isBusy;
 
+    /**
+     * Constructeur pour les cartes ouvriers, on crée la carte en y associant ses caractéristiques
+     * @param id le numéro de la carte
+     * @param nom le nom de la carte
+     * @param cout le coût de l'ouvrier
+     * @param pierre le nombre de pierre que l'ouvrier apporte
+     * @param bois le nombre de bois que l'ouvrier apporte
+     * @param savoir le nombre de savoir que l'ouvrier apporte
+     * @param tuile le nombre de tuile que l'ouvrier apporte
+     */
     public CarteOuvriers(int id, String nom, int cout, int pierre, int bois, int savoir, int tuile){
         super(id, nom , pierre, bois, savoir, tuile);
         this.cout = cout;
@@ -17,6 +27,7 @@ public class CarteOuvriers extends Cartes {
     }
 
     /**
+     * Méthode retournant le coût de l'ouvrier
      * @return le coût de l'ouvrier
      */
     public int getCout() {
@@ -32,6 +43,7 @@ public class CarteOuvriers extends Cartes {
     }
 
     /**
+     * Méthode permettant de savoir si l'ouvrier est occupé
      * @return true si l'ouvrier est assigné à un batiment, false sinon
      */
     public boolean isBusy() { return isBusy;

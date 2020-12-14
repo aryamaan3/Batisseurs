@@ -21,6 +21,11 @@ public class IASmart implements IA {
     private Compteur compteur;
     private final Display display = new Display(false);
 
+    /**
+     * Constructeur pour l'IA intelligente
+     * @param joueur le joueur auquel on veut associer l'IA intelligente
+     * @param compteur le compteur d'actions du joueur
+     */
     public IASmart(Joueur joueur, Compteur compteur){
         this.joueur = joueur;
         this.compteur = compteur;
@@ -48,7 +53,7 @@ public class IASmart implements IA {
 
 
     /**
-     *  Méthode qui permet à l'IA de choisir elle même un batiment
+     * Méthode qui permet à l'IA de choisir un batiment
      * @param nbChoix le nombre de batiments que l'IA doit piocher
      * @param carteBatSurTable les cartes dans lesquelles l'IA doit piocher
      */
@@ -72,7 +77,7 @@ public class IASmart implements IA {
 
     }
     /**
-     *  Méthode qui permet à l'IA de choisir elle même un ouvrier
+     * Méthode qui permet à l'IA de choisir un ouvrier
      * @param nbChoix le nombre d'ouvriers que l'IA doit piocher
      * @param cartesOuvSurTable les cartes dans lesquelles l'IA doit piocher
      */
@@ -157,7 +162,7 @@ public class IASmart implements IA {
     }
 
     /**
-     *  Méthode qui appel une suite de méthodes de l'IA pour qu'elle soit plus "intelligente"
+     * Méthode qui appelle une suite de méthodes de l'IA pour qu'elle soit plus "intelligente"
      * @param carteOuvSurTable les cartes ouvriers disponibles sur le plateau
      * @param carteBatSurTable les cartes batiments disponibles sur le plateau
      */

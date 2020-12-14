@@ -31,7 +31,7 @@ public class Cartes {
 
 
     /**
-     *
+     * Méthode retournant le nombre de bois associé à la carte
      * @return La valeur en bois de la carte
      */
     public int getBois() {
@@ -39,13 +39,13 @@ public class Cartes {
     }
 
     /**
-     *
+     * Méthode retournant le nombre de pierre associé à la carte
      * @return La valeur en pierre de la carte
      */
     public int getPierre() { return pierre; }
 
     /**
-     *
+     * Méthode retournant le nombre de savoir associé à la carte
      * @return La valeur en savoir de la carte
      */
     public int getSavoir() {
@@ -53,7 +53,7 @@ public class Cartes {
     }
 
     /**
-     *
+     * Méthode retournant le nombre de tuile associé à la carte
      * @return La valeur en tuile de la carte
      */
     public int getTuile() {
@@ -61,25 +61,21 @@ public class Cartes {
     }
 
     /**
-     *
-     * @return L'id d'une carte
+     * Méthode retournant le numéro de la carte
+     * @return Le numéro d'une carte
      */
     public int getIdCarte(){
         return id;
     }
 
     /**
-     *
+     * Méthode retournant le nom de la carte
      * @return Le nom d'une carte
      */
     public String getNom(){
         return nom;
     }
 
-    /**
-     *
-     * @return Le nom de la carte
-     */
     @Override
     public String toString() {      //méthode pour visualiser
         return nom

@@ -17,30 +17,54 @@ import static commun.display.Couleur.*;
 public class Display {
     private static boolean afficher;
 
-
+    /**
+     * Constructeur pour la classe Display
+     * @param afficher true si on souhaite afficher les actions, false sinon
+     */
     public Display(boolean afficher){
         Display.afficher = afficher;
     }
 
-
+    /**
+     * Méthode permettant de savoir si on a choisi d'afficher les actions des joueurs
+     * @return true si on a choisi d'afficher les actions, false sinon
+     */
     public boolean isAfficher(){
         return afficher;
     }
+
+    /**
+     * Méthode permettant de choisir l'affichage ou non des actions
+     * @param afficher true si on veut afficher les actions, false sinon
+     */
     public void setAfficher(boolean afficher){
         Display.afficher = afficher;
     }
 
 
-
+    /**
+     * Méthode permettant l'affichage de diverses informations sur le déroulement de la partie
+     * @param s la chaîne de caractères à afficher
+     */
     public void displayString(String s){
         if(afficher){System.out.println(s);}
     }
 
+    /**
+     * Méthode permettant d'afficher le bâtiment choisi par le joueur
+     * @param idJoueur le numéro du joueur
+     * @param batiment la carte bâtiment que le joueur choisi
+     */
     public void displayBatimentChoisi(int idJoueur, CarteChantier batiment){
         if(afficher){
             System.out.println("Le "+ANSI_CYAN+"joueur "+ idJoueur+ANSI_RESET+" a pioché la carte bâtiment "+batiment.getNom());
         }
     }
+
+    /**
+     * Méthode permettant d'afficher l'ouvrier choisi par le joueur
+     * @param ouvrier la carte ouvrier que le joueur choisi
+     */
     public void displayOuvrierChoisi(CarteOuvriers ouvrier){
         if(afficher){
             System.out.println("l'ouvrier "+ouvrier.getNom()+" ("+ouvrier.getIdCarte()+")");
