@@ -12,6 +12,7 @@ import commun.ouvriers.DeckOuvriers;
 import commun.display.Display;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
+import plateau.Plateau;
 
 import java.util.*;
 
@@ -30,9 +31,7 @@ public class MoteurDeJeu {
      */
 
     public Joueur partie(ArrayList<Joueur> joueurs, boolean isDisplay){
-
-        ArrayList<CarteChantier> deckBat = new DeckBatiments().getDeck();
-        ArrayList<CarteOuvriers> deckOuv = new DeckOuvriers().getDeck();
+        Plateau plateau = new Plateau();
         Display display = new Display(isDisplay);
         int compteTour =1;
         int ptsGagnant = -1;
@@ -63,29 +62,28 @@ public class MoteurDeJeu {
             display.displayString(ANSI_CYAN+ (i+1)+" : " + "joueur " + ia.get(i).getJoueur().getId()+ANSI_RESET);
         }
 
-        Collections.shuffle(deckBat);
-        Collections.shuffle(deckOuv);
+
 
         // On attribut automatiquement un apprenti par joueur
         // 6 apprentis dans le decks
         ArrayList<Integer> indiceApprentis = new ArrayList<>();
         // On boucle sur les indices du deck (qui a été shuffle)
-        for(int i = 0; i < deckOuv.size() ; i++){
-            if(deckOuv.get(i).getNom().equals("apprenti")){
+        for(int i = 0; i < plateau.getDeckOuvrier().size() ; i++){
+            if(plateau.getDeckOuvrier().get(i).getNom().equals("apprenti")){
                 indiceApprentis.add(i);
             }
         }
         for(int i = 0; i < nbJoueurs ; i ++){
             // On prend à chaque fois le premier apprenti de la lite qui a été shuffle
             // Puis le deuxième joueur prendra le deuxième ...
-            ia.get(i).getJoueur().ajouteOuvrier(deckOuv.get( indiceApprentis.get(i)) );
+            ia.get(i).getJoueur().ajouteOuvrier(plateau.getDeckOuvrier().get( indiceApprentis.get(i)) );
         }
         // On remove tous les apprentis qu'on a selectionné (les 4 premiers)
-        deckOuv.remove(indiceApprentis.subList( 0, 4) );
+        plateau.getDeckOuvrier().remove(indiceApprentis.subList( 0, 4) );
+        plateau.carteBatimentsSurTable();
+        plateau.carteOuvriersSurTable();
 
 
-        ArrayList<CarteOuvriers> carteOuvSurTable = carteOuvriersSurTable(deckOuv);
-        ArrayList<CarteChantier> carteBatSurTable = carteBatimentsSurTable(deckBat);
         display.displayString("Debut du jeu...");
 
         //whileTour:
@@ -93,13 +91,9 @@ public class MoteurDeJeu {
             display.displayString("\n######################### "+ANSI_PURPLE + "Tour n°" + compteTour + ANSI_RESET + " #########################");
             for(int i=0;i<nbJoueurs;i++){
                 display.displayString(ANSI_CYAN+"------------------ Joueur n°" + ia.get(i).getJoueur().getId() + "------------------\n"+ANSI_RESET);
-                display.displayCarteDispo(carteOuvSurTable, carteBatSurTable);
+                display.displayCarteDispo(plateau.getCartesOuvSurTable(),plateau.getCartesBatSurTable());
                 display.displayActions(ia.get(i).getCompteur());
-                ia.get(i).actionIA(carteOuvSurTable,carteBatSurTable); // effectue les actions et l'affichage
-
-
-
-
+                ia.get(i).actionIA(plateau.getCartesOuvSurTable(),plateau.getCartesBatSurTable()); // effectue les actions et l'affichage
 
                 display.displayChantierDuJoueur(ia.get(i).getJoueur());
                 display.displayOuvriersDuJoueur(ia.get(i).getJoueur());
@@ -113,14 +107,14 @@ public class MoteurDeJeu {
                         }
                     }
                 }
-                //ia.get(i).getJoueur().getBourse().addEcus(2);
+
                 ia.get(i).getJoueur().trierBuiltBat();
                 display.displayChantierFini(ia.get(i).getJoueur());
                 ia.get(i).getCompteur().reset();
 
                 display.displayEcus(ia.get(i).getJoueur().getId(),ia.get(i).getJoueur().getBourse().getEcus());
-                fillCartesBatiments(deckBat,carteBatSurTable);
-                fillCartesOuvriers(deckOuv,carteOuvSurTable);
+                plateau.fillCartesBatiments();
+                plateau.fillCartesOuvriers();
             }
             display.displayString("Fin du tour : "+compteTour+"\n");//On affiche le numéro du tour à la fin de ce dernier
             compteTour++;//On incrémente compteTour
@@ -141,7 +135,7 @@ public class MoteurDeJeu {
                     joueur.conversionEcuPoint();
                     int pointsgagnes = ancienneBourse[joueur.getId()-1] - joueur.getBourse().getEcus();
                     display.displayConversionEcuPoint(joueur.getId(),pointsgagnes);
-                    //display.displayString("Le joueur " + joueur.getId() + " utilise " + ANSI_YELLOW+(pointsgagnes) + " écus"+ ANSI_RESET +" pour gagner " + (pointsgagnes / 10) + " points");
+
                 }
                 display.displayPoint(joueur);
                 display.displayBourse(joueur);
@@ -188,74 +182,6 @@ public class MoteurDeJeu {
         }
     }
 
-    /**
-     *  Méthode qui sélectionne les 5 premières cartes du deck ouvrier pour les poser sur le plateau
-     * @param deck le deck ouvrier principal
-     * @return une ArrayList contenant 5 cartes ouvrier
-     */
-    public ArrayList<CarteOuvriers> carteOuvriersSurTable(ArrayList<CarteOuvriers> deck){
-        ArrayList<CarteOuvriers> cartes = new ArrayList<>();
-        for(int i=0;i<5;i++){
-            cartes.add(deck.get(i));
-            deck.remove(deck.get(i));
-
-        }
-        return cartes;
-    }
-    /**
-     *  Méthode qui sélectionne les 5 premières cartes du deck batiment pour les poser sur le plateau
-     * @param deck le deck batiment principal
-     * @return une ArrayList contenant 5 cartes batiment
-     */
-    public ArrayList<CarteChantier> carteBatimentsSurTable(ArrayList<CarteChantier> deck) {
-        ArrayList<CarteChantier> cartes = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            cartes.add(deck.get(i));
-            deck.remove(deck.get(i));
-        }
-        return cartes;
-    }
-    /**
-     *  Méthode qui vérifie le nombre de cartes ouvrier disponibles sur le plateau, et qui pioche le nombre de cartes nécessaire
-     *  dans le deck principal ouvrier pour toujours avoir 5 cartes ouvrier sur le plateau
-     * @param deck le deck ouvrier principal
-     * @param carteSurTable les cartes ouvrier sur le plateau
-     */
-    public void fillCartesOuvriers(ArrayList<CarteOuvriers> deck,ArrayList<CarteOuvriers> carteSurTable){
-        int nbCartes;
-        if(carteSurTable.size()<5){
-            nbCartes = 5 - carteSurTable.size();
-            if (deck.size() > nbCartes + 1) {
-                for (int i = 0; i < nbCartes; i++) {
-                    carteSurTable.add(deck.get(i));
-                    deck.remove(deck.get(i));
-                }
-            }
-            else {
-                for (int i = 0; i < deck.size(); i++){
-                    carteSurTable.add(deck.get(i));
-                    deck.remove(deck.get(i));
-                }
-            }
-
-        }
-    }
-    /**
-     *  Méthode qui vérifie le nombre de cartes batiment disponibles sur le plateau, et qui pioche le nombre de cartes nécessaire
-     *  dans le deck principal batiment pour toujours avoir 5 cartes ouvrier sur le plateau
-     * @param deck le deck batiment principal
-     * @param carteSurTable les cartes batiment sur le plateau
-     */
-    public void fillCartesBatiments(ArrayList<CarteChantier> deck, ArrayList<CarteChantier> carteSurTable){
-        int nbCartes;
-        if(carteSurTable.size()<5){
-            nbCartes = 5 - carteSurTable.size();
-            for(int i=0;i<nbCartes;i++){
-                carteSurTable.add(deck.get(i));
-                deck.remove(deck.get(i));
-            }
-        }
-    }
 
     /**
      *  Méthode qui parcourt les cartes batiments dans la main de l'IA pour vérifier si l'une de ses cartes est construite
@@ -296,8 +222,8 @@ public class MoteurDeJeu {
     }
 
     public static void main(String[] args){
-        int nbPartie =Integer.parseInt(args[0]);
-        //int nbPartie = 1; //à enlever pour lancer avec maven
+        //int nbPartie =Integer.parseInt(args[0]);
+        int nbPartie = 1; //à enlever pour lancer avec maven
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -312,7 +238,7 @@ public class MoteurDeJeu {
             joueurs.add(j3);
             joueurs.add(j4);
             //joueursGagnants.add(m1.partie(joueurs, true)); // à enlever pour lancer avec maven
-            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            joueursGagnants.add(m1.partie(joueurs, true));
             //true pour mode display
             //false pour mode sans display
         }
