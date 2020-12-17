@@ -110,4 +110,5 @@ public class TestCarteBatiments {
         carteBat.attribuerOuvrier(carteOuv3);
         assertTrue(carteBat.isBuilt());
     }
+
 }

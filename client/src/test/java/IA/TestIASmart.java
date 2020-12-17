@@ -9,6 +9,7 @@ import commun.joueur.Joueur;
 import commun.ouvriers.CarteOuvriers;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestIASmart {
     Joueur j1 = new Joueur(0);
@@ -211,4 +212,40 @@ public class TestIASmart {
         // car le joueur achete 3 actions ce qui lui rapport 6 ecus
     }
 
+    @Test
+    public void libererOuvrier(){
+        ArrayList<CarteChantier> cartesBat = new ArrayList<>();
+        cartesBat.add(new CarteBatiments(0,"chantier1",2,5,4,4,3,9));
+        ArrayList<CarteOuvriers> cartesOuv = new ArrayList<>();
+        cartesOuv.add(new CarteOuvriers(0,"ouv1",0,1,3,0,0));
+        cartesOuv.add(new CarteOuvriers(1,"ouv2",0,1,2,3,0));
+        cartesOuv.add(new CarteOuvriers(2,"ouv3",0,0,3,6,5));
+        cartesOuv.add(new CarteOuvriers(3,"ouv4",0,2,5,0,5));
+        Joueur j = new Joueur(0);
+        Compteur c = new Compteur();
+        IASmart ia = new IASmart(j, c);
+
+        ia.choisitBatiment(1, cartesBat);
+        ia.choisitOuvrier(4, cartesOuv);
+
+        int id = ia.idealOuvToChantier(j.getMainOuv());
+
+        assertEquals(1, j.getMainBat().size());
+        assertEquals(3, j.getMainOuv().get(id).getIdCarte());
+        assertEquals(4, j.getMainOuv().size());
+        ia.poserOuvrierSurChantier();
+        assertEquals(3, j.getMainOuv().size());
+        id = ia.idealOuvToChantier(j.getMainOuv());
+        assertEquals(2, j.getMainOuv().get(id).getIdCarte());
+        ia.poserOuvrierSurChantier();
+        assertEquals(2, j.getMainOuv().size());
+        assertTrue(j.getMainBat().get(0).isBuilt());
+        j.trierBuiltBat();
+        assertEquals(0, j.getMainBat().size());
+        assertEquals(1, j.getMainOuv().get(0).getIdCarte());
+        assertEquals(0, j.getMainOuv().get(1).getIdCarte());
+        assertEquals(3, j.getMainOuv().get(2).getIdCarte());
+        assertEquals(4, j.getMainOuv().size());
+
+    }
 }

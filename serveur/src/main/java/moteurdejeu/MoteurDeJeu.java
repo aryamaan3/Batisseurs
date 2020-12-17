@@ -8,6 +8,7 @@ import commun.ouvriers.CarteOuvriers;
 import commun.display.Display;
 import commun.joueur.Compteur;
 import commun.joueur.Joueur;
+import commun.ouvriers.DeckOuvriers;
 import plateau.Plateau;
 
 import java.util.*;
@@ -56,7 +57,6 @@ public class MoteurDeJeu {
         for(int i = 0; i < nbJoueurs ; i ++){
             display.displayString(ANSI_CYAN+ (i+1)+" : " + "joueur " + ia.get(i).getJoueur().getId()+ANSI_RESET);
         }
-
 
 
         // On attribut automatiquement un apprenti par joueur
@@ -161,15 +161,7 @@ public class MoteurDeJeu {
                 display.displayClassement(joueurs);
                 return joueurs.get((joueurGagnant - 1));
             }
-            if (compteTour == 28){
-                for (Joueur joueur : joueurs){
-                    joueur.conversionEcuPoint();
-                }
-            }
-            if (compteTour == 29){
-                Collections.sort(joueurs);
-                joueurs.get(0).setPoints(17);
-            }
+
             if (compteTour > 30){
                 display.displayString("not done");
                 return null;} //Pour eviter des millions de tours ... a retirer à l'avenir
@@ -218,6 +210,7 @@ public class MoteurDeJeu {
             ia.setDisplay(display);
         }
     }
+
 
     /**
      * Cette méthode permet de lancer le jeu avec des arguments tels que le nombre de partie ou ou l'affichage ou non des actions des joueurs

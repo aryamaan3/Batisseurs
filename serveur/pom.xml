@@ -47,19 +47,6 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>stats500</id>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
-                            <arguments>
-                                <argument>500</argument>
-                                <argument>false</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>stats</id>
                         <goals>
                             <goal>java</goal>
@@ -67,7 +54,7 @@
                         <configuration>
                             <mainClass>moteurdejeu.MoteurDeJeu</mainClass>
                             <arguments>
-                                <argument>1</argument>
+                                <argument>500</argument>
                                 <argument>false</argument>
                             </arguments>
                         </configuration>

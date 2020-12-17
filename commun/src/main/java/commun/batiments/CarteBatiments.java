@@ -117,12 +117,7 @@ public class CarteBatiments extends Cartes implements CarteChantier{
      *  Méthode qui libère les ouvriers assignés à un chantier
      */
     public void libererOuvrier(){
-        if(ouvriers.size()!=0){
-            for(int i=0;i< ouvriers.size()+1;i++){
-                ouvriers.get(i).setAssign(false);
-                ouvriers.remove(i);
-            }
-        }
+        ouvriers.remove(0);
     }
     /**
      *  Méthode qui additionne le bois des ouvriers assignés au batiment

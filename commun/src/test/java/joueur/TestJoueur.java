@@ -15,6 +15,8 @@ public class TestJoueur {
     Joueur joueur = new Joueur(0);
     CarteBatiments carteBat = new CarteBatiments(0,"batiment1",2,3,5,4,6,8);
     CarteOuvriers carteOuv = new CarteOuvriers(0,"ouvrier",1,3,6,5,8);
+    CarteOuvriers carteOuv1 = new CarteOuvriers(1,"ouvrier2",1,3,6,5,8);
+    CarteOuvriers carteOuv2 = new CarteOuvriers(2,"ouvrier3",1,3,6,5,8);
 
     @Test
     public void testAjouteBatiment(){
@@ -45,7 +47,13 @@ public class TestJoueur {
     public void testTrierBuiltBat(){
         carteBat.setConstruit(true);
         joueur.ajouteBatiment(carteBat);
+        joueur.attribuerOuvrierAChantier(carteOuv, carteBat);
+        joueur.attribuerOuvrierAChantier(carteOuv1, carteBat);
+        joueur.attribuerOuvrierAChantier(carteOuv2, carteBat);
+        assertEquals(3, carteBat.getOuvriers().size());
+
         joueur.trierBuiltBat();
+        assertEquals(0, carteBat.getOuvriers().size());
         assertEquals(1,joueur.getBuiltBat().size());
         assertEquals(carteBat,joueur.getBuiltBat().get(0));
     }

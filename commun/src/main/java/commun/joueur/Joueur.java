@@ -121,10 +121,11 @@ public class Joueur implements Comparable{
     public void trierBuiltBat(){
         for(int j=0;j<MainBat.size();j++){
             if(MainBat.get(j).isBuilt()){
-                for(int i=0;i<MainBat.get(j).getOuvriers().size();i++){
-                    MainBat.get(j).getOuvriers().get(i).setAssign(false);
-                    MainOuv.add(MainBat.get(j).getOuvriers().get(i));
-                    MainBat.get(j).getOuvriers().remove(MainBat.get(j).getOuvriers().get(i));
+                int len = MainBat.get(j).getOuvriers().size();
+                for(int i=0;i<len;i++){
+                    MainBat.get(j).getOuvriers().get(0).setAssign(false);
+                    MainOuv.add(MainBat.get(j).getOuvriers().get(0));
+                    MainBat.get(j).getOuvriers().remove(MainBat.get(j).getOuvriers().get(0));
                 }
                 BuiltBat.add(MainBat.get(j));
                 MainBat.remove(MainBat.get(j));
