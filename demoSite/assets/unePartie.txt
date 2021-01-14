@@ -1,0 +1,2997 @@
+C'est le joueur 4 qui a gagné le totem.
+Ordre de jeu :
+1 : joueur 4
+2 : joueur 2
+3 : joueur 3
+4 : joueur 1
+Debut du jeu...
+
+######################### Tour n°1 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 1)
+ - Ouvrier maitre (bois : 2 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - l'écurie (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - la porcherie (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - un instrument de mesure (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - le château-fort (bois : 3 ; pierre : 5 ; tuile : 3 ; savoir : 5)
+ - la tonnelle (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché la carte bâtiment l'écurie
+Le joueur 4 a pioché la carte bâtiment la porcherie
+=> 2 actions ont été utilisées
+Le joueur 4 a pioché :
+l'ouvrier manœuvre (29)
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : apprenti (id = 41) manœuvre (id = 29)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 10 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier maitre (bois : 2 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 3 ; pierre : 0 ; tuile : 1 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - un instrument de mesure (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - le château-fort (bois : 3 ; pierre : 5 ; tuile : 3 ; savoir : 5)
+ - la tonnelle (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la pont couvert (bois : 1 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment la tonnelle
+=> 1 action a été utilisée
+Le joueur 2 a pioché :
+l'ouvrier manœuvre (33)
+l'ouvrier compagnon (11)
+=> 2 actions ont été utilisées
+
+Le joueur 2 construit ce(s) chantier(s) : la tonnelle (id = 1)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 11)
+
+Carte Batiment la tonnelle, appartient au joueur 2, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 0  (besoin : 1) ; tuile : 0    (besoin : 1) ; savoir : 0  (besoin : 0)
+
+la bourse actuelle du joueur 2 est de 10 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier maitre (bois : 2 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier compagnon (bois : 1 ; pierre : 1 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - un instrument de mesure (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - le château-fort (bois : 3 ; pierre : 5 ; tuile : 3 ; savoir : 5)
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la pont couvert (bois : 1 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 3 a pioché la carte bâtiment un instrument de mesure
+Le joueur 3 a pioché la carte bâtiment le château-fort
+=> 2 actions ont été utilisées
+Le joueur 3 a pioché :
+l'ouvrier maitre (3)
+=> 1 action a été utilisée
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : apprenti (id = 39) maitre (id = 3)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 0  (besoin : 1) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 10 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier compagnon (bois : 1 ; pierre : 1 ; tuile : 1 ; savoir : 1)
+ - Ouvrier compagnon (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la pont couvert (bois : 1 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment la pont couvert
+=> 1 action a été utilisée
+Le joueur 1 a pioché :
+l'ouvrier compagnon (16)
+l'ouvrier compagnon (23)
+=> 2 actions ont été utilisées
+
+Le joueur 1 construit ce(s) chantier(s) : la pont couvert (id = 6)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 16) compagnon (id = 23)
+
+Carte Batiment la pont couvert, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 1) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 0) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 1 est de 10 écu(s)
+
+Fin du tour : 1
+
+Le joueur n°1 a 0 point(s)
+Le joueur 1 possede 10 écu(s)
+Le joueur n°2 a 0 point(s)
+Le joueur 2 possede 10 écu(s)
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 10 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 10 écu(s)
+
+######################### Tour n°2 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier maitre (bois : 0 ; pierre : 3 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier apprenti (41) sur le batiment l'écurie cela lui coûte 2 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : manœuvre (id = 29)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 1  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 0  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier maitre (bois : 0 ; pierre : 3 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché :
+l'ouvrier maitre (2)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (2) sur le batiment la tonnelle cela lui coûte 5 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (11) sur le batiment la tonnelle cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : la tonnelle (id = 1)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33)
+
+Carte Batiment la tonnelle, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 3  (besoin : 1) ; tuile : 3    (besoin : 1) ; savoir : 0  (besoin : 0)
+
+Le joueur 2 a fini le batiment la tonnelle, il gagne donc 0 point(s) et 8 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, 
+
+la bourse actuelle du joueur 2 est de 9 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier apprenti (39) sur le batiment un instrument de mesure cela lui coûte 2 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : maitre (id = 3)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 1  (besoin : 1) ; tuile : 0    (besoin : 2) ; savoir : 1  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 11 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché :
+l'ouvrier compagnon (15)
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (16) sur le batiment la pont couvert cela lui coûte 4 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment la pont couvert cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : la pont couvert (id = 6)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23)
+
+Carte Batiment la pont couvert, appartient au joueur 1, ressources présentes : 
+bois : 4  (besoin : 1) ; pierre : 0  (besoin : 0) ; tuile : 2    (besoin : 0) ; savoir : 2  (besoin : 2)
+
+Le joueur 1 a fini le batiment la pont couvert, il gagne donc 1 point(s) et 6 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, 
+
+la bourse actuelle du joueur 1 est de 8 écu(s)
+
+Fin du tour : 2
+
+Le joueur n°1 a 1 point(s)
+Le joueur 1 possede 8 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, 
+
+Le joueur n°2 a 0 point(s)
+Le joueur 2 possede 9 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 11 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°3 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier manœuvre (29) sur le batiment l'écurie cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 1  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - le lavoir (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 0)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment le lavoir
+=> 1 action a été utilisée
+Le joueur 2 a pioché :
+l'ouvrier manœuvre (30)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment le lavoir cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le lavoir (id = 4)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) maitre (id = 2) compagnon (id = 11)
+
+Carte Batiment le lavoir, appartient au joueur 2, ressources présentes : 
+bois : 0  (besoin : 1) ; pierre : 1  (besoin : 0) ; tuile : 2    (besoin : 2) ; savoir : 0  (besoin : 0)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, 
+
+la bourse actuelle du joueur 2 est de 6 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier maitre (3) sur le batiment un instrument de mesure cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 4  (besoin : 1) ; tuile : 0    (besoin : 2) ; savoir : 1  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 9 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment une scie circulaire
+=> 1 action a été utilisée
+Le joueur 1 a pioché :
+l'ouvrier manœuvre (31)
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier manœuvre (31) sur le batiment une scie circulaire cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : une scie circulaire (id = 41)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) compagnon (id = 15)
+
+Carte Machine une scie circulaire, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 1  (besoin : 1) ; tuile : 2    (besoin : 1) ; savoir : 0  (besoin : 0)
+
+Le joueur 1 a fini le batiment une scie circulaire, il gagne donc 1 point(s) et 0 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+la bourse actuelle du joueur 1 est de 5 écu(s)
+
+Fin du tour : 3
+
+Le joueur n°1 a 2 point(s)
+Le joueur 1 possede 5 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+Le joueur n°2 a 0 point(s)
+Le joueur 2 possede 6 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 9 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°4 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 3 ; tuile : 0 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+ - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - un instrument de mesure (bois : 1 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché :
+l'ouvrier compagnon (8)
+l'ouvrier manœuvre (35)
+=> 2 actions ont été utilisées
+Le joueur 4 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 8) manœuvre (id = 35)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 1  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 12 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+ - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier compagnon (bois : 1 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - un instrument de mesure (bois : 1 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché :
+l'ouvrier compagnon (18)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (18) sur le batiment le lavoir cela lui coûte 4 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (11) sur le batiment le lavoir cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le lavoir (id = 4)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) maitre (id = 2) compagnon (id = 11)
+
+Carte Batiment le lavoir, appartient au joueur 2, ressources présentes : 
+bois : 1  (besoin : 1) ; pierre : 1  (besoin : 0) ; tuile : 4    (besoin : 2) ; savoir : 1  (besoin : 0)
+
+Le joueur 2 a fini le batiment le lavoir, il gagne donc 1 point(s) et 6 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, 
+
+la bourse actuelle du joueur 2 est de 8 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 2)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 1)
+ - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - un instrument de mesure (bois : 1 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 3 a pioché :
+l'ouvrier compagnon (14)
+l'ouvrier manœuvre (34)
+=> 2 actions ont été utilisées
+Le joueur 3 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : compagnon (id = 14) manœuvre (id = 34)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 4  (besoin : 1) ; tuile : 0    (besoin : 2) ; savoir : 1  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 10 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - un instrument de mesure (bois : 1 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment un instrument de mesure
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier manœuvre (31) sur le batiment un instrument de mesure cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : un instrument de mesure (id = 38)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) compagnon (id = 15) une scie circulaire (id = 141)
+
+Carte Machine un instrument de mesure, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 1) ; pierre : 1  (besoin : 1) ; tuile : 2    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+la bourse actuelle du joueur 1 est de 2 écu(s)
+
+Fin du tour : 4
+
+Le joueur n°1 a 2 point(s)
+Le joueur 1 possede 2 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+Le joueur n°2 a 1 point(s)
+Le joueur 2 possede 8 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 10 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 12 écu(s)
+
+######################### Tour n°5 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier compagnon (8) sur le batiment l'écurie cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : manœuvre (id = 35)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 3  (besoin : 3) ; pierre : 4  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 1  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - la hutte de paille (bois : 0 ; pierre : 1 ; tuile : 2 ; savoir : 0)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment la hutte de paille
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment la hutte de paille cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : la hutte de paille (id = 3)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) maitre (id = 2) compagnon (id = 11) compagnon (id = 18)
+
+Carte Batiment la hutte de paille, appartient au joueur 2, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 1  (besoin : 1) ; tuile : 2    (besoin : 2) ; savoir : 0  (besoin : 0)
+
+Le joueur 2 a fini le batiment la hutte de paille, il gagne donc 1 point(s) et 6 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, 
+
+la bourse actuelle du joueur 2 est de 11 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier compagnon (14) sur le batiment un instrument de mesure cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : manœuvre (id = 34)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 6  (besoin : 1) ; tuile : 0    (besoin : 2) ; savoir : 3  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 9 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 1 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 1 construit ce(s) chantier(s) : un instrument de mesure (id = 38)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) compagnon (id = 15) une scie circulaire (id = 141)
+
+Carte Machine un instrument de mesure, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 1) ; pierre : 1  (besoin : 1) ; tuile : 2    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+la bourse actuelle du joueur 1 est de 8 écu(s)
+
+Fin du tour : 5
+
+Le joueur n°1 a 2 point(s)
+Le joueur 1 possede 8 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, 
+
+Le joueur n°2 a 2 point(s)
+Le joueur 2 possede 11 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 9 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°6 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier manœuvre (35) sur le batiment l'écurie cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 6  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 1  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - le relais rural (bois : 3 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment le relais rural
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (18) sur le batiment le relais rural cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le relais rural (id = 13)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) maitre (id = 2) compagnon (id = 11) manœuvre (id = 30)
+
+Carte Batiment le relais rural, appartient au joueur 2, ressources présentes : 
+bois : 1  (besoin : 3) ; pierre : 0  (besoin : 0) ; tuile : 2    (besoin : 2) ; savoir : 1  (besoin : 1)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, 
+
+la bourse actuelle du joueur 2 est de 7 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier manœuvre (34) sur le batiment un instrument de mesure cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 8  (besoin : 1) ; tuile : 1    (besoin : 2) ; savoir : 4  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 9 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+le joueur 1 pose l'ouvrier une scie circulaire (141) sur le batiment un instrument de mesure cela lui coûte 0 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment un instrument de mesure cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : un instrument de mesure (id = 38)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16)
+
+Carte Machine un instrument de mesure, appartient au joueur 1, ressources présentes : 
+bois : 4  (besoin : 1) ; pierre : 1  (besoin : 1) ; tuile : 4    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Le joueur 1 a fini le batiment un instrument de mesure, il gagne donc 1 point(s) et 0 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, 
+
+la bourse actuelle du joueur 1 est de 4 écu(s)
+
+Fin du tour : 6
+
+Le joueur n°1 a 3 point(s)
+Le joueur 1 possede 4 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, 
+
+Le joueur n°2 a 2 point(s)
+Le joueur 2 possede 7 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 9 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°7 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché :
+l'ouvrier compagnon (19)
+l'ouvrier manœuvre (24)
+=> 2 actions ont été utilisées
+Le joueur 4 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 19) manœuvre (id = 24)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 6  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 1  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 12 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+le joueur 2 pose l'ouvrier compagnon (11) sur le batiment le relais rural cela lui coûte 4 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment le relais rural cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le relais rural (id = 13)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) maitre (id = 2)
+
+Carte Batiment le relais rural, appartient au joueur 2, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 1  (besoin : 0) ; tuile : 5    (besoin : 2) ; savoir : 1  (besoin : 1)
+
+Le joueur 2 a fini le batiment le relais rural, il gagne donc 3 point(s) et 12 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 12 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 3 ; savoir : 1)
+ - Ouvrier manœuvre (bois : 2 ; pierre : 1 ; tuile : 0 ; savoir : 0)
+ - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+Le joueur 3 a pioché :
+l'ouvrier compagnon (9)
+l'ouvrier manœuvre (27)
+=> 2 actions ont été utilisées
+Le joueur 3 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : compagnon (id = 9) manœuvre (id = 27)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 8  (besoin : 1) ; tuile : 1    (besoin : 2) ; savoir : 4  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+la bourse actuelle du joueur 3 est de 10 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+Le joueur 1 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) une scie circulaire (id = 141) compagnon (id = 15)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, 
+
+la bourse actuelle du joueur 1 est de 10 écu(s)
+
+Fin du tour : 7
+
+Le joueur n°1 a 3 point(s)
+Le joueur 1 possede 10 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 12 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 0 point(s)
+Le joueur 3 possede 10 écu(s)
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 12 écu(s)
+
+######################### Tour n°8 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier compagnon (19) sur le batiment l'écurie cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : manœuvre (id = 24)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 5  (besoin : 3) ; pierre : 8  (besoin : 0) ; tuile : 1    (besoin : 3) ; savoir : 2  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - le moulin à vent (bois : 0 ; pierre : 3 ; tuile : 1 ; savoir : 3)
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment le moulin à vent
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (2) sur le batiment le moulin à vent cela lui coûte 5 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18) compagnon (id = 11) manœuvre (id = 30)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 3  (besoin : 3) ; tuile : 2    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 7 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - une grue (bois : 1 ; pierre : 0 ; tuile : 1 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier compagnon (9) sur le batiment un instrument de mesure cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : un instrument de mesure (id = 34) le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : manœuvre (id = 27)
+
+Carte Machine un instrument de mesure, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 0) ; pierre : 8  (besoin : 1) ; tuile : 4    (besoin : 2) ; savoir : 5  (besoin : 0)
+
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+Le joueur 3 a fini le batiment un instrument de mesure, il gagne donc 2 point(s) et 0 écu(s).
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 9 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - une grue (bois : 1 ; pierre : 0 ; tuile : 1 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment une grue
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment une grue cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : une grue (id = 40)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) une scie circulaire (id = 141)
+
+Carte Machine une grue, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 0  (besoin : 0) ; tuile : 2    (besoin : 1) ; savoir : 0  (besoin : 0)
+
+Le joueur 1 a fini le batiment une grue, il gagne donc 1 point(s) et 0 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+la bourse actuelle du joueur 1 est de 6 écu(s)
+
+Fin du tour : 8
+
+Le joueur n°1 a 4 point(s)
+Le joueur 1 possede 6 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 7 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 9 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°9 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - un four à tuiles (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier manœuvre (24) sur le batiment l'écurie cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 5  (besoin : 3) ; pierre : 8  (besoin : 0) ; tuile : 2    (besoin : 3) ; savoir : 4  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - un four à tuiles (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment le moulin à vent cela lui coûte 3 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (11) sur le batiment le moulin à vent cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 4  (besoin : 3) ; tuile : 5    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 0 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - un four à tuiles (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier manœuvre (27) sur le batiment le château-fort cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : un instrument de mesure (id = 134) apprenti (id = 39) maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 0  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 9 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - un four à tuiles (bois : 1 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment un four à tuiles
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment un four à tuiles cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : un four à tuiles (id = 35)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) une scie circulaire (id = 141) une grue (id = 140)
+
+Carte Machine un four à tuiles, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 0  (besoin : 2) ; tuile : 2    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+la bourse actuelle du joueur 1 est de 2 écu(s)
+
+Fin du tour : 9
+
+Le joueur n°1 a 4 point(s)
+Le joueur 1 possede 2 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 0 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 9 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°10 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 2 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 2 ; pierre : 0 ; tuile : 0 ; savoir : 3)
+ - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché :
+l'ouvrier compagnon (13)
+l'ouvrier maitre (6)
+=> 2 actions ont été utilisées
+Le joueur 4 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 13) maitre (id = 6)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 5  (besoin : 3) ; pierre : 8  (besoin : 0) ; tuile : 2    (besoin : 3) ; savoir : 4  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 12 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 2 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 4  (besoin : 3) ; tuile : 5    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 6 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier un instrument de mesure (134) sur le batiment le château-fort cela lui coûte 0 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : apprenti (id = 39) maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 3  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 12 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 1 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 1 construit ce(s) chantier(s) : un four à tuiles (id = 35)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) une scie circulaire (id = 141) une grue (id = 140)
+
+Carte Machine un four à tuiles, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 0  (besoin : 2) ; tuile : 2    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+la bourse actuelle du joueur 1 est de 8 écu(s)
+
+Fin du tour : 10
+
+Le joueur n°1 a 4 point(s)
+Le joueur 1 possede 8 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 6 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 12 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 12 écu(s)
+
+######################### Tour n°11 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier compagnon (13) sur le batiment l'écurie cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : maitre (id = 6)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 7  (besoin : 3) ; pierre : 10  (besoin : 0) ; tuile : 2    (besoin : 3) ; savoir : 4  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 11 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier compagnon (bois : 0 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché :
+l'ouvrier compagnon (12)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (12) sur le batiment le moulin à vent cela lui coûte 4 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (18) sur le batiment le moulin à vent cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 6  (besoin : 3) ; tuile : 7    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 2 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier apprenti (39) sur le batiment le château-fort cela lui coûte 2 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 2  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 4  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 13 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 1 pose l'ouvrier une grue (140) sur le batiment un four à tuiles cela lui coûte 0 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier une scie circulaire (141) sur le batiment un four à tuiles cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : un four à tuiles (id = 35)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31)
+
+Carte Machine un four à tuiles, appartient au joueur 1, ressources présentes : 
+bois : 4  (besoin : 1) ; pierre : 2  (besoin : 2) ; tuile : 2    (besoin : 0) ; savoir : 0  (besoin : 0)
+
+Le joueur 1 a fini le batiment un four à tuiles, il gagne donc 2 point(s) et 0 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+la bourse actuelle du joueur 1 est de 8 écu(s)
+
+Fin du tour : 11
+
+Le joueur n°1 a 6 point(s)
+Le joueur 1 possede 8 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 2 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 13 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 11 écu(s)
+
+######################### Tour n°12 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier maitre (6) sur le batiment l'écurie cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 9  (besoin : 3) ; pierre : 10  (besoin : 0) ; tuile : 2    (besoin : 3) ; savoir : 7  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 9 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 2 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 6  (besoin : 3) ; tuile : 7    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 8 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier maitre (3) sur le batiment le château-fort cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 5  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 4  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 11 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'auberge (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment l'auberge
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment l'auberge cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : l'auberge (id = 19)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) un four à tuiles (id = 135) une grue (id = 140) une scie circulaire (id = 141)
+
+Carte Batiment l'auberge, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 0  (besoin : 2) ; tuile : 2    (besoin : 2) ; savoir : 0  (besoin : 1)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+la bourse actuelle du joueur 1 est de 4 écu(s)
+
+Fin du tour : 12
+
+Le joueur n°1 a 6 point(s)
+Le joueur 1 possede 4 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 8 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 11 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 9 écu(s)
+
+######################### Tour n°13 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier compagnon (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 2)
+ - Ouvrier maitre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché :
+l'ouvrier compagnon (17)
+l'ouvrier maitre (7)
+=> 2 actions ont été utilisées
+Le joueur 4 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 17) maitre (id = 7)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 9  (besoin : 3) ; pierre : 10  (besoin : 0) ; tuile : 2    (besoin : 3) ; savoir : 7  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+la bourse actuelle du joueur 4 est de 10 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 0 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché :
+l'ouvrier maitre (1)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (1) sur le batiment le moulin à vent cela lui coûte 5 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier compagnon (18) sur le batiment le moulin à vent cela lui coûte 4 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 8  (besoin : 3) ; tuile : 10    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 3 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier compagnon (14) sur le batiment le château-fort cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 7  (besoin : 5) ; tuile : 0    (besoin : 3) ; savoir : 6  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 10 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 1 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 1 construit ce(s) chantier(s) : l'auberge (id = 19)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un instrument de mesure (id = 138) manœuvre (id = 31) un four à tuiles (id = 135) une grue (id = 140) une scie circulaire (id = 141)
+
+Carte Batiment l'auberge, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 0  (besoin : 2) ; tuile : 2    (besoin : 2) ; savoir : 0  (besoin : 1)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+la bourse actuelle du joueur 1 est de 10 écu(s)
+
+Fin du tour : 13
+
+Le joueur n°1 a 6 point(s)
+Le joueur 1 possede 10 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 3 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 10 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 0 point(s)
+Le joueur 4 possede 10 écu(s)
+
+######################### Tour n°14 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier compagnon (17) sur le batiment l'écurie cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'écurie (id = 14) la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : maitre (id = 7)
+
+Carte Batiment l'écurie, appartient au joueur 4, ressources présentes : 
+bois : 9  (besoin : 3) ; pierre : 10  (besoin : 0) ; tuile : 4    (besoin : 3) ; savoir : 9  (besoin : 1)
+
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 0    (besoin : 2) ; savoir : 0  (besoin : 2)
+
+Le joueur 4 a fini le batiment l'écurie, il gagne donc 3 point(s) et 14 écu(s).
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+la bourse actuelle du joueur 4 est de 23 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : apprenti (id = 36) manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 0) ; pierre : 8  (besoin : 3) ; tuile : 10    (besoin : 1) ; savoir : 0  (besoin : 3)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+la bourse actuelle du joueur 2 est de 9 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier manœuvre (34) sur le batiment le château-fort cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Le joueur 3 possède ce(s) ouvrier(s) : compagnon (id = 9)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 9  (besoin : 5) ; tuile : 1    (besoin : 3) ; savoir : 7  (besoin : 5)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+la bourse actuelle du joueur 3 est de 10 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 1 pose l'ouvrier une grue (140) sur le batiment l'auberge cela lui coûte 0 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier un instrument de mesure (138) sur le batiment l'auberge cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : l'auberge (id = 19)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) manœuvre (id = 31) un four à tuiles (id = 135) une scie circulaire (id = 141)
+
+Carte Batiment l'auberge, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 2  (besoin : 2) ; tuile : 2    (besoin : 2) ; savoir : 2  (besoin : 1)
+
+Le joueur 1 a fini le batiment l'auberge, il gagne donc 3 point(s) et 12 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, 
+
+la bourse actuelle du joueur 1 est de 22 écu(s)
+
+Fin du tour : 14
+
+Le joueur n°1 a 9 point(s)
+Le joueur 1 possede 22 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, 
+
+Le joueur n°2 a 5 point(s)
+Le joueur 2 possede 9 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, 
+
+Le joueur n°3 a 2 point(s)
+Le joueur 3 possede 10 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, 
+
+Le joueur n°4 a 3 point(s)
+Le joueur 4 possede 23 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+
+######################### Tour n°15 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier maitre (7) sur le batiment la porcherie cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : apprenti (id = 41) manœuvre (id = 29) compagnon (id = 8) manœuvre (id = 35) compagnon (id = 19) manœuvre (id = 24) compagnon (id = 13) maitre (id = 6) compagnon (id = 17)
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 0) ; tuile : 2    (besoin : 2) ; savoir : 3  (besoin : 2)
+
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+la bourse actuelle du joueur 4 est de 21 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier maitre (bois : 3 ; pierre : 0 ; tuile : 0 ; savoir : 2)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché :
+l'ouvrier maitre (4)
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (4) sur le batiment le moulin à vent cela lui coûte 5 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier apprenti (36) sur le batiment le moulin à vent cela lui coûte 2 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : le moulin à vent (id = 11)
+
+Le joueur 2 possède ce(s) ouvrier(s) : manœuvre (id = 33) compagnon (id = 18)
+
+Carte Batiment le moulin à vent, appartient au joueur 2, ressources présentes : 
+bois : 6  (besoin : 0) ; pierre : 8  (besoin : 3) ; tuile : 11    (besoin : 1) ; savoir : 3  (besoin : 3)
+
+Le joueur 2 a fini le batiment le moulin à vent, il gagne donc 3 point(s) et 14 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+la bourse actuelle du joueur 2 est de 16 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier compagnon (9) sur le batiment le château-fort cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : le château-fort (id = 32)
+
+Carte Batiment le château-fort, appartient au joueur 3, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 9  (besoin : 5) ; tuile : 4    (besoin : 3) ; savoir : 8  (besoin : 5)
+
+Le joueur 3 a fini le batiment le château-fort, il gagne donc 7 point(s) et 20 écu(s).
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+la bourse actuelle du joueur 3 est de 29 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - les halles (bois : 3 ; pierre : 0 ; tuile : 3 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment les halles
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier un instrument de mesure (138) sur le batiment les halles cela lui coûte 0 écus
+=> 1 action a été utilisée
+Le joueur 1 achète 0 action(s) pour 0 écu(s)
+le joueur 1 pose l'ouvrier un four à tuiles (135) sur le batiment les halles cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : les halles (id = 24)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) manœuvre (id = 31) une scie circulaire (id = 141) compagnon (id = 15) une grue (id = 140)
+
+Carte Batiment les halles, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 0) ; tuile : 3    (besoin : 3) ; savoir : 2  (besoin : 2)
+
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, 
+
+la bourse actuelle du joueur 1 est de 22 écu(s)
+
+Fin du tour : 15
+
+Le joueur n°1 a 9 point(s)
+Le joueur 1 possede 22 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, 
+
+Le joueur n°2 a 8 point(s)
+Le joueur 2 possede 16 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+Le joueur n°3 a 9 point(s)
+Le joueur 3 possede 29 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+Le joueur n°4 a 3 point(s)
+Le joueur 4 possede 21 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+
+######################### Tour n°16 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier apprenti (41) sur le batiment la porcherie cela lui coûte 2 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : manœuvre (id = 29) compagnon (id = 8) manœuvre (id = 35) compagnon (id = 19) manœuvre (id = 24) compagnon (id = 13) maitre (id = 6) compagnon (id = 17)
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 1  (besoin : 0) ; tuile : 3    (besoin : 2) ; savoir : 3  (besoin : 2)
+
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+la bourse actuelle du joueur 4 est de 22 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - la tour de guet (bois : 3 ; pierre : 3 ; tuile : 2 ; savoir : 2)
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment la tour de guet
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (4) sur le batiment la tour de guet cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 2 achète 1 action(s) pour 5 écu(s)
+le joueur 2 pose l'ouvrier compagnon (12) sur le batiment la tour de guet cela lui coûte 4 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier apprenti (36) sur le batiment la tour de guet cela lui coûte 2 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : la tour de guet (id = 27)
+
+Le joueur 2 possède ce(s) ouvrier(s) : manœuvre (id = 33) compagnon (id = 18) maitre (id = 2) manœuvre (id = 30) compagnon (id = 11) maitre (id = 1)
+
+Carte Batiment la tour de guet, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 3) ; pierre : 2  (besoin : 3) ; tuile : 3    (besoin : 2) ; savoir : 3  (besoin : 2)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+la bourse actuelle du joueur 2 est de 0 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'abbaye (bois : 3 ; pierre : 4 ; tuile : 1 ; savoir : 2)
+ - le cloître (bois : 2 ; pierre : 4 ; tuile : 0 ; savoir : 4)
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+
+
+Il reste 3 actions
+Le joueur 3 a pioché la carte bâtiment l'abbaye
+Le joueur 3 a pioché la carte bâtiment le cloître
+=> 2 actions ont été utilisées
+Le joueur 3 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 3 construit ce(s) chantier(s) : l'abbaye (id = 28) le cloître (id = 30)
+
+Le joueur 3 possède ce(s) ouvrier(s) : manœuvre (id = 27) un instrument de mesure (id = 134) apprenti (id = 39) maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment l'abbaye, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 3) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 1) ; savoir : 0  (besoin : 2)
+
+
+Carte Batiment le cloître, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 0) ; savoir : 0  (besoin : 4)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+la bourse actuelle du joueur 3 est de 30 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 1 pose l'ouvrier une grue (140) sur le batiment les halles cela lui coûte 0 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment les halles cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 1 achète 1 action(s) pour 5 écu(s)
+le joueur 1 pose l'ouvrier une scie circulaire (141) sur le batiment les halles cela lui coûte 0 écus
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier manœuvre (31) sur le batiment les halles cela lui coûte 3 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : les halles (id = 24)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16)
+
+Carte Batiment les halles, appartient au joueur 1, ressources présentes : 
+bois : 4  (besoin : 3) ; pierre : 3  (besoin : 0) ; tuile : 7    (besoin : 3) ; savoir : 2  (besoin : 2)
+
+Le joueur 1 a fini le batiment les halles, il gagne donc 4 point(s) et 16 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, 
+
+la bourse actuelle du joueur 1 est de 26 écu(s)
+
+Fin du tour : 16
+
+Le joueur n°1 a 13 point(s)
+Le joueur 1 possede 26 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, 
+
+Le joueur n°2 a 8 point(s)
+Le joueur 2 possede 0 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+Le joueur n°3 a 9 point(s)
+Le joueur 3 possede 30 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+Le joueur n°4 a 3 point(s)
+Le joueur 4 possede 22 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, 
+
+
+######################### Tour n°17 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier manœuvre (29) sur le batiment la porcherie cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : la porcherie (id = 12)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 8) manœuvre (id = 35) compagnon (id = 19) manœuvre (id = 24) compagnon (id = 13) maitre (id = 6) compagnon (id = 17)
+
+Carte Batiment la porcherie, appartient au joueur 4, ressources présentes : 
+bois : 2  (besoin : 2) ; pierre : 1  (besoin : 0) ; tuile : 3    (besoin : 2) ; savoir : 4  (besoin : 2)
+
+Le joueur 4 a fini le batiment la porcherie, il gagne donc 3 point(s) et 12 écu(s).
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+la bourse actuelle du joueur 4 est de 34 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 2 passe son tour et vend 3 actions restantes pour 6 écus
+=> 3 actions ont été utilisées
+
+Le joueur 2 construit ce(s) chantier(s) : la tour de guet (id = 27)
+
+Le joueur 2 possède ce(s) ouvrier(s) : manœuvre (id = 33) compagnon (id = 18) maitre (id = 2) manœuvre (id = 30) compagnon (id = 11) maitre (id = 1)
+
+Carte Batiment la tour de guet, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 3) ; pierre : 2  (besoin : 3) ; tuile : 3    (besoin : 2) ; savoir : 3  (besoin : 2)
+
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+la bourse actuelle du joueur 2 est de 6 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier manœuvre (27) sur le batiment l'abbaye cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : l'abbaye (id = 28) le cloître (id = 30)
+
+Le joueur 3 possède ce(s) ouvrier(s) : un instrument de mesure (id = 134) apprenti (id = 39) maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment l'abbaye, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 4) ; tuile : 0    (besoin : 1) ; savoir : 0  (besoin : 2)
+
+
+Carte Batiment le cloître, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 0) ; savoir : 0  (besoin : 4)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+la bourse actuelle du joueur 3 est de 30 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - une scie circulaire (bois : 0 ; pierre : 0 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment une scie circulaire
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier manœuvre (31) sur le batiment une scie circulaire cela lui coûte 3 écus
+=> 1 action a été utilisée
+Le joueur 1 achète 0 action(s) pour 0 écu(s)
+le joueur 1 pose l'ouvrier un instrument de mesure (138) sur le batiment une scie circulaire cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : une scie circulaire (id = 37)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un four à tuiles (id = 135) une grue (id = 140) compagnon (id = 15) une scie circulaire (id = 141)
+
+Carte Machine une scie circulaire, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 1  (besoin : 0) ; tuile : 2    (besoin : 1) ; savoir : 2  (besoin : 2)
+
+Le joueur 1 a fini le batiment une scie circulaire, il gagne donc 2 point(s) et 0 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, 
+
+la bourse actuelle du joueur 1 est de 23 écu(s)
+
+Fin du tour : 17
+
+Le joueur n°1 a 15 point(s)
+Le joueur 1 possede 23 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, 
+
+Le joueur n°2 a 8 point(s)
+Le joueur 2 possede 6 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, 
+
+Le joueur n°3 a 9 point(s)
+Le joueur 3 possede 30 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+Le joueur n°4 a 6 point(s)
+Le joueur 4 possede 34 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+
+######################### Tour n°18 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - l'eglise (bois : 0 ; pierre : 4 ; tuile : 4 ; savoir : 2)
+ - la cathédrale (bois : 4 ; pierre : 5 ; tuile : 4 ; savoir : 4)
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - le pont en pierre (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 4 a pioché la carte bâtiment l'eglise
+Le joueur 4 a pioché la carte bâtiment la cathédrale
+=> 2 actions ont été utilisées
+Le joueur 4 passe son tour et vend  une action restante pour 1 écus
+=> 1 action a été utilisée
+
+Le joueur 4 construit ce(s) chantier(s) : l'eglise (id = 29) la cathédrale (id = 33)
+
+Le joueur 4 possède ce(s) ouvrier(s) : compagnon (id = 8) manœuvre (id = 35) compagnon (id = 19) manœuvre (id = 24) compagnon (id = 13) maitre (id = 6) compagnon (id = 17) maitre (id = 7) apprenti (id = 41) manœuvre (id = 29)
+
+Carte Batiment l'eglise, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 4) ; savoir : 0  (besoin : 2)
+
+
+Carte Batiment la cathédrale, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 4) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 4) ; savoir : 0  (besoin : 4)
+
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+la bourse actuelle du joueur 4 est de 35 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - le pont en pierre (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment la tour de guet cela lui coûte 3 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (1) sur le batiment la tour de guet cela lui coûte 5 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : la tour de guet (id = 27)
+
+Le joueur 2 possède ce(s) ouvrier(s) : manœuvre (id = 33) compagnon (id = 18) maitre (id = 2) compagnon (id = 11) maitre (id = 1)
+
+Carte Batiment la tour de guet, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 3) ; pierre : 3  (besoin : 3) ; tuile : 5    (besoin : 2) ; savoir : 3  (besoin : 2)
+
+Le joueur 2 a fini le batiment la tour de guet, il gagne donc 5 point(s) et 18 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, la tour de guet, 
+
+la bourse actuelle du joueur 2 est de 21 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - le pont en pierre (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier un instrument de mesure (134) sur le batiment l'abbaye cela lui coûte 0 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : l'abbaye (id = 28) le cloître (id = 30)
+
+Le joueur 3 possède ce(s) ouvrier(s) : apprenti (id = 39) maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment l'abbaye, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 1  (besoin : 4) ; tuile : 0    (besoin : 1) ; savoir : 3  (besoin : 2)
+
+
+Carte Batiment le cloître, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 0) ; savoir : 0  (besoin : 4)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+la bourse actuelle du joueur 3 est de 33 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - le pont en pierre (bois : 0 ; pierre : 2 ; tuile : 0 ; savoir : 1)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment le pont en pierre
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier un instrument de mesure (138) sur le batiment le pont en pierre cela lui coûte 0 écus
+=> 1 action a été utilisée
+Le joueur 1 achète 0 action(s) pour 0 écu(s)
+le joueur 1 pose l'ouvrier une grue (140) sur le batiment le pont en pierre cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : le pont en pierre (id = 5)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un four à tuiles (id = 135) compagnon (id = 15) une scie circulaire (id = 141) une scie circulaire (id = 137) manœuvre (id = 31)
+
+Carte Batiment le pont en pierre, appartient au joueur 1, ressources présentes : 
+bois : 0  (besoin : 0) ; pierre : 2  (besoin : 2) ; tuile : 0    (besoin : 0) ; savoir : 2  (besoin : 1)
+
+Le joueur 1 a fini le batiment le pont en pierre, il gagne donc 1 point(s) et 6 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, le pont en pierre, 
+
+la bourse actuelle du joueur 1 est de 29 écu(s)
+
+Fin du tour : 18
+
+Le joueur n°1 a 16 point(s)
+Le joueur 1 possede 29 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, le pont en pierre, 
+
+Le joueur n°2 a 13 point(s)
+Le joueur 2 possede 21 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, la tour de guet, 
+
+Le joueur n°3 a 9 point(s)
+Le joueur 3 possede 33 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+Le joueur n°4 a 6 point(s)
+Le joueur 4 possede 35 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+
+######################### Tour n°19 #########################
+------------------ Joueur n°4------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+ - la cabane (bois : 1 ; pierre : 0 ; tuile : 0 ; savoir : 1)
+
+
+Il reste 3 actions
+le joueur 4 pose l'ouvrier compagnon (8) sur le batiment l'eglise cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 4 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 4 construit ce(s) chantier(s) : l'eglise (id = 29) la cathédrale (id = 33)
+
+Le joueur 4 possède ce(s) ouvrier(s) : manœuvre (id = 35) compagnon (id = 19) manœuvre (id = 24) compagnon (id = 13) maitre (id = 6) compagnon (id = 17) maitre (id = 7) apprenti (id = 41) manœuvre (id = 29)
+
+Carte Batiment l'eglise, appartient au joueur 4, ressources présentes : 
+bois : 1  (besoin : 0) ; pierre : 3  (besoin : 4) ; tuile : 0    (besoin : 4) ; savoir : 0  (besoin : 2)
+
+
+Carte Batiment la cathédrale, appartient au joueur 4, ressources présentes : 
+bois : 0  (besoin : 4) ; pierre : 0  (besoin : 5) ; tuile : 0    (besoin : 4) ; savoir : 0  (besoin : 4)
+
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+la bourse actuelle du joueur 4 est de 34 écu(s)
+
+------------------ Joueur n°2------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+ - la cabane (bois : 1 ; pierre : 0 ; tuile : 0 ; savoir : 1)
+
+
+Il reste 3 actions
+Le joueur 2 a pioché la carte bâtiment la cabane
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier maitre (4) sur le batiment la cabane cela lui coûte 5 écus
+=> 1 action a été utilisée
+Le joueur 2 achète 1 action(s) pour 5 écu(s)
+le joueur 2 pose l'ouvrier manœuvre (30) sur le batiment la cabane cela lui coûte 3 écus
+=> 1 action a été utilisée
+le joueur 2 pose l'ouvrier apprenti (36) sur le batiment la cabane cela lui coûte 2 écus
+=> 1 action a été utilisée
+
+Le joueur 2 construit ce(s) chantier(s) : la cabane (id = 0)
+
+Le joueur 2 possède ce(s) ouvrier(s) : manœuvre (id = 33) compagnon (id = 18) maitre (id = 2) compagnon (id = 11) maitre (id = 1) compagnon (id = 12)
+
+Carte Batiment la cabane, appartient au joueur 2, ressources présentes : 
+bois : 3  (besoin : 1) ; pierre : 1  (besoin : 0) ; tuile : 3    (besoin : 0) ; savoir : 3  (besoin : 1)
+
+Le joueur 2 a fini le batiment la cabane, il gagne donc 0 point(s) et 8 écu(s).
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, la tour de guet, la cabane, 
+
+la bourse actuelle du joueur 2 est de 14 écu(s)
+
+------------------ Joueur n°3------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+ - l'hôtel (bois : 3 ; pierre : 1 ; tuile : 1 ; savoir : 3)
+
+
+Il reste 3 actions
+le joueur 3 pose l'ouvrier apprenti (39) sur le batiment l'abbaye cela lui coûte 2 écus
+=> 1 action a été utilisée
+Le joueur 3 passe son tour et vend 2 actions restantes pour 3 écus
+=> 2 actions ont été utilisées
+
+Le joueur 3 construit ce(s) chantier(s) : l'abbaye (id = 28) le cloître (id = 30)
+
+Le joueur 3 possède ce(s) ouvrier(s) : maitre (id = 3) compagnon (id = 14) manœuvre (id = 34) compagnon (id = 9)
+
+Carte Batiment l'abbaye, appartient au joueur 3, ressources présentes : 
+bois : 2  (besoin : 3) ; pierre : 2  (besoin : 4) ; tuile : 0    (besoin : 1) ; savoir : 4  (besoin : 2)
+
+
+Carte Batiment le cloître, appartient au joueur 3, ressources présentes : 
+bois : 0  (besoin : 2) ; pierre : 0  (besoin : 4) ; tuile : 0    (besoin : 0) ; savoir : 0  (besoin : 4)
+
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+la bourse actuelle du joueur 3 est de 34 écu(s)
+
+------------------ Joueur n°1------------------
+
+Cartes ouvriers disponibles : - Ouvrier manœuvre (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 2)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 1 ; savoir : 0)
+ - Ouvrier manœuvre (bois : 0 ; pierre : 0 ; tuile : 2 ; savoir : 1)
+ - Ouvrier maitre (bois : 3 ; pierre : 2 ; tuile : 0 ; savoir : 0)
+ - Ouvrier apprenti (bois : 0 ; pierre : 1 ; tuile : 0 ; savoir : 1)
+
+Cartes chantiers disponibles :
+ - le moulin à eau (bois : 2 ; pierre : 0 ; tuile : 2 ; savoir : 3)
+ - la forge (bois : 2 ; pierre : 2 ; tuile : 3 ; savoir : 0)
+ - la maisonnette (bois : 1 ; pierre : 2 ; tuile : 2 ; savoir : 0)
+ - la maison urbaine (bois : 0 ; pierre : 2 ; tuile : 1 ; savoir : 2)
+ - l'hôtel (bois : 3 ; pierre : 1 ; tuile : 1 ; savoir : 3)
+
+
+Il reste 3 actions
+Le joueur 1 a pioché la carte bâtiment la maisonnette
+=> 1 action a été utilisée
+le joueur 1 pose l'ouvrier compagnon (15) sur le batiment la maisonnette cela lui coûte 4 écus
+=> 1 action a été utilisée
+Le joueur 1 achète 0 action(s) pour 0 écu(s)
+le joueur 1 pose l'ouvrier une grue (140) sur le batiment la maisonnette cela lui coûte 0 écus
+=> 1 action a été utilisée
+
+Le joueur 1 construit ce(s) chantier(s) : la maisonnette (id = 8)
+
+Le joueur 1 possède ce(s) ouvrier(s) : apprenti (id = 37) compagnon (id = 23) compagnon (id = 16) un four à tuiles (id = 135) une scie circulaire (id = 141) une scie circulaire (id = 137) manœuvre (id = 31) un instrument de mesure (id = 138)
+
+Carte Batiment la maisonnette, appartient au joueur 1, ressources présentes : 
+bois : 2  (besoin : 1) ; pierre : 2  (besoin : 2) ; tuile : 2    (besoin : 2) ; savoir : 0  (besoin : 0)
+
+Le joueur 1 a fini le batiment la maisonnette, il gagne donc 2 point(s) et 10 écu(s).
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, le pont en pierre, la maisonnette, 
+
+la bourse actuelle du joueur 1 est de 35 écu(s)
+
+Fin du tour : 19
+
+Le joueur 1 utilise 30 écus pour gagner 3 points
+Le joueur n°1 a 21 point(s)
+Le joueur 1 possede 5 écu(s)
+Joueur 1 a ce(s) bâtiment(s) de construit(s): la pont couvert, une scie circulaire, un instrument de mesure, une grue, un four à tuiles, l'auberge, les halles, une scie circulaire, le pont en pierre, la maisonnette, 
+
+Le joueur 2 utilise 10 écus pour gagner 1 points
+Le joueur n°2 a 14 point(s)
+Le joueur 2 possede 4 écu(s)
+Joueur 2 a ce(s) bâtiment(s) de construit(s): la tonnelle, le lavoir, la hutte de paille, le relais rural, le moulin à vent, la tour de guet, la cabane, 
+
+Le joueur 3 utilise 30 écus pour gagner 3 points
+Le joueur n°3 a 12 point(s)
+Le joueur 3 possede 4 écu(s)
+Joueur 3 a ce(s) bâtiment(s) de construit(s): un instrument de mesure, le château-fort, 
+
+Le joueur 4 utilise 30 écus pour gagner 3 points
+Le joueur n°4 a 9 point(s)
+Le joueur 4 possede 4 écu(s)
+Joueur 4 a ce(s) bâtiment(s) de construit(s): l'écurie, la porcherie, 
+
+Le Joueur 1 a gagné !
+
+Voici le classement :
+
+1. Joueur 1 avec 21 points.
+Possedant comme IA, l'IA intelligent
+
+2. Joueur 2 avec 14 points.
+Possedant comme IA, l'IA intelligent
+
+3. Joueur 3 avec 12 points.
+Possedant comme IA, l'IA bête
+
+4. Joueur 4 avec 9 points.
+Possedant comme IA, l'IA bête
+

@@ -217,7 +217,8 @@ public class MoteurDeJeu {
      * @param args les arguments que prend la méthode
      */
     public static void main(String[] args){
-        int nbPartie =Integer.parseInt(args[0]);
+        //int nbPartie =Integer.parseInt(args[0]);
+        int nbPartie = 500;
         ArrayList<Joueur> joueursGagnants = new ArrayList<>();
         for (int i = 0; i < nbPartie; i++) {
             MoteurDeJeu m1 = new MoteurDeJeu();
@@ -231,7 +232,8 @@ public class MoteurDeJeu {
             joueurs.add(j2);
             joueurs.add(j3);
             joueurs.add(j4);
-            joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            //joueursGagnants.add(m1.partie(joueurs, Boolean.parseBoolean(args[1])));
+            joueursGagnants.add(m1.partie(joueurs, false));
             //true pour mode display
             //false pour mode sans display
         }

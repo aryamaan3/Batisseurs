@@ -1,0 +1,9 @@
+Voici le recapitulatif de(s) 500 parties lancés :
+
+Le Joueur 1 avec l'IA intelligent a gagné : 224 fois
+Le Joueur 2 avec l'IA intelligent a gagné : 213 fois
+Le Joueur 3 avec l'IA bête a gagné        : 27 fois
+Le Joueur 4 avec l'IA bête a gagné        : 36 fois
+
+Un joueur avec un IA intelligent a gagné 437 fois
+Un joueur avec un IA bête a gagné 63 fois

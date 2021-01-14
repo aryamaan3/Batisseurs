@@ -1,13 +1,18 @@
-# Les Batissuers
+# Les Batisseurs
 
 ![alt text](https://jeuxdis.files.wordpress.com/2016/06/lb41.png)
 
 Version Java  du jeu Les Batisseurs avec deux IA
 
-## Installation
+## Demonstration en ligne 
+[Cliquez ici](https://Les-Batisseurs.github.io)
+
+## Lancement local
+
+### Installation
 telecharger [Maven](https://maven.apache.org/download.cgi) 
 
-## Terminal
+### Terminal
 dans le fichier du projet
 ```
 mvn install
