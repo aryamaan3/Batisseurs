@@ -5,7 +5,7 @@
 Version Java  du jeu Les Batisseurs avec deux IA
 
 ## Demonstration en ligne 
-[Cliquez ici](https://Les-Batisseurs.github.io)
+[Cliquez ici](https://aryamaan3.github.io/Batisseurs/)
 
 ## Lancement local
 
